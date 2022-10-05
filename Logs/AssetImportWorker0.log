@@ -1,23 +1,23 @@
 Using pre-set license
-Built from '2021.3/staging' branch; Version is '2021.3.10f1 (1c7d0df0160b) revision 1867021'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'en' Physical Memory: 16334 MB
+Built from '2021.3/staging' branch; Version is '2021.3.11f1 (0a5ca18544bf) revision 679073'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'en' Physical Memory: 32677 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Paul/Unity/rpg_game
+C:/Users/rvict/Documents/GitHub/rpg_game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51474
-Successfully changed project path to: C:/Users/Paul/Unity/rpg_game
-C:/Users/Paul/Unity/rpg_game
+55742
+Successfully changed project path to: C:/Users/rvict/Documents/GitHub/rpg_game
+C:/Users/rvict/Documents/GitHub/rpg_game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,91 +47,99 @@ C:/Users/Paul/Unity/rpg_game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 95.48 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 108.66 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2021.3.10f1 (1c7d0df0160b)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Paul/Unity/rpg_game/Assets
+Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/rvict/Documents/GitHub/rpg_game/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: AMD Radeon RX 5700 (ID=0x731f)
-    Vendor:   ATI
-    VRAM:     8151 MB
-    Driver:   30.0.15021.11005
+    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2489)
+    Vendor:   NVIDIA
+    VRAM:     8050 MB
+    Driver:   31.0.15.1694
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56968
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56672
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005938 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007071 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 92.22 ms, found 4 plugins.
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 113.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.557 seconds
+- Completed reload, in  0.716 seconds
 Domain Reload Profiling:
-	ReloadAssembly (557ms)
-		BeginReloadAssembly (61ms)
+	ReloadAssembly (717ms)
+		BeginReloadAssembly (74ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (402ms)
-			LoadAssemblies (59ms)
+		EndReloadAssembly (524ms)
+			LoadAssemblies (72ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (84ms)
+			SetupTypeCache (109ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (253ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (336ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (60ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (92ms)
+				RefreshPlugins (114ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (115ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
+				ProcessInitializeOnLoadAttributes (116ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007328 seconds.
+Registered in 0.008905 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Paul\Unity\rpg_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Paul\Unity\rpg_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\rvict\Documents\GitHub\rpg_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\rvict\Documents\GitHub\rpg_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 91.36 ms, found 4 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 108.24 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.115 seconds
+- Completed reload, in  1.402 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1116ms)
-		BeginReloadAssembly (97ms)
+	ReloadAssembly (1403ms)
+		BeginReloadAssembly (122ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (916ms)
-			LoadAssemblies (77ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (1153ms)
+			LoadAssemblies (108ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (230ms)
+			SetupTypeCache (265ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (56ms)
-			SetupLoadedEditorAssemblies (512ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (670ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (23ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (91ms)
-				BeforeProcessingInitializeOnLoad (103ms)
-				ProcessInitializeOnLoadAttributes (272ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
+				RefreshPlugins (108ms)
+				BeforeProcessingInitializeOnLoad (110ms)
+				ProcessInitializeOnLoadAttributes (366ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
 				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -140,12 +148,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.93 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4573 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 55 unused Assets / (129.0 KB). Loaded Objects now: 5028.
+Unloading 55 unused Assets / (128.9 KB). Loaded Objects now: 5030.
 Memory consumption went from 170.6 MB to 170.5 MB.
-Total: 3.450600 ms (FindLiveObjects: 0.434000 ms CreateObjectMapping: 0.120200 ms MarkObjects: 2.798000 ms  DeleteObjects: 0.097400 ms)
+Total: 3.975000 ms (FindLiveObjects: 0.431000 ms CreateObjectMapping: 0.132800 ms MarkObjects: 3.302500 ms  DeleteObjects: 0.106800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -157,75 +165,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 1431654.573202 seconds.
-  path: Assets/Sound Effects
-  artifactKey: Guid(a9d884571d5d2df4dbf28ecb495db8d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects using Guid(a9d884571d5d2df4dbf28ecb495db8d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f24f7536738e354422fbd516f3c3f08') in 0.012282 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 72.204524 seconds.
-  path: Assets/Sound Effects/terrain interactions
-  artifactKey: Guid(8b469356a37c8ff478af3a38f114b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/terrain interactions using Guid(8b469356a37c8ff478af3a38f114b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ccb796c742f2e5790ec7db718ca56b4') in 0.005609 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.046991 seconds.
-  path: Assets/Sound Effects/terrain interactions/boop_loop.mp3
-  artifactKey: Guid(c61e95ff2f3395a40b335e4915557dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/terrain interactions/boop_loop.mp3 using Guid(c61e95ff2f3395a40b335e4915557dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fa6864de4584dd9fc56d434e85864e5') in 0.088272 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Sound Effects/terrain interactions/player footstep.mp3
-  artifactKey: Guid(249dd82c3f4d5074f9f58b139f18e3f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/terrain interactions/player footstep.mp3 using Guid(249dd82c3f4d5074f9f58b139f18e3f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bb08dd28c39a2e1c69cc63551833ef3') in 0.012980 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 32.428955 seconds.
-  path: Assets/Sound Effects/enemy ambience
-  artifactKey: Guid(a05f1b30b6f8de0409c4e2776164c3bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/enemy ambience using Guid(a05f1b30b6f8de0409c4e2776164c3bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08f36662520939a0f542dc88794922bb') in 0.006314 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.067697 seconds.
-  path: Assets/Sound Effects/enemy ambience/Wing_flap.mp3
-  artifactKey: Guid(5f6e9348cc901464f85d029022adffad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/enemy ambience/Wing_flap.mp3 using Guid(5f6e9348cc901464f85d029022adffad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a24a87b86619a5eca02310dbf19c447c') in 0.012613 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.505990 seconds.
-  path: Assets/Sound Effects/weapon interactions
-  artifactKey: Guid(e1fe4101fcea0804badde6a0db6adcd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/weapon interactions using Guid(e1fe4101fcea0804badde6a0db6adcd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53338967d3c4f9c73f56882947b083d5') in 0.005377 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.855730 seconds.
-  path: Assets/Sound Effects/weapon interactions/spell
-  artifactKey: Guid(4e993e95a6ff31c47af6508a85a2afa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/weapon interactions/spell using Guid(4e993e95a6ff31c47af6508a85a2afa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50592c344dd96bf58fd897caa393843c') in 0.005525 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.749736 seconds.
-  path: Assets/Sound Effects/weapon interactions/sword
-  artifactKey: Guid(bd4379ea69c93484e9a3015e665613cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/weapon interactions/sword using Guid(bd4379ea69c93484e9a3015e665613cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad5388c2e930664bcb002769daaa69ef') in 0.005969 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.877698 seconds.
-  path: Assets/Sound Effects/weapon interactions/trigun
-  artifactKey: Guid(9429e1027e657924aab7c6bafdb07a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/weapon interactions/trigun using Guid(9429e1027e657924aab7c6bafdb07a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4d260e7e779a46f88cba847d332fada') in 0.005576 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.510101 seconds.
-  path: Assets/Sound Effects/chest interactions
-  artifactKey: Guid(acb6fa992b437d141bf83edbb7410f37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/chest interactions using Guid(acb6fa992b437d141bf83edbb7410f37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fd5fd6152d89de280c952f25a1ab2e0') in 0.006148 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.049329 seconds.
-  path: Assets/Sound Effects/chest interactions/boss_chest_open.mp3
-  artifactKey: Guid(3c6af3edc6383af4d95bea0057873c2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound Effects/chest interactions/boss_chest_open.mp3 using Guid(3c6af3edc6383af4d95bea0057873c2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6cca4448e9f37ca4583ad194900261b') in 0.012534 seconds 
