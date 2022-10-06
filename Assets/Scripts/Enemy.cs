@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth((int)maxHealth);
-        flasheffect = GameObject.FindGameObjectWithTag("Effect").GetComponent<SimpleFlash>();
+        
     }
     
     // Gets called forom the attack sword.
