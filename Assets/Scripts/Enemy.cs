@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float Health {
-        set {                   // setter for health
-            health = value;
-            
-            if (health <= 0) {
+    public HealthBar healthBar;
+
+    public float maxHealth = 100;
+    public float currentHealth;
+
+    //public float Health;
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth((int)maxHealth);
+    }
+    
+    // Gets called forom the attack sword.
+    public void TakeDamage(float damage)
+    {
+        
+          //print("taken damage");  
+          if (currentHealth <= 0) {
                 Destroy(gameObject);
             }
-        }
-        get {                  // getter for health
-            return health;
-        }
+            else
+           currentHealth -= damage;
+           healthBar.SetHealth((int)currentHealth);
     }
 
-    private float health = 100;
 }

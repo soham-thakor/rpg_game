@@ -7,17 +7,13 @@ public class SwordAttack : MonoBehaviour
     public float damageDealt;
     public Collider2D swordCollider;
 
-    public HealthBar healthBar;
-    public float maxHealth = 100;
-    public float currentHealth;
     
     Vector2 colliderPosition;
 
     private void Start() {
         swordCollider.enabled = false;
         colliderPosition = transform.position;
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth((int)maxHealth);
+        
     }
 
     public void Attack(string direction) {
@@ -45,11 +41,7 @@ public class SwordAttack : MonoBehaviour
             
             if(enemy != null) {
                 print("Enemy injured!");
-                //TakeDamage(damageDealt);
-                //enemy.Health -= damageDealt;
-                 enemy.Health -= damageDealt;
-                 currentHealth -= damageDealt;
-                 healthBar.SetHealth((int)currentHealth);
+                enemy.TakeDamage(damageDealt);               
 
             }
         }
