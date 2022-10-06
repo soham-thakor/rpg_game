@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public HealthBar healthBar;
-
+    public SimpleFlash flasheffect;
     public float maxHealth = 100;
     public float currentHealth;
 
@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth((int)maxHealth);
+        flasheffect = GameObject.FindGameObjectWithTag("Effect").GetComponent<SimpleFlash>();
     }
     
     // Gets called forom the attack sword.
@@ -24,7 +25,8 @@ public class Enemy : MonoBehaviour
           if (currentHealth <= 0) {
                 Destroy(gameObject);
             }
-            else
+        
+          flasheffect.Flash();
            currentHealth -= damage;
            healthBar.SetHealth((int)currentHealth);
     }
