@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
+    public AudioSource footstepsound; 
 
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
@@ -30,12 +31,15 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         if(canMove) {
             // If movement input is not 0, try to move
+
+            
             if(movementInput == Vector2.zero){
                 animator.SetBool("isMoving", false);
                 return;
             }
                 
             bool success = TryMove(movementInput);
+            //footstepsound.Play();
 
             if(!success) {
                 success = TryMove(new Vector2(movementInput.x, 0));
@@ -53,6 +57,8 @@ public class PlayerController : MonoBehaviour
             } else if (movementInput.x > 0) {
                 spriteRenderer.flipX = false;
             }
+
+           // footstepsound.Pause();
         }
     }
 
@@ -60,6 +66,7 @@ public class PlayerController : MonoBehaviour
         if(direction == Vector2.zero) {
             return false;
         }
+        footstepsound.Play();
         // Check for potential collisions
         int count = rb.Cast(
             direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions
@@ -77,6 +84,8 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputValue movementValue) {
         movementInput = movementValue.Get<Vector2>();
+       // footstepsound.Play();
+        
     }
 
     // called on left click
