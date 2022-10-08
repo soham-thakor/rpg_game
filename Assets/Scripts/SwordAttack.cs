@@ -7,30 +7,35 @@ public class SwordAttack : MonoBehaviour
     public float damageDealt;
     public Collider2D swordCollider;
 
-    
-    Vector2 colliderPosition;
+    Vector3 faceRight;
+    Vector3 faceLeft;
 
     private void Start() {
         swordCollider.enabled = false;
-        colliderPosition = transform.position;
-        
+        faceRight = transform.position;
+        faceLeft = new Vector3(faceRight.x * -1, faceRight.y, faceRight.z);
     }
 
-    public void Attack(string direction) {
-        swordCollider.enabled = true;
-
-        // check to see which direction attack is in
-        if (direction == "left") {
-            transform.localPosition = new Vector2(colliderPosition.x * -1, colliderPosition.y);
+    public void ChangeColliderDirection(bool isFacingRight) {
+        if(isFacingRight) {
+            gameObject.transform.position = faceRight;
         }
         else {
-            transform.localPosition = colliderPosition;
+            gameObject.transform.position = faceLeft;
         }
     }
+    // public void Attack(string direction) {
+    //     swordCollider.enabled = true;
+    //     print("collider enabled");
 
-    public void EndAttack() {
-        swordCollider.enabled = false;
-    }
+    //     // check to see which direction attack is in
+    //     if (direction == "left") {
+    //         transform.localPosition = new Vector2(colliderPosition.x * -1, colliderPosition.y);
+    //     }
+    //     else {
+    //         transform.localPosition = colliderPosition;
+    //     }
+    // }
 
     private void OnTriggerEnter2D(Collider2D other) {
         print("Collided");
@@ -39,15 +44,10 @@ public class SwordAttack : MonoBehaviour
         if(other.tag == "Enemy") {
             Enemy enemy = other.GetComponent<Enemy>();
             
-            if(enemy != null) {
+            if(enemy != null) {  
                 print("Enemy injured!");
                 enemy.TakeDamage(damageDealt);               
-
             }
         }
     }
-
-
-
-    
 }

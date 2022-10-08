@@ -12,11 +12,13 @@ public class PlayerController : MonoBehaviour
     public ContactFilter2D movementFilter;
     public AudioSource footstepsound; 
 
+    private bool isFacingRight;
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     Animator animator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    
 
     bool canMove = true;
 
@@ -39,7 +41,6 @@ public class PlayerController : MonoBehaviour
             }
                 
             bool success = TryMove(movementInput);
-            //footstepsound.Play();
 
             if(!success) {
                 success = TryMove(new Vector2(movementInput.x, 0));
@@ -54,11 +55,12 @@ public class PlayerController : MonoBehaviour
             // Set direction of sprite to movement direction
             if(movementInput.x < 0) {
                 spriteRenderer.flipX = true;
+                isFacingRight = false;
             } else if (movementInput.x > 0) {
                 spriteRenderer.flipX = false;
+                isFacingRight = true;
             }
 
-           // footstepsound.Pause();
         }
     }
 
@@ -84,23 +86,10 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputValue movementValue) {
         movementInput = movementValue.Get<Vector2>();
-       // footstepsound.Play();
-        
     }
 
     // called on left click
     void OnFire() {
         animator.SetTrigger("swordAttack");   
-    }
-
-    // these functions are called in the animation events
-    public void EndSwordAttack() {
-        swordHitbox.EndAttack();
-    }
-
-    public void SwordAttack() {
-        // attack left or right depending on which way sprite is facing
-        if(spriteRenderer.flipX == true) { swordHitbox.Attack("left"); }
-        else { swordHitbox.Attack("right"); }
     }
 }
