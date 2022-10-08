@@ -12,15 +12,15 @@ public class PlayerController : MonoBehaviour
     public ContactFilter2D movementFilter;
     public AudioSource footstepsound; 
 
-    private bool isFacingRight;
+    private bool canMove = true;
+
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     Animator animator;
+    // SwordAttack swordHitbox;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     
-
-    bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -54,13 +54,13 @@ public class PlayerController : MonoBehaviour
 
             // Set direction of sprite to movement direction
             if(movementInput.x < 0) {
+                if (spriteRenderer.flipX != true){ swordHitbox.RotateCollider(); }
                 spriteRenderer.flipX = true;
-                isFacingRight = false;
-            } else if (movementInput.x > 0) {
+            } 
+            else if (movementInput.x > 0) {
+                if (spriteRenderer.flipX == true) { swordHitbox.RotateCollider(); }
                 spriteRenderer.flipX = false;
-                isFacingRight = true;
             }
-
         }
     }
 
