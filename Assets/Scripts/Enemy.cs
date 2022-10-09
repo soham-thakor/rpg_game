@@ -9,10 +9,11 @@ public class Enemy : MonoBehaviour
     public float maxHealth = 100;
     public float currentHealth;
     public float speed = 2.5f;
+    
+    public Transform player;
+    public bool isFlipped = false;
 
-
-    Transform player;
-    Rigidbody2D rb;
+    
 
     //public float Health;
     void Start()
@@ -21,22 +22,30 @@ public class Enemy : MonoBehaviour
         healthBar.SetMaxHealth((int)maxHealth);
         
     }
-/*
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+
+    // Gets called forom the attack sword.
+    public bool LookAtPlayer()
     {
-        player = Gameobject.FindGameObjectWithTag("Player").transform;
-        rb = animator.GetComponent<Rigidbody2D>();
+        Vector3 flipped = transform.localScale;
+        flipped.z *= -1f;
+
+        if(transform.position.x > player.position.x && isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = false;
+        }
+
+        else if(transform.position.x < player.position.x && !isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = true;
+        }
+
+        return isFlipped;
     }
 
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        //animator.GetComponent<>
-        Vector2 target = new Vector2(player.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        rb.MovePosition(newPos);
-    }
-  */
-    // Gets called forom the attack sword.
     public void TakeDamage(float damage)
     {
         
