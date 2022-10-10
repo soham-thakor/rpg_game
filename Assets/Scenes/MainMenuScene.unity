@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7dc235b2d4716e49830323504adcde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartScene: 0
+  gameStartScene: 1
   pauseMenu: {fileID: 0}
   numberText: {fileID: 0}
 --- !u!1 &975645998
@@ -1264,7 +1264,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1728,6 +1728,7 @@ GameObject:
   - component: {fileID: 2145501641}
   - component: {fileID: 2145501640}
   - component: {fileID: 2145501639}
+  - component: {fileID: 2145501642}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1799,7 +1800,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2145501640}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2145501642}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2145501640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1838,3 +1851,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145501637}
   m_CullTransparentMesh: 1
+--- !u!114 &2145501642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145501637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7dc235b2d4716e49830323504adcde2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStartScene: 0
+  pauseMenu: {fileID: 0}
+  numberText: {fileID: 0}
