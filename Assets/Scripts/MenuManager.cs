@@ -14,7 +14,6 @@ public class MenuManager : MonoBehaviour
 	public GameObject pauseMenu;
 	public TextMeshProUGUI numberText;
 	private Slider slider;
-		
 	
 	
     // Start is called before the first frame update	
@@ -22,7 +21,6 @@ public class MenuManager : MonoBehaviour
 		pauseMenu.SetActive(false);
 		slider = GetComponent<Slider>();
 		SetSliderNumberText(slider.value);
-		
 	}
 	
 	public void StartGame(){
@@ -42,7 +40,6 @@ public class MenuManager : MonoBehaviour
 		pauseMenu.SetActive(true);
 		Time.timeScale = 0f;
 		isPaused = true;
-		
 	}
 	
 	public void ResumeGame() {
@@ -66,7 +63,5 @@ public class MenuManager : MonoBehaviour
 			}
 		}
     }
-	
-	
 	
 }
