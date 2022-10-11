@@ -51,15 +51,14 @@ public class PlayerController : MonoBehaviour
             }
             
             animator.SetBool("isMoving", success);
-
             // Set direction of sprite to movement direction
             if(movementInput.x < 0) {
-                if (spriteRenderer.flipX != true){ swordHitbox.RotateCollider(); }
-                spriteRenderer.flipX = true;
+                if (spriteRenderer.flipX != false){ swordHitbox.RotateCollider(); }
+                spriteRenderer.flipX = false;
             } 
             else if (movementInput.x > 0) {
-                if (spriteRenderer.flipX == true) { swordHitbox.RotateCollider(); }
-                spriteRenderer.flipX = false;
+                if (spriteRenderer.flipX == false) { swordHitbox.RotateCollider(); }
+                spriteRenderer.flipX = true;
             }
         }
     }
@@ -68,7 +67,7 @@ public class PlayerController : MonoBehaviour
         if(direction == Vector2.zero) {
             return false;
         }
-        footstepsound.Play();
+        // footstepsound.Play();
         // Check for potential collisions
         int count = rb.Cast(
             direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions

@@ -49,14 +49,13 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         
-          //print("taken damage");  
-          if (currentHealth <= 0) {
-                Destroy(gameObject);
-            }
-        
-          flasheffect.Flash();
-           currentHealth -= damage;
-           healthBar.SetHealth((int)currentHealth);
+        if (currentHealth <= 0) {
+            Destroy(gameObject);
+        }
+    
+        flasheffect.Flash();
+        currentHealth -= damage;
+        healthBar.SetHealth((int)currentHealth);
     }
 
 }
