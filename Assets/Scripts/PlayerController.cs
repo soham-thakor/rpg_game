@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public float currentHealth = 100f;
     public AudioSource footstepsound;
     public AudioSource swordslash;
+    public AudioSource damagetaken1;
+    public AudioSource damagetaken2;
 
     // private variables
     private bool canMove = true;
@@ -99,7 +101,7 @@ public class PlayerController : MonoBehaviour
     // called on left click
     void OnFire() {
         animator.SetTrigger("swordAttack");
-        // swordslash.Play();
+        swordslash.Play();
     }
 
     public void TakeDamage(float damage)
@@ -108,6 +110,7 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     
+        damagetaken2.Play();
         flashEffect.Flash();
         currentHealth -= damage;
         healthBar.SetHealth((int)currentHealth);
