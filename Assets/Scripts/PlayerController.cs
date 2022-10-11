@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     // health related variables
     public HealthBar healthBar;
     public float currentHealth = 100f;
-    
-    public AudioSource footstepsound; 
+    public AudioSource footstepsound;
+    public AudioSource swordslash;
 
     // private variables
     private bool canMove = true;
@@ -97,7 +97,8 @@ public class PlayerController : MonoBehaviour
 
     // called on left click
     void OnFire() {
-        animator.SetTrigger("swordAttack");   
+        animator.SetTrigger("swordAttack");
+        swordslash.Play();
     }
 
     public void TakeDamage(float damage)

@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public float currentHealth;
     public float speed = 2.5f;
     public SwordAttack swordHitbox;             // needs to be set to swordattack game object in editor
+    public AudioSource damageReceived;
+    public AudioSource deathSound;
     
     private SpriteRenderer spriteRenderer;
     private SimpleFlash flashEffect;
@@ -66,12 +68,14 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        
+        //print("taken damage");  
         if (currentHealth <= 0) {
+            deathSound.Play();
             Destroy(gameObject);
         }
-    
-        flashEffect.Flash();
+
+        damageReceived.Play();
+        flasheffect.Flash();
         currentHealth -= damage;
         healthBar.SetHealth((int)currentHealth);
     }
