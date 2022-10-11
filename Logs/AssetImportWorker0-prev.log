@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.11f1 (0a5ca18544bf) revision 679073'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'en' Physical Memory: 7564 MB
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'en' Physical Memory: 16085 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity 2021.3.11f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/alexa/OneDrive/Documents/FALL 2022/COSC 4358/UNITY PROJECTS/Duel Fight/rpg_game
+C:/Users/rgfor/OneDrive/Documents/cs4358/rpg_game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49728
-Successfully changed project path to: C:/Users/alexa/OneDrive/Documents/FALL 2022/COSC 4358/UNITY PROJECTS/Duel Fight/rpg_game
-C:/Users/alexa/OneDrive/Documents/FALL 2022/COSC 4358/UNITY PROJECTS/Duel Fight/rpg_game
+58825
+Successfully changed project path to: C:/Users/rgfor/OneDrive/Documents/cs4358/rpg_game
+C:/Users/rgfor/OneDrive/Documents/cs4358/rpg_game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,105 +47,105 @@ C:/Users/alexa/OneDrive/Documents/FALL 2022/COSC 4358/UNITY PROJECTS/Duel Fight/
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 169.18 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 140.83 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.3.11f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/alexa/OneDrive/Documents/FALL 2022/COSC 4358/UNITY PROJECTS/Duel Fight/rpg_game/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/rgfor/OneDrive/Documents/cs4358/rpg_game/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: AMD Radeon(TM) Graphics (ID=0x1636)
-    Vendor:   ATI
-    VRAM:     3782 MB
-    Driver:   27.20.21020.4003
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x3ea0)
+    Vendor:   Intel
+    VRAM:     8042 MB
+    Driver:   26.20.100.7927
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity 2021.3.11f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity 2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity 2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56988
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity 2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004558 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009370 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 177.38 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 140.82 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.153 seconds
+- Completed reload, in  0.900 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1154ms)
-		BeginReloadAssembly (172ms)
+	ReloadAssembly (901ms)
+		BeginReloadAssembly (96ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (806ms)
-			LoadAssemblies (167ms)
+		EndReloadAssembly (650ms)
+			LoadAssemblies (94ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (168ms)
+			SetupTypeCache (141ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (509ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (401ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (178ms)
+				RefreshPlugins (141ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (227ms)
-				ProcessInitializeOnLoadMethodAttributes (90ms)
+				ProcessInitializeOnLoadAttributes (186ms)
+				ProcessInitializeOnLoadMethodAttributes (61ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013103 seconds.
+Registered in 0.009173 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\alexa\OneDrive\Documents\FALL 2022\COSC 4358\UNITY PROJECTS\Duel Fight\rpg_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\alexa\OneDrive\Documents\FALL 2022\COSC 4358\UNITY PROJECTS\Duel Fight\rpg_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\rgfor\OneDrive\Documents\cs4358\rpg_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\rgfor\OneDrive\Documents\cs4358\rpg_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 166.88 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 151.92 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.111 seconds
+- Completed reload, in  1.791 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2113ms)
-		BeginReloadAssembly (176ms)
+	ReloadAssembly (1793ms)
+		BeginReloadAssembly (158ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (1718ms)
-			LoadAssemblies (131ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (1477ms)
+			LoadAssemblies (107ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (429ms)
+			SetupTypeCache (367ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (105ms)
-			SetupLoadedEditorAssemblies (977ms)
+			RebuildScriptCaches (92ms)
+			SetupLoadedEditorAssemblies (841ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (167ms)
-				BeforeProcessingInitializeOnLoad (171ms)
-				ProcessInitializeOnLoadAttributes (549ms)
-				ProcessInitializeOnLoadMethodAttributes (74ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				RefreshPlugins (152ms)
+				BeforeProcessingInitializeOnLoad (190ms)
+				ProcessInitializeOnLoadAttributes (431ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.58 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4632 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 55 unused Assets / (129.2 KB). Loaded Objects now: 5089.
-Memory consumption went from 175.8 MB to 175.7 MB.
-Total: 6.829300 ms (FindLiveObjects: 0.651300 ms CreateObjectMapping: 0.228900 ms MarkObjects: 5.717400 ms  DeleteObjects: 0.228500 ms)
+Unloading 55 unused Assets / (129.1 KB). Loaded Objects now: 5088.
+Memory consumption went from 174.2 MB to 174.1 MB.
+Total: 4.822200 ms (FindLiveObjects: 0.413900 ms CreateObjectMapping: 0.405800 ms MarkObjects: 3.885600 ms  DeleteObjects: 0.115800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -160,61 +160,43 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 82471.242967 seconds.
-  path: Assets/Character/Player/Player.prefab
-  artifactKey: Guid(3dd2d18d4fd562744b86b18d41941ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Character/Player/Player.prefab using Guid(3dd2d18d4fd562744b86b18d41941ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1a5ebeef90521800f4f2f87218e634') in 0.092025 seconds 
+  Time since last request: 7216.937013 seconds.
+  path: Assets/Scenes/ThroneRoom.unity
+  artifactKey: Guid(2375eb3585910234cbb8e0e203829294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/ThroneRoom.unity using Guid(2375eb3585910234cbb8e0e203829294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7341f900e13e9700deb70d3ac58c7260') in 0.016944 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/Character/Antagonist
-  artifactKey: Guid(8e9496405cc69f3499306691a2096997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Character/Antagonist using Guid(8e9496405cc69f3499306691a2096997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88a1a9c7329c546ad8340bbf949d05fb') in 0.009814 seconds 
+  Time since last request: 25.443473 seconds.
+  path: Assets/Scenes/Throne Room v2.unity
+  artifactKey: Guid(3869b6f272d3efd43aad49a49520e9fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Throne Room v2.unity using Guid(3869b6f272d3efd43aad49a49520e9fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84fbddacf3956235e27893f03ff64f9d') in 0.008557 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 35.504108 seconds.
+  Time since last request: 13.604517 seconds.
+  path: Assets/Scenes/Throne Room v2.unity
+  artifactKey: Guid(3869b6f272d3efd43aad49a49520e9fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Throne Room v2.unity using Guid(3869b6f272d3efd43aad49a49520e9fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ba5e96412bcec4a9605835bcd861d03') in 0.002991 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.858260 seconds.
+  path: Assets/Scenes/Large Rooms.unity
+  artifactKey: Guid(aac96281b6a1b8b418183e2930d9834b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Large Rooms.unity using Guid(aac96281b6a1b8b418183e2930d9834b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d64ee2f424cd51314c0c4eb1300490e') in 0.003164 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 47.780145 seconds.
+  path: Assets/Scenes/Large Rooms.unity
+  artifactKey: Guid(aac96281b6a1b8b418183e2930d9834b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Large Rooms.unity using Guid(aac96281b6a1b8b418183e2930d9834b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'facd06a06e74fa54055f33112c074d3d') in 0.002754 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.907077 seconds.
   path: Assets/Scenes/Dungeon Maze.unity
   artifactKey: Guid(b6d3cc0ac9444f948a723c9aecd19c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon Maze.unity using Guid(b6d3cc0ac9444f948a723c9aecd19c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '675bbe1d19cc769b68cf0e43961f7e9d') in 0.008258 seconds 
+Start importing Assets/Scenes/Dungeon Maze.unity using Guid(b6d3cc0ac9444f948a723c9aecd19c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7100478f98d226e6f992933f1324b27') in 0.004876 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 24.548389 seconds.
-  path: Assets/Sprites/Bar.png
-  artifactKey: Guid(c8bbd02a88c2bbc41b7d7e50ec7b2aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Bar.png using Guid(c8bbd02a88c2bbc41b7d7e50ec7b2aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd62860a26e995e130b14536eb93db1f8') in 0.142974 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.256374 seconds.
-  path: Assets/Music/combatost.mp3
-  artifactKey: Guid(290f79048bf7d9d4e8b9d43476ae117b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Music/combatost.mp3 using Guid(290f79048bf7d9d4e8b9d43476ae117b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8d295077a33f902b727e9edf63b560a') in 0.139262 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Music/sorrowhihat.mp3
-  artifactKey: Guid(0cf3c7453d48fa045a54d72e05feb6fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Music/sorrowhihat.mp3 using Guid(0cf3c7453d48fa045a54d72e05feb6fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd343b670b54049a9c6a1a15cfa89a0e3') in 0.030359 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000119 seconds.
-  path: Assets/Music/maybecombat.mp3
-  artifactKey: Guid(b09f53422b6426e40b99f9b93f85520f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Music/maybecombat.mp3 using Guid(b09f53422b6426e40b99f9b93f85520f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aad473a63a849c6b0aa747b5ced4f818') in 0.029914 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.213236 seconds.
-  path: Assets/menu/castle.png
-  artifactKey: Guid(c2650664f40c3704eab76dfe7cf2c96a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/menu/castle.png using Guid(c2650664f40c3704eab76dfe7cf2c96a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e581782e659535a20f27c28d8fc90c7') in 0.226071 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/menu/old-paper-texture.png
-  artifactKey: Guid(b1fc209c046cf7c4881b9057dd9ed210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/menu/old-paper-texture.png using Guid(b1fc209c046cf7c4881b9057dd9ed210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7546361629ccf89c5f7e9352ef9f5176') in 0.686003 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 30.118884 seconds.
-  path: Assets/Character/Antagonist/Animations
-  artifactKey: Guid(fbd9380fee65d914b8df6962957b686b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Character/Antagonist/Animations using Guid(fbd9380fee65d914b8df6962957b686b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7db2578c2a830a2ce116509b1aa58f4f') in 0.007652 seconds 
+  Time since last request: 142.359784 seconds.
+  path: Assets/Scenes/Throne Room v2.unity
+  artifactKey: Guid(3869b6f272d3efd43aad49a49520e9fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Throne Room v2.unity using Guid(3869b6f272d3efd43aad49a49520e9fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4330da80bfa84982cc1c75408c3931a1') in 0.003159 seconds 
