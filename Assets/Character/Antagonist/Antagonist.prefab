@@ -184,12 +184,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1808272138, guid: 2f725499731080547b6cbd3406e78650, type: 3}
+  m_Sprite: {fileID: -571295033, guid: 2f725499731080547b6cbd3406e78650, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.18, y: 0.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -213,7 +213,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.18, y: 0.24}
-    newSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.18, y: 0.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -278,7 +278,9 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   speed: 2.5
-  swordHitbox: {fileID: 0}
+  swordHitbox: {fileID: 232391609022844776}
+  damageReceived: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &3151946911013386427
 MonoBehaviour:
   m_ObjectHideFlags: 0

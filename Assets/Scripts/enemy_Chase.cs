@@ -5,7 +5,6 @@ using UnityEngine;
 public class enemy_Chase : StateMachineBehaviour
 {
     public float speed = 1.0f;
-<<<<<<< HEAD
     public float attackRange = .01f;
     public float chaseRange = .5f;
 
@@ -15,11 +14,6 @@ public class enemy_Chase : StateMachineBehaviour
     private Rigidbody2D rb;
     private Enemy enemy;
 
-=======
-    Transform player;
-    Rigidbody2D rb;
-    Enemy enemy;
->>>>>>> dialogue_and_menu
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -50,7 +44,8 @@ public class enemy_Chase : StateMachineBehaviour
 
         // if(Vector2.Distance(player.position, rb.position) <= attackRange)
         // {
-        //     animator.SetTrigger("Attack");
+        //     animator.SetTrigger("attack");
+        //     Debug.Log("Triggered attack");
         // }
         
     }

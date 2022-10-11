@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
     // called on left click
     void OnFire() {
         animator.SetTrigger("swordAttack");
-        swordslash.Play();
+        // swordslash.Play();
     }
 
     public void TakeDamage(float damage)
