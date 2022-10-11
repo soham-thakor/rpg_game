@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
-    public AudioSource footstepsound; 
+    public AudioSource footstepsound;
+    public AudioSource swordslash;
 
     private bool canMove = true;
 
@@ -90,6 +91,7 @@ public class PlayerController : MonoBehaviour
 
     // called on left click
     void OnFire() {
-        animator.SetTrigger("swordAttack");   
+        animator.SetTrigger("swordAttack");
+        swordslash.Play();
     }
 }

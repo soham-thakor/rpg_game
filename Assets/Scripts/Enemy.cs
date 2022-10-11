@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public float maxHealth = 100;
     public float currentHealth;
     public float speed = 2.5f;
+    public AudioSource damageReceived;
+    public AudioSource deathSound;
     
     public Transform player;
     public bool isFlipped = false;
@@ -20,7 +22,6 @@ public class Enemy : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth((int)maxHealth);
-        
     }
 
     // Gets called forom the attack sword.
@@ -48,15 +49,16 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        
-          //print("taken damage");  
-          if (currentHealth <= 0) {
-                Destroy(gameObject);
-            }
-        
-          flasheffect.Flash();
-           currentHealth -= damage;
-           healthBar.SetHealth((int)currentHealth);
+        //print("taken damage");  
+        if (currentHealth <= 0) {
+            deathSound.Play();
+            Destroy(gameObject);
+        }
+
+        damageReceived.Play();
+        flasheffect.Flash();
+        currentHealth -= damage;
+        healthBar.SetHealth((int)currentHealth);
     }
 
 }

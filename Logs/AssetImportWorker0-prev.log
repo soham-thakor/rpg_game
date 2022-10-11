@@ -15,7 +15,7 @@ C:/Users/Paul/Unity/rpg_game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53709
+63872
 Successfully changed project path to: C:/Users/Paul/Unity/rpg_game
 C:/Users/Paul/Unity/rpg_game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Paul/Unity/rpg_game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 99.96 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 91.78 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -59,96 +59,93 @@ Direct3D:
     Vendor:   ATI
     VRAM:     8151 MB
     Driver:   30.0.15021.11005
-Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
-Shader 'TextMeshPro/Distance Field Overlay': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
-Shader 'TextMeshPro/Distance Field SSD': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56672
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56268
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006071 seconds.
+Registered in 0.005892 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 92.49 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 90.51 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.611 seconds
+- Completed reload, in  0.573 seconds
 Domain Reload Profiling:
-	ReloadAssembly (611ms)
-		BeginReloadAssembly (78ms)
+	ReloadAssembly (573ms)
+		BeginReloadAssembly (61ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (5ms)
-		EndReloadAssembly (428ms)
-			LoadAssemblies (71ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (417ms)
+			LoadAssemblies (59ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (94ms)
+			SetupTypeCache (95ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (267ms)
+			SetupLoadedEditorAssemblies (254ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (93ms)
+				RefreshPlugins (91ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (125ms)
-				ProcessInitializeOnLoadMethodAttributes (41ms)
+				ProcessInitializeOnLoadAttributes (117ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006794 seconds.
+Registered in 0.006987 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Paul\Unity\rpg_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Paul\Unity\rpg_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 93.02 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 96.51 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.178 seconds
+- Completed reload, in  1.105 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1179ms)
-		BeginReloadAssembly (109ms)
+	ReloadAssembly (1106ms)
+		BeginReloadAssembly (102ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (959ms)
-			LoadAssemblies (92ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (901ms)
+			LoadAssemblies (84ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (241ms)
+			SetupTypeCache (220ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (530ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (508ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (93ms)
-				BeforeProcessingInitializeOnLoad (101ms)
-				ProcessInitializeOnLoadAttributes (289ms)
-				ProcessInitializeOnLoadMethodAttributes (35ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				RefreshPlugins (97ms)
+				BeforeProcessingInitializeOnLoad (96ms)
+				ProcessInitializeOnLoadAttributes (267ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.15 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4628 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 55 unused Assets / (129.1 KB). Loaded Objects now: 5084.
+Unloading 4629 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (129.0 KB). Loaded Objects now: 5085.
 Memory consumption went from 174.1 MB to 174.0 MB.
-Total: 3.564100 ms (FindLiveObjects: 0.405700 ms CreateObjectMapping: 0.124100 ms MarkObjects: 2.886700 ms  DeleteObjects: 0.146500 ms)
+Total: 3.478500 ms (FindLiveObjects: 0.429700 ms CreateObjectMapping: 0.120500 ms MarkObjects: 2.818600 ms  DeleteObjects: 0.108700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -162,7 +159,161 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1947021.592454 seconds.
-  path: Assets/menu/castle.png
-  artifactKey: Guid(c2650664f40c3704eab76dfe7cf2c96a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/menu/castle.png using Guid(c2650664f40c3704eab76dfe7cf2c96a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88bb8c954cf51409234c24feee23e3d5') in 0.199755 seconds 
+  Time since last request: 2006900.904838 seconds.
+  path: Assets/Character
+  artifactKey: Guid(7bf8ad0f716d0da4cbc87370a750f979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character using Guid(7bf8ad0f716d0da4cbc87370a750f979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f42596152625bf7f4426be6edf7760b') in 0.012158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.022130 seconds.
+  path: Assets/Character/MC SHEET.png
+  artifactKey: Guid(f73c2cbb989217e4bb1f3e79f3e976b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/MC SHEET.png using Guid(f73c2cbb989217e4bb1f3e79f3e976b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce55100a207e41235e4abee9f4651f30') in 0.101012 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.527177 seconds.
+  path: Assets/Character/SPRITE SHEET PNG
+  artifactKey: Guid(1a9de8a557c91864ab9492b069cd89f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/SPRITE SHEET PNG using Guid(1a9de8a557c91864ab9492b069cd89f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96f43c5b212aa07da7d6aed4302dc7c5') in 0.005276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.553270 seconds.
+  path: Assets/Character/SPRITE SHEET PNG/ANT SHEET.png
+  artifactKey: Guid(6b227f7776b475f4f961161a394894dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/SPRITE SHEET PNG/ANT SHEET.png using Guid(6b227f7776b475f4f961161a394894dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd0a1480428894dc3c66a4ab0af44bc0') in 0.018496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Character/SPRITE SHEET PNG/KNIGHT SHEET.png
+  artifactKey: Guid(140d1ad8bc7f1ec4bb42cf40dac6574b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/SPRITE SHEET PNG/KNIGHT SHEET.png using Guid(140d1ad8bc7f1ec4bb42cf40dac6574b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7625ab9e5ea96234d110e3f0540d72fd') in 0.020383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Character/SPRITE SHEET PNG/MC SHEET.png
+  artifactKey: Guid(ec39743903a39eb47a09fd59f0bbc218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/SPRITE SHEET PNG/MC SHEET.png using Guid(ec39743903a39eb47a09fd59f0bbc218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1906f145f851be107ba5634c29f62769') in 0.017562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Character/SPRITE SHEET PNG/GARGOYOLE SHEET.png
+  artifactKey: Guid(99562ed7acdb84f48af6de250d67d93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/SPRITE SHEET PNG/GARGOYOLE SHEET.png using Guid(99562ed7acdb84f48af6de250d67d93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56cdd5b19bb5f203287be97ced81f161') in 0.017018 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.840564 seconds.
+  path: Assets/Character/Player/PlayerInputActions.inputactions
+  artifactKey: Guid(af9ae3a4564f037489c9d046aee0a4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/Player/PlayerInputActions.inputactions using Guid(af9ae3a4564f037489c9d046aee0a4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e75ceae4af02d54161d75090cb12cdbb') in 0.010835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 82.227769 seconds.
+  path: Assets/Art/custom art/dungeon tileset.png
+  artifactKey: Guid(8ec9727281a8eef4595a2c6499dd6c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/dungeon tileset.png using Guid(8ec9727281a8eef4595a2c6499dd6c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '231545b5856471b6ea1c318df9848c12') in 0.028571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Art/custom art/Throne Tiles.png
+  artifactKey: Guid(d3143d1bc2ee0ed4285618950c455cf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/Throne Tiles.png using Guid(d3143d1bc2ee0ed4285618950c455cf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d5da2dc7a365d19d2222b88a3f4da67') in 0.016107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.183954 seconds.
+  path: Assets/Art/custom art/tilesets/brown room tileset_1.asset
+  artifactKey: Guid(260b8ceeb74976c47b8506ab0e0d3b8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/brown room tileset_1.asset using Guid(260b8ceeb74976c47b8506ab0e0d3b8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c312a0619d39d297502fd89bc1cc8827') in 0.018311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/custom art/tilesets/dungeon tileset_0.asset
+  artifactKey: Guid(ae890ca331718d5418a894324a7e4df4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/dungeon tileset_0.asset using Guid(ae890ca331718d5418a894324a7e4df4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a8900b3212cd4ba0b6fc37bac142e9a') in 0.015869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Art/custom art/tilesets/dungeon tileset_3.asset
+  artifactKey: Guid(4aee211cd6ce20e4d8dfd494675a5d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/dungeon tileset_3.asset using Guid(4aee211cd6ce20e4d8dfd494675a5d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ef7e00c93ab6cd5c135167c7d62bdf') in 0.018095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Art/custom art/tilesets/brown room tileset_7.asset
+  artifactKey: Guid(a6767c56f00797e488e0f909d94a2a18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/brown room tileset_7.asset using Guid(a6767c56f00797e488e0f909d94a2a18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c899920e4429cafaa017cfe72cbc989f') in 0.011633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Art/custom art/tilesets/Throne Tiles.asset
+  artifactKey: Guid(7ef54f2d5d2a2b140bf20918e6816034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/Throne Tiles.asset using Guid(7ef54f2d5d2a2b140bf20918e6816034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bb9218ba2cd7aa42835e5536da36120') in 0.005118 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Art/custom art/tilesets/brown room tileset_12.asset
+  artifactKey: Guid(4b22db35392ea104ba98efbe48a7e2f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/brown room tileset_12.asset using Guid(4b22db35392ea104ba98efbe48a7e2f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '068cdfc51e2740423d7b64c230324151') in 0.010392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Art/custom art/tilesets/brown room tileset_4.asset
+  artifactKey: Guid(75f20e2a843ab3d42b734063ec180838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/brown room tileset_4.asset using Guid(75f20e2a843ab3d42b734063ec180838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f8b28ece4bdfd921d46be5e25dbdc6f') in 0.010989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/custom art/tilesets/brown room tileset_8.asset
+  artifactKey: Guid(80e58d699ebdb7542a128fb9aa420229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/brown room tileset_8.asset using Guid(80e58d699ebdb7542a128fb9aa420229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ab1e6fde899b3c2959287eaf5090ff') in 0.011164 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Art/custom art/tilesets/brown room tileset_11.asset
+  artifactKey: Guid(1a41e32ed8f5c5748b5ebc2d7d55621a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/brown room tileset_11.asset using Guid(1a41e32ed8f5c5748b5ebc2d7d55621a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3825ea19671b6b7b01b3b9f808b82995') in 0.010377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/custom art/tilesets/Throne Tiles_0.asset
+  artifactKey: Guid(cd90460e46cce84439aed258fbc04f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/Throne Tiles_0.asset using Guid(cd90460e46cce84439aed258fbc04f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d431d87e9cc0c159b93122ee28c34d8') in 0.010712 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Art/custom art/tilesets/brown room tileset_3.asset
+  artifactKey: Guid(5b7815dea753245419e202b95881b08e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/brown room tileset_3.asset using Guid(5b7815dea753245419e202b95881b08e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0529466f2f8874752fc9b22b004a96b5') in 0.010997 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Art/custom art/tilesets/dungeon tileset_5.asset
+  artifactKey: Guid(091e1896e2cceaf4e8e29145d16f64a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/dungeon tileset_5.asset using Guid(091e1896e2cceaf4e8e29145d16f64a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fe25d1066008efb77dbf0643afec037') in 0.015015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Art/custom art/tilesets/brown room tileset_14.asset
+  artifactKey: Guid(b3ba3eb9488c45a44bcc32fd0e71164e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/brown room tileset_14.asset using Guid(b3ba3eb9488c45a44bcc32fd0e71164e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94e0600614238e9ef71ddd1004cafb27') in 0.011118 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Art/custom art/tilesets/brown room tileset_18.asset
+  artifactKey: Guid(42cab67f09a118346a202b150a1f6518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/brown room tileset_18.asset using Guid(42cab67f09a118346a202b150a1f6518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe35a5a2050268671473752d0c0d4612') in 0.011147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Art/custom art/tilesets/Throne Tiles_1.asset
+  artifactKey: Guid(83397b115d3ad0042bfaf42c37bb07d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/Throne Tiles_1.asset using Guid(83397b115d3ad0042bfaf42c37bb07d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80c69320beb6c79270a58d0b4a318152') in 0.012050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Art/custom art/tilesets/Throne Room.prefab
+  artifactKey: Guid(ca1ebb6a739ee6547b86b43242595dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/custom art/tilesets/Throne Room.prefab using Guid(ca1ebb6a739ee6547b86b43242595dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be4ef5b8159812d139496316806928b2') in 0.045585 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
