@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 7.3952637, y: 45.585083}
-  m_SizeDelta: {x: -234.7905, y: 73.3344}
+  m_AnchoredPosition: {x: 55.179993, y: 47.27161}
+  m_SizeDelta: {x: -139.221, y: 76.7074}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34197237
 MonoBehaviour:
@@ -183,18 +183,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5c7d9f3d04ff578419978c965257c57c, type: 3}
-    m_FontSize: 28
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 67
     m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Now it's my time.
 --- !u!222 &34197238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7892,7 +7892,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: NPC Name
 --- !u!222 &886948236
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8697,7 +8697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.49803925, g: 0.49803925, b: 0.49803925, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9829,17 +9829,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 0
-    message: Hi!
+    message: Welcome to the beginning of your journey
   - actorID: 0
-    message: How are you?
+    message: Here we will test your skills and see if you have what it takes to defeat
+      the castle!
   - actorID: 1
-    message: Not Bad
+    message: Don't worry, I am a legend where im from
   - actorID: 0
-    message: Nice!Good luck with your journey!
+    message: Woah! Aright there cowboy easy now
   actors:
-  - name: NPC
+  - name: Guy
     sprite: {fileID: 0}
-  - name: player
+  - name: Player
     sprite: {fileID: -1506777351, guid: 173f591696d866047974ee18be6e3c4d, type: 3}
 --- !u!114 &1415912716
 MonoBehaviour:
