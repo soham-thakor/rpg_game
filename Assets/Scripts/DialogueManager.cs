@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     public Text actorName;
     public Text msgText;
     public GameObject DialogueBox;
+    public AudioSource DialogueSound;
 
     Message[] currentmsg;
     Actor[] currentActor;
@@ -62,6 +63,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && isActive == true)
         {
+            DialogueSound.Play();
             NextMsg();
         }
     }
