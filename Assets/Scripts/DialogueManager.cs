@@ -11,10 +11,16 @@ public class DialogueManager : MonoBehaviour
     public GameObject DialogueBox;
     public AudioSource DialogueSound;
 
+    public float closeBox = .5f;
+    Transform dBox;
+    Transform player;
+
     Message[] currentmsg;
     Actor[] currentActor;
     int activemsg = 0;
     public static bool isActive = false;
+
+   
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
@@ -52,15 +58,28 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+   
+
     // Start is called before the first frame update
     void Start()
     {
+         
         DialogueBox.SetActive(false);
+        player= GameObject.FindGameObjectWithTag("Player").transform;
+        dBox = GameObject.FindGameObjectWithTag("Dbox").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Vector2.Distance(player.position, dBox.position) >= closeBox && isActive == true )
+        {
+            
+            DialogueBox.SetActive(false);
+           
+        }
+        
+
         if (Input.GetKeyDown(KeyCode.F) && isActive == true)
         {
             DialogueSound.Play();

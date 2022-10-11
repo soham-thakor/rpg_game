@@ -8681,7 +8681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -662.8, y: 39.991}
+  m_AnchoredPosition: {x: -890, y: 40}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1053414281
@@ -8697,7 +8697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803925, g: 0.49803925, b: 0.49803925, a: 0}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.43137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9372,6 +9372,7 @@ MonoBehaviour:
   msgText: {fileID: 34197237}
   DialogueBox: {fileID: 1245808589}
   DialogueSound: {fileID: 1468397159}
+  closeBox: 0.5
 --- !u!1 &1265192056
 GameObject:
   m_ObjectHideFlags: 0
@@ -9717,7 +9718,7 @@ GameObject:
   - component: {fileID: 1415912718}
   m_Layer: 0
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: Dbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
