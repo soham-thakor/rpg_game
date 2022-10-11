@@ -65,8 +65,5 @@ public class MenuManager : MonoBehaviour
 				PauseGame();
 			}
 		}
-    }
-	
-	
-	
+    }	
 }

@@ -5,22 +5,27 @@ using UnityEngine;
 public class enemy_Chase : StateMachineBehaviour
 {
     public float speed = 1.0f;
-    Transform player;
-    Rigidbody2D rb;
-    Enemy enemy;
+    private float offset;
+    private Transform player;
+    private Rigidbody2D rb;
+    private Enemy enemy;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        player =  GameObject.FindGameObjectWithTag("Player").transform;
        rb = animator.GetComponent<Rigidbody2D>();
-       enemy = animator.GetComponent<Enemy>();
+    //    enemy = animator.GameObject.GetComponent<Enemy>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //enemy.LookAtPlayer();
-       Vector2 target = new Vector2(player.position.x, player.position.y);
+        // calculate offset of player position (so enemy doesnt stand inside of player)
+        if(player.position.x > 0) { offset = 0.2f; }
+        else { offset = -0.2f; }
+        
+        Vector2 target = new Vector2(player.position.x+offset, player.position.y);
 
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
 

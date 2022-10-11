@@ -5,22 +5,40 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public HealthBar healthBar;
-    public SimpleFlash flasheffect;
     public float maxHealth = 100;
     public float currentHealth;
     public float speed = 2.5f;
+    public SwordAttack swordHitbox;             // needs to be set to swordattack game object in editor
     
-    public Transform player;
-    public bool isFlipped = false;
-
-    
+    private SpriteRenderer spriteRenderer;
+    private SimpleFlash flashEffect;
+    private Transform player;
+    private bool isFlipped = false;  // collider starts facing right (false is right, true is left)
 
     //public float Health;
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth((int)maxHealth);
-        
+
+        flashEffect = GetComponent<SimpleFlash>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void FixedUpdate() {
+        // if player is left of enemy
+        if(player.position.x < transform.position.x) {
+            if(isFlipped != true) { swordHitbox.RotateCollider(); }
+            isFlipped = true;
+            spriteRenderer.flipX = false;
+        } 
+        // if player is right of enemy
+        else if (player.position.x > transform.position.x) {
+            if(isFlipped != false) { swordHitbox.RotateCollider(); }
+            isFlipped = false;
+            spriteRenderer.flipX = true;
+        }
     }
 
     // Gets called forom the attack sword.
@@ -53,7 +71,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     
-        flasheffect.Flash();
+        flashEffect.Flash();
         currentHealth -= damage;
         healthBar.SetHealth((int)currentHealth);
     }

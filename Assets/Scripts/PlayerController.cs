@@ -7,19 +7,25 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public SwordAttack swordHitbox;             // needs to be set to swordattack game object in editor
+    // movement and collision variables
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
+
+    // health related variables
+    public HealthBar healthBar;
+    public float currentHealth = 100f;
+    
     public AudioSource footstepsound; 
 
+    // private variables
     private bool canMove = true;
-
-    Vector2 movementInput;
-    SpriteRenderer spriteRenderer;
-    Rigidbody2D rb;
-    Animator animator;
-    // SwordAttack swordHitbox;
-    List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    private SimpleFlash flashEffect;
+    private Vector2 movementInput;
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
+    private Animator animator;
+    private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     
 
     // Start is called before the first frame update
@@ -28,6 +34,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        flashEffect = GetComponent<SimpleFlash>();
+        healthBar.SetMaxHealth((int)currentHealth);
     }
 
     private void FixedUpdate() {
@@ -90,5 +98,16 @@ public class PlayerController : MonoBehaviour
     // called on left click
     void OnFire() {
         animator.SetTrigger("swordAttack");   
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (currentHealth <= 0) {
+            Destroy(gameObject);
+        }
+    
+        flashEffect.Flash();
+        currentHealth -= damage;
+        healthBar.SetHealth((int)currentHealth);
     }
 }
