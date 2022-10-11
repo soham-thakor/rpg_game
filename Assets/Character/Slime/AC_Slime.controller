@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  attackRange: 3
-  chaseRange: 1
+  attackRange: 0.01
+  chaseRange: 0.5
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
