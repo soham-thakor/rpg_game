@@ -7,11 +7,19 @@ public class SwordAttack : MonoBehaviour
     public float damageDealt;
     public Collider2D swordCollider;
 
-    Vector3 faceRight;
-    Vector3 faceLeft;
+    private Animator animator;
+    private Vector3 faceRight;
+    private Vector3 faceLeft;
 
     private void Start() {
-        swordCollider.enabled = false;
+        if (this.transform.parent.tag == "Enemy") {
+            swordCollider.enabled = true;
+            animator = gameObject.GetComponentInParent(typeof(Animator)) as Animator;
+        }
+        else {
+            swordCollider.enabled = false;
+        }
+        
         faceRight = transform.position;
         faceLeft = new Vector3(transform.position.x * -1, transform.position.y, transform.position.z);
     }
@@ -29,5 +37,19 @@ public class SwordAttack : MonoBehaviour
                 enemy.TakeDamage(damageDealt);               
             }
         }
+
+        if(other.tag == "Player") {
+            PlayerController player = other.GetComponent<PlayerController>();
+
+            if(player != null) {
+                animator.SetTrigger("attack");
+                player.TakeDamage(damageDealt);
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        Debug.Log("Exited Trigger");
     }
 }

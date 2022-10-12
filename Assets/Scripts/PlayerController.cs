@@ -7,21 +7,28 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public SwordAttack swordHitbox;             // needs to be set to swordattack game object in editor
+    // movement and collision variables
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
+
+    // health related variables
+    public HealthBar healthBar;
+    public float currentHealth = 100f;
     public AudioSource footstepsound;
     public AudioSource swordslash;
+    public AudioSource damagetaken1;
+    public AudioSource damagetaken2;
 
+    // private variables
     private bool canMove = true;
-
-    Vector2 movementInput;
-    SpriteRenderer spriteRenderer;
-    Rigidbody2D rb;
-    Animator animator;
-    // SwordAttack swordHitbox;
-    List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-    
+    private SimpleFlash flashEffect;
+    private Vector2 movementInput;
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
+    private Animator animator;
+    private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    public VectorValue startingPosition; 
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +36,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        flashEffect = GetComponent<SimpleFlash>();
+        healthBar.SetMaxHealth((int)currentHealth);
+        transform.position = startingPosition.initialValue;
     }
 
     private void FixedUpdate() {
@@ -52,15 +62,14 @@ public class PlayerController : MonoBehaviour
             }
             
             animator.SetBool("isMoving", success);
-
             // Set direction of sprite to movement direction
             if(movementInput.x < 0) {
-                if (spriteRenderer.flipX != true){ swordHitbox.RotateCollider(); }
-                spriteRenderer.flipX = true;
+                if (spriteRenderer.flipX != false){ swordHitbox.RotateCollider(); }
+                spriteRenderer.flipX = false;
             } 
             else if (movementInput.x > 0) {
-                if (spriteRenderer.flipX == true) { swordHitbox.RotateCollider(); }
-                spriteRenderer.flipX = false;
+                if (spriteRenderer.flipX == false) { swordHitbox.RotateCollider(); }
+                spriteRenderer.flipX = true;
             }
         }
     }
@@ -69,7 +78,7 @@ public class PlayerController : MonoBehaviour
         if(direction == Vector2.zero) {
             return false;
         }
-        footstepsound.Play();
+        // footstepsound.Play();
         // Check for potential collisions
         int count = rb.Cast(
             direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions
@@ -93,5 +102,17 @@ public class PlayerController : MonoBehaviour
     void OnFire() {
         animator.SetTrigger("swordAttack");
         swordslash.Play();
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (currentHealth <= 0) {
+            Destroy(gameObject);
+        }
+    
+        damagetaken2.Play();
+        flashEffect.Flash();
+        currentHealth -= damage;
+        healthBar.SetHealth((int)currentHealth);
     }
 }
