@@ -15,10 +15,10 @@ public class PlayerController : MonoBehaviour
     // health related variables
     public HealthBar healthBar;
     public float currentHealth = 100f;
-    public AudioSource footstepsound;
+    //public AudioSource footstepsound;
     public AudioSource swordslash;
     public AudioSource damagetaken1;
-    public AudioSource damagetaken2;
+    //public AudioSource damagetaken2;
 
     // private variables
     private bool canMove = true;
@@ -109,8 +109,9 @@ public class PlayerController : MonoBehaviour
         if (currentHealth <= 0) {
             Destroy(gameObject);
         }
-    
-        damagetaken2.Play();
+
+        //damagetaken2.Play();
+        damagetaken1.Play();
         flashEffect.Flash();
         currentHealth -= damage;
         healthBar.SetHealth((int)currentHealth);
