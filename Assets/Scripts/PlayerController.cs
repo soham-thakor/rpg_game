@@ -35,10 +35,11 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        transform.position = startingPosition.initialValue;
         spriteRenderer = GetComponent<SpriteRenderer>();
         flashEffect = GetComponent<SimpleFlash>();
         healthBar.SetMaxHealth((int)currentHealth);
-        transform.position = startingPosition.initialValue;
+        
     }
 
     private void FixedUpdate() {
