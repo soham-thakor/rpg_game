@@ -43,17 +43,17 @@ public class enemy_Chase : StateMachineBehaviour
             rb.MovePosition(newPos);
         }
 
-        // if(Vector2.Distance(player.position, rb.position) <= attackRange)
-        // {
-        //     animator.SetTrigger("attack");
-        //     Debug.Log("Triggered attack");
-        // }
+        if(Vector2.Distance(player.position, rb.position) <= attackRange)
+        {
+            animator.SetTrigger("attack");
+            Debug.Log("Triggered attack");
+        }
 
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        
     }
 }
