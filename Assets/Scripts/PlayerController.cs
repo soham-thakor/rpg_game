@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         flashEffect = GetComponent<SimpleFlash>();
-        Debug.Log(flashEffect);
         healthBar.SetMaxHealth((int)currentHealth);
         
     }
