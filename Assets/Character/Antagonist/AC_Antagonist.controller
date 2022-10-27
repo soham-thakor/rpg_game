@@ -14,7 +14,7 @@ AnimatorStateMachine:
     m_Position: {x: 330, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -13665063609177689}
-    m_Position: {x: 340, y: 10, z: 0}
+    m_Position: {x: 320, y: 0, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 9214113515584229005}
@@ -107,6 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
+  attackRange: 0.01
+  chaseRange: 0.5
 --- !u!1102 &8685755986275112154
 AnimatorState:
   serializedVersion: 6
