@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     //public AudioSource footstepsound;
     public AudioSource swordslash;
     public AudioSource damagetaken1;
-    //public AudioSource damagetaken2;
 
     // private variables
     private bool canMove = true;
@@ -28,16 +27,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-    public VectorValue startingPosition; 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        transform.position = startingPosition.initialValue;
         spriteRenderer = GetComponent<SpriteRenderer>();
         flashEffect = GetComponent<SimpleFlash>();
+        Debug.Log(flashEffect);
         healthBar.SetMaxHealth((int)currentHealth);
         
     }

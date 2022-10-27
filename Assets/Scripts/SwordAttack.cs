@@ -47,9 +47,4 @@ public class SwordAttack : MonoBehaviour
             }
         }
     }
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        Debug.Log("Exited Trigger");
-    }
 }

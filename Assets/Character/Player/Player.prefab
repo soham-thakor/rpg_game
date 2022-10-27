@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 8454170824699123502}
   - component: {fileID: 3807633216227243796}
   - component: {fileID: 1245068519016021934}
+  - component: {fileID: 3623622513716773179}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -152,12 +153,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 358399731, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
+  m_Sprite: {fileID: 920525235, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.48, y: 0.48}
+  m_Size: {x: 0.16, y: 0.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -222,7 +223,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  footstepsound: {fileID: 0}
+  healthBar: {fileID: 0}
+  currentHealth: 100
+  swordslash: {fileID: 0}
+  damagetaken1: {fileID: 0}
+  startingPosition: {fileID: 0}
 --- !u!61 &8454170824699123502
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -241,7 +246,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.24}
-    newSize: {x: 0.48, y: 0.48}
+    newSize: {x: 0.16, y: 0.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -290,3 +295,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3623622513716773179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283007440131791999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c235e2e61bf02468c4630cdc3326fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 9e234875eda8c474db9372bebee2ea1f, type: 2}
+  duration: 0.03
