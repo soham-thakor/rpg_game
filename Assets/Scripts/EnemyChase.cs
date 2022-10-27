@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy_Chase : StateMachineBehaviour
+public class EnemyChase : StateMachineBehaviour
 {
     public float speed = 1.0f;
     public float attackRange = .01f;
