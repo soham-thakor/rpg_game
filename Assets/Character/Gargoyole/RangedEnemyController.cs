@@ -34,12 +34,13 @@ public class RangedEnemyController : MonoBehaviour
 
          if(Vector2.Distance(transform.position,player.position) <= (attackRange)){
             if(timeBtwnShots <= 0 ){
-                Instantiate(EnemyProjectile, shotPoint.position, shotPoint.transform.rotation);
+                // Create new bullet aimed at player
+                GameObject newBullet = Instantiate(EnemyProjectile, shotPoint.position, shotPoint.transform.rotation);
+                newBullet.GetComponent<Bullet>().bulletClone = true;    // indicates that this bullet must be deleted
                 timeBtwnShots = startTimeBtwnShots;
             }else{
                 timeBtwnShots -= Time.deltaTime;
             }
-
          }
     }
 

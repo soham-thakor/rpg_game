@@ -26738,8 +26738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f828c590537796a49b91a9f3c0f32949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 5
+  bulletSpeed: 1
   lifeTime: 1
+  bulletClone: 0
 --- !u!114 &2088195634 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 232391609022844776, guid: aa24187083cb4464f8cf19752d82341b, type: 3}

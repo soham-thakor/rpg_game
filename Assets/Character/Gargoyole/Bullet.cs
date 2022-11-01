@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public float bulletSpeed;
     public float lifeTime;
-
+    // Do not change this in the inspector
+    public bool bulletClone = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("DestroyProjectile",lifeTime);
+        if(bulletClone){
+            Invoke("DestroyProjectile",lifeTime);
+        } 
     }
 
     // Update is called once per frame
