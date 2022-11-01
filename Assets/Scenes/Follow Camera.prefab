@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 2977266930249518368}
   - component: {fileID: 2977266930249518375}
   - component: {fileID: 2977266930249518374}
-  - component: {fileID: 2977266930249518370}
+  - component: {fileID: 1643750177126503161}
   m_Layer: 0
   m_Name: Follow Camera
   m_TagString: MainCamera
@@ -139,7 +139,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 1.1912842
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
---- !u!114 &2977266930249518370
+--- !u!114 &1643750177126503161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b449b9c009ecf314e90ef6dbeeeb044f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2977266930249518369}
 --- !u!1 &2977266930387483358
 GameObject:
   m_ObjectHideFlags: 0
