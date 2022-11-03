@@ -30,7 +30,7 @@ public class SwordAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         // other collider MUST be set to Enemy
-        if(other.tag == "Enemy") {
+        if(other.tag == "Enemy" && gameObject.tag == "Player") {
             Enemy enemy = other.GetComponent<Enemy>();
             
             if(enemy != null) {  
