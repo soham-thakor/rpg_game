@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RangedEnemyController : MonoBehaviour
 {
-    public float moveSpeed;
-    public Transform player;
+    private Transform player;
     public Transform shotPoint;
     public Transform gun;
 
@@ -17,7 +16,10 @@ public class RangedEnemyController : MonoBehaviour
     public float startTimeBtwnShots;
     public float timeBtwnShots;
     // Start is called before the first frame update
-
+    void Start() 
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     // Update is called once per frame
     void Update()
@@ -42,12 +44,6 @@ public class RangedEnemyController : MonoBehaviour
                 timeBtwnShots -= Time.deltaTime;
             }
          }
-    }
-
-    void FixedUpdate(){
-        if(inRange){
-            transform.position = Vector2.MoveTowards(transform.position,player.position , moveSpeed*Time.deltaTime);
-        }
     }
 
     void OnDrawGizmos(){

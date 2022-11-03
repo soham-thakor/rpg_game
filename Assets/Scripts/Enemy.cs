@@ -30,14 +30,20 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate() {
         // if player is left of enemy
-        if(player.position.x < transform.position.x) {
-            if(isFlipped != true) { swordHitbox.RotateCollider(); }
+        if(player.position.x < transform.position.x)
+        {   
+            if(swordHitbox){
+                if(isFlipped != true) { swordHitbox.RotateCollider(); }
+            }
             isFlipped = true;
             spriteRenderer.flipX = false;
         } 
         // if player is right of enemy
-        else if (player.position.x > transform.position.x) {
-            if(isFlipped != false) { swordHitbox.RotateCollider(); }
+        else if (player.position.x > transform.position.x) 
+        {
+            if(swordHitbox) {
+                if(isFlipped != false) { swordHitbox.RotateCollider(); }
+            }
             isFlipped = false;
             spriteRenderer.flipX = true;
         }
