@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float bulletSpeed;
     public float lifeTime;
+    public float damageDealt;
     // Do not change this in the inspector
     public bool bulletClone = false;
     
@@ -25,5 +26,17 @@ public class Bullet : MonoBehaviour
 
     void DestroyProjectile(){
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.tag == "Player") {
+            PlayerController player = other.GetComponent<PlayerController>();
+
+            if(player != null) {
+                player.TakeDamage(damageDealt);
+            }
+            Destroy(gameObject);
+        }
+        
     }
 }
