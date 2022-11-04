@@ -19,8 +19,13 @@ public class PlayerController : MonoBehaviour
     public AudioSource swordslash;
     public AudioSource damagetaken1;
 
+    // public ability variables
+    public GameObject projectile;
+    
+
     // private variables
     private bool canMove = true;
+    private PlayerInput playerInput; 
     private SimpleFlash flashEffect;
     private Vector2 movementInput;
     private SpriteRenderer spriteRenderer;
@@ -31,6 +36,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -97,9 +103,17 @@ public class PlayerController : MonoBehaviour
     }
 
     // called on left click
-    void OnFire() {
+    void OnSlash() {
         animator.SetTrigger("swordAttack");
         swordslash.Play();
+    }
+
+    // called on 1
+    void OnBite() {
+        // Create new bullet aimed at player
+        GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
+        newBullet.SetActive(true);
+        newBullet.GetComponent<Bullet>().bulletClone = true;    // indicates that this bullet must be deleted
     }
 
     public void TakeDamage(float damage)

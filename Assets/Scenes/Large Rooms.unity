@@ -2066,6 +2066,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 98859758125486669, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3283007440131791997, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2126,14 +2130,6 @@ PrefabInstance:
       propertyPath: damagetaken1
       value: 
       objectReference: {fileID: 668491233}
-    - target: {fileID: 4396909729723977686, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: currentHealth
-      value: 5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4396909729723977686, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: startingPosition
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
 --- !u!1 &707769863
@@ -3573,6 +3569,27 @@ Transform:
   m_Father: {fileID: 707769864}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1056896462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 98859758125486669, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+  m_PrefabInstance: {fileID: 674384540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1056896466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056896462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f828c590537796a49b91a9f3c0f32949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 3
+  lifeTime: 100
+  damageDealt: 5000
+  bulletClone: 0
 --- !u!1001 &1089652891
 PrefabInstance:
   m_ObjectHideFlags: 0

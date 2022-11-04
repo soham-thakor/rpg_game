@@ -24,9 +24,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Fire",
+                    "name": "Slash",
                     "type": "Button",
                     "id": "6b9a8191-eb94-471f-978b-ea0187dab0a6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Bite",
+                    "type": "Button",
+                    "id": "45d00571-b8b4-453a-bace-7cc30a584c8f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -206,7 +215,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Fire",
+                    "action": "Slash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -217,7 +226,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Fire",
+                    "action": "Slash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -228,7 +237,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Touch",
-                    "action": "Fire",
+                    "action": "Slash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -239,7 +248,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Fire",
+                    "action": "Slash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -250,7 +259,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Fire",
+                    "action": "Slash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "92bce9ba-762f-4a0f-a024-fad9974f40fe",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Bite",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

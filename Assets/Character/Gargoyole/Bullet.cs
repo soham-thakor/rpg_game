@@ -7,12 +7,15 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed;
     public float lifeTime;
     public float damageDealt;
+    private Animator animator;
     // Do not change this in the inspector
     public bool bulletClone = false;
     
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
+
         if(bulletClone){
             Invoke("DestroyProjectile",lifeTime);
         } 
@@ -31,6 +34,11 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player") {
             PlayerController player = other.GetComponent<PlayerController>();
+
+            // if current bullet is a fire bite
+            if(gameObject.name == "Bite") {
+                animator.SetTrigger("CloseMouth");
+            }
 
             if(player != null) {
                 player.TakeDamage(damageDealt);
