@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
         animator = GetComponent<Animator>();
 
         if(bulletClone){
+            animator.SetTrigger("OpenMouth");
             Invoke("DestroyProjectile",lifeTime);
         } 
     }
