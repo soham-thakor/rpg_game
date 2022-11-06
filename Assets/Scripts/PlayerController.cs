@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     // public ability variables
     public GameObject projectile;
+    public GameObject mine;
     
 
     // private variables
@@ -118,6 +119,16 @@ public class PlayerController : MonoBehaviour
         bulletScript.setBulletClone(true);    // indicates that this bullet must be deleted
         bulletScript.setOrigin("Player");   // where bullet came from
         newBullet.SetActive(true);  // activate game object
+    }
+
+    // called on pressing keyboard button 2
+    void OnDropMine() {
+        // Create new water mine
+        GameObject newMine = Instantiate(mine, transform.position, transform.rotation);
+        Mine mineScript = newMine.GetComponent<Mine>();
+
+        mineScript.setOrigin("Player");
+        newMine.SetActive(true);
     }
 
     public void TakeDamage(float damage)
