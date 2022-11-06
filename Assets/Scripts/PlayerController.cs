@@ -108,12 +108,16 @@ public class PlayerController : MonoBehaviour
         swordslash.Play();
     }
 
-    // called on 1
+    // called on pressing keyboard button 1
     void OnBite() {
-        // Create new bullet aimed at player
+        // Create new bullet
         GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
-        newBullet.SetActive(true);
-        newBullet.GetComponent<Bullet>().bulletClone = true;    // indicates that this bullet must be deleted
+        Bullet bulletScript = newBullet.GetComponent<Bullet>();
+
+        bulletScript.setFlipX(spriteRenderer.flipX);
+        bulletScript.setBulletClone(true);    // indicates that this bullet must be deleted
+        bulletScript.setOrigin("Player");   // where bullet came from
+        newBullet.SetActive(true);  // activate game object
     }
 
     public void TakeDamage(float damage)
@@ -122,7 +126,6 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //damagetaken2.Play();
         damagetaken1.Play();
         flashEffect.Flash();
         currentHealth -= damage;
