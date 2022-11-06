@@ -15,11 +15,13 @@ public class Bullet : MonoBehaviour
     private string origin = "";
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private bool isMoving = true;
 
     // setters
     public void setBulletClone(bool b) { bulletClone = b;}
     public void setFlipX(bool b) { flipX = b; }
     public void setOrigin(string s) {origin = s; }
+    
     
     // Start is called before the first frame update
     void Start()
@@ -36,7 +38,7 @@ public class Bullet : MonoBehaviour
     void FixedUpdate()
     {   
         // if player shoots projectile
-        if(origin == "Player") {
+        if(origin == "Player" && isMoving) {
             
             if(flipX) {
                 spriteRenderer.flipX = false;
@@ -54,16 +56,27 @@ public class Bullet : MonoBehaviour
     }
 
     void DestroyProjectile(){
-        Destroy(gameObject);
+
+        if(gameObject.name == "Bite(Clone)") {
+            animator.SetTrigger("CloseMouth");
+            Destroy(gameObject, .8f);
+        }
+        else {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         // if player shoots enemy
         if(other.tag == "Enemy") {
+            Enemy enemy = other.GetComponent<Enemy>();
+
             // if current bullet is a fire bite
-            if(gameObject.name == "Bite") {
-                Debug.Log("Bite Collided");
+            if(gameObject.name == "Bite(Clone)") {
+                enemy.TakeDamage(damageDealt);
+                isMoving = false;
                 animator.SetTrigger("CloseMouth");
+                Destroy(gameObject, .8f);
             }
         }
 
@@ -77,4 +90,6 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
 }

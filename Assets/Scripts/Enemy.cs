@@ -74,7 +74,6 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        //print("taken damage");  
         if (currentHealth <= 0) {
             deathSound.Play();
             Destroy(gameObject);
