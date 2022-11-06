@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5694900740150349117}
   - component: {fileID: 1056896464}
   - component: {fileID: 1056896466}
+  - component: {fileID: 857811982}
   m_Layer: 0
   m_Name: Bite
   m_TagString: Untagged
@@ -95,7 +96,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1842212813, guid: e5cba4d0a767b5d44b3946676b862cc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +104,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1056896466
@@ -118,10 +119,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f828c590537796a49b91a9f3c0f32949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 3
-  lifeTime: 100
-  damageDealt: 5000
-  bulletClone: 0
+  bulletSpeed: 1
+  lifeTime: 1
+  damageDealt: 100
+--- !u!61 &857811982
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98859758125486669}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.033805527, y: -0.033161342}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.17754035, y: 0.13014877}
+  m_EdgeRadius: 0
 --- !u!1 &798015939441882258
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,8 +537,8 @@ MonoBehaviour:
     maxNormalAngle: 0
   healthBar: {fileID: 0}
   currentHealth: 50000
-  swordslash: {fileID: 6155820412643640950}
-  damagetaken1: {fileID: 3697422110017840495}
+  swordslash: {fileID: 0}
+  damagetaken1: {fileID: 0}
   projectile: {fileID: 98859758125486669}
 --- !u!61 &8454170824699123502
 BoxCollider2D:
