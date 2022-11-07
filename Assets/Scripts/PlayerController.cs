@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
         if(direction == Vector2.zero) {
             return false;
         }
-        // footstepsound.Play();
+
         // Check for potential collisions
         int count = rb.Cast(
             direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions
@@ -137,7 +137,6 @@ public class PlayerController : MonoBehaviour
     void OnWind() {
         WindSpeed windScript = wind.GetComponent<WindSpeed>();
 
-        windScript.setOrigin("Player");
         wind.SetActive(true);
     }
 

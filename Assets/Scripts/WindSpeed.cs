@@ -8,17 +8,13 @@ public class WindSpeed : MonoBehaviour
     public float grantedSpeed;
 
     // private vars
-    private string origin = "";
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private float origSpeed;
     private PlayerController player;
-
-    // setters
-    public void setOrigin(string s) {origin = s; }
     
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
