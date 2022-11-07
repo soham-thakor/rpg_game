@@ -134,13 +134,12 @@ public class PlayerController : MonoBehaviour
     }
 
     // called on pressing keyboard button 3
-    // void onWind() {
-    //     GameObject newWind = instantiate(wind, transform.position, transform.rotation);
-    //     WindSpeed windScript = newWind.GetComponent<WindSpeed>();
+    void OnWind() {
+        WindSpeed windScript = wind.GetComponent<WindSpeed>();
 
-    //     windScript.setOrigin("Player");
-    //     newWind.SetActive(true);
-    // }
+        windScript.setOrigin("Player");
+        wind.SetActive(true);
+    }
 
     public void TakeDamage(float damage)
     {

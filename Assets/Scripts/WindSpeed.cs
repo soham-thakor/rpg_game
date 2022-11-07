@@ -12,6 +12,7 @@ public class WindSpeed : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private float origSpeed;
+    private PlayerController player;
 
     // setters
     public void setOrigin(string s) {origin = s; }
@@ -21,20 +22,20 @@ public class WindSpeed : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        player = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<PlayerController>();
 
-        // checks if this object is a duplicate
-        // if(gameObject.name.Contains("Clone")) {
-        //     Invoke("DestroySelf");
-        // }
+        // modify speed
+        origSpeed = player.moveSpeed;
+        player.moveSpeed = player.moveSpeed + grantedSpeed;
+
+        Invoke("DisableWind", lifeTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        
-        if(other.tag == "Player") {
-            PlayerController player = other.GetComponent<PlayerController>();
-
-            origSpeed = player.moveSpeed;
-            player.moveSpeed = player.moveSpeed + grantedSpeed;
+    private void DisableWind() {
+        if(player) {
+            // set player speed back to original speed
+            player.moveSpeed = origSpeed;
         }
+        gameObject.SetActive(false);
     }
 }
