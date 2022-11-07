@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  target: {fileID: 2111344516}
+  target: {fileID: 0}
 --- !u!114 &487369073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4244,6 +4244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 200
   visionDistance: 1000
+  enemy: {fileID: 487369065}
 --- !u!1 &1259359666
 GameObject:
   m_ObjectHideFlags: 0

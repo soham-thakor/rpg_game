@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Pathfinding; // this is required to use IAstarAI class
 
 // DOCUMENTATION
 // https://docs.unity3d.com/Manual/layers-and-layermasks.html
@@ -13,6 +13,17 @@ public class LineOfSight : MonoBehaviour
 
     public float rotationSpeed;
     public float visionDistance;
+    public GameObject enemy;
+
+    private Transform player;
+    private IAstarAI enemyChase;
+
+
+    void Start() 
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        enemyChase = enemy.GetComponent<IAstarAI>();
+    }
     
     // Update is called once per frame
     void Update()
@@ -27,11 +38,11 @@ public class LineOfSight : MonoBehaviour
         {
             
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
-            Debug.Log(hitInfo.collider);
-            Debug.Log(hitInfo.collider.tag);
             if(hitInfo.collider.tag == "Player")
             {
                 Debug.Log("Enemy sees player");
+                // chase player
+                enemyChase.destination = player.position;
             }
         }
         else {
