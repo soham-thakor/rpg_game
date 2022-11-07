@@ -128,7 +128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054056195137738975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.5214396, y: -2.8915744, z: 0.009979725}
+  m_LocalPosition: {x: -5.5214396, y: -0.75, z: 0.009979725}
   m_LocalScale: {x: 0.96796054, y: 0.9526531, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -162,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2931778459199537424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 544.6161, y: 348.8588, z: -14.663563}
+  m_LocalPosition: {x: 5.75, y: 0.92, z: -0.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 5940368533430915155}
   - component: {fileID: 3224075120322683278}
   - component: {fileID: 3151946911013386427}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Antagonist
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 8554443851382517029}
   - component: {fileID: 6143409528737712107}
   - component: {fileID: 232391609022844776}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemySwordHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4930580856189411577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5004009, y: -1.8676354, z: -0.1111474}
+  m_LocalPosition: {x: 5.75, y: 0.92, z: -0.1111474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

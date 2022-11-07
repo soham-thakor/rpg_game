@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2028284937540347138}
   - component: {fileID: 2028284937540347139}
   - component: {fileID: 2028284937540347140}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SceneTransition
   m_TagString: Respawn
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d046869eb26e34b9aa0c8eda511548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Large Rooms
-  playerPosition: {x: 0, y: 0}
+  sceneToLoad: Throne Room v2
+  playerPosition: {x: -0.6446802, y: -4.702177}
   playerStorage: {fileID: 11400000, guid: 3b5d3a0d220d98549a9c1e34dd0f7a08, type: 2}
 --- !u!61 &2028284937540347140
 BoxCollider2D:
