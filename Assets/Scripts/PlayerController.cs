@@ -17,10 +17,6 @@ public class PlayerController : MonoBehaviour
     public HealthBar healthBar;
     public float currentHealth = 100f;
 
-    // public audio sources
-    public AudioSource swordslash;
-    public AudioSource damagetaken1;
-
     // public ability variables
     public GameObject projectile;
     public GameObject mine;
@@ -108,7 +104,7 @@ public class PlayerController : MonoBehaviour
     // called on left click
     void OnSlash() {
         animator.SetTrigger("swordAttack");
-        swordslash.Play();
+        SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
     }
 
     // called on pressing keyboard button 1
@@ -146,7 +142,7 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        damagetaken1.Play();
+        SoundManager.PlaySound(SoundManager.Sound.PlayerDamaged);
         flashEffect.Flash();
         currentHealth -= damage;
         healthBar.SetHealth((int)currentHealth);
