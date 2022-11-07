@@ -6,7 +6,7 @@ public class EnemyChase : StateMachineBehaviour
 {
     public float speed = 1.0f;
     public float attackRange = .01f;
-    public float chaseRange = .5f;
+    public float chaseRange = 2f;
 
     private bool near = false;
     private float offset;
@@ -30,6 +30,7 @@ public class EnemyChase : StateMachineBehaviour
         {
             near = true;
         }
+
         // calculate offset of player position (so enemy doesnt stand inside of player)
         if (player.position.x > 0) { offset = 0.2f; }
         else { offset = -0.2f; }
@@ -41,11 +42,6 @@ public class EnemyChase : StateMachineBehaviour
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
 
             rb.MovePosition(newPos);
-        }
-
-        if(Vector2.Distance(player.position, rb.position) <= attackRange)
-        {
-            animator.SetTrigger("attack");
         }
 
     }
