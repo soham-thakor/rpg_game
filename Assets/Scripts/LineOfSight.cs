@@ -2,25 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// DOCUMENTATION
+// https://docs.unity3d.com/Manual/layers-and-layermasks.html
+// https://docs.unity3d.com/ScriptReference/Physics.Raycast.html
+// https://www.youtube.com/watch?v=dmQyfWxUNPw
+
 public class LineOfSight : MonoBehaviour
 {
 
     public float rotationSpeed;
     public float visionDistance;
     
-    // Start is called before the first frame update
-    // void Start()
-    // {
-        
-    // }
-
     // Update is called once per frame
     void Update()
     {
         // rotate looking for player
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, visionDistance, 5);
+        // will only hit objects on the obstacle layer
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, visionDistance, 8);
         
         if(hitInfo.collider != null) 
         {
