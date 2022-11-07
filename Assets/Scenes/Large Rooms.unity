@@ -1855,6 +1855,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1932433595, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932433595, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3283007440131791997, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1903,10 +1911,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4396909729723977686, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 1101942967}
     - target: {fileID: 4396909729723977686, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: swordslash
       value: 
@@ -20909,6 +20913,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Follow Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 2977266930387483353, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
+      propertyPath: m_Value
+      value: 49.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977266930387483353, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
+      propertyPath: m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977266930387483353, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977266930387483353, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2977266930387483358, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
       propertyPath: m_Name
       value: Player Healthbar
@@ -20917,13 +20937,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2977266931411562113, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 2977266931378466440, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2977266931411562113, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.496
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977266931411562113, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
