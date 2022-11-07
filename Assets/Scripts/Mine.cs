@@ -20,6 +20,16 @@ public class Mine : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // checks if current object is a clone
+        if(gameObject.name.Contains("Clone")) {
+            Invoke("DestroyMine",lifeTime);   // deletes self whenever lifetime is reached
+        } 
+    }
+
+    void DestroyMine() {
+        animator.SetTrigger("Explode");
+        Destroy(gameObject, 1f);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -33,7 +43,7 @@ public class Mine : MonoBehaviour
             {
                 enemy.TakeDamage(damageDealt);
                 animator.SetTrigger("Explode");
-                Destroy(gameObject, .8f);
+                Destroy(gameObject, 1f);
             }
         }
 

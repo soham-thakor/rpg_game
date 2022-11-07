@@ -29,8 +29,9 @@ public class Bullet : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        if(bulletClone) {
-            Invoke("DestroyProjectile",lifeTime);
+        // checks if current object is a clone
+        if(gameObject.name.Contains("Clone")) {
+            Invoke("DestroyProjectile",lifeTime);   // deletes self whenever lifetime is reached
         } 
     }
 

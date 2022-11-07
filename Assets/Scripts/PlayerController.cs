@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public SwordAttack swordHitbox;             // needs to be set to swordattack game object in editor
+
     // movement and collision variables
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
@@ -15,15 +16,16 @@ public class PlayerController : MonoBehaviour
     // health related variables
     public HealthBar healthBar;
     public float currentHealth = 100f;
-    //public AudioSource footstepsound;
+
+    // public audio sources
     public AudioSource swordslash;
     public AudioSource damagetaken1;
 
     // public ability variables
     public GameObject projectile;
     public GameObject mine;
+    public GameObject wind;
     
-
     // private variables
     private bool canMove = true;
     private PlayerInput playerInput; 
@@ -130,6 +132,15 @@ public class PlayerController : MonoBehaviour
         mineScript.setOrigin("Player");
         newMine.SetActive(true);
     }
+
+    // called on pressing keyboard button 3
+    // void onWind() {
+    //     GameObject newWind = instantiate(wind, transform.position, transform.rotation);
+    //     WindSpeed windScript = newWind.GetComponent<WindSpeed>();
+
+    //     windScript.setOrigin("Player");
+    //     newWind.SetActive(true);
+    // }
 
     public void TakeDamage(float damage)
     {
