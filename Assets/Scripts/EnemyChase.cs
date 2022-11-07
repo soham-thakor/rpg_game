@@ -34,7 +34,7 @@ public class EnemyChase : StateMachineBehaviour
         if (player.position.x > 0) { offset = 0.2f; }
         else { offset = -0.2f; }
 
-        if (near)
+        if (near && !enemy.getKnockedOut())
         {
             Vector2 target = new Vector2(player.position.x + offset, player.position.y);
 
@@ -46,7 +46,6 @@ public class EnemyChase : StateMachineBehaviour
         if(Vector2.Distance(player.position, rb.position) <= attackRange)
         {
             animator.SetTrigger("attack");
-            Debug.Log("Triggered attack");
         }
 
     }

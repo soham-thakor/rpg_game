@@ -16,6 +16,11 @@ public class Enemy : MonoBehaviour
     private SimpleFlash flashEffect;
     private Transform player;
     private bool isFlipped = false;  // collider starts facing right (false is right, true is left)
+    private Rigidbody2D rb;
+    private bool knockedOut = false;     // if set to true, will stop movement
+
+    // getters
+    public bool getKnockedOut() { return knockedOut; }
 
     //public float Health;
     void Start()
@@ -26,6 +31,7 @@ public class Enemy : MonoBehaviour
         flashEffect = GetComponent<SimpleFlash>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate() {
@@ -84,5 +90,4 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth((int)currentHealth);
     }
-
 }

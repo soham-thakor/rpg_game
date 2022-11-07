@@ -59,7 +59,7 @@ public class Bullet : MonoBehaviour
 
         if(gameObject.name == "Bite(Clone)") {
             animator.SetTrigger("CloseMouth");
-            Destroy(gameObject, .7f);
+            Destroy(gameObject, .5f);
         }
         else {
             Destroy(gameObject);
