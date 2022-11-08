@@ -13,6 +13,7 @@ public class LineOfSight : MonoBehaviour
 
     public float rotationSpeed;
     public float visionDistance;
+    public bool canMove;
     public GameObject enemy;
 
     private Transform player;
@@ -40,7 +41,6 @@ public class LineOfSight : MonoBehaviour
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
             if(hitInfo.collider.tag == "Player")
             {
-                Debug.Log("Enemy sees player");
                 // chase player
                 enemyChase.destination = player.position;
             }

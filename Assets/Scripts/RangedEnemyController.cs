@@ -49,7 +49,7 @@ public class RangedEnemyController : MonoBehaviour
             else {
                 timeBtwnShots -= Time.deltaTime;
             }
-         }
+        }
     }
 
     void OnDrawGizmos(){
