@@ -8,36 +8,25 @@ public class BasicNPC : MonoBehaviour
     public GameObject dialogBox;
     public Text dialogText;
     public string dialog;
-    public bool playerInRange;
-    private int index;
     public Message[] messages;
     public Actor[] actors;
-    int activemsg = 0;
-    public static bool isActive = false;
+
+    private bool playerInRange;
+    private int index;
+    private int activemsg = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         dialogBox.SetActive(false);
     }
 
-    // Update is called once per frame
-    // void Update()
-    // {
-
-    //     if(Input.GetKey(KeyCode.F) && playerInRange){
-    //         if(dialogBox.activeInHierarchy){
-    //             dialogBox.SetActive(false);
-    //         }else{
-    //             dialogBox.SetActive(true);
-    //             dialogText.text = dialog;
-    //         }
-    //     }
-    // }
-
     void Update(){
 
-        if(Input.GetKeyDown(KeyCode.F) && playerInRange){
-            
+        if(Input.GetKeyDown(KeyCode.F) && playerInRange)
+        {
+            SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+
             if(dialogBox.activeInHierarchy){
                 dialogBox.SetActive(false);
             }else{
@@ -59,7 +48,6 @@ public class BasicNPC : MonoBehaviour
             dialogBox.SetActive(true);
             dialogText.text = msgToDisplay.message;
         }else{
-            isActive = false;
             dialogBox.SetActive(false);
         }
     }
@@ -85,6 +73,7 @@ public class BasicNPC : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("Player")){
             playerInRange = false;
+            dialogBox.SetActive(false);
         }
     }
 }
