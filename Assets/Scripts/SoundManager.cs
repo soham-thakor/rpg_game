@@ -49,7 +49,7 @@ public class SoundManager : MonoBehaviour
             GameObject soundObj = new GameObject("Sound");
             AudioSource audioSrc = soundObj.AddComponent<AudioSource>();
             audioSrc.PlayOneShot(GetAudioClip(sound));
-            //DestroySound(soundObj);
+            Destroy(soundObj, 5f);
         }
     }
 
