@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     private bool isFlipped = false;  // collider starts facing right (false is right, true is left)
     private Rigidbody2D rb;
     private bool knockedOut = false;     // if set to true, will stop movement
+    private string enemyType;
 
     // getters
     public bool getKnockedOut() { return knockedOut; }
@@ -36,6 +37,14 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        if(gameObject.name.Contains("Antagonist") || gameObject.name.Contains("Gargoyle"))
+        {
+            enemyType = "Knight";
+        } else if(gameObject.name.Contains("GOBLIN")) {
+            enemyType = "Goblin";
+        } else {
+            enemyType = "Unknown";
+        }
     }
 
     private void FixedUpdate() {
@@ -85,7 +94,25 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         if (currentHealth <= 0) {
-            SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
+            /*switch(enemyType)
+            {
+                case "Knight":
+                    SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
+                case "Goblin":
+                    SoundManager.PlaySound(SoundManager.Sound.GoblinDeath);
+                default:
+                    SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
+                    break;
+            }*/
+            if(enemyType == "Knight")
+            {
+                SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
+            } else if(enemyType == "Goblin") {
+                SoundManager.PlaySound(SoundManager.Sound.GoblinDeath);
+            } else {
+                SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
+            }
+            
             Destroy(gameObject);
         }
 
