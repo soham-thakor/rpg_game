@@ -18,7 +18,8 @@ public class SoundManager : MonoBehaviour
         SpeedUpBoost,
         FireBite,
         NormalChestOpen,
-        BossChestOpen
+        BossChestOpen,
+        GoblinDeath
     }
 
     private static Dictionary<Sound, float> soundTimers;
@@ -77,11 +78,6 @@ public class SoundManager : MonoBehaviour
                 }*/
         }
     }
-
-    /*public static void DestroySound(GameObject soundObject)
-    {
-        if (soundObject.name == "Sound") Destroy(soundObject);
-    }*/
 
     private static AudioClip GetAudioClip(Sound sound)
     {
