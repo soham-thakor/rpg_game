@@ -19,6 +19,7 @@ public class SoundManager : MonoBehaviour
         FireBite,
         NormalChestOpen,
         BossChestOpen,
+        GoblinDamaged,
         GoblinDeath
     }
 
