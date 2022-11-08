@@ -15,12 +15,67 @@ public class SoundManager : MonoBehaviour
         DialogueSound
     }
 
+    private static Dictionary<Sound, float> soundTimers;
+
+    public static void Initialize()
+    {
+        soundTimers = new Dictionary<Sound, float>();
+        soundTimers[Sound.PlayerFootstep] = 0;
+    }
+
+    // PlaySound function for 3D sounds
+    /*public static void PlaySound(Sound sound, Vector3 position)
+    {
+        if (CanPlaySound(sound))
+        {
+            GameObject soundObj = new GameObject("Sound");
+            soundObj.transform.position = position;
+            AudioSource audioSrc = soundObj.AddComponent<AudioSource>();
+            audioSrc.clip = GetAudioClip(sound);
+            audioSrc.Play();
+        }
+    }*/
+
     public static void PlaySound(Sound sound)
     {
-        GameObject soundObj = new GameObject("Sound");
-        AudioSource audioSrc = soundObj.AddComponent<AudioSource>();
-        audioSrc.PlayOneShot(GetAudioClip(sound));
+        if (CanPlaySound(sound))
+        {
+            GameObject soundObj = new GameObject("Sound");
+            AudioSource audioSrc = soundObj.AddComponent<AudioSource>();
+            audioSrc.PlayOneShot(GetAudioClip(sound));
+            //DestroySound(soundObj);
+        }
     }
+
+    private static bool CanPlaySound(Sound sound)
+    {
+        switch(sound)
+        {
+            default:
+                return true;
+            // to prevent footsteps from constantly overlapping (error currently)
+            case Sound.PlayerFootstep:
+                /*if (soundTimers.ContainsKey(sound))
+                {
+                    float lastTimePlayed = soundTimers[sound];
+                    float playerMoveTimerMax = .05f;
+                    if (lastTimePlayed + playerMoveTimerMax < Time.time)
+                    {
+                        soundTimers[sound] = Time.time;
+                        return true;
+                    } else {*/
+                        return false;
+                    /*}
+                } else {
+                    return true;
+                }*/
+        }
+    }
+
+    /*public static void DestroySound(GameObject soundObject)
+    {
+        if (soundObject.name == "Sound") Destroy(soundObject);
+    }*/
 
     private static AudioClip GetAudioClip(Sound sound)
     {

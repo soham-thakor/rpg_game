@@ -20,6 +20,12 @@ public class Enemy : MonoBehaviour
     // getters
     public bool getKnockedOut() { return knockedOut; }
 
+    // To be used for sound manager 3D sound
+    /*public Vector3 GetPosition()
+    {
+        return transform.position;
+    }*/
+
     //public float Health;
     void Start()
     {

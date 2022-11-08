@@ -44,6 +44,12 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    // To be used for sound manager 3D sound
+    /*public Vector3 GetPosition()
+    {
+        return transform.position;
+    }*/
+
     private void FixedUpdate() {
         if(canMove) {
             // If movement input is not 0, try to move
@@ -99,6 +105,7 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputValue movementValue) {
         movementInput = movementValue.Get<Vector2>();
+        SoundManager.PlaySound(SoundManager.Sound.PlayerFootstep);
     }
 
     // called on left click
