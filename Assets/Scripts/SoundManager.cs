@@ -12,7 +12,13 @@ public class SoundManager : MonoBehaviour
         PlayerDeath,
         KnightDamaged,
         KnightDeath,
-        DialogueSound
+        DialogueSound,
+        PlaceWaterBomb,
+        WaterBombExplode,
+        SpeedUpBoost,
+        FireSpell,
+        NormalChestOpen,
+        BossChestOpen
     }
 
     private static Dictionary<Sound, float> soundTimers;

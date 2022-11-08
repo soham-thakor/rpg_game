@@ -124,6 +124,7 @@ public class PlayerController : MonoBehaviour
         bulletScript.setBulletClone(true);    // indicates that this bullet must be deleted
         bulletScript.setOrigin("Player");   // where bullet came from
         newBullet.SetActive(true);  // activate game object
+        //SoundManager.PlaySound(SoundManager.Sound.FireSpell);
     }
 
     // called on pressing keyboard button 2
@@ -134,6 +135,7 @@ public class PlayerController : MonoBehaviour
 
         mineScript.setOrigin("Player");
         newMine.SetActive(true);
+        SoundManager.PlaySound(SoundManager.Sound.PlaceWaterBomb);
     }
 
     // called on pressing keyboard button 3
@@ -141,6 +143,7 @@ public class PlayerController : MonoBehaviour
         WindSpeed windScript = wind.GetComponent<WindSpeed>();
 
         wind.SetActive(true);
+        //SoundManager.PlaySound(SoundManager.Sound.SpeedUpBoost);
     }
 
     public void TakeDamage(float damage)
