@@ -90,6 +90,12 @@ public class Bullet : MonoBehaviour
             }
             Destroy(gameObject);
         }
+
+        Debug.Log(other.tag);
+        // if bullet hits wall
+        if(other.tag == "Obstacle") {
+            Destroy(gameObject);
+        }
     }
 
 

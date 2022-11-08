@@ -1151,11 +1151,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
   m_PrefabInstance: {fileID: 1089652891}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &192577504 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
-  m_PrefabInstance: {fileID: 5055019471925388203}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &199885126
 GameObject:
   m_ObjectHideFlags: 0
@@ -4636,14 +4631,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.0331
-      objectReference: {fileID: 0}
-    - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.0497
-      objectReference: {fileID: 0}
-    - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.561719
       objectReference: {fileID: 0}
@@ -5686,7 +5673,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5731,6 +5718,10 @@ PrefabInstance:
     - target: {fileID: 3151946911013386404, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_Name
       value: Antagonist (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151946911013386404, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: deathSound
@@ -15370,9 +15361,9 @@ GameObject:
   - component: {fileID: 1386350479}
   - component: {fileID: 1386350478}
   - component: {fileID: 1386350477}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CollisionObjects
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22833,6 +22824,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antagonist (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3151946911013386404, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: deathSound
       value: 
@@ -28996,6 +28991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antagonist (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3151946911013386404, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: deathSound
       value: 
@@ -29041,7 +29040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444079326137328146, guid: 5b47d3352dede4b4ab8d21abbb3f40ea, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 444079326137328146, guid: 5b47d3352dede4b4ab8d21abbb3f40ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29110,7 +29109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444079326137328146, guid: 5b47d3352dede4b4ab8d21abbb3f40ea, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 444079326137328146, guid: 5b47d3352dede4b4ab8d21abbb3f40ea, type: 3}
       propertyPath: m_LocalPosition.x
