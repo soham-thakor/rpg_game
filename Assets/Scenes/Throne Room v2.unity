@@ -25099,3 +25099,80 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &8813717278836054447
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4006666277231790730, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: actors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006666277231790730, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: messages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006666277231790730, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: actors.Array.data[0].name
+      value: Earl
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006666277231790730, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: messages.Array.data[0].message
+      value: I'm eagar to see this all come to an end...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054764228389582199, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_Text
+      value: Earl
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.646
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.042
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920736846887036172, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+      propertyPath: m_Name
+      value: NPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
