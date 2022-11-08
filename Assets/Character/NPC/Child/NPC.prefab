@@ -10,10 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3876921638745691612}
   - component: {fileID: 3876921638745691613}
-  - component: {fileID: 3876921638745691618}
-  - component: {fileID: 3876921638745691619}
-  - component: {fileID: 3876921638745691616}
-  - component: {fileID: 3876921638745691617}
+  - component: {fileID: 1900912200630466662}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Dbox
@@ -88,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3876921638745691618
+--- !u!61 &1900912200630466662
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.018726707, y: 0.10705875}
+  m_Offset: {x: 0, y: -0.09}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -112,62 +109,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6579816, y: 0.5829022}
+  m_Size: {x: 0.48, y: 0.48}
   m_EdgeRadius: 0
---- !u!114 &3876921638745691619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3876921638745691622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21171f431de9e9349ac08e40df4b1e89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  messages:
-  - actorID: 0
-    message: Welcome to the beginning of your journey!
-  - actorID: 0
-    message: Here we will test your skills and see if you have what it takes to save
-      the castle!
-  - actorID: 1
-    message: Don't worry, I am a legend where I'm from.
-  - actorID: 0
-    message: Woah! Aright there cowboy, easy now...
-  actors:
-  - name: Guy
-    sprite: {fileID: 0}
-  - name: Player
-    sprite: {fileID: -1506777351, guid: 173f591696d866047974ee18be6e3c4d, type: 3}
---- !u!114 &3876921638745691616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3876921638745691622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20cfe642dec7d60479c066e47e08dfea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 3876921638745691619}
-  DialogueBox: {fileID: 3876921638745691622}
---- !u!70 &3876921638745691617
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3876921638745691622}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0056512654, y: -0.1181258}
-  m_Size: {x: 0.19074637, y: 0.3410815}
-  m_Direction: 0

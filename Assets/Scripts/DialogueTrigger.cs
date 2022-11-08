@@ -11,7 +11,6 @@ public class DialogueTrigger : MonoBehaviour
     {
         FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);
     }
-
 }
 
 [System.Serializable]
@@ -19,7 +18,6 @@ public class Message
 {
     public int actorID;
     public string message;
-
 }
 
 [System.Serializable]

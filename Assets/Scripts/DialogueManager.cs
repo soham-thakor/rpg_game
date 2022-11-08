@@ -74,9 +74,9 @@ public class DialogueManager : MonoBehaviour
     {
         if(Vector2.Distance(player.position, dBox.position) >= closeBox && isActive == true )
         {
-            
+
             DialogueBox.SetActive(false);
-           
+
         }
         
 

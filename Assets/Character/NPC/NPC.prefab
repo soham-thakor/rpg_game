@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 2916700753510722991}
   - component: {fileID: 2916700753510722976}
   - component: {fileID: 2916700753510722990}
-  - component: {fileID: 2916700753510722988}
-  - component: {fileID: 2916700753510722987}
   - component: {fileID: 2916700753510722985}
   m_Layer: 0
   m_Name: NPC
@@ -114,47 +112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6579816, y: 0.5829022}
   m_EdgeRadius: 0
---- !u!114 &2916700753510722988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2916700753510722977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21171f431de9e9349ac08e40df4b1e89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  messages:
-  - actorID: 0
-    message: Welcome to the beginning of your journey!
-  - actorID: 0
-    message: Here we will test your skills and see if you have what it takes to save
-      the castle!
-  - actorID: 1
-    message: Don't worry, I am a legend where I'm from.
-  - actorID: 0
-    message: Woah! Aright there cowboy, easy now...
-  actors:
-  - name: Guy
-    sprite: {fileID: 0}
-  - name: Player
-    sprite: {fileID: -1506777351, guid: 173f591696d866047974ee18be6e3c4d, type: 3}
---- !u!114 &2916700753510722987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2916700753510722977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20cfe642dec7d60479c066e47e08dfea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 2916700753510722988}
-  DialogueBox: {fileID: 6187177750972704953, guid: 97935d753c53c704ab3904e6d1ed7694, type: 3}
 --- !u!70 &2916700753510722985
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
