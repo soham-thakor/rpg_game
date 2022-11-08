@@ -36,15 +36,17 @@ public class BasicNPC : MonoBehaviour
 
     void Update(){
 
-        if(Input.GetKey(KeyCode.F) && playerInRange){
+        if(Input.GetKeyDown(KeyCode.F) && playerInRange){
             
             if(dialogBox.activeInHierarchy){
                 dialogBox.SetActive(false);
             }else{
-                activemsg++;
                 dialogBox.SetActive(true);
                 Message msgToDisplay = messages[activemsg];
                 dialogText.text = msgToDisplay.message;
+                if(activemsg < messages.Length-1){
+                    activemsg++;
+                }
             }
         }
     }

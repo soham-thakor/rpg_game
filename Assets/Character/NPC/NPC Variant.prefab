@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &848506106538904730
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2916700753510722977, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Name
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722985, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1789548
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722985, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.020125767
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722985, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722990, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Size.x
+      value: 3.0910988
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722990, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Size.y
+      value: 3.2409723
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722990, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.115771055
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722990, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3636037
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722990, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.387
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.011
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916700753510722991, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+--- !u!1 &2575016852352573755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2916700753510722977, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+  m_PrefabInstance: {fileID: 848506106538904730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &15782447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2575016852352573755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b820f28abf86104dab5383687475616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBox: {fileID: 4012922417003108597}
+  dialogText: {fileID: 4012922416995720277}
+  dialog: Howdy
+  playerInRange: 0
+  messages:
+  - actorID: 0
+    message: How has your investigation gone?
+  - actorID: 1
+    message: Still gathering evidence, but there is progress...
+  - actorID: 0
+    message: Godspeed then!
+  actors:
+  - name: 'Earl '
+  - name: Player
+--- !u!114 &4012922416995720277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4356876825704206543, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+  m_PrefabInstance: {fileID: 848506106538904730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4012922417003108597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4356876825711629423, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+  m_PrefabInstance: {fileID: 848506106538904730}
+  m_PrefabAsset: {fileID: 0}
