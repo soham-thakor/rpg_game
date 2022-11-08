@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed9cc00735ec704f8ee4d945ab8250c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 200
+  rotationSpeed: 1000
   visionDistance: 100
+  canMove: 0
   enemy: {fileID: 3151946911013386404}
 --- !u!1 &582942176229413276
 GameObject:
@@ -492,8 +493,6 @@ MonoBehaviour:
   currentHealth: 0
   speed: 2.5
   swordHitbox: {fileID: 232391609022844776}
-  damageReceived: {fileID: 0}
-  deathSound: {fileID: 0}
 --- !u!114 &3151946911013386427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,7 +1027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_Color: {r: 0.35150385, g: 0.8113208, b: 0.19517621, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

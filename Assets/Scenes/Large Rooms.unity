@@ -4629,14 +4629,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antagonist (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
-      propertyPath: deathSound
-      value: 
-      objectReference: {fileID: 860620129}
-    - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
-      propertyPath: damageReceived
-      value: 
-      objectReference: {fileID: 982064962}
     - target: {fileID: 5568664322051731575, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4645,10 +4637,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8992021002436299891, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
 --- !u!1 &1092064488
@@ -28978,7 +28966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_LocalPosition.x
