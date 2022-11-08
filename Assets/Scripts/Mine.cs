@@ -28,6 +28,7 @@ public class Mine : MonoBehaviour
     }
 
     void DestroyMine() {
+        SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
         animator.SetTrigger("Explode");
         Destroy(gameObject, 1f);
     }
@@ -42,6 +43,7 @@ public class Mine : MonoBehaviour
             if(gameObject.name == "Water Mine(Clone)") 
             {
                 enemy.TakeDamage(damageDealt);
+                SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
                 animator.SetTrigger("Explode");
                 Destroy(gameObject, 1f);
             }
