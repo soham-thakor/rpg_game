@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour
         PlaceWaterBomb,
         WaterBombExplode,
         SpeedUpBoost,
-        FireSpell,
+        FireBite,
         NormalChestOpen,
         BossChestOpen
     }
