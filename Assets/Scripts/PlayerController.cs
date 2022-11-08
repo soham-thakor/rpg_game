@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    public VectorValue startingPosition;    
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         flashEffect = GetComponent<SimpleFlash>();
         healthBar.SetMaxHealth((int)currentHealth);
+        transform.position = startingPosition.initialValue;
         
     }
 
