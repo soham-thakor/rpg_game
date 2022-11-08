@@ -94,22 +94,14 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         if (currentHealth <= 0) {
-            /*switch(enemyType)
-            {
-                case "Knight":
-                    SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
-                case "Goblin":
-                    SoundManager.PlaySound(SoundManager.Sound.GoblinDeath);
-                default:
-                    SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
-                    break;
-            }*/
             if(enemyType == "Knight")
             {
                 SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
-            } else if(enemyType == "Goblin") {
+            } else if(enemyType == "Goblin") 
+            {
                 SoundManager.PlaySound(SoundManager.Sound.GoblinDeath);
-            } else {
+            } else 
+            {
                 SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
             }
             

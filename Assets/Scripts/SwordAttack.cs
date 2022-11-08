@@ -42,7 +42,10 @@ public class SwordAttack : MonoBehaviour
             PlayerController player = other.GetComponent<PlayerController>();
 
             if(player != null) {
-                animator.SetTrigger("attack");
+                // goblins do not have this animation trigger
+                if(!this.transform.parent.name.Contains("GOBLIN")) {
+                    animator.SetTrigger("attack");
+                }
                 player.TakeDamage(damageDealt);
             }
         }

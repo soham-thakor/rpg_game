@@ -53,6 +53,14 @@ public class Bullet : MonoBehaviour
 
         if(origin == "Enemy") {
             transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
+
+            // destroy object when it hits wall
+            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, 1, 8);
+            if(hitInfo) {
+                if(hitInfo.collider.tag == "Obstacle") {
+                    Destroy(gameObject);
+                }
+            }
         }
     }
 
@@ -90,12 +98,5 @@ public class Bullet : MonoBehaviour
             }
             Destroy(gameObject);
         }
-
-        // if bullet hits wall
-        if(other.tag == "Obstacle") {
-            Destroy(gameObject);
-        }
     }
-
-
 }
