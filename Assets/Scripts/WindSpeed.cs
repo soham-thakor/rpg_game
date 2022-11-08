@@ -19,6 +19,7 @@ public class WindSpeed : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<PlayerController>();
+        SoundManager.PlaySound(SoundManager.Sound.SpeedUpBoost);
 
         // modify speed
         origSpeed = player.moveSpeed;

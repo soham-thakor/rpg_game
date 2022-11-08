@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
         bulletScript.setBulletClone(true);    // indicates that this bullet must be deleted
         bulletScript.setOrigin("Player");   // where bullet came from
         newBullet.SetActive(true);  // activate game object
-        //SoundManager.PlaySound(SoundManager.Sound.FireSpell);
+        SoundManager.PlaySound(SoundManager.Sound.FireSpell);
     }
 
     // called on pressing keyboard button 2
