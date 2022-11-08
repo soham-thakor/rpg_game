@@ -18,12 +18,13 @@ public class LineOfSight : MonoBehaviour
 
     private Transform player;
     private IAstarAI enemyChase;
-
+    private RangedEnemyController rangedEnemy;
 
     void Start() 
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         enemyChase = enemy.GetComponent<IAstarAI>();
+        rangedEnemy = enemy.GetComponent<RangedEnemyController>();
     }
     
     // Update is called once per frame
@@ -37,12 +38,18 @@ public class LineOfSight : MonoBehaviour
         
         if(hitInfo.collider != null) 
         {
-            
+            // debug stuff
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
-            if(hitInfo.collider.tag == "Player")
+
+            // melee enemy targetting
+            if(hitInfo.collider.tag == "Player" && enemyChase != null)
             {
                 // chase player
                 enemyChase.destination = player.position;
+            }
+            // ranged enemy targeting
+            else if(hitInfo.collider.tag == "Player" && rangedEnemy != null) {
+                rangedEnemy.setRange(true);
             }
         }
         else {

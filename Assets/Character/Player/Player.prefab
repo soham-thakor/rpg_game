@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 268904240}
   - component: {fileID: 268904239}
   - component: {fileID: 268904238}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Water Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 504880935}
   - component: {fileID: 504880937}
   - component: {fileID: 504880936}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Slot 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 565841692}
   - component: {fileID: 565841694}
   - component: {fileID: 565841693}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 694771790}
   - component: {fileID: 694771789}
   - component: {fileID: 694771788}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Player Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 700079399}
   - component: {fileID: 700079398}
   - component: {fileID: 700079397}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wind Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0051334687, y: -0.05457782}
+  m_Offset: {x: -0.0060290433, y: -0.07558961}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -532,7 +532,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.21647933, y: 0.17298172}
+  m_Size: {x: 0.036566064, y: 0.015393399}
   m_EdgeRadius: 0
 --- !u!114 &700079397
 MonoBehaviour:
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 908641169}
   - component: {fileID: 908641171}
   - component: {fileID: 908641170}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1113521385}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ability Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -674,7 +674,7 @@ GameObject:
   - component: {fileID: 1188737030}
   - component: {fileID: 1188737032}
   - component: {fileID: 1188737031}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Slot 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 1241075200}
   - component: {fileID: 1241075202}
   - component: {fileID: 1241075201}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Player Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +856,7 @@ GameObject:
   - component: {fileID: 1753159438}
   - component: {fileID: 1753159440}
   - component: {fileID: 1753159439}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +932,7 @@ GameObject:
   - component: {fileID: 1909597279}
   - component: {fileID: 1909597281}
   - component: {fileID: 1909597280}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1008,7 +1008,7 @@ GameObject:
   - component: {fileID: 1926907178}
   - component: {fileID: 1926907180}
   - component: {fileID: 1926907179}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Slot 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1085,7 +1085,7 @@ GameObject:
   - component: {fileID: 1932433595}
   - component: {fileID: 1932433597}
   - component: {fileID: 1932433596}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 1960984972}
   - component: {fileID: 1960984974}
   - component: {fileID: 1960984973}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1238,7 @@ GameObject:
   - component: {fileID: 2104962097}
   - component: {fileID: 2104962096}
   - component: {fileID: 2104962095}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ability bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1340,7 +1340,7 @@ GameObject:
   - component: {fileID: 1056896464}
   - component: {fileID: 1056896466}
   - component: {fileID: 857811982}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1485,7 +1485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8917402030804794297}
   - component: {fileID: 2165594170271561691}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player Damage Taken 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,7 +1612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5397122439131349689}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1648,7 +1648,7 @@ GameObject:
   - component: {fileID: 8979986573265580535}
   - component: {fileID: 7480985058395139634}
   - component: {fileID: 4319249292504339720}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SwordHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1726,7 +1726,7 @@ GameObject:
   - component: {fileID: 3807633216227243796}
   - component: {fileID: 1245068519016021934}
   - component: {fileID: 3623622513716773179}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1883,7 +1883,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00144279, y: -0.10928631}
+  m_Offset: {x: 0.00144279, y: -0.048733413}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1894,7 +1894,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.101989, y: 0.026905775}
+  m_Size: {x: 0.101989, y: 0.13006997}
   m_EdgeRadius: 0
 --- !u!95 &3807633216227243796
 Animator:
@@ -1961,7 +1961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1112757326845535178}
   - component: {fileID: 3697422110017840495}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player Damage Taken 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2088,7 +2088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8357649179422404622}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Abilities
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2124,7 +2124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3982181849631370199}
   - component: {fileID: 6155820412643640950}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SwordSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
