@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     public GameObject mine;
     public GameObject wind;
     
+    public VectorValue startingPosition;
+    public bool movedScene = false;  
+
     // private variables
     private bool canMove = true;
     private PlayerInput playerInput; 
@@ -31,8 +34,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-    public VectorValue startingPosition;    
+    
 
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -42,15 +47,11 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         flashEffect = GetComponent<SimpleFlash>();
         healthBar.SetMaxHealth((int)currentHealth);
-        transform.position = startingPosition.initialValue;
-        
-    }
 
-    // To be used for sound manager 3D sound
-    /*public Vector3 GetPosition()
-    {
-        return transform.position;
-    }*/
+        if(movedScene){
+            transform.position = startingPosition.initialValue;
+        }
+    }
 
     private void FixedUpdate() {
         if(canMove) {
