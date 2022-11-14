@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public GameObject mine;
     public GameObject wind;
     
-    public VectorValue startingPosition;
+    public SceneChange sceneChange;
     public bool movedScene = false;  
 
     // private variables
@@ -35,9 +35,6 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     
-
-
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -48,8 +45,8 @@ public class PlayerController : MonoBehaviour
         flashEffect = GetComponent<SimpleFlash>();
         healthBar.SetMaxHealth((int)currentHealth);
 
-        if(movedScene){
-            transform.position = startingPosition.initialValue;
+        if(sceneChange.movedScene){
+            transform.position = sceneChange.initialValue;
         }
     }
 
