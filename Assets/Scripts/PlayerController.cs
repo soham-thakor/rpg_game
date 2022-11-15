@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour
     public GameObject mine;
     public GameObject wind;
     
-    public SceneChange sceneChange;
-    public bool movedScene = false;  
+    // scriptable object
+    public PlayerData playerData;
 
     // private variables
     private bool canMove = true;
@@ -35,26 +35,38 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     
+    // pull data from scriptable object
+    void Awake() 
+    {
+        currentHealth = playerData.currentHealth;
+        moveSpeed = playerData.moveSpeed;        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        // set health values from previous scene
+        healthBar.SetMaxHealth((int)playerData.maxHealth);
+        healthBar.SetHealth((int)currentHealth);
+
+        // get references
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         flashEffect = GetComponent<SimpleFlash>();
-        healthBar.SetMaxHealth((int)currentHealth);
-
-        if(sceneChange.movedScene){
-            transform.position = sceneChange.initialValue;
+        
+        // move player in scene if necessary
+        if(playerData.movedScene){
+            transform.position = playerData.initialValue;
         }
     }
 
-    private void FixedUpdate() {
-        if(canMove) {
-            // If movement input is not 0, try to move
-
-            
+    private void FixedUpdate() 
+    {
+        if(canMove) 
+        {
+            // If movement input is not 0, try to move            
             if(movementInput == Vector2.zero){
                 animator.SetBool("isMoving", false);
                 return;
@@ -156,5 +168,11 @@ public class PlayerController : MonoBehaviour
         flashEffect.Flash();
         currentHealth -= damage;
         healthBar.SetHealth((int)currentHealth);
+    }
+
+    // saves player data to scriptable object
+    public void SavePlayerData() 
+    {
+        playerData.currentHealth = currentHealth;
     }
 }

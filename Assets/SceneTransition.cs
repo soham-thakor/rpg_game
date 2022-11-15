@@ -7,13 +7,21 @@ public class SceneTransition : MonoBehaviour
 {
     public string sceneToLoad;
     public Vector2 playerPosition;
-    public SceneChange playerStorage;
+    public PlayerData playerData;
+
+    private PlayerController player;
+
+    void Start() {
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+    }
     
     public void OnTriggerEnter2D(Collider2D other){
         
-        if(other.CompareTag("Player") && !other.isTrigger){
-            playerStorage.initialValue = playerPosition;
-            playerStorage.movedScene = true;
+        if(other.CompareTag("Player"))
+        {
+            playerData.initialValue = playerPosition;
+            playerData.movedScene = true;
+            player.SavePlayerData();
             SceneManager.LoadScene(sceneToLoad);
         }
 
