@@ -103,7 +103,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0016875267, y: -0.003375113}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -114,7 +114,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.24011493, y: 0.3109926}
   m_EdgeRadius: 0
 --- !u!70 &3505516397280310493
 CapsuleCollider2D:
@@ -126,11 +126,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.35, y: 0.35}
+  m_Offset: {x: -0.0033751428, y: -0.027000993}
+  m_Size: {x: 0.14074194, y: 0.18799359}
   m_Direction: 0
 --- !u!114 &6131157889786026835
 MonoBehaviour:
@@ -147,7 +147,6 @@ MonoBehaviour:
   dialogBox: {fileID: 2642090249760640283}
   dialogText: {fileID: 2642090249753643451}
   dialog: 
-  playerInRange: 0
   messages: []
   actors: []
 --- !u!95 &1791354540058690011

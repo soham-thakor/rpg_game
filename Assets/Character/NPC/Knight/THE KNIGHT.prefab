@@ -29,39 +29,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2916700753510722985, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Size.x
-      value: 0.35
+      value: 0.15696383
       objectReference: {fileID: 0}
     - target: {fileID: 2916700753510722985, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Size.y
-      value: 0.35
+      value: 0.16563958
       objectReference: {fileID: 0}
     - target: {fileID: 2916700753510722985, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Offset.x
-      value: 0
+      value: 0.0032533407
       objectReference: {fileID: 0}
     - target: {fileID: 2916700753510722985, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Offset.y
-      value: 0
+      value: -0.024942845
       objectReference: {fileID: 0}
     - target: {fileID: 2916700753510722985, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2916700753510722990, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Size.x
-      value: 0.5
+      value: 0.23538852
       objectReference: {fileID: 0}
     - target: {fileID: 2916700753510722990, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Size.y
-      value: 0.5
+      value: 0.29611897
       objectReference: {fileID: 0}
     - target: {fileID: 2916700753510722990, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Offset.x
-      value: 0
+      value: 0.0021688938
       objectReference: {fileID: 0}
     - target: {fileID: 2916700753510722990, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Offset.y
-      value: 0
+      value: -0.0021688938
       objectReference: {fileID: 0}
     - target: {fileID: 2916700753510722990, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_IsTrigger
@@ -190,7 +190,6 @@ MonoBehaviour:
   dialogBox: {fileID: 7124869456125753906}
   dialogText: {fileID: 7124869456134717074}
   dialog: Howdy
-  playerInRange: 0
   messages:
   - actorID: 0
     message: How has your investigation gone?

@@ -146,7 +146,6 @@ MonoBehaviour:
   dialogBox: {fileID: 4356876825711629423}
   dialogText: {fileID: 4356876825704206543}
   dialog: 
-  playerInRange: 0
   messages: []
   actors: []
 --- !u!1001 &3132549934849350500
@@ -275,6 +274,14 @@ PrefabInstance:
     - target: {fileID: 1661742442426607294, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
       propertyPath: m_Text
       value: KNIGHT OF THE LEFT
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661742442426607295, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 448.5025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661742442426607295, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 349.0373
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1661742441494089481, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}

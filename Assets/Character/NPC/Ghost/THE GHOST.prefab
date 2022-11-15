@@ -103,7 +103,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0014711618, y: -0.006200671}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -114,7 +114,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.25491714, y: 0.30157995}
   m_EdgeRadius: 0
 --- !u!70 &5526247868506528521
 CapsuleCollider2D:
@@ -126,11 +126,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.35, y: 0.35}
+  m_Offset: {x: -0.004433334, y: -0.038753986}
+  m_Size: {x: 0.14271343, y: 0.15468013}
   m_Direction: 0
 --- !u!95 &7262932676040562441
 Animator:
@@ -167,7 +167,6 @@ MonoBehaviour:
   dialogBox: {fileID: 6394445898451378895}
   dialogText: {fileID: 6394445898443826799}
   dialog: 
-  playerInRange: 0
   messages:
   - actorID: 0
     message: THOSE RED EYES!!!
