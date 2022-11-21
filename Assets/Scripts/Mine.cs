@@ -48,7 +48,7 @@ public class Mine : MonoBehaviour
                 Destroy(gameObject, 1f);
             }
         }
-
+        /*
         if(other.tag == "Boss" && origin == "Player") {
             RedEyeBoss boss = other.GetComponent<RedEyeBoss>();
 
@@ -61,7 +61,7 @@ public class Mine : MonoBehaviour
                 Destroy(gameObject, 1f);
             }
         }
-
+*/
 
         // enemy mine comes in contact with player
         if(other.tag == "Player" && origin == "Enemy") {

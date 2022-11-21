@@ -39,13 +39,14 @@ public class SwordAttack : MonoBehaviour
                 //boss.TakingDamage(damageDealt);               
             }
         }
+        /*
         if(other.tag == "Boss" && gameObject.transform.root.tag == "Player") {
             RedEyeBoss boss = other.GetComponent<RedEyeBoss>();
             if(boss != null) {  
              boss.TakeDamage(damageDealt);               
             }
         }
-
+        */
         if(other.tag == "Player") {
             PlayerController player = other.GetComponent<PlayerController>();
 

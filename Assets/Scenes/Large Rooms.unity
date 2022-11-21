@@ -3456,6 +3456,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &647780617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3151946911013386404, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+  m_PrefabInstance: {fileID: 5055019471925388203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &668491231
 GameObject:
   m_ObjectHideFlags: 0
@@ -5113,11 +5118,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3151946911013386404, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_TagString
-      value: Boss
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+      propertyPath: speed
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+      propertyPath: maxHealth
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5568664322051731575, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6103,6 +6116,10 @@ PrefabInstance:
     - target: {fileID: 3151946911013386404, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_Name
       value: Antagonist (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+      propertyPath: maxHealth
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5568664322051731575, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7692,6 +7709,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3224075120322683278, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 860620129}
@@ -7908,7 +7929,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298186699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c42c041712fabd4fa19002cf4c4a717, type: 3}
   m_Name: 
@@ -7918,6 +7939,30 @@ MonoBehaviour:
   currentHealth: 0
   speed: 1
   swordHitbox: {fileID: 964265179}
+--- !u!114 &1298186722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298186699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08f30e26c9fe9047bf8cc5d494b31f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1275147723}
+  - {fileID: 820218321}
+  - {fileID: 1274095134}
+  - {fileID: 348689698}
+  - {fileID: 624633011}
+  - {fileID: 1855111021}
+  - {fileID: 836622179}
+  enemyPrefabs:
+  - {fileID: 910742319}
+  - {fileID: 647780617}
+  Timer: 15
 --- !u!1 &1385733087
 GameObject:
   m_ObjectHideFlags: 0
