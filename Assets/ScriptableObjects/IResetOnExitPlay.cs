@@ -9,19 +9,19 @@ static class SOPlayModeResetter
     [InitializeOnLoadMethod]
     static void RegisterResets()
     {
-        EditorApplication.playModeStateChanged += ResetSOsWithIResetOnExitPlay; 
+        EditorApplication.playModeStateChanged += ResetSOsWithIResetOnExitAndStart; 
     }
 
-    static void ResetSOsWithIResetOnExitPlay(PlayModeStateChange change)
+    static void ResetSOsWithIResetOnExitAndStart(PlayModeStateChange change)
     {
-        if (change == PlayModeStateChange.ExitingPlayMode)
+        if (change == PlayModeStateChange.ExitingPlayMode || change == PlayModeStateChange.EnteredPlayMode)
         {
             var assets = FindAssets<ScriptableObject>();
             foreach (var a in assets)
             {
-                if (a is IResetOnExitPlay)
+                if (a is IResetOnExitAndStart)
                 {
-                    (a as IResetOnExitPlay).ResetOnExitPlay();
+                    (a as IResetOnExitAndStart).ResetOnExitAndStart();
                 }
             }
         }
@@ -41,7 +41,7 @@ static class SOPlayModeResetter
 }
 #endif
 
-public interface IResetOnExitPlay
+public interface IResetOnExitAndStart
 {
-    public void ResetOnExitPlay();
+    public void ResetOnExitAndStart();
 }

@@ -34,6 +34,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+
+    // for ability cooldowns (cooldown times are set in playerdata)
+    int[] abilityReady = { 1, 1, 1};  // 1 represents that ability is ready
+
     
     // pull data from scriptable object
     void Awake() 
@@ -128,34 +132,45 @@ public class PlayerController : MonoBehaviour
 
     // called on pressing keyboard button 1
     void OnBite() {
-        // Create new bullet
-        GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
-        Bullet bulletScript = newBullet.GetComponent<Bullet>();
+        if(abilityReady[0] == 1) {
+            // Create new bullet
+            GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
+            Bullet bulletScript = newBullet.GetComponent<Bullet>();
 
-        bulletScript.setFlipX(spriteRenderer.flipX);
-        bulletScript.setBulletClone(true);    // indicates that this bullet must be deleted
-        bulletScript.setOrigin("Player");   // where bullet came from
-        newBullet.SetActive(true);  // activate game object
-        SoundManager.PlaySound(SoundManager.Sound.FireBite);
+            bulletScript.setFlipX(spriteRenderer.flipX);
+            bulletScript.setBulletClone(true);    // indicates that this bullet must be deleted
+            bulletScript.setOrigin("Player");   // where bullet came from
+            newBullet.SetActive(true);  // activate game object
+            SoundManager.PlaySound(SoundManager.Sound.FireBite);
+            
+            // start cooldown
+            StartCoroutine(StartCooldown(0, playerData.biteCoolDown));
+        }
     }
 
     // called on pressing keyboard button 2
     void OnDropMine() {
-        // Create new water mine
-        GameObject newMine = Instantiate(mine, transform.position, transform.rotation);
-        Mine mineScript = newMine.GetComponent<Mine>();
+        if(abilityReady[1] == 1) {
+            // Create new water mine
+            GameObject newMine = Instantiate(mine, transform.position, transform.rotation);
+            Mine mineScript = newMine.GetComponent<Mine>();
 
-        mineScript.setOrigin("Player");
-        newMine.SetActive(true);
-        SoundManager.PlaySound(SoundManager.Sound.PlaceWaterBomb);
+            mineScript.setOrigin("Player");
+            newMine.SetActive(true);
+            SoundManager.PlaySound(SoundManager.Sound.PlaceWaterBomb);
+            StartCoroutine(StartCooldown(1, playerData.mineCoolDown));
+        }
     }
 
     // called on pressing keyboard button 3
     void OnWind() {
-        WindSpeed windScript = wind.GetComponent<WindSpeed>();
+        if(abilityReady[2] == 1) {
+            WindSpeed windScript = wind.GetComponent<WindSpeed>();
 
-        wind.SetActive(true);
-        //SoundManager.PlaySound(SoundManager.Sound.SpeedUpBoost);
+            wind.SetActive(true);
+            StartCoroutine(StartCooldown(2, playerData.speedCoolDown));
+            //SoundManager.PlaySound(SoundManager.Sound.SpeedUpBoost);
+        }
     }
 
     public void TakeDamage(float damage)
@@ -174,5 +189,12 @@ public class PlayerController : MonoBehaviour
     public void SavePlayerData() 
     {
         playerData.currentHealth = currentHealth;
+    }
+
+    private IEnumerator StartCooldown(int slot, float delayTime) 
+    {
+        abilityReady[slot] = 0; // disable ability
+        yield return new WaitForSeconds(delayTime);
+        abilityReady[slot] = 1; // enable ability
     }
 }
