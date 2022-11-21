@@ -31,7 +31,7 @@ public class RedEyeBoss : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        enemyType = "Knight";
+        //enemyType = "Knight";
         if(gameObject.name.Contains("Antagonist") || gameObject.name.Contains("Gargoyle") || gameObject.name.Contains("BOSS"))
         {
             enemyType = "Knight";
@@ -87,6 +87,8 @@ public class RedEyeBoss : MonoBehaviour
     // Update is called once per frame
     public void TakeDamage(float damage)
     {
+        //Destroy(gameObject);
+
         if (currentHealth <= 0) {
             if(enemyType == "Knight") {
                 SoundManager.PlaySound(SoundManager.Sound.KnightDeath);

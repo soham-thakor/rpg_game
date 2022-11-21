@@ -79,10 +79,20 @@ public class Bullet : MonoBehaviour
         // if player shoots enemy
         if(other.tag == "Enemy") {
             Enemy enemy = other.GetComponent<Enemy>();
-
+           
             // if current bullet is a fire bite
             if(gameObject.name == "Bite(Clone)") {
                 enemy.TakeDamage(damageDealt);
+                isMoving = false;
+                animator.SetTrigger("CloseMouth");
+                Destroy(gameObject, .8f);
+            }
+        }
+         if(other.tag == "Boss") {
+            RedEyeBoss boss = other.GetComponent<RedEyeBoss>();
+            // if current bullet is a fire bite
+            if(gameObject.name == "Bite(Clone)") {
+                boss.TakeDamage(damageDealt);
                 isMoving = false;
                 animator.SetTrigger("CloseMouth");
                 Destroy(gameObject, .8f);

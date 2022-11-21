@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        if(gameObject.name.Contains("Antagonist") || gameObject.name.Contains("Gargoyle"))
+        if(gameObject.name.Contains("Antagonist") || gameObject.name.Contains("Gargoyle") || gameObject.name.Contains("BOSS") )
         {
             enemyType = "Knight";
         } else if(gameObject.name.Contains("GOBLIN")) {

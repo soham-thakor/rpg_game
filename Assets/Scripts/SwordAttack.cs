@@ -32,9 +32,17 @@ public class SwordAttack : MonoBehaviour
         // only let player attack enemies (prevent enemy friendly fire)
         if(other.tag == "Enemy" && gameObject.transform.root.tag == "Player") {
             Enemy enemy = other.GetComponent<Enemy>();
-            
+            //RedEyeBoss boss = other.GetComponent<RedEyeBoss>();
+
             if(enemy != null) {  
-                enemy.TakeDamage(damageDealt);               
+                enemy.TakeDamage(damageDealt);
+                //boss.TakingDamage(damageDealt);               
+            }
+        }
+        if(other.tag == "Boss" && gameObject.transform.root.tag == "Player") {
+            RedEyeBoss boss = other.GetComponent<RedEyeBoss>();
+            if(boss != null) {  
+             boss.TakeDamage(damageDealt);               
             }
         }
 
