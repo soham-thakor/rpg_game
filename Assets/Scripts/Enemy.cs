@@ -9,7 +9,10 @@ public class Enemy : MonoBehaviour
     public float currentHealth;
     public float speed = 2.5f;
     public SwordAttack swordHitbox;             // needs to be set to swordattack game object in editor
-    
+    public Transform[] spawnPoints;
+    public GameObject[] enemyPrefabs;
+    public float Timer = 2;
+
     private SpriteRenderer spriteRenderer;
     private SimpleFlash flashEffect;
     private Transform player;
@@ -68,6 +71,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+   
     // Gets called forom the attack sword.
     public bool LookAtPlayer()
     {
@@ -87,7 +91,7 @@ public class Enemy : MonoBehaviour
             transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
-
+      
         return isFlipped;
     }
 

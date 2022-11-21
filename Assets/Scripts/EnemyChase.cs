@@ -29,6 +29,7 @@ public class EnemyChase : StateMachineBehaviour
         if (Vector2.Distance(player.position, rb.position) <= chaseRange)
         {
             near = true;
+            //enemy.Spawn();
         }
 
         // calculate offset of player position (so enemy doesnt stand inside of player)
@@ -40,8 +41,8 @@ public class EnemyChase : StateMachineBehaviour
             Vector2 target = new Vector2(player.position.x + offset, player.position.y);
 
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-
-            rb.MovePosition(newPos);
+            
+            //rb.MovePosition(newPos);
         }
 
     }

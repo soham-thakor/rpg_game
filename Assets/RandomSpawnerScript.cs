@@ -13,6 +13,10 @@ public class RandomSpawnerScript : MonoBehaviour
         
     }
 
+    private void Spawn()
+    {
+        
+    }
     // Update is called once per frame
     void Update()
     {
