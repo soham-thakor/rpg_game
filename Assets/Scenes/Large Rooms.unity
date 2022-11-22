@@ -8094,6 +8094,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 910742319}
   - {fileID: 647780617}
+  - {fileID: 1552882225}
   Timer: 15
 --- !u!1 &1385733087
 GameObject:
@@ -26062,6 +26063,11 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1552882225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 444079326137328145, guid: 5b47d3352dede4b4ab8d21abbb3f40ea, type: 3}
+  m_PrefabInstance: {fileID: 2132924363}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1566709561 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 232391609022844776, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
@@ -33318,6 +33324,14 @@ PrefabInstance:
     - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0331
+      objectReference: {fileID: 0}
+    - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0497
       objectReference: {fileID: 0}
     - target: {fileID: 217958420937478025, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
       propertyPath: m_LocalPosition.x
