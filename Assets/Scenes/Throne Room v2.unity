@@ -24655,10 +24655,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: EARL
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4006666277231790730, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
 --- !u!4 &8813717278836054448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5920736846887036162, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
   m_PrefabInstance: {fileID: 8813717278836054447}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8813717278836054449 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5054764227447838818, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+  m_PrefabInstance: {fileID: 8813717278836054447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8813717278836054450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5054764227457588418, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+  m_PrefabInstance: {fileID: 8813717278836054447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8813717278836054451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5920736846887036172, guid: 360ddca3dd967f340b8df462e9ca5134, type: 3}
+  m_PrefabInstance: {fileID: 8813717278836054447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8813717278836054452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8813717278836054451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5290a04921469564284eeb3489053f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBox: {fileID: 8813717278836054450}
+  dialogText: {fileID: 8813717278836054449}
+  messages:
+  - message:
+    - Does
+    - this
+    - work?
+    - ...
+  - message:
+    - I
+    - think
+    - it
+    - does!!!
+  currentQuest: 0
