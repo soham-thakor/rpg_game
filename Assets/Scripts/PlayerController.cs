@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 // Takes and handles input and movement for a player character
 public class PlayerController : MonoBehaviour
@@ -87,6 +88,8 @@ public class PlayerController : MonoBehaviour
             }
             
             animator.SetBool("isMoving", success);
+            animator.SetFloat("yDirection", movementInput.y);
+            animator.SetFloat("xDirection", Math.Abs(movementInput.x));
             // Set direction of sprite to movement direction
             if(movementInput.x < 0) {
                 if (spriteRenderer.flipX != false){ swordHitbox.RotateCollider(); }
