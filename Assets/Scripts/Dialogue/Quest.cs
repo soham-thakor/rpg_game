@@ -17,7 +17,7 @@ public class Quest : MonoBehaviour
     private int questTracker = 0;
     private bool playerInRange;
     private int cuMsg = 0;
-    
+
     
     void Start()
     {   

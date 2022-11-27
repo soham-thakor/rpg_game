@@ -6,62 +6,92 @@ using UnityEngine.UI;
 public class BasicNPC : MonoBehaviour
 {
     public GameObject dialogBox;
+    public GameObject selectionBox;
+
     public Text dialogText;
-    public string dialog;
-    public Message[] messages;
-    public Actor[] actors;
+    public Message [] messages;
+    public NPC actor;
 
+    public QuestTrackerData data1;
+    public SelectionData data2;
+
+    public int currentQuest;
+    private int questTracker = 0;
     private bool playerInRange;
-    private int index;
-    private int activemsg = 0;
-
+    private int cuMsg = 0;
+    private bool dialogDone;
+    
     // Start is called before the first frame update
     void Start()
     {
         dialogBox.SetActive(false);
+        selectionBox.SetActive(false);
     }
 
     void Update(){
+        
+        if(questTracker != currentQuest){
+            questTracker = currentQuest;
+            cuMsg = 0;
+        }
 
         if(Input.GetKeyDown(KeyCode.F) && playerInRange)
         {
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
-
-            if(dialogBox.activeInHierarchy){
+            if(selectionBox.activeInHierarchy){
+                selectionBox.SetActive(false);
+                dialogBox.SetActive(true);
+                string msgToDisplay = "Today is a good day to solve it ya know.";
+                dialogText.text = msgToDisplay;
+                cuMsg--;
+            }else if(dialogBox.activeInHierarchy){
                 dialogBox.SetActive(false);
+
+                //experimental from here
+                if(cuMsg == messages[questTracker].message.Length-1){
+                    selectionBox.SetActive(true);
+                }
             }else{
                 dialogBox.SetActive(true);
-                Message msgToDisplay = messages[activemsg];
-                dialogText.text = msgToDisplay.message;
-                if(activemsg < messages.Length-1){
-                    activemsg++;
+                string msgToDisplay = messages[questTracker].message[cuMsg];
+                dialogText.text = msgToDisplay;
+
+                if(cuMsg < messages[questTracker].message.Length-1){
+                    cuMsg++;
                 }
             }
         }
-    }
-    
 
-    public void NextMsg(){
-        activemsg++;
-        if(activemsg < messages.Length){
-            Message msgToDisplay = messages[activemsg];
-            dialogBox.SetActive(true);
-            dialogText.text = msgToDisplay.message;
-        }else{
-            dialogBox.SetActive(false);
+        if(selectionBox.activeInHierarchy){
+
         }
     }
 
-    [System.Serializable]
+    public void CorrectChoice(){
+        selectionBox.SetActive(false);
+        Debug.Log("Correct choice");
+        data2.bossFight = true;
+    }
+
+    public void WrongChoice(){
+        selectionBox.SetActive(false);
+        Debug.Log("Wrong choice");
+        data2.wrongChoice();
+    }
+
+    // public void sSystem(){
+        
+    // }
+    
+     [System.Serializable]
     public class Message{
-        public int actorID;
-        public string message;
+        public string [] message;
     }
 
     [System.Serializable]
-    public class Actor
-    {
+    public class NPC{
         public string name;
+        public int id;
     }
 
     public void OnTriggerEnter2D(Collider2D other){
@@ -69,7 +99,6 @@ public class BasicNPC : MonoBehaviour
             playerInRange = true;
         }
     }
-
     private void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("Player")){
             playerInRange = false;
