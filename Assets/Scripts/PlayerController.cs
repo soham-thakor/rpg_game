@@ -141,7 +141,6 @@ public class PlayerController : MonoBehaviour
             GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
             Bullet bulletScript = newBullet.GetComponent<Bullet>();
 
-            bulletScript.setBulletClone(true);    // indicates that this bullet must be deleted
             bulletScript.setOrigin("Player");   // where bullet came from
             newBullet.SetActive(true);  // activate game object
             SoundManager.PlaySound(SoundManager.Sound.FireBite);

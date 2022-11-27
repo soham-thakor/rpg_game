@@ -8,8 +8,6 @@ public class Bullet : MonoBehaviour
     public float lifeTime;
     public float damageDealt;
 
-    private bool bulletClone = false;
-
     private string origin = "";
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -20,7 +18,6 @@ public class Bullet : MonoBehaviour
     private Camera mainCam;
 
     // setters
-    public void setBulletClone(bool b) { bulletClone = b;}
     public void setOrigin(string s) {origin = s; }
     
     
