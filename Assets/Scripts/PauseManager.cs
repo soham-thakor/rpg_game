@@ -33,11 +33,13 @@ public class PauseManager : MonoBehaviour
         {
             pausePanel.SetActive(true);
             Time.timeScale = 0f;
+            AudioListener.pause = true;
         }
         else
         {
             pausePanel.SetActive(false);
             Time.timeScale = 1f;
+            AudioListener.pause = false;
         }
     }
     public void Quit()
