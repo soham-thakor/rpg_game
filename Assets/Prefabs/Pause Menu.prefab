@@ -280,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9144596998897863638, guid: 82a990ba64c7dfe4b9ae961367190381, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9144596998897863638, guid: 82a990ba64c7dfe4b9ae961367190381, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -293,6 +293,18 @@ PrefabInstance:
     - target: {fileID: 9144596998897863638, guid: 82a990ba64c7dfe4b9ae961367190381, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144596999022713704, guid: 82a990ba64c7dfe4b9ae961367190381, type: 3}
+      propertyPath: m_fontSize
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144596999022713704, guid: 82a990ba64c7dfe4b9ae961367190381, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144596999022713704, guid: 82a990ba64c7dfe4b9ae961367190381, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 9144596999649090422, guid: 82a990ba64c7dfe4b9ae961367190381, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -318,6 +330,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9144596999904367852, guid: 82a990ba64c7dfe4b9ae961367190381, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7026679189b90634ba817011da14099a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a990ba64c7dfe4b9ae961367190381, type: 3}
 --- !u!1 &3080474784131804481 stripped
