@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: player_attack
+  m_Name: player_attack_down
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -42,17 +42,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: Hitboxes/RightLeftSwordHitbox
+    path: Hitboxes/DownSwordHitbox
     classID: 61
     script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 139586624, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
+      value: {fileID: 1444410796, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
     - time: 0.1
-      value: {fileID: 311089970, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
+      value: {fileID: 383932359, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
     - time: 0.2
-      value: {fileID: 162190962, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
+      value: {fileID: -1469059970, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -65,7 +65,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1295994043
+      path: 1804133271
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 61
@@ -79,9 +79,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 139586624, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
-    - {fileID: 311089970, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
-    - {fileID: 162190962, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
+    - {fileID: 1444410796, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
+    - {fileID: 383932359, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
+    - {fileID: -1469059970, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -128,7 +128,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: Hitboxes/RightLeftSwordHitbox
+    path: Hitboxes/DownSwordHitbox
     classID: 61
     script: {fileID: 0}
   m_EulerEditorCurves: []

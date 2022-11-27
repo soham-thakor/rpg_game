@@ -39,7 +39,6 @@ public class RangedEnemyController : MonoBehaviour
                 GameObject newBullet = Instantiate(EnemyProjectile, shotPoint.position, shotPoint.transform.rotation);
                 Bullet bulletScript = newBullet.GetComponent<Bullet>();
 
-                bulletScript.setBulletClone(true);   // indicates that this bullet must be deleted
                 bulletScript.setOrigin("Enemy");
                 newBullet.SetActive(true);
 

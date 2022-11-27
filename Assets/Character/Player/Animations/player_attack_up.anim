@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: player_death
+  m_Name: player_attack_up
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,7 +22,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -31,7 +31,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.3
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -41,18 +41,18 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_IsActive
-    path: SwordHitbox
-    classID: 1
+    attribute: m_Enabled
+    path: Hitboxes/UpSwordHitbox
+    classID: 61
     script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -190575777, guid: 173f591696d866047974ee18be6e3c4d, type: 3}
+      value: {fileID: 1696469096, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
     - time: 0.1
-      value: {fileID: -628467000, guid: 173f591696d866047974ee18be6e3c4d, type: 3}
+      value: {fileID: -1491331843, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
     - time: 0.2
-      value: {fileID: 1332398196, guid: 173f591696d866047974ee18be6e3c4d, type: 3}
+      value: {fileID: -2061045687, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -65,10 +65,10 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3900972952
-      attribute: 2086281974
+      path: 1929842711
+      attribute: 3305885265
       script: {fileID: 0}
-      typeID: 1
+      typeID: 61
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
@@ -79,9 +79,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -190575777, guid: 173f591696d866047974ee18be6e3c4d, type: 3}
-    - {fileID: -628467000, guid: 173f591696d866047974ee18be6e3c4d, type: 3}
-    - {fileID: 1332398196, guid: 173f591696d866047974ee18be6e3c4d, type: 3}
+    - {fileID: 1696469096, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
+    - {fileID: -1491331843, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
+    - {fileID: -2061045687, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -108,7 +108,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -117,7 +117,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.3
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -127,9 +127,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_IsActive
-    path: SwordHitbox
-    classID: 1
+    attribute: m_Enabled
+    path: Hitboxes/UpSwordHitbox
+    classID: 61
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0

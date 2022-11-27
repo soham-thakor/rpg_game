@@ -8,24 +8,23 @@ public class Bullet : MonoBehaviour
     public float lifeTime;
     public float damageDealt;
 
-    private bool bulletClone = false;
-
-    // only used for player made projectiles
-    private bool flipX = false;
     private string origin = "";
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    private bool isMoving = true;
+    private Rigidbody2D rb;
+
+    // for mouse targetting
+    private Vector3 mousePos;
+    private Camera mainCam;
 
     // setters
-    public void setBulletClone(bool b) { bulletClone = b;}
-    public void setFlipX(bool b) { flipX = b; }
     public void setOrigin(string s) {origin = s; }
     
     
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -33,24 +32,30 @@ public class Bullet : MonoBehaviour
         if(gameObject.name.Contains("Clone")) {
             Invoke("DestroyProjectile",lifeTime);   // deletes self whenever lifetime is reached
         } 
+
+
+        // if player is firing the bullet, run this
+        if(origin == "Player")
+        {
+            // set position for bullet to travel to
+            mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+            mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+
+            // set speed and direction
+            Vector3 direction = mousePos - transform.position;
+            rb.velocity = new Vector2(direction.x, direction.y).normalized * bulletSpeed;
+
+            // handle rotation
+            Vector3 rotation = transform.position - mousePos;
+            float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, rot + 180);
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {   
-        // if player shoots projectile
-        if(origin == "Player" && isMoving) {
-            
-            if(flipX) {
-                spriteRenderer.flipX = false;
-                transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
-            }
-            else {
-                spriteRenderer.flipX = true;
-                transform.Translate(Vector2.left * bulletSpeed * Time.deltaTime);
-            }
-        }
-
+        // if enemy is firing bullet, run this
         if(origin == "Enemy") {
             transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
 
@@ -77,14 +82,15 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         // if player shoots enemy
-        if(other.tag == "Enemy") {
+        if(other.tag == "Enemy" && origin == "Player") {
+
             Enemy enemy = other.GetComponent<Enemy>();
 
             // if current bullet is a fire bite
             if(gameObject.name == "Bite(Clone)") {
                 enemy.TakeDamage(damageDealt);
-                isMoving = false;
                 animator.SetTrigger("CloseMouth");
+                rb.velocity = Vector2.zero; // stop bullet from moving
                 Destroy(gameObject, .8f);
             }
         }
