@@ -993,6 +993,7 @@ GameObject:
   - component: {fileID: 1056896464}
   - component: {fileID: 1056896466}
   - component: {fileID: 857811982}
+  - component: {fileID: 4500656388710074806}
   m_Layer: 2
   m_Name: Bite
   m_TagString: Untagged
@@ -1099,8 +1100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f828c590537796a49b91a9f3c0f32949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 1
-  lifeTime: 1
+  bulletSpeed: 1.5
+  lifeTime: 12
   damageDealt: 100
 --- !u!61 &857811982
 BoxCollider2D:
@@ -1128,6 +1129,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.30845863, y: 0.26951346}
   m_EdgeRadius: 0
+--- !u!50 &4500656388710074806
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98859758125486669}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &798015939441882258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,6 +2278,26 @@ PrefabInstance:
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456893848286488374, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5445104
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456893848286488374, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5445104
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456893848286488374, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5445104
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815958674705015422, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2de3d1b015310664abb054f30f6d6634, type: 3}
+    - target: {fileID: 7740745573737775983, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Name
+      value: ButtonPrompt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
