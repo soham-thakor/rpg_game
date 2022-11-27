@@ -137,12 +137,10 @@ public class PlayerController : MonoBehaviour
     void OnBite() {
         
         if(abilityReady[0] == 1) {
-            Debug.Log("bite triggered");
             // Create new bullet
             GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
             Bullet bulletScript = newBullet.GetComponent<Bullet>();
 
-            bulletScript.setFlipX(spriteRenderer.flipX);
             bulletScript.setBulletClone(true);    // indicates that this bullet must be deleted
             bulletScript.setOrigin("Player");   // where bullet came from
             newBullet.SetActive(true);  // activate game object
