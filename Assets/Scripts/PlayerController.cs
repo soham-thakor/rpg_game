@@ -135,7 +135,9 @@ public class PlayerController : MonoBehaviour
 
     // called on pressing keyboard button 1
     void OnBite() {
+        
         if(abilityReady[0] == 1) {
+            Debug.Log("bite triggered");
             // Create new bullet
             GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
             Bullet bulletScript = newBullet.GetComponent<Bullet>();

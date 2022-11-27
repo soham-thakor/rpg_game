@@ -12,20 +12,29 @@ public class Bullet : MonoBehaviour
 
     // only used for player made projectiles
     private bool flipX = false;
+    private bool rotateY = false;
+    private bool isMoving = true;
+
     private string origin = "";
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    private bool isMoving = true;
+
+    // for mouse targetting
+    private Vector3 mousePos;
+    private Camera mainCam;
 
     // setters
     public void setBulletClone(bool b) { bulletClone = b;}
     public void setFlipX(bool b) { flipX = b; }
+    public void setRotateY(bool b) { rotateY = b; }
     public void setOrigin(string s) {origin = s; }
     
     
     // Start is called before the first frame update
     void Start()
     {
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -38,17 +47,24 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {   
+
         // if player shoots projectile
         if(origin == "Player" && isMoving) {
             
+            Debug.Log(mousePos);
             if(flipX) {
                 spriteRenderer.flipX = false;
-                transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
+                // transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
             }
             else {
                 spriteRenderer.flipX = true;
-                transform.Translate(Vector2.left * bulletSpeed * Time.deltaTime);
+                // transform.Translate(Vector2.left * bulletSpeed * Time.deltaTime);
             }
+
+            // if(rotateY) {
+            //     transform.Rotate(0, 0, -3.0f); , (float)bulletSpeed/1000
+            // }
+            transform.Translate(mousePos * bulletSpeed * Time.deltaTime);
         }
 
         if(origin == "Enemy") {
