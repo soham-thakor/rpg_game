@@ -5,42 +5,69 @@ using UnityEngine.UI;
 
 public class Quest : MonoBehaviour
 {
+    public GameObject npcTrigger;
     public GameObject dialogBox;
     public Text dialogText;
+    public Text listName;
     public Message [] messages;
     public NPC actor;
+    public QuestTrackerData data1;
 
     public int currentQuest;
     private int questTracker = 0;
     private bool playerInRange;
     private int cuMsg = 0;
-    public QuestTrackerData data1;
+    
     
     void Start()
-    {
+    {   
+        
+        if(actor.id == 0){
+            listName.text = npcTrigger.name;
+        }
         dialogBox.SetActive(false);
+        
+        //turns on and off the Ghosts
+        //give ghosts an actor id of 2
+        //all other NPCs give them a 1
+        if(data1.npcTalked(actor.name) == 1 && actor.id == 2){
+            npcTrigger.SetActive(true);
+        }else if(actor.id == 2){
+            npcTrigger.SetActive(false);
+        }
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.E) && (currentQuest < 2)){
-            currentQuest++;
-        }
+    //     if(Input.GetKeyDown(KeyCode.E) && (currentQuest < 2)){
+    //         currentQuest++;
+    //     }
 
+        //keeps track of the current stage of the game for the scripts 
+        //of all npc characters and resets it
         if(questTracker != currentQuest){
             questTracker = currentQuest;
             cuMsg = 0;
         }
+
+    //will have a problem once all interactions are linked
+    //
+        //dialogue interactions system when key F is pressed
         if(Input.GetKeyDown(KeyCode.F) && playerInRange){
+
+            //if its a regular NPC and they have a clue to give you
+            //then they will spawn a ghost after interacting with them
             if(data1.npcTalked(actor.name) == 0 && actor.id == 1){
                 data1.interactions++;
                 data1.interact[actor.name]++;
-            }else if(data1.npcTalked(actor.name) >= 0 && actor.id == 2){
+            }else if(data1.npcTalked(actor.name) == 1 && actor.id == 2){
                 data1.interactions++;
                 data1.interact[actor.name]++;
             }
 
+            //sound for the dialogue boxes
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
             
+            //controls dialogue boxes
             if(dialogBox.activeInHierarchy){
                 dialogBox.SetActive(false);
             }else{
@@ -55,6 +82,7 @@ public class Quest : MonoBehaviour
         }
     }
 
+    //info that will be collected to keep track of the NPC
     [System.Serializable]
     public class Message{
         public string [] message;

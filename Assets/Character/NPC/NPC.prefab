@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2916700753510722976}
   - component: {fileID: 2916700753510722990}
   - component: {fileID: 2916700753510722985}
-  - component: {fileID: 5605315685860917799}
+  - component: {fileID: -3839663607116430803}
+  - component: {fileID: -2738694963087747677}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Dbox
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2916700753510722977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.173, y: -0.5955, z: 0}
+  m_LocalPosition: {x: -1.123, y: -0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -1506777351, guid: 173f591696d866047974ee18be6e3c4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,11 +103,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.48, y: 0.48}
     newSize: {x: 0.48, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -125,13 +126,13 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.35, y: 0.35}
+  m_Size: {x: 0.157, y: 0.165}
   m_Direction: 0
---- !u!114 &5605315685860917799
+--- !u!114 &-3839663607116430803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,14 +141,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 2916700753510722977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b820f28abf86104dab5383687475616, type: 3}
+  m_Script: {fileID: 11500000, guid: 5290a04921469564284eeb3489053f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcTrigger: {fileID: 2916700753510722977}
   dialogBox: {fileID: 4356876825711629423}
   dialogText: {fileID: 4356876825704206543}
-  dialog: 
-  messages: []
-  actors: []
+  listName: {fileID: 4356876826922548698}
+  messages:
+  - message:
+    - New NPC
+  actor:
+    name: NPC Template
+    id: 0
+  data1: {fileID: 11400000, guid: f31c1745af12a924ba194d97f6737341, type: 2}
+  currentQuest: 0
+--- !u!95 &-2738694963087747677
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2916700753510722977}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3132549934849350500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -245,11 +273,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1661742441494089482, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 182.6556
+      value: 182
       objectReference: {fileID: 0}
     - target: {fileID: 1661742441494089482, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 235.92245
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 1661742441494089483, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
       propertyPath: m_IsActive
@@ -273,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1661742442426607294, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
       propertyPath: m_Text
-      value: KNIGHT OF THE LEFT
+      value: New NPC
       objectReference: {fileID: 0}
     - target: {fileID: 1661742442426607295, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
       propertyPath: m_SizeDelta.x
@@ -283,8 +311,7 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 349.0373
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1661742441494089481, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
 --- !u!224 &4356876825631370288 stripped
 RectTransform:
@@ -307,6 +334,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1661742441494089483, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
   m_PrefabInstance: {fileID: 3132549934849350500}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4356876826922548698 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1661742442426607294, guid: 172b4ebe891efe84c91319b8bb87749c, type: 3}
+  m_PrefabInstance: {fileID: 3132549934849350500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4435926339155996227
 PrefabInstance:
   m_ObjectHideFlags: 0

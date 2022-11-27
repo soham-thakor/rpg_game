@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5526247868506528526}
   - component: {fileID: 5526247868506528521}
   - component: {fileID: 7262932676040562441}
-  - component: {fileID: 3277065037966763820}
+  - component: {fileID: 1317937662531541798}
   m_Layer: 0
   m_Name: THE GHOST
   m_TagString: Dbox
@@ -152,7 +152,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3277065037966763820
+--- !u!114 &1317937662531541798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,17 +161,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5526247868506528513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b820f28abf86104dab5383687475616, type: 3}
+  m_Script: {fileID: 11500000, guid: 5290a04921469564284eeb3489053f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcTrigger: {fileID: 5526247868506528513}
   dialogBox: {fileID: 6394445898451378895}
   dialogText: {fileID: 6394445898443826799}
-  dialog: 
   messages:
-  - actorID: 0
-    message: THOSE RED EYES!!!
-  actors:
-  - name: GHOST
+  - message:
+    - THOSE EYES!
+  actor:
+    name: 
+    id: 2
+  data1: {fileID: 11400000, guid: f31c1745af12a924ba194d97f6737341, type: 2}
+  currentQuest: 0
 --- !u!1001 &2338527629608550854
 PrefabInstance:
   m_ObjectHideFlags: 0

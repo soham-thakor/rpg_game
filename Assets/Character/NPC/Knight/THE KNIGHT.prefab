@@ -134,22 +134,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5605315685860917799, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
---- !u!1 &7124869456125753906 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4356876825711629423, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
-  m_PrefabInstance: {fileID: 6815674010518138461}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7124869456134717074 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4356876825704206543, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
-  m_PrefabInstance: {fileID: 6815674010518138461}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8569242363066926076 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2916700753510722977, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
@@ -175,28 +159,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &848506105775903206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8569242363066926076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b820f28abf86104dab5383687475616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 7124869456125753906}
-  dialogText: {fileID: 7124869456134717074}
-  dialog: Howdy
-  messages:
-  - actorID: 0
-    message: How has your investigation gone?
-  - actorID: 1
-    message: Still gathering evidence, but there is progress...
-  - actorID: 0
-    message: Godspeed then!
-  actors:
-  - name: 'Earl '
-  - name: Player
