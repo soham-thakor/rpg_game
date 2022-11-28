@@ -8,6 +8,9 @@ public class ItemSlotter : MonoBehaviour
     [SerializeField] TextMeshProUGUI itemName;
     [SerializeField] TextMeshProUGUI itemCount;
 
+    public TextMeshProUGUI ItemName => itemName;
+    public TextMeshProUGUI ItemCount => itemCount;
+
     public void setData(ItemSlot itemSlot)
     {
         itemName.text = itemSlot.Item.ItemName;
