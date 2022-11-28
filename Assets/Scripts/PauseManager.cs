@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-
     private bool isPaused;
-    public GameObject pausePanel;
+    public GameObject pausePanel, inventoryPanel, settingsPanel;
     public string mainMenu;
     // Start is called before the first frame update
     void Start()
     {
         pausePanel.SetActive(false);
+        inventoryPanel.SetActive(false);
+        settingsPanel.SetActive(false);
         isPaused = false;
     }
 
@@ -37,11 +38,37 @@ public class PauseManager : MonoBehaviour
         }
         else
         {
-            pausePanel.SetActive(false);
+            hidePanels();
             Time.timeScale = 1f;
             AudioListener.pause = false;
         }
     }
+
+    public void showInventory()
+    {
+        pausePanel.SetActive(false);
+        inventoryPanel.SetActive(true);
+    }
+
+    public void showSettings()
+    {
+        pausePanel.SetActive(false);
+        settingsPanel.SetActive(true);
+    }
+
+    public void showOptions(GameObject previous_panel)
+    {
+        previous_panel.SetActive(false);
+        pausePanel.SetActive(true);
+    }
+
+    public void hidePanels()
+    {
+        pausePanel.SetActive(false);
+        inventoryPanel.SetActive(false);
+        settingsPanel.SetActive(false);
+    }
+
     public void Quit()
     {
         SceneManager.LoadScene(mainMenu);
