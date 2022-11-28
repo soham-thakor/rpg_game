@@ -8,7 +8,8 @@ public class InventoryUI : MonoBehaviour
 {
     [SerializeField] GameObject itemList;
     [SerializeField] ItemSlotter itemToSlot;
-    [SerializeField] Color highlightColor;
+    [SerializeField] Color highlightedColor;
+    [SerializeField] Color unselectedColor;
 
     [SerializeField] Image itemIcon;
     [SerializeField] TextMeshProUGUI itemDescription;
@@ -70,11 +71,11 @@ public class InventoryUI : MonoBehaviour
         {
             if (i == selectedItem)
             {
-                itemSlotList[i].ItemName.color = highlightColor;
-                itemSlotList[i].ItemCount.color = highlightColor;
+                itemSlotList[i].ItemName.color = highlightedColor;
+                itemSlotList[i].ItemCount.color = highlightedColor;
             } else {
-                itemSlotList[i].ItemName.color = Color.black;
-                itemSlotList[i].ItemCount.color = Color.black;
+                itemSlotList[i].ItemName.color = unselectedColor;
+                itemSlotList[i].ItemCount.color = unselectedColor;
             }
 
             var selectedSlot = inventory.ItemSlots[selectedItem].Item;
