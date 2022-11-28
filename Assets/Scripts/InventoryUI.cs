@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
     [SerializeField] GameObject itemList;
     [SerializeField] ItemSlotter itemToSlot;
     [SerializeField] Color highlightColor;
+
+    [SerializeField] Image itemIcon;
+    [SerializeField] TextMeshProUGUI itemDescription;
 
     int selectedItem = 0;
 
@@ -71,6 +76,10 @@ public class InventoryUI : MonoBehaviour
                 itemSlotList[i].ItemName.color = Color.black;
                 itemSlotList[i].ItemCount.color = Color.black;
             }
+
+            var selectedSlot = inventory.ItemSlots[selectedItem].Item;
+            itemIcon.sprite = selectedSlot.Icon;
+            itemDescription.text = selectedSlot.Description;
         }
     }
 }
