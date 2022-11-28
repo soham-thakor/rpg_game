@@ -48,18 +48,21 @@ public class PauseManager : MonoBehaviour
     {
         pausePanel.SetActive(false);
         inventoryPanel.SetActive(true);
+        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     public void showSettings()
     {
         pausePanel.SetActive(false);
         settingsPanel.SetActive(true);
+        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     public void showOptions(GameObject previous_panel)
     {
         previous_panel.SetActive(false);
         pausePanel.SetActive(true);
+        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     public void hidePanels()
@@ -74,5 +77,6 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene(mainMenu);
         Time.timeScale = 1f;
         AudioListener.pause = false;
+        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 }
