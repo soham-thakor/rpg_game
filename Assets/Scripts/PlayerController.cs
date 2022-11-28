@@ -39,7 +39,9 @@ public class PlayerController : MonoBehaviour
     // for ability cooldowns (cooldown times are set in playerdata)
     int[] abilityReady = { 1, 1, 1};  // 1 represents that ability is ready
 
-    
+    //To keep track of the ghosts that need to spawn
+    public QuestTrackerData questData; //isn't used, but it acts as a global variable
+
     // pull data from scriptable object
     void Awake() 
     {

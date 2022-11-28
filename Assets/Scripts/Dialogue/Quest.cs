@@ -17,7 +17,6 @@ public class Quest : MonoBehaviour
     private int questTracker = 0;
     private bool playerInRange;
     private int cuMsg = 0;
-
     
     void Start()
     {   
@@ -26,22 +25,18 @@ public class Quest : MonoBehaviour
             listName.text = npcTrigger.name;
         }
         dialogBox.SetActive(false);
-        
+
         //turns on and off the Ghosts
         //give ghosts an actor id of 2
         //all other NPCs give them a 1
-        if(data1.npcTalked(actor.name) == 1 && actor.id == 2){
+        if((data1.npcTalked(actor.name) == 1) && (actor.id == 2)){
             npcTrigger.SetActive(true);
-        }else if(actor.id == 2){
+        }else if(actor.id == 2 && data1.npcTalked(actor.name) == 0){
             npcTrigger.SetActive(false);
         }
     }
 
     void Update(){
-    //     if(Input.GetKeyDown(KeyCode.E) && (currentQuest < 2)){
-    //         currentQuest++;
-    //     }
-
         //keeps track of the current stage of the game for the scripts 
         //of all npc characters and resets it
         if(questTracker != currentQuest){

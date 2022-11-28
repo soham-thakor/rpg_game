@@ -61,10 +61,6 @@ public class BasicNPC : MonoBehaviour
                 }
             }
         }
-
-        if(selectionBox.activeInHierarchy){
-
-        }
     }
 
     public void CorrectChoice(){
