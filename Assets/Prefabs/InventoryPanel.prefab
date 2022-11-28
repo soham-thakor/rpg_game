@@ -245,7 +245,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 195}
+  m_SizeDelta: {x: 0, y: 291}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4306349992762129023
 MonoBehaviour:
@@ -1505,7 +1505,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.3529412, g: 0.039215688, b: 0, a: 1}
     m_HighlightedColor: {r: 0.5882353, g: 0.039215688, b: 0, a: 1}
     m_PressedColor: {r: 0.5882353, g: 0.039215688, b: 0, a: 1}
-    m_SelectedColor: {r: 0.5882353, g: 0.039215688, b: 0, a: 1}
+    m_SelectedColor: {r: 0.3529412, g: 0.039215688, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1524,8 +1524,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1055125123680108462}
   m_HandleRect: {fileID: 2809805701323122337}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.99656355
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
