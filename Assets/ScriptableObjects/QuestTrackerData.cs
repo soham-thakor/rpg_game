@@ -26,12 +26,12 @@ public class QuestTrackerData : ScriptableObject, IResetOnExitPlay {
         questTracker = 0;
         interactions = 0;
 
-        interact["FKL"] = 0; 
-        interact["FKR"] = 0; 
-        interact["Impa"] = 0; 
-        interact["Aveil"] = 0; 
-        interact["Poe"] = 0; 
-        interact["Earl"] = 0;
+        interact["Alexandre"] = 0; 
+        interact["Edgar"] = 0; 
+        interact["Cobra"] = 0; 
+        interact["Balthazar"] = 0; 
+        interact["Olivia"] = 0; 
+        interact["Elanor"] = 0;
         interact["Dajjal"] = 0; 
     }
 

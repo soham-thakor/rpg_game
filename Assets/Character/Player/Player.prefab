@@ -1508,6 +1508,7 @@ GameObject:
   - component: {fileID: 3807633216227243796}
   - component: {fileID: 1245068519016021934}
   - component: {fileID: 3623622513716773179}
+  - component: {fileID: 6175205338193437050}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1652,6 +1653,7 @@ MonoBehaviour:
   mine: {fileID: 268904236}
   wind: {fileID: 700079395}
   playerData: {fileID: 11400000, guid: 3b5d3a0d220d98549a9c1e34dd0f7a08, type: 2}
+  questData: {fileID: 11400000, guid: f31c1745af12a924ba194d97f6737341, type: 2}
 --- !u!61 &8454170824699123502
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1733,6 +1735,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 9e234875eda8c474db9372bebee2ea1f, type: 2}
   duration: 0.03
+--- !u!114 &6175205338193437050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283007440131791999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8f7c13a2b9a914887b141d2771a395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSlots:
+  - item: {fileID: 11400000, guid: 0a874ac329d774a4181bb7e2e355616c, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 7247f6c6c35debb4e8c06a6d3cb3e93f, type: 2}
+    count: 4
 --- !u!1 &4984915653449562502
 GameObject:
   m_ObjectHideFlags: 0
