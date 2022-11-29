@@ -8,9 +8,10 @@ using TMPro;
 public class GAMEMANAGER_TIME : MonoBehaviour
 {
 
-    public float minutes = 300;
+    private float minutes;
     private int minutesToDisplay, hoursToDisplay, previoiusHoursToDisplay;
     private float percentageDayCompleted, maxMinutesInADay = 1440, timeIncrement = 1, nextIncrement, nextRate = 1;
+    public TimeData timeData;
 
     // turning this to false, will prevent the clock from brightness in the scene.
     public bool changeLightInScene;
@@ -21,12 +22,12 @@ public class GAMEMANAGER_TIME : MonoBehaviour
     public TMP_Text hoursText;
     public TMP_Text minutesText;
 
-    //public delegate void TimeChangedEventHandler(int hours);
-    //public event TimeChangedEventHandler EventTimeChanged;
-
     // Start is called before the first frame update
     void Start()
     {
+        // read time from scriptable object
+        minutes = timeData.currMinutes;
+        
         SetLightGradient();
         SetClock();
     }
@@ -35,8 +36,6 @@ public class GAMEMANAGER_TIME : MonoBehaviour
     void Update()
     {
         IncrementTime();
-        //MakeTimeFaster();
-        //MakeTimeNormal();
     }
 
     void IncrementTime()
@@ -52,6 +51,9 @@ public class GAMEMANAGER_TIME : MonoBehaviour
         {
             minutes = 0;
         }
+
+        // set minutes in scriptable object
+        timeData.currMinutes = minutes;
         
         if(changeLightInScene) {
             SetLightGradient();
@@ -85,6 +87,5 @@ public class GAMEMANAGER_TIME : MonoBehaviour
 
         hoursText.text = hoursToDisplay.ToString("D2");
         minutesText.text = minutesToDisplay.ToString("D2");
-
     }
 }
