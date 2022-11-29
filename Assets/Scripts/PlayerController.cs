@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectile;
     public GameObject mine;
     public GameObject wind;
+    public GameObject fireHeal;
     
     // scriptable object
     public PlayerData playerData;
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
     // for ability cooldowns (cooldown times are set in playerdata)
-    int[] abilityReady = { 1, 1, 1};  // 1 represents that ability is ready
+    int[] abilityReady = { 1, 1, 1, 1};  // 1 represents that ability is ready
 
     //To keep track of the ghosts that need to spawn
     public QuestTrackerData questData; //isn't used, but it acts as a global variable
@@ -121,6 +122,13 @@ public class PlayerController : MonoBehaviour
             return true;
         } else {
             return false;
+        }
+    }
+
+    void OnHeal() {
+        if(abilityReady[3] == 1) {
+            fireHeal.SetActive(true);
+            StartCoroutine(StartCooldown(3, playerData.fireHealCoolDown));
         }
     }
 

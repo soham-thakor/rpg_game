@@ -16,6 +16,7 @@ public class PlayerData : ScriptableObject, IResetOnExitPlay
     public float biteCoolDown = 2;
     public float mineCoolDown = 2;
     public float speedCoolDown = 2;
+    public float fireHealCoolDown = 12;
 
     public void ResetOnExitPlay()
     {
@@ -29,5 +30,6 @@ public class PlayerData : ScriptableObject, IResetOnExitPlay
         biteCoolDown = 2;
         mineCoolDown = 2;
         speedCoolDown = 2;
+        fireHealCoolDown = 12;
     }    
 }
