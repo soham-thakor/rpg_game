@@ -12,6 +12,9 @@ public class GAMEMANAGER_TIME : MonoBehaviour
     private int minutesToDisplay, hoursToDisplay, previoiusHoursToDisplay;
     private float percentageDayCompleted, maxMinutesInADay = 1440, timeIncrement = 1, nextIncrement, nextRate = 1;
 
+    // turning this to false, will prevent the clock from brightness in the scene.
+    public bool changeLightInScene;
+
     public Gradient gradient;
     public Light2D environmentLight;
 
@@ -49,8 +52,10 @@ public class GAMEMANAGER_TIME : MonoBehaviour
         {
             minutes = 0;
         }
-
-        SetLightGradient();
+        
+        if(changeLightInScene) {
+            SetLightGradient();
+        }
         SetClock();
     }
 
