@@ -12,11 +12,14 @@ public class Quest : MonoBehaviour
     public Message [] messages;
     public NPC actor;
     public QuestTrackerData data1;
+    public TimeData timeData;
 
     public int currentQuest;
     private int questTracker = 0;
     private bool playerInRange;
     private int cuMsg = 0;
+
+
     
     void Start()
     {   
@@ -34,11 +37,19 @@ public class Quest : MonoBehaviour
         }else if(actor.id == 2 && data1.npcTalked(actor.name) == 0){
             npcTrigger.SetActive(false);
         }
+
+        if(timeData.isNight && (actor.id == 1 || actor.id == 0)){
+            npcTrigger.SetActive(false);
+        }else{
+            npcTrigger.SetActive(true);
+        }
+
     }
 
     void Update(){
         //keeps track of the current stage of the game for the scripts 
         //of all npc characters and resets it
+
         if(questTracker != currentQuest){
             questTracker = currentQuest;
             cuMsg = 0;
