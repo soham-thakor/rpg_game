@@ -183,6 +183,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: actor.name
       value: Ferrante
       objectReference: {fileID: 0}
@@ -292,6 +296,10 @@ PrefabInstance:
       value: Honorable Nefertiti
       objectReference: {fileID: 0}
     - target: {fileID: 5124164439307769591, guid: 14b68bc17ea87b64ca0faa5990c9b268, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
+    - target: {fileID: 5124164439307769591, guid: 14b68bc17ea87b64ca0faa5990c9b268, type: 3}
       propertyPath: actor.name
       value: Neferiti
       objectReference: {fileID: 0}
@@ -380,6 +388,10 @@ PrefabInstance:
       propertyPath: actor.id
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
     - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
       propertyPath: actor.name
       value: Elanor
@@ -473,6 +485,10 @@ PrefabInstance:
       propertyPath: actor.id
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
     - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: actor.name
       value: Alexandre
@@ -604,6 +620,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: Lady Balthazar
       objectReference: {fileID: 0}
+    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
     - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
       propertyPath: actor.name
       value: Balthazar
@@ -5835,6 +5855,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: actor.name
       value: Charles
       objectReference: {fileID: 0}
@@ -6061,6 +6085,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5124164439307769591, guid: 14b68bc17ea87b64ca0faa5990c9b268, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
+    - target: {fileID: 5124164439307769591, guid: 14b68bc17ea87b64ca0faa5990c9b268, type: 3}
       propertyPath: actor.name
       value: Dajjal
       objectReference: {fileID: 0}
@@ -6141,6 +6169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
     - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: actor.name
       value: Benjamin
@@ -6236,12 +6268,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: actor.name
       value: Edgar
       objectReference: {fileID: 0}
     - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: messages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: messages.Array.data[0].message.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: messages.Array.data[1].message.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
@@ -6254,6 +6298,22 @@ PrefabInstance:
     - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[2]
       value: Welcome!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: messages.Array.data[1].message.Array.data[0]
+      value: Hey!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: messages.Array.data[1].message.Array.data[1]
+      value: There was another body found at  the top right section of the dungeon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: messages.Array.data[1].message.Array.data[2]
+      value: Gather what you can...
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: messages.Array.data[1].message.Array.data[3]
+      value: He was a brother in arms...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
@@ -6547,6 +6607,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
     - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
+    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
       propertyPath: actor.name
       value: Andre
       objectReference: {fileID: 0}
@@ -6632,11 +6696,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
+    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
       propertyPath: actor.name
-      value: LadyBalthazar
+      value: Balthazar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
+      propertyPath: messages.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
       propertyPath: messages.Array.data[0].message.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
+      propertyPath: messages.Array.data[1].message.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
@@ -6646,6 +6722,14 @@ PrefabInstance:
     - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[1]
       value: Everyone has different ways of coping with reality.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
+      propertyPath: messages.Array.data[1].message.Array.data[0]
+      value: My sister disappeared a little over a week ago.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
+      propertyPath: messages.Array.data[1].message.Array.data[1]
+      value: She was found in the in the middle section of the dungeon...
       objectReference: {fileID: 0}
     - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
       propertyPath: m_RootOrder
@@ -6802,6 +6886,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
+    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
       propertyPath: actor.name
       value: Olivia
       objectReference: {fileID: 0}
@@ -6898,6 +6986,10 @@ PrefabInstance:
       propertyPath: actor.id
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5124164439307769591, guid: 14b68bc17ea87b64ca0faa5990c9b268, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
     - target: {fileID: 5124164439307769591, guid: 14b68bc17ea87b64ca0faa5990c9b268, type: 3}
       propertyPath: actor.name
       value: Cobra
@@ -12296,6 +12388,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
     - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
       propertyPath: actor.name
       value: Alex Louis
@@ -25629,6 +25725,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
+      propertyPath: timeData
+      value: 
+      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
     - target: {fileID: 9000013682612906363, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: actor.name
       value: David

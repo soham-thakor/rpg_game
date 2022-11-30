@@ -85,6 +85,13 @@ public class GAMEMANAGER_TIME : MonoBehaviour
             //call event
         }
 
+        if(hoursToDisplay >= 6 && hoursToDisplay <= 19){
+            timeData.isNight = false;
+
+        }else{
+            timeData.isNight = true;
+        }
+        Debug.Log(timeData.isNight);
         hoursText.text = hoursToDisplay.ToString("D2");
         minutesText.text = minutesToDisplay.ToString("D2");
     }
