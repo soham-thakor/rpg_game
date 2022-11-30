@@ -12,11 +12,6 @@ public class PlayerData : ScriptableObject, IResetOnExitPlay
     public float currentHealth = 1000;
     public float maxHealth = 1000;
     public float moveSpeed = 1;
-    
-    public float biteCoolDown = 2;
-    public float mineCoolDown = 2;
-    public float speedCoolDown = 2;
-    public float fireHealCoolDown = 12;
 
     public void ResetOnExitPlay()
     {
@@ -26,10 +21,5 @@ public class PlayerData : ScriptableObject, IResetOnExitPlay
         currentHealth = 1000;
         maxHealth = 1000;
         moveSpeed = 1;
-        
-        biteCoolDown = 2;
-        mineCoolDown = 2;
-        speedCoolDown = 2;
-        fireHealCoolDown = 12;
     }    
 }

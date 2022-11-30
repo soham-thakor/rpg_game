@@ -38,7 +38,8 @@ public class PlayerController : MonoBehaviour
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
     // for ability cooldowns (cooldown times are set in playerdata)
-    int[] abilityReady = { 1, 1, 1, 1};  // 1 represents that ability is ready
+    public int[] abilityReady = { 1, 1, 1, 1};  // 1 represents that ability is ready
+    private string[] abilityNames = { "Bite", "WaterMine", "WindSpeed", "FireHeal"};
 
     //To keep track of the ghosts that need to spawn
     public QuestTrackerData questData; //isn't used, but it acts as a global variable
@@ -128,7 +129,8 @@ public class PlayerController : MonoBehaviour
     void OnHeal() {
         if(abilityReady[3] == 1) {
             fireHeal.SetActive(true);
-            StartCoroutine(StartCooldown(3, playerData.fireHealCoolDown));
+            var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[3] + "Slot").GetComponent<AbilitySlot>();
+            ability.StartCooldown(3);
         }
     }
 
@@ -156,7 +158,8 @@ public class PlayerController : MonoBehaviour
             SoundManager.PlaySound(SoundManager.Sound.FireBite);
             
             // start cooldown
-            StartCoroutine(StartCooldown(0, playerData.biteCoolDown));
+            var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[0] + "Slot").GetComponent<AbilitySlot>();
+            ability.StartCooldown(0);
         }
     }
 
@@ -170,7 +173,9 @@ public class PlayerController : MonoBehaviour
             mineScript.setOrigin("Player");
             newMine.SetActive(true);
             SoundManager.PlaySound(SoundManager.Sound.PlaceWaterBomb);
-            StartCoroutine(StartCooldown(1, playerData.mineCoolDown));
+
+            var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[1] + "Slot").GetComponent<AbilitySlot>();
+            ability.StartCooldown(1);
         }
     }
 
@@ -180,7 +185,8 @@ public class PlayerController : MonoBehaviour
             WindSpeed windScript = wind.GetComponent<WindSpeed>();
 
             wind.SetActive(true);
-            StartCoroutine(StartCooldown(2, playerData.speedCoolDown));
+            var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[2] + "Slot").GetComponent<AbilitySlot>();
+            ability.StartCooldown(2);
             //SoundManager.PlaySound(SoundManager.Sound.SpeedUpBoost);
         }
     }

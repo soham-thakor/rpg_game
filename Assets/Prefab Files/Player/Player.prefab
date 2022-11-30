@@ -2385,6 +2385,7 @@ MonoBehaviour:
   wind: {fileID: 700079395}
   fireHeal: {fileID: 1124123973469116107}
   playerData: {fileID: 11400000, guid: 3b5d3a0d220d98549a9c1e34dd0f7a08, type: 2}
+  abilityReady: 01000000010000000100000001000000
   questData: {fileID: 11400000, guid: f31c1745af12a924ba194d97f6737341, type: 2}
 --- !u!61 &8454170824699123502
 BoxCollider2D:
@@ -3234,7 +3235,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
-      value: AbilitySlot (3)
+      value: FireHealSlot
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
@@ -3356,7 +3357,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
-      value: AbilitySlot
+      value: Bite Slot
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
@@ -3482,7 +3483,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 1de63f756f38a8941902ff3ffd044da1, type: 3}
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
-      value: AbilitySlot (2)
+      value: Wind Speed Slot
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
@@ -3592,7 +3593,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7029ed795281f1f438db16e3494e18c5, type: 3}
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
-      value: AbilitySlot (1)
+      value: Water Mine Slot
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
