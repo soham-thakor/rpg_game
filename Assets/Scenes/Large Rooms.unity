@@ -1673,10 +1673,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 268904238, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: damageDealt
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 1932433595, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1685,18 +1681,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 293452190653679645, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: cooldownTime
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 659475673689931466, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: cooldownTime
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251804127132344697, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: m_Name
-      value: BiteSlot
-      objectReference: {fileID: 0}
     - target: {fileID: 1429260862171607116, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1704,10 +1688,6 @@ PrefabInstance:
     - target: {fileID: 1429260862171607116, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2047780686758336430, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: m_Name
-      value: WindSpeedSlot
       objectReference: {fileID: 0}
     - target: {fileID: 2225237509106747035, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1772,18 +1752,6 @@ PrefabInstance:
     - target: {fileID: 3283007440131791999, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3716855919993527771, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: cooldownTime
-      value: 3000
-      objectReference: {fileID: 0}
-    - target: {fileID: 5536051331701241079, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: cooldownTime
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6456404107670265235, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: m_Name
-      value: WaterMineSlot
       objectReference: {fileID: 0}
     - target: {fileID: 6562674031345208486, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x

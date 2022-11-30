@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 10
-  damageDealt: 50
+  damageDealt: 100
 --- !u!1 &543546096
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,6 +3321,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3716855919744931179, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: cooldownTime
+      value: 3000
+      objectReference: {fileID: 0}
     - target: {fileID: 5456893848286488374, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5445104
@@ -3357,7 +3361,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
-      value: Bite Slot
+      value: BiteSlot
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
@@ -3443,6 +3447,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3716855919744931179, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: cooldownTime
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 5456893848286488374, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5445104
@@ -3483,7 +3491,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 1de63f756f38a8941902ff3ffd044da1, type: 3}
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
-      value: Wind Speed Slot
+      value: WindSpeedSlot
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
@@ -3569,6 +3577,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3716855919744931179, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: cooldownTime
+      value: 1500
+      objectReference: {fileID: 0}
     - target: {fileID: 6815958674705015422, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3593,7 +3605,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7029ed795281f1f438db16e3494e18c5, type: 3}
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
-      value: Water Mine Slot
+      value: WaterMineSlot
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
@@ -3678,6 +3690,10 @@ PrefabInstance:
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716855919744931179, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: cooldownTime
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6815958674705015422, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Sprite
