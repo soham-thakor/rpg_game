@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -107,6 +108,9 @@ public class Enemy : MonoBehaviour
                 SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
             }
             
+            if(isBoss) {
+                SceneManager.LoadScene("CutSceneEnding");
+            }
             Destroy(gameObject);
         }
 
