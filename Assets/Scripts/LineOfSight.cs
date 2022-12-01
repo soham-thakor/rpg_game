@@ -22,7 +22,7 @@ public class LineOfSight : MonoBehaviour
     //private Enemy en;
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
-    public float Timer = 15;
+    public float Timer;
 
     void Start() 
     {
@@ -63,7 +63,7 @@ public class LineOfSight : MonoBehaviour
                     Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, Quaternion.identity);
                     
                 }
-                Timer = 15;
+                Timer = 20;
                 }
                 enemyChase.destination = player.position;
                 //Debug.Log("spawn");

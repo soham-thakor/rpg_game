@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        if(gameObject.name.Contains("Antagonist") || gameObject.name.Contains("Gargoyle") || gameObject.name.Contains("BOSS") )
+        if(gameObject.name.Contains("Antagonist") || gameObject.name.Contains("Gargoyle") || gameObject.name.Contains("Boss") )
         {
             enemyType = "Knight";
         } else if(gameObject.name.Contains("GOBLIN")) {
@@ -107,6 +107,11 @@ public class Enemy : MonoBehaviour
             }
             
             Destroy(gameObject);
+        }
+
+        if(currentHealth <= 800)
+        {
+            GetComponent<Animator>().SetBool("IsEnraged", true);
         }
 
         if (enemyType == "Knight") {
