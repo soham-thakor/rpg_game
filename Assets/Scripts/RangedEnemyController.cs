@@ -11,7 +11,6 @@ public class RangedEnemyController : MonoBehaviour
     public Transform gun;
 
     public GameObject EnemyProjectile;
-    public float followPlayerRange;
     public float attackRange;
 
     public float startTimeBtwnShots;

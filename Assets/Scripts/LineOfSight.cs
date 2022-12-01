@@ -15,6 +15,7 @@ public class LineOfSight : MonoBehaviour
     public float visionDistance;
     public bool canMove;
     public GameObject enemy;
+    public bool isSpawner = false;
 
     private Transform player;
     private IAstarAI enemyChase;
@@ -48,26 +49,28 @@ public class LineOfSight : MonoBehaviour
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
 
             // melee enemy targetting
-            if(hitInfo.collider.tag == "Player" && enemyChase != null)
+            if(hitInfo.collider.tag == "Player" && enemyChase != null && !isSpawner)
             {
                 // chase player
                 //Timer -= Time.deltaTime;
-                if(Timer <=0f)
-                {
-                    //Debug.Log("spawning");
-                  for(int i = 0;i<5;i++)
-                {
-                    int randEnemy = Random.Range(0, enemyPrefabs.Length);
-                    int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-            
-                    Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, Quaternion.identity);
-                    
-                }
-                Timer = 20;
-                }
                 enemyChase.destination = player.position;
                 //Debug.Log("spawn");
                 
+            }
+            else if(hitInfo.collider.tag == "Player" && enemyChase != null && isSpawner)
+            {
+                if(Timer <=0f)
+                {
+                    for(int i = 0;i<5;i++)
+                    {
+                        int randEnemy = Random.Range(0, enemyPrefabs.Length);
+                        int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+                
+                        Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, Quaternion.identity);
+                        
+                    }
+                    Timer = 20;
+                }
             }
             // ranged enemy targeting
             else if(hitInfo.collider.tag == "Player" && rangedEnemy != null) {

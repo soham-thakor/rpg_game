@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
     public float Timer = 2;
+    public bool isBoss = false;
 
     private SpriteRenderer spriteRenderer;
     private SimpleFlash flashEffect;
@@ -109,7 +110,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(currentHealth <= 800)
+        if(currentHealth <= 800 && isBoss)
         {
             GetComponent<Animator>().SetBool("IsEnraged", true);
         }
