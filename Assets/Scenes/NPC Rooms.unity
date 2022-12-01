@@ -6446,7 +6446,7 @@ Transform:
   - {fileID: 1705587002}
   - {fileID: 1787145069}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1528316545 stripped
 Transform:
@@ -25148,6 +25148,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04b829b35ff773544bf4c31652d6acfe, type: 3}
+--- !u!1001 &2018965859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1450411058180074608, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: actor.id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450411058180074608, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450411058180074608, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: We are guarding this entrance...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450411058180074608, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: There are monsters on the other side.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.53879774
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8224811
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926076, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_Name
+      value: THE KNIGHT (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
 --- !u!1001 &2061683746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25276,3 +25349,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1687a25742d297b40aef521b8487dc5e, type: 3}
+--- !u!1001 &2129148386
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1450411058180074608, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: actor.id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450411058180074608, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450411058180074608, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: I hate my job...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450411058180074608, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: I put in my two weeks...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450411058180074608, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: and now I'm stuck defending this infested castle.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.20770061
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.81278634
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926066, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569242363066926076, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
+      propertyPath: m_Name
+      value: THE KNIGHT
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ee0fe509d3a8f742820888e53160fa6, type: 3}
