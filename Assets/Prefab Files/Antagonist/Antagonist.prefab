@@ -48,6 +48,10 @@ MonoBehaviour:
   visionDistance: 100
   canMove: 0
   enemy: {fileID: 3151946911013386404}
+  isSpawner: 0
+  spawnPoints: []
+  enemyPrefabs: []
+  Timer: 0
 --- !u!1 &582942176229413276
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +498,10 @@ MonoBehaviour:
   currentHealth: 0
   speed: 2.5
   swordHitbox: {fileID: 232391609022844776}
+  spawnPoints: []
+  enemyPrefabs: []
+  Timer: 2
+  isBoss: 0
 --- !u!114 &3151946911013386427
 MonoBehaviour:
   m_ObjectHideFlags: 0
