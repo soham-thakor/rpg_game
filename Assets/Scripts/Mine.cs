@@ -48,6 +48,20 @@ public class Mine : MonoBehaviour
                 Destroy(gameObject, 1f);
             }
         }
+        /*
+        if(other.tag == "Boss" && origin == "Player") {
+            RedEyeBoss boss = other.GetComponent<RedEyeBoss>();
+
+            // if current mine is water mine
+            if(gameObject.name == "Water Mine(Clone)") 
+            {
+                boss.TakeDamage(damageDealt);
+                SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
+                animator.SetTrigger("Explode");
+                Destroy(gameObject, 1f);
+            }
+        }
+*/
 
         // enemy mine comes in contact with player
         if(other.tag == "Player" && origin == "Enemy") {

@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class RedEyeBoss : MonoBehaviour
 {
+    
     public HealthBar healthBar;
-    public float maxHealth = 100;
+    public float maxHealth = 10000;
     public float currentHealth;
     public float speed = 2.5f;
     public SwordAttack swordHitbox;             // needs to be set to swordattack game object in editor
-    public Transform[] spawnPoints;
-    public GameObject[] enemyPrefabs;
-    public float Timer = 2;
-
+    
     private SpriteRenderer spriteRenderer;
     private SimpleFlash flashEffect;
     private Transform player;
@@ -23,24 +21,18 @@ public class Enemy : MonoBehaviour
 
     // getters
     public bool getKnockedOut() { return knockedOut; }
-
-    // To be used for sound manager 3D sound
-    /*public Vector3 GetPosition()
-    {
-        return transform.position;
-    }*/
-
-    //public float Health;
+    // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+         currentHealth = maxHealth;
         healthBar.SetMaxHealth((int)maxHealth);
 
         flashEffect = GetComponent<SimpleFlash>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        if(gameObject.name.Contains("Antagonist") || gameObject.name.Contains("Gargoyle") || gameObject.name.Contains("Boss") )
+        //enemyType = "Knight";
+        if(gameObject.name.Contains("Antagonist") || gameObject.name.Contains("Gargoyle") || gameObject.name.Contains("BOSS"))
         {
             enemyType = "Knight";
         } else if(gameObject.name.Contains("GOBLIN")) {
@@ -50,7 +42,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void FixedUpdate() {
+
+     private void FixedUpdate() {
         // if player is left of enemy
         if(player.position.x < transform.position.x)
         {   
@@ -70,9 +63,6 @@ public class Enemy : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
-
-   
-    // Gets called forom the attack sword.
     public bool LookAtPlayer()
     {
         Vector3 flipped = transform.localScale;
@@ -91,12 +81,14 @@ public class Enemy : MonoBehaviour
             transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
-      
+
         return isFlipped;
     }
-
+    // Update is called once per frame
     public void TakeDamage(float damage)
     {
+        //Destroy(gameObject);
+
         if (currentHealth <= 0) {
             if(enemyType == "Knight") {
                 SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
@@ -107,11 +99,6 @@ public class Enemy : MonoBehaviour
             }
             
             Destroy(gameObject);
-        }
-
-        if(currentHealth <= 800)
-        {
-            GetComponent<Animator>().SetBool("IsEnraged", true);
         }
 
         if (enemyType == "Knight") {

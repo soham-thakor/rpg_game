@@ -19,6 +19,10 @@ public class LineOfSight : MonoBehaviour
     private Transform player;
     private IAstarAI enemyChase;
     private RangedEnemyController rangedEnemy;
+    //private Enemy en;
+    public Transform[] spawnPoints;
+    public GameObject[] enemyPrefabs;
+    public float Timer;
 
     void Start() 
     {
@@ -26,10 +30,12 @@ public class LineOfSight : MonoBehaviour
         enemyChase = enemy.GetComponent<IAstarAI>();
         rangedEnemy = enemy.GetComponent<RangedEnemyController>();
     }
-    
+  
     // Update is called once per frame
     void Update()
-    {
+    {    
+
+        Timer -= Time.deltaTime;
         // rotate looking for player
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
 
@@ -45,11 +51,29 @@ public class LineOfSight : MonoBehaviour
             if(hitInfo.collider.tag == "Player" && enemyChase != null)
             {
                 // chase player
+                //Timer -= Time.deltaTime;
+                if(Timer <=0f)
+                {
+                    //Debug.Log("spawning");
+                  for(int i = 0;i<5;i++)
+                {
+                    int randEnemy = Random.Range(0, enemyPrefabs.Length);
+                    int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+            
+                    Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, Quaternion.identity);
+                    
+                }
+                Timer = 20;
+                }
                 enemyChase.destination = player.position;
+                //Debug.Log("spawn");
+                
             }
             // ranged enemy targeting
             else if(hitInfo.collider.tag == "Player" && rangedEnemy != null) {
                 rangedEnemy.setRange(true);
+                //Spawn();
+                //Debug.Log("spawning");
             }
         }
         else {

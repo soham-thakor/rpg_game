@@ -13,6 +13,10 @@ public class RandomSpawnerScript : MonoBehaviour
         
     }
 
+    private void Spawn()
+    {
+        
+    }
     // Update is called once per frame
     void Update()
     {
@@ -20,10 +24,13 @@ public class RandomSpawnerScript : MonoBehaviour
         if(Timer <=0f)
         //if(Input.GetMouseButtonDown(0))
         {
+            for(int i = 0;i<5;i++)
+            {
             int randEnemy = Random.Range(0, enemyPrefabs.Length);
             int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-
+            
             Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+            }
             Timer = 15f;
         }
     }
