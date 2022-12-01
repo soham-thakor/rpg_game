@@ -13,7 +13,6 @@ public class LineOfSight : MonoBehaviour
 
     public float rotationSpeed;
     public float visionDistance;
-    public bool canMove;
     public GameObject enemy;
     public bool isSpawner = false;
 
@@ -71,6 +70,7 @@ public class LineOfSight : MonoBehaviour
                     }
                     Timer = 20;
                 }
+                enemyChase.destination = player.position;
             }
             // ranged enemy targeting
             else if(hitInfo.collider.tag == "Player" && rangedEnemy != null) {

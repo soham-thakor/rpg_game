@@ -3233,6 +3233,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113521385}
     m_Modifications:
+    - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
       value: FireHealSlot
@@ -3359,6 +3367,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113521385}
     m_Modifications:
+    - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
       value: BiteSlot
@@ -3449,7 +3465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716855919744931179, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: cooldownTime
-      value: 500
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5456893848286488374, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_LocalScale.x
@@ -3489,6 +3505,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1de63f756f38a8941902ff3ffd044da1, type: 3}
+    - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
       value: WindSpeedSlot
@@ -3579,7 +3603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716855919744931179, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: cooldownTime
-      value: 1500
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6815958674705015422, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Sprite
@@ -3603,6 +3627,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7029ed795281f1f438db16e3494e18c5, type: 3}
+    - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
       value: WaterMineSlot
@@ -3693,7 +3725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716855919744931179, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: cooldownTime
-      value: 500
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6815958674705015422, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Sprite

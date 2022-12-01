@@ -10,8 +10,6 @@ public class Enemy : MonoBehaviour
     public float currentHealth;
     public float speed = 2.5f;
     public SwordAttack swordHitbox;             // needs to be set to swordattack game object in editor
-    public Transform[] spawnPoints;
-    public GameObject[] enemyPrefabs;
     public float Timer = 2;
     public bool isBoss = false;
 

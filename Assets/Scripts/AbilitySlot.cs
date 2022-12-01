@@ -21,7 +21,7 @@ public class AbilitySlot : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
-    void Update() {
+    void FixedUpdate() {
         if(inCooldown) {
             RunCooldown();
         }
