@@ -78,6 +78,7 @@ public class PauseManager : MonoBehaviour
         pausePanel.SetActive(false);
         inventoryPanel.SetActive(false);
         settingsPanel.SetActive(false);
+        controlPanel.SetActive(false);
     }
 
     public void Quit()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using System;
 
 // Takes and handles input and movement for a player character
@@ -194,7 +195,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         if (currentHealth <= 0) {
-            Destroy(gameObject);
+            SceneManager.LoadScene("CutSceneGameOver");
         }
 
         SoundManager.PlaySound(SoundManager.Sound.PlayerDamaged);
