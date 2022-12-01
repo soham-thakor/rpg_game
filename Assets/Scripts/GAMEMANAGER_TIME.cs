@@ -91,7 +91,7 @@ public class GAMEMANAGER_TIME : MonoBehaviour
         }else{
             timeData.isNight = true;
         }
-        Debug.Log(timeData.isNight);
+  
         hoursText.text = hoursToDisplay.ToString("D2");
         minutesText.text = minutesToDisplay.ToString("D2");
     }

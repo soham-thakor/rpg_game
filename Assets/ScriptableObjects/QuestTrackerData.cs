@@ -43,5 +43,11 @@ public class QuestTrackerData : ScriptableObject, IResetOnExitPlay {
         return var;
     }  
 
+    public void nextSet(){
+        if(interactions == 5){
+            questTracker++;
+        }
+    }
+
 
 }

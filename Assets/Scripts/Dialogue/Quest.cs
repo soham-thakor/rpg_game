@@ -14,8 +14,7 @@ public class Quest : MonoBehaviour
     public QuestTrackerData data1;
     public TimeData timeData;
 
-    public int currentQuest;
-    private int questTracker = 0;
+    public int currentQuest = 0;
     private bool playerInRange;
     private int cuMsg = 0;
 
@@ -37,10 +36,10 @@ public class Quest : MonoBehaviour
         }else if(actor.id == 2 && data1.npcTalked(actor.name) == 0){
             npcTrigger.SetActive(false);
         }
-
-        if(timeData.isNight && (actor.id == 1 || actor.id == 0)){
+        
+        if((actor.id == 1 || actor.id == 0) && timeData.isNight){
             npcTrigger.SetActive(false);
-        }else{
+        }else if(actor.id != 2){
             npcTrigger.SetActive(true);
         }
 
@@ -50,8 +49,8 @@ public class Quest : MonoBehaviour
         //keeps track of the current stage of the game for the scripts 
         //of all npc characters and resets it
 
-        if(questTracker != currentQuest){
-            questTracker = currentQuest;
+        if(data1.questTracker != currentQuest){
+            currentQuest = data1.questTracker;
             cuMsg = 0;
         }
 
@@ -59,14 +58,19 @@ public class Quest : MonoBehaviour
     //
         //dialogue interactions system when key F is pressed
         if(Input.GetKeyDown(KeyCode.F) && playerInRange){
-
             //if its a regular NPC and they have a clue to give you
             //then they will spawn a ghost after interacting with them
+            
             if(data1.npcTalked(actor.name) == 0 && actor.id == 1){
-                data1.interactions++;
                 data1.interact[actor.name]++;
-            }else if(data1.npcTalked(actor.name) == 1 && actor.id == 2){
                 data1.interactions++;
+                if(data1.interactions == 5){
+                    data1.questTracker++;
+                    cuMsg = 0;
+                    data1.interactions++;
+                }
+                Debug.Log(data1.interactions);
+            }else if(data1.npcTalked(actor.name) == 1 && actor.id == 2){
                 data1.interact[actor.name]++;
             }
 
@@ -78,10 +82,10 @@ public class Quest : MonoBehaviour
                 dialogBox.SetActive(false);
             }else{
                 dialogBox.SetActive(true);
-                string msgToDisplay = messages[questTracker].message[cuMsg];
+                string msgToDisplay = messages[data1.questTracker].message[cuMsg];
                 dialogText.text = msgToDisplay;
 
-                if(cuMsg < messages[questTracker].message.Length-1){
+                if(cuMsg < messages[data1.questTracker].message.Length-1){
                     cuMsg++;
                 }
             }
