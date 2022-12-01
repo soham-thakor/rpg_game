@@ -10,7 +10,7 @@ public class PlayerData : ScriptableObject, IResetOnExitPlay
     public Vector2 initialValue = Vector2.zero;
     public bool movedScene = false;
     public float currentHealth = 700;
-    public float maxHealth = 1000;
+    public float maxHealth = 700;
     public float moveSpeed = 1;
 
     public void ResetOnExitPlay()
@@ -18,8 +18,8 @@ public class PlayerData : ScriptableObject, IResetOnExitPlay
         // reset values to default whenever exiting playmode
         initialValue = Vector2.zero;
         movedScene = false;
-        currentHealth = 1000;
-        maxHealth = 1000;
+        currentHealth = 700;
+        maxHealth = 700;
         moveSpeed = 1;
     }    
 }

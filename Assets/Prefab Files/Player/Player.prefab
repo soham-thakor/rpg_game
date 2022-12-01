@@ -2385,7 +2385,6 @@ MonoBehaviour:
   wind: {fileID: 700079395}
   fireHeal: {fileID: 1124123973469116107}
   playerData: {fileID: 11400000, guid: 3b5d3a0d220d98549a9c1e34dd0f7a08, type: 2}
-  abilityReady: 01000000010000000100000001000000
   questData: {fileID: 11400000, guid: f31c1745af12a924ba194d97f6737341, type: 2}
 --- !u!61 &8454170824699123502
 BoxCollider2D:
@@ -3603,7 +3602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716855919744931179, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: cooldownTime
-      value: 500
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 6815958674705015422, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Sprite

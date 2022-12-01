@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
     // for ability cooldowns (cooldown times are set in playerdata)
-    public int[] abilityReady = { 1, 1, 1, 1};  // 1 represents that ability is ready
+    [System.NonSerialized] public int[] abilityReady = { 1, 1, 1, 1};  // 1 represents that ability is ready
     private string[] abilityNames = { "Bite", "WaterMine", "WindSpeed", "FireHeal"};
 
     //To keep track of the ghosts that need to spawn
