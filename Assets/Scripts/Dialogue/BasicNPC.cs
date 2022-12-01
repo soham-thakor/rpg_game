@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BasicNPC : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class BasicNPC : MonoBehaviour
     public QuestTrackerData data1;
     public SelectionData data2;
 
+    public int gameStartScene;
     public int currentQuest;
     private int questTracker = 0;
     private bool playerInRange;
@@ -67,6 +69,7 @@ public class BasicNPC : MonoBehaviour
         selectionBox.SetActive(false);
         Debug.Log("Correct choice");
         data2.bossFight = true;
+        SceneManager.LoadScene(gameStartScene);
     }
 
     public void WrongChoice(){
