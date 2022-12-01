@@ -40,6 +40,7 @@ public class RangedEnemyController : MonoBehaviour
 
                 bulletScript.setOrigin("Enemy");
                 newBullet.SetActive(true);
+                SoundManager.PlaySound(SoundManager.Sound.Fireball);
 
                 timeBtwnShots = startTimeBtwnShots;
             } 

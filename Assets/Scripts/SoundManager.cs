@@ -20,7 +20,8 @@ public class SoundManager : MonoBehaviour
         NormalChestOpen,
         BossChestOpen,
         GoblinDamaged,
-        GoblinDeath
+        GoblinDeath,
+        Fireball
     }
 
     private static Dictionary<Sound, float> soundTimers;
