@@ -115,18 +115,18 @@ public class Enemy : MonoBehaviour
             }
             Destroy(gameObject);
         }
-
+        else {
+            if (enemyType == "Knight") {
+                SoundManager.PlaySound(SoundManager.Sound.KnightDamaged);
+            } else if (enemyType == "Goblin") {
+                SoundManager.PlaySound(SoundManager.Sound.GoblinDamaged);
+            } else {
+                SoundManager.PlaySound(SoundManager.Sound.KnightDamaged);
+            }
+        }
         if(currentHealth <= 800 && isBoss)
         {
             GetComponent<Animator>().SetBool("IsEnraged", true);
-        }
-
-        if (enemyType == "Knight") {
-            SoundManager.PlaySound(SoundManager.Sound.KnightDamaged);
-        } else if (enemyType == "Goblin") {
-            SoundManager.PlaySound(SoundManager.Sound.GoblinDamaged);
-        } else {
-            SoundManager.PlaySound(SoundManager.Sound.KnightDamaged);
         }
         flashEffect.Flash();
         currentHealth -= damage;
