@@ -25,7 +25,7 @@ public class Heal : MonoBehaviour
 
     private void DisableHeal()
     {
-        player.currentHealth += healAmount;
+        player.AddHealth(healAmount);
         gameObject.SetActive(false);
     }
 }

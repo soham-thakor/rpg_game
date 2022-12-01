@@ -204,6 +204,12 @@ public class PlayerController : MonoBehaviour
         healthBar.SetHealth((int)currentHealth);
     }
 
+    public void AddHealth(float heal)
+    {
+        currentHealth += heal;
+        healthBar.SetHealth((int)currentHealth);
+    }
+
     // saves player data to scriptable object
     public void SavePlayerData() 
     {
