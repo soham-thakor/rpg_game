@@ -67,15 +67,16 @@ public class BasicNPC : MonoBehaviour
 
     public void CorrectChoice(){
         selectionBox.SetActive(false);
-        Debug.Log("Correct choice");
         data2.bossFight = true;
         SceneManager.LoadScene(gameStartScene);
     }
 
     public void WrongChoice(){
         selectionBox.SetActive(false);
-        Debug.Log("Wrong choice");
         data2.wrongChoice();
+        if(data2.gameOver){
+            SceneManager.LoadScene(14);
+        }
     }
 
     // public void sSystem(){

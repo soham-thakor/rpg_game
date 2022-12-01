@@ -21,7 +21,7 @@ public class SelectionData : ScriptableObject, IResetOnExitPlay
         chance++;
         if(chance == maxChances){
             gameOver = true;
-            Debug.Log("Game Over!");
+            
         }
     }
 

@@ -32,6 +32,11 @@ public class MenuManager : MonoBehaviour
 	public void QuitGame() {
 		Application.Quit();
 	}
+
+	public void BackToStart(){
+		SceneManager.LoadScene(0);
+	}
+
 	
 	public void SetSliderNumberText(float value) {
 		numberText.text = value.ToString();
