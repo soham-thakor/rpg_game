@@ -33,6 +33,10 @@ public class Enemy : MonoBehaviour
     //public float Health;
     void Start()
     {
+        if(isBoss){
+            SoundManager.PlaySound(SoundManager.Sound.CulpritFound);
+        }
+
         currentHealth = maxHealth;
         healthBar.SetMaxHealth((int)maxHealth);
 
