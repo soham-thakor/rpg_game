@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7022281978209769151}
-  - component: {fileID: 7022281978209769148}
+  - component: {fileID: 7930843993450580510}
   m_Layer: 0
-  m_Name: GAME MANGER
+  m_Name: TimeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7022281978209769148
+--- !u!114 &7930843993450580510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,24 +41,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7022281978209769149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19294a2e9e44bf743a7bc5ab9952fc8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 044aac0a8d0423845b1a722eafa052f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minutes: 500
+  timeData: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
+  changeLightInScene: 1
   gradient:
     serializedVersion: 2
-    key0: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+    key0: {r: 1, g: 1, b: 1, a: 1}
     key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 1, g: 1, b: 1, a: 0}
-    key3: {r: 0.20784315, g: 0.20784315, b: 0.20784315, a: 0}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 14456
-    ctime1: 20432
-    ctime2: 45682
-    ctime3: 52043
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
     ctime4: 0
     ctime5: 0
     ctime6: 0
@@ -72,7 +73,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 4
+    m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   environmentLight: {fileID: 0}
   hoursText: {fileID: 0}

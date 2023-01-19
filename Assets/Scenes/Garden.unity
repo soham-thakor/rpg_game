@@ -14343,7 +14343,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Clock
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8891155364132610968, guid: 03691f4a5ab45f4419ba571387f06bfc, type: 3}
+      propertyPath: m_Name
+      value: TimeManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8891155364132610969, guid: 03691f4a5ab45f4419ba571387f06bfc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03691f4a5ab45f4419ba571387f06bfc, type: 3}
 --- !u!1001 &854737116
 PrefabInstance:

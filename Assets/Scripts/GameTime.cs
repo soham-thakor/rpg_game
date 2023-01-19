@@ -5,7 +5,7 @@ using UnityEngine.Rendering.Universal;
 using TMPro;
 
 
-public class GAMEMANAGER_TIME : MonoBehaviour
+public class GameTime : MonoBehaviour
 {
 
     private float minutes;
