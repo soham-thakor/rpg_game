@@ -761,6 +761,30 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &1819710409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1115029871573629518, guid: 847d63bc451232d4abdebebc645fcea2, type: 3}
+  m_PrefabInstance: {fileID: 1138896962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!328 &1819710410 stripped
+VideoPlayer:
+  m_CorrespondingSourceObject: {fileID: 1115029871573629519, guid: 847d63bc451232d4abdebebc645fcea2, type: 3}
+  m_PrefabInstance: {fileID: 1138896962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1819710412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819710409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9fc1d70b1e4c04295d40bc17da5cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  video: {fileID: 1819710410}
+  SceneName: MainMenuScene
 --- !u!224 &1981711293 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4608290830162506349, guid: 693c74c023c00cf4abdf1125156014a2, type: 3}
