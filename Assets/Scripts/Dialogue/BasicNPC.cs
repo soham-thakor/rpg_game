@@ -42,18 +42,22 @@ public class BasicNPC : MonoBehaviour
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
             if(selectionBox.activeInHierarchy){
                 selectionBox.SetActive(false);
+                staticVariables.immobile = false;
                 dialogBox.SetActive(true);
                 string msgToDisplay = "Today is a good day to solve it ya know.";
                 dialogText.text = msgToDisplay;
                 cuMsg--;
-            }else if(dialogBox.activeInHierarchy){
+            }
+            else if(dialogBox.activeInHierarchy){
                 dialogBox.SetActive(false);
 
                 //experimental from here
                 if(cuMsg == messages[questTracker].message.Length-1){
                     selectionBox.SetActive(true);
+                    staticVariables.immobile = true;
                 }
-            }else{
+            }
+            else{
                 dialogBox.SetActive(true);
                 string msgToDisplay = messages[questTracker].message[cuMsg];
                 dialogText.text = msgToDisplay;

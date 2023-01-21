@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        if(canMove) 
+        if(canMove && !staticVariables.immobile) 
         {
             // If movement input is not 0, try to move            
             if(movementInput == Vector2.zero){
