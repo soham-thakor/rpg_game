@@ -7,98 +7,55 @@ public class staticVariables : MonoBehaviour
     public static bool immobile = false;
 
     //Cooldowns Slider Values
-    public static float projectileCooldown = 1f;
-    public static float mineCooldown = 1f;
-    public static float windCooldown = 1f;
-    public static float healCooldown = 1f;
+    [System.NonSerialized] public static Dictionary<int, float> cooldowns = new Dictionary<int, float>();
+
     //Cooldowns Time left Values
-    public static float projectileTimeLeft;
-    public static float mineTimeLeft;
-    public static float windTimeLeft;
-    public static float healTimeLeft;
-
-
-
-
+    [System.NonSerialized] public static Dictionary<int, float> timeLeft = new Dictionary<int, float>();
 
     public static void changeTimeLeft(int i, float value)
 	{
-        switch (i)
-        {
-            case 0: // projectile
-                projectileTimeLeft = value;
-                break;
-            case 1: // mine
-                mineTimeLeft = value;
-                break;
-            case 2: // wind
-                windTimeLeft = value;
-                break;
-            case 3: // heal
-                healTimeLeft = value;
-                break;
-
+        if(timeLeft.ContainsKey(i)) {
+            timeLeft[i] = value;
+        }
+        else {
+            timeLeft.Add(i, value);
         }
     }
     public static float getTimeLeft(int i)
 	{
-        switch (i)
-        {
-            case 0: // projectile
-                return projectileTimeLeft;
-            case 1: // mine
-                return mineTimeLeft;
-            case 2: // wind
-                return windTimeLeft;
-            case 3: // heal
-                return healTimeLeft;
-            default:
-                return 0f;
-
+        if(timeLeft.ContainsKey(i)){
+            return timeLeft[i];
+        }
+        else {
+            timeLeft.Add(i, 1f);
+            return 1f;
         }
     }
     public static void changeCooldown(int i, float value)
     {
-        switch (i)
-        {
-            case 0: // projectile
-                projectileCooldown = value;
-                break;
-            case 1: // mine
-                mineCooldown = value;
-                break;
-            case 2: // wind
-                windCooldown = value;
-                break;
-            case 3: // heal
-                healCooldown = value;
-                break;
-
+        if(cooldowns.ContainsKey(i)) {
+            cooldowns[i] = value;
+        }
+        else {
+            cooldowns.Add(i, value);
         }
     }
     public static float getCooldown(int i)
 	{
-        switch (i)
-        {
-            case 0: // projectile
-                return projectileCooldown;
-            case 1: // mine
-                return mineCooldown;
-            case 2: // wind
-                return windCooldown;
-            case 3: // heal
-                return healCooldown;
-			default:
-                return 0f;
-
-		}
+        if(cooldowns.ContainsKey(i)){
+            return cooldowns[i];
+        }
+        else {
+            cooldowns.Add(i, 1f);
+            return 0f;
+        }
 	}
 
 	public static void resetCooldowns()
 	{
-        projectileCooldown = 1f;
-        healCooldown = 1f;
-        mineCooldown = 1f;
-        windCooldown = 1f;
+        foreach(KeyValuePair<int, float> entry in cooldowns)
+        {
+            cooldowns[entry.Key] = 1f;
+        }
 	}
 }
