@@ -19,6 +19,7 @@ public class AbilitySlot : MonoBehaviour
 
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        slider.value = staticVariables.getCooldown(index);
     }
 
     void FixedUpdate() {
@@ -33,8 +34,10 @@ public class AbilitySlot : MonoBehaviour
         inCooldown = true;
         // disable ability
         player.abilityReady[index] = 0;
+        Debug.Log(index);
 
         // set value to 0
+        staticVariables.changeCooldown(index, 0);
         slider.value = 0;
     }
 
@@ -42,10 +45,12 @@ public class AbilitySlot : MonoBehaviour
     public void RunCooldown() 
     {
         timeLeft -= 1f;
-        slider.value = (cooldownTime - timeLeft) / cooldownTime;
+        staticVariables.changeCooldown(index, ((cooldownTime - timeLeft) / cooldownTime));
+        slider.value = staticVariables.getCooldown(index);
 
         if(timeLeft <= 0) {
             player.abilityReady[index] = 1;
+            staticVariables.changeCooldown(index, 1f);
             slider.value = 1f;
             inCooldown = false;
         }
