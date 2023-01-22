@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnHeal() {
-        if(abilityReady[3] == 1) {
+        if(staticVariables.getCooldown(3) == 1f) {
             fireHeal.SetActive(true);
             var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[3] + "Slot").GetComponent<AbilitySlot>();
             ability.StartCooldown(3);
@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
     // called on pressing keyboard button 1
     void OnBite() {
         
-        if(abilityReady[0] == 1) {
+        if(staticVariables.getCooldown(0) == 1f) {
             // Create new bullet
             GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
             Bullet bulletScript = newBullet.GetComponent<Bullet>();
@@ -172,7 +172,7 @@ public class PlayerController : MonoBehaviour
 
     // called on pressing keyboard button 2
     void OnDropMine() {
-        if(abilityReady[1] == 1) {
+        if(staticVariables.getCooldown(1) == 1f) {
             // Create new water mine
             GameObject newMine = Instantiate(mine, transform.position, transform.rotation);
             Mine mineScript = newMine.GetComponent<Mine>();
@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour
 
     // called on pressing keyboard button 3
     void OnWind() {
-        if(abilityReady[2] == 1) {
+        if(staticVariables.getCooldown(2) == 1f) {
             WindSpeed windScript = wind.GetComponent<WindSpeed>();
 
             wind.SetActive(true);
