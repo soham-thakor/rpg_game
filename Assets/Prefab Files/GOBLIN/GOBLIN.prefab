@@ -564,8 +564,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 1000
   visionDistance: 1
-  canMove: 0
   enemy: {fileID: 8481735856549416990}
+  isSpawner: 0
+  spawnPoints: []
+  enemyPrefabs: []
+  Timer: 0
 --- !u!1 &8072469900543924459
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,8 +578,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2936249696456803743}
-  - component: {fileID: 813212801692381009}
-  - component: {fileID: 6715223531746191314}
+  - component: {fileID: 6470682261190707639}
+  - component: {fileID: 6151987261584102249}
   m_Layer: 2
   m_Name: EnemySwordHitbox
   m_TagString: Untagged
@@ -599,8 +602,22 @@ Transform:
   m_Father: {fileID: 6705440732218222387}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &813212801692381009
-BoxCollider2D:
+--- !u!114 &6470682261190707639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8072469900543924459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44529f141c501884abbd5fbb625fe577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 5
+  attackInterval: 1
+--- !u!58 &6151987261584102249
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -612,33 +629,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08849352, y: -0.008497022}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.20139964, y: 0.19278608}
-  m_EdgeRadius: 0
---- !u!114 &6715223531746191314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8072469900543924459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185889adb6addac4d8e23850a934da7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageDealt: 5
-  swordCollider: {fileID: 813212801692381009}
+  m_Radius: 0.17
 --- !u!1 &8481735856549416990
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +811,9 @@ MonoBehaviour:
   maxHealth: 30
   currentHealth: 0
   speed: 5
-  swordHitbox: {fileID: 6715223531746191314}
+  swordHitbox: {fileID: 0}
+  Timer: 2
+  isBoss: 0
 --- !u!114 &8481735856549416961
 MonoBehaviour:
   m_ObjectHideFlags: 0
