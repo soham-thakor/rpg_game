@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class staticVariables : MonoBehaviour
 {
+    //Use This to disallow player movement from any script
     public static bool immobile = false;
+    //Keep track of guesses
+    public static int guesses = 0;
 
     //Cooldowns Slider Values
     [System.NonSerialized] public static Dictionary<int, float> cooldowns = new Dictionary<int, float>();
