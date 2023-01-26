@@ -134,10 +134,6 @@ PrefabInstance:
       propertyPath: m_Text
       value: Third Knight Ferrante
       objectReference: {fileID: 0}
-    - target: {fileID: 731275201242971014, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
-      objectReference: {fileID: 0}
     - target: {fileID: 731275201252491064, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.052246094
@@ -497,10 +493,6 @@ PrefabInstance:
     - target: {fileID: 731275200045373068, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: m_Text
       value: First Knight Alexandre
-      objectReference: {fileID: 0}
-    - target: {fileID: 731275201242971014, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
       objectReference: {fileID: 0}
     - target: {fileID: 731275201252491064, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5806,10 +5798,6 @@ PrefabInstance:
       propertyPath: m_Text
       value: Second Knight Charles
       objectReference: {fileID: 0}
-    - target: {fileID: 731275201242971014, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
-      objectReference: {fileID: 0}
     - target: {fileID: 731275201252491064, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.052246094
@@ -6177,10 +6165,6 @@ PrefabInstance:
       propertyPath: m_Text
       value: First Knight Benjamin
       objectReference: {fileID: 0}
-    - target: {fileID: 731275201242971014, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
-      objectReference: {fileID: 0}
     - target: {fileID: 731275201252491064, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.052246094
@@ -6290,10 +6274,6 @@ PrefabInstance:
     - target: {fileID: 731275200045373068, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: m_Text
       value: Third Knight Edgar
-      objectReference: {fileID: 0}
-    - target: {fileID: 731275201242971014, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
       objectReference: {fileID: 0}
     - target: {fileID: 731275201252491064, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -12379,6 +12359,90 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 694771786, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 777782873, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 777782874, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 777782874, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 777782874, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 777782874, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 806160466, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 806160467, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 806160467, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 806160467, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 806160467, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 837592896, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 908641168, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034723773, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034723774, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034723774, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034723774, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034723774, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241075199, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909597278, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932433594, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1932433595, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -12386,6 +12450,14 @@ PrefabInstance:
     - target: {fileID: 1932433595, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132950745, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 294779068683543309, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1429260862171607116, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -12466,6 +12538,10 @@ PrefabInstance:
     - target: {fileID: 6562674031345208486, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022281978615162398, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
@@ -25656,10 +25732,6 @@ PrefabInstance:
     - target: {fileID: 731275200045373068, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: m_Text
       value: Second Knight David
-      objectReference: {fileID: 0}
-    - target: {fileID: 731275201242971014, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
       objectReference: {fileID: 0}
     - target: {fileID: 731275201252491064, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
       propertyPath: m_AnchoredPosition.x
