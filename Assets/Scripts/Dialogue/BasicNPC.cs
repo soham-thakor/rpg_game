@@ -74,6 +74,7 @@ public class BasicNPC : MonoBehaviour
         data2.bossFight = true;
         SceneManager.LoadScene(gameStartScene);
         staticVariables.immobile = false;
+        staticVariables.guesses += 1;
     }
 
     public void WrongChoice(){
@@ -83,6 +84,7 @@ public class BasicNPC : MonoBehaviour
             SceneManager.LoadScene(14);
         }
         staticVariables.immobile = false;
+        staticVariables.guesses += 1;
     }
 
     // public void sSystem(){
