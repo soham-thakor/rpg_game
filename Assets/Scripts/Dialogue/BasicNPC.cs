@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class BasicNPC : MonoBehaviour
 {
@@ -86,6 +87,20 @@ public class BasicNPC : MonoBehaviour
         staticVariables.immobile = false;
         staticVariables.guesses += 1;
     }
+
+    public void StoreChoice(TextMeshProUGUI textMesh)
+	{
+        staticVariables.lastGuess = textMesh.text;
+        staticVariables.guesses += 1;
+        staticVariables.immobile = false;
+        selectionBox.SetActive(false);
+        GoToCutscene();
+	}
+
+    public void GoToCutscene()
+	{
+        SceneManager.LoadScene("Accuse Cutscene");
+	}
 
     // public void sSystem(){
         

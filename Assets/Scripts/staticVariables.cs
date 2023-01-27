@@ -8,6 +8,10 @@ public class staticVariables : MonoBehaviour
     public static bool immobile = false;
     //Keep track of guesses
     public static int guesses = 0;
+    //declared for now but will be randomized eventually
+    public static string realVillain = "Ambassador Dajjal";
+    //Store what the last guess was, so that it can be used in the cutscene
+    public static string lastGuess = "If you see this message in game an error has occured";
 
     //Cooldowns Slider Values
     [System.NonSerialized] public static Dictionary<int, float> cooldowns = new Dictionary<int, float>();
