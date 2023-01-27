@@ -229,139 +229,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2173705255022642937, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
   m_PrefabInstance: {fileID: 119439016}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &135603971
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 640846854}
-    m_Modifications:
-    - target: {fileID: 2706334427366490709, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Name
-      value: Lady Elanor
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490714, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Size.y
-      value: 0.4289865
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490714, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.024493247
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.9605067
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.997
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.080109
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567514256357233198, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Text
-      value: Lady Elanor
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567514257293949850, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.052246094
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567514257303207716, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: actor.id
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: timeData
-      value: 
-      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: actor.name
-      value: Elanor
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: This compares nothing to the war my people have gone through.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: If only we weren't surrounded by so many COWARDS!!!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[2]
-      value: WE MIGHT OF DEFEATED THOSE ANTAGONIZING US!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[3]
-      value: Ayee, this generation is rotten.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[0]
-      value: This compares nothing to the war my people have gone through.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[1]
-      value: If only we weren't surrounded by so many COWARDS!!!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[2]
-      value: WE MIGHT OF DEFEATED THOSE ANTAGONIZING US!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[3]
-      value: Ayee, this generation is rotten.
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
 --- !u!1001 &139672276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -493,127 +360,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2173705255022642937, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
   m_PrefabInstance: {fileID: 139672276}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &348009433
+--- !u!1001 &238431676
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
-    - target: {fileID: 2706334427366490709, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Name
-      value: Lady Balthazar
+    - target: {fileID: 4542905661596670709, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: My muscles are the only light I need to illuminate the faces of all
+        these inhabitants!
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490714, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Size.x
-      value: 0.44230175
+    - target: {fileID: 5317588461301622018, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_Text
+      value: Lord Alex Louis Armstrong
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490714, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Size.y
-      value: 0.44674003
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490714, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.028849125
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490714, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.020054877
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.981
+      value: 1.256
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.201
+      value: -2.059
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_LocalPosition.z
       value: 7.080109
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3567514256357233198, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Text
-      value: Lady Balthazar
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567514257293949850, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.052246094
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567514257303207716, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: timeData
-      value: 
-      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: actor.name
-      value: Balthazar
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: Finally some good news!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: I shall reward you if you get me some fresh lavender.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[0]
-      value: Finally some good news!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[1]
-      value: I shall reward you if you get me some fresh lavender.
+    - target: {fileID: 6757458869391127929, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_Name
+      value: Lord Alex Louis Armstrong
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+--- !u!4 &238431677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+  m_PrefabInstance: {fileID: 238431676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &380590869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3283007440131791997, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
@@ -5672,12 +5489,12 @@ Transform:
   - {fileID: 610269462}
   - {fileID: 1189677828}
   - {fileID: 1874140429}
-  - {fileID: 1745484691}
-  - {fileID: 1495778185}
-  - {fileID: 1612464914}
-  - {fileID: 2110627720}
-  - {fileID: 1436643375}
-  - {fileID: 1344764752}
+  - {fileID: 1021957608}
+  - {fileID: 1775767988}
+  - {fileID: 2071402685}
+  - {fileID: 238431677}
+  - {fileID: 1042927974}
+  - {fileID: 2094643346}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5864,6 +5681,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2173705255022642937, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
   m_PrefabInstance: {fileID: 945057128}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1021957607
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 640846854}
+    m_Modifications:
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: I am embarrassed to call you my brother sometimes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: Underneath those muscles, he's as soft as ever.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035810, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_Name
+      value: Lady Olivia Armstrong
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5835934
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0567803
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847893435117982937, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_Text
+      value: Lady Olivia Armstrong
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+--- !u!4 &1021957608 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+  m_PrefabInstance: {fileID: 1021957607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1032382989
 GameObject:
   m_ObjectHideFlags: 0
@@ -5967,6 +5862,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1042927973
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 640846854}
+    m_Modifications:
+    - target: {fileID: 4542905661596670709, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542905661596670709, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Excuse my wife.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542905661596670709, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: Everyone has different ways of coping with reality.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5317588461301622018, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_Text
+      value: Lord Balthazar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.3730123
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1983454
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127929, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_Name
+      value: Lord Balthazar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+--- !u!4 &1042927974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+  m_PrefabInstance: {fileID: 1042927973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1189677827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6282,11 +6255,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2173705255022642937, guid: d110949e8fd7d6844bd9c7a9cb2d5a50, type: 3}
   m_PrefabInstance: {fileID: 1280024951}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1344764752 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-  m_PrefabInstance: {fileID: 1522057708}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1373102715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6364,11 +6332,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
---- !u!4 &1436643375 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-  m_PrefabInstance: {fileID: 1561768962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1439779200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6582,379 +6545,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e4ab61ebadae2a4ebd6e1c5f3fe7238, type: 3}
---- !u!4 &1495778185 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-  m_PrefabInstance: {fileID: 135603971}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1522057708
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 640846854}
-    m_Modifications:
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: timeData
-      value: 
-      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: actor.name
-      value: Andre
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: I'm already old.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: I basically have one step thorugh deaths door already.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[2]
-      value: I wish to die free and this curfew won't allow me to.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[0]
-      value: I'm already old.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[1]
-      value: I basically have one step thorugh deaths door already.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[2]
-      value: I wish to die free and this curfew won't allow me to.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.7597444
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.6278256
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.080109
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743036, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Name
-      value: Lord Andre
-      objectReference: {fileID: 0}
-    - target: {fileID: 6259194739930935431, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Text
-      value: Lord Andre
-      objectReference: {fileID: 0}
-    - target: {fileID: 6259194740868242829, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
-      objectReference: {fileID: 0}
-    - target: {fileID: 6259194740875893043, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.052246094
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f6bb030669440a047857f5088b56e434, type: 3}
---- !u!1001 &1561768962
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 640846854}
-    m_Modifications:
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: actor.id
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: timeData
-      value: 
-      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: actor.name
-      value: Balthazar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: Excuse my wife.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: Everyone has different ways of coping with reality.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[0]
-      value: My sister disappeared a little over a week ago.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[1]
-      value: She was found in the in the middle section of the dungeon...
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.3778062
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.196921
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.080109
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743027, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Size.x
-      value: 0.40679502
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743027, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Size.y
-      value: 0.42454833
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743027, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0155341625
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743027, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.022274166
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743036, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Name
-      value: Lord Balthazar
-      objectReference: {fileID: 0}
-    - target: {fileID: 6259194739930935431, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Text
-      value: Lord Balthazar
-      objectReference: {fileID: 0}
-    - target: {fileID: 6259194740868242829, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
-      objectReference: {fileID: 0}
-    - target: {fileID: 6259194740875893043, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.052246094
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f6bb030669440a047857f5088b56e434, type: 3}
---- !u!4 &1612464914 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-  m_PrefabInstance: {fileID: 348009433}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1615541415
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 640846854}
-    m_Modifications:
-    - target: {fileID: 2706334427366490709, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Name
-      value: Lady Olivia Armstrong
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490714, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Size.x
-      value: 0.41809154
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490714, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Size.y
-      value: 0.48244798
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490714, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.040954232
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490714, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.0014314055
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.579
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.080109
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567514256357233198, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_Text
-      value: Lady Olivia Armstrong
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567514257293949850, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.052246094
-      objectReference: {fileID: 0}
-    - target: {fileID: 3567514257303207716, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: actor.id
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: timeData
-      value: 
-      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: actor.name
-      value: Olivia
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: I am embarrassed to call you my brother sometimes.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: Underneath those muscles, he's as soft as ever.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[0]
-      value: I am embarrassed to call you my brother sometimes.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134703331202919897, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[1]
-      value: Underneath those muscles, he's as soft as ever.
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
 --- !u!1 &1741131652
 GameObject:
   m_ObjectHideFlags: 0
@@ -12312,122 +11902,92 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
---- !u!4 &1745484691 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2706334427366490715, guid: 2ceac8655f825824f929a0b243ee6403, type: 3}
-  m_PrefabInstance: {fileID: 1615541415}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1825666218
+--- !u!1001 &1775767987
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: timeData
-      value: 
-      objectReference: {fileID: 11400000, guid: f45f1a02d03b0b444a39f578fbdebb87, type: 2}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: actor.name
-      value: Alex Louis
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.size
-      value: 2
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: This compares nothing to the war my people have gone through.
       objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.size
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: If only we weren't surrounded by so many COWARDS!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: WE MIGHT OF DEFEATED THOSE ANTAGONIZING US!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[3]
+      value: This generation is rotten.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035810, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_Name
+      value: Lady Elanor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9540586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.99985737
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: My muscles are the only light I need to illuminate the faces of all
-        these inhabitants!
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314105139345903472, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: messages.Array.data[1].message.Array.data[0]
-      value: My muscles are the only light I need to illuminate the faces of all
-        these inhabitants!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.256
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.059
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.080109
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743027, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Size.x
-      value: 0.41809154
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743027, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Size.y
-      value: 0.6287133
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743027, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.040954232
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743027, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.0043566525
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814822948442743036, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_Name
-      value: Lord Alex Louis Armstrong
-      objectReference: {fileID: 0}
-    - target: {fileID: 6259194739930935431, guid: f6bb030669440a047857f5088b56e434, type: 3}
+    - target: {fileID: 6847893435117982937, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
       propertyPath: m_Text
-      value: Lord Alex Louis Armstrong
-      objectReference: {fileID: 0}
-    - target: {fileID: 6259194740868242829, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 55.180054
-      objectReference: {fileID: 0}
-    - target: {fileID: 6259194740875893043, guid: f6bb030669440a047857f5088b56e434, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.052246094
+      value: Lady Elanor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f6bb030669440a047857f5088b56e434, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+--- !u!4 &1775767988 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+  m_PrefabInstance: {fileID: 1775767987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1874140428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12634,10 +12194,165 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2110627720 stripped
+--- !u!1001 &2071402684
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 640846854}
+    m_Modifications:
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Finally some good news!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010903625953323822, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: I'm so glad you're here!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035810, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_Name
+      value: Lady Balthazar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.9760329
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2019544
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847893435117982937, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+      propertyPath: m_Text
+      value: Lady Balthazar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+--- !u!4 &2071402685 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4814822948442743026, guid: f6bb030669440a047857f5088b56e434, type: 3}
-  m_PrefabInstance: {fileID: 1825666218}
+  m_CorrespondingSourceObject: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+  m_PrefabInstance: {fileID: 2071402684}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2094643345
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 640846854}
+    m_Modifications:
+    - target: {fileID: 4542905661596670709, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542905661596670709, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: I'm already old.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542905661596670709, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: I basically have one step thorugh deaths door already.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542905661596670709, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: I wish to die free and this curfew won't allow me to.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5317588461301622018, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_Text
+      value: Lord Andre
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.755556
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6314139
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757458869391127929, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_Name
+      value: Lord Andre
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+--- !u!4 &2094643346 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6757458869391127927, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+  m_PrefabInstance: {fileID: 2094643345}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2120180781
 GameObject:
