@@ -7,6 +7,7 @@ public class Quest : MonoBehaviour
 {
     public GameObject npcTrigger;
     public GameObject dialogBox;
+    public GameObject npcPortrait;
     public Text dialogText;
     public Text listName;
     public Message [] messages;
@@ -27,6 +28,7 @@ public class Quest : MonoBehaviour
             listName.text = npcTrigger.name;
         }
         dialogBox.SetActive(false);
+        npcPortrait.SetActive(false);
 
         //turns on and off the Ghosts
         //give ghosts an actor id of 2
@@ -61,16 +63,20 @@ public class Quest : MonoBehaviour
             //if its a regular NPC and they have a clue to give you
             //then they will spawn a ghost after interacting with them
             
-            if(data1.npcTalked(actor.name) == 0 && actor.id == 1){
+            if(data1.npcTalked(actor.name) == 0 && actor.id == 1)
+            {
                 data1.interact[actor.name]++;
                 data1.interactions++;
-                if(data1.interactions == 5){
+
+                if(data1.interactions == 5)
+                {
                     data1.questTracker++;
                     cuMsg = 0;
                     data1.interactions++;
                 }
-                Debug.Log(data1.interactions);
-            }else if(data1.npcTalked(actor.name) == 1 && actor.id == 2){
+            } 
+            else if(data1.npcTalked(actor.name) == 1 && actor.id == 2)
+            {
                 data1.interact[actor.name]++;
             }
 
@@ -78,10 +84,15 @@ public class Quest : MonoBehaviour
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
             
             //controls dialogue boxes
-            if(dialogBox.activeInHierarchy){
+            if(dialogBox.activeInHierarchy)
+            {
                 dialogBox.SetActive(false);
-            }else{
+                npcPortrait.SetActive(false);
+            }
+            else
+            {
                 dialogBox.SetActive(true);
+                npcPortrait.SetActive(true);
                 string msgToDisplay = messages[data1.questTracker].message[cuMsg];
                 dialogText.text = msgToDisplay;
 
