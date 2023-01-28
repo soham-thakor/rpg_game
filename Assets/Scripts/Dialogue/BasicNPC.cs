@@ -29,6 +29,7 @@ public class BasicNPC : MonoBehaviour
     {
         dialogBox.SetActive(false);
         selectionBox.SetActive(false);
+        
     }
 
     void Update(){
@@ -94,7 +95,8 @@ public class BasicNPC : MonoBehaviour
         staticVariables.guesses += 1;
         staticVariables.immobile = false;
         selectionBox.SetActive(false);
-        GoToCutscene();
+        //GoToCutscene();
+        StartCoroutine(TransitionScene());
 	}
 
     public void GoToCutscene()
@@ -102,11 +104,17 @@ public class BasicNPC : MonoBehaviour
         SceneManager.LoadScene("Accuse Cutscene");
 	}
 
+    public IEnumerator TransitionScene()
+    {
+        GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Accuse Cutscene");
+    }
     // public void sSystem(){
-        
+
     // }
-    
-     [System.Serializable]
+
+    [System.Serializable]
     public class Message{
         public string [] message;
     }
