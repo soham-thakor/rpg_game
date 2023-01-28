@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 147318123}
   - component: {fileID: 147318122}
   m_Layer: 5
-  m_Name: Portrait
+  m_Name: Player Portrait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 328331294}
   - component: {fileID: 328331293}
   m_Layer: 5
-  m_Name: DialogueBox
+  m_Name: Player DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,9 +470,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4396909729723977686, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5857765724295562769, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 43.69995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385581608635903283, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6562674031345208486, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -533,6 +541,8 @@ PlayableDirector:
     value: {fileID: 1314260550}
   - key: {fileID: -6263361312427507080, guid: 9077896ecdce8374eaa6981af5e7e996, type: 2}
     value: {fileID: 957739692}
+  - key: {fileID: 4440594910429507274, guid: 9077896ecdce8374eaa6981af5e7e996, type: 2}
+    value: {fileID: 430827903}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &430827912 stripped
@@ -1485,6 +1495,10 @@ PrefabInstance:
     - target: {fileID: 3178000094959285325, guid: d954556f8325b3145b258810308302de, type: 3}
       propertyPath: m_Name
       value: AMBASSADOR 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041428426379627907, guid: d954556f8325b3145b258810308302de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d954556f8325b3145b258810308302de, type: 3}
@@ -6474,6 +6488,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeline: {fileID: 430827904}
   runUp: {fileID: 7400000, guid: 30b1fcfec21d0594c974a7800181ea1f, type: 2}
+  playerDialogueBox: {fileID: 1577402796}
+  typingSpeed: 0.02
+  playerDialogue:
+  - I have asked everyone to leave
+  - First, I'll need you to drink this truth serum
 --- !u!114 &1411671191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6486,7 +6505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c49d11c9895d9f49a842a28cdb051e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCTypes:
+  NonPlayerCharacters:
   - {fileID: 1539415989}
   - {fileID: 1797835286}
   - {fileID: 1027310578}
@@ -6510,7 +6529,7 @@ GameObject:
   - component: {fileID: 1577402799}
   - component: {fileID: 1577402798}
   m_Layer: 5
-  m_Name: Message
+  m_Name: Player Message
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6590,7 +6609,7 @@ GameObject:
   - component: {fileID: 1684416714}
   - component: {fileID: 1684416713}
   m_Layer: 5
-  m_Name: Name
+  m_Name: Player Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
