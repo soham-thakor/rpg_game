@@ -32,7 +32,7 @@ public class NPCmaker : MonoBehaviour
         }
 		else
 		{
-            selectedNPC = NPCTypes[0];
+            selectedNPC = NPCTypes[3];
 		}
         GameObject spawnedNPC = Instantiate(selectedNPC, gameObject.transform);
     }
