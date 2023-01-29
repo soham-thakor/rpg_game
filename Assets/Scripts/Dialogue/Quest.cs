@@ -18,6 +18,7 @@ public class Quest : MonoBehaviour
     public int currentQuest = 0;
     private bool playerInRange;
     private int cuMsg = 0;
+    private bool onLastMsg = false;
 
 
     
@@ -82,12 +83,16 @@ public class Quest : MonoBehaviour
 
             //sound for the dialogue boxes
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
-            
+
+
+            Debug.Log(cuMsg);
             //controls dialogue boxes
-            if(dialogBox.activeInHierarchy)
+            if(onLastMsg)
             {
                 dialogBox.SetActive(false);
                 npcPortrait.SetActive(false);
+                cuMsg = 0;
+                onLastMsg = false;
             }
             else
             {
@@ -96,8 +101,12 @@ public class Quest : MonoBehaviour
                 string msgToDisplay = messages[data1.questTracker].message[cuMsg];
                 dialogText.text = msgToDisplay;
 
-                if(cuMsg < messages[data1.questTracker].message.Length-1){
+                if(cuMsg < messages[data1.questTracker].message.Length){
                     cuMsg++;
+                    if(cuMsg == messages[data1.questTracker].message.Length)
+					{
+                        onLastMsg = true;
+					}
                 }
             }
         }
@@ -123,6 +132,8 @@ public class Quest : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("Player")){
             playerInRange = false;
+            cuMsg = 0;
+            onLastMsg = false;
             dialogBox.SetActive(false);
         }
     }
