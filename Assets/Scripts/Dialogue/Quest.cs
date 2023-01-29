@@ -19,12 +19,12 @@ public class Quest : MonoBehaviour
     private bool playerInRange;
     private int cuMsg = 0;
     private bool onLastMsg = false;
-
+    private GameObject buttonPrompt;
 
     
     void Start()
-    {   
-        
+    {
+        buttonPrompt = gameObject.transform.Find("Button Prompt").gameObject;
         if(actor.id == 0){
             listName.text = npcTrigger.name;
         }
@@ -56,7 +56,14 @@ public class Quest : MonoBehaviour
             currentQuest = data1.questTracker;
             cuMsg = 0;
         }
-
+        if(playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject))
+		{
+            buttonPrompt.SetActive(true);
+		}
+        else
+		{
+            buttonPrompt.SetActive(false);
+		}
     //will have a problem once all interactions are linked
     //
         //dialogue interactions system when key F is pressed AND in range AND this NPC is the one closest to the player
