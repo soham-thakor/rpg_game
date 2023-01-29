@@ -217,10 +217,24 @@ public class PlayerController : MonoBehaviour
     }
 
     // saves player data to scriptable object
-    public void SavePlayerData() 
+    public void SavePlayerData()
     {
         playerData.currentHealth = currentHealth;
     }
+
+    public bool IsClosestNPC(GameObject tryingNPC)
+	{
+        float minDist = 999999999999999999999999999f;
+        GameObject closestNPC = tryingNPC;
+        foreach(GameObject NPC in GameObject.FindGameObjectsWithTag("NPC"))
+		{
+            if(Vector2.Distance(NPC.transform.position, gameObject.transform.position) < minDist){
+                minDist = Vector2.Distance(NPC.transform.position, gameObject.transform.position);
+                closestNPC = NPC;
+            }
+		}
+        return closestNPC == tryingNPC;
+	}
 
     private IEnumerator StartCooldown(int slot, float delayTime) 
     {

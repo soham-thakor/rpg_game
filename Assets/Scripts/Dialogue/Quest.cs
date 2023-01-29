@@ -59,8 +59,8 @@ public class Quest : MonoBehaviour
 
     //will have a problem once all interactions are linked
     //
-        //dialogue interactions system when key F is pressed
-        if(Input.GetKeyDown(KeyCode.F) && playerInRange){
+        //dialogue interactions system when key F is pressed AND in range AND this NPC is the one closest to the player
+        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject)){
             //if its a regular NPC and they have a clue to give you
             //then they will spawn a ghost after interacting with them
             
