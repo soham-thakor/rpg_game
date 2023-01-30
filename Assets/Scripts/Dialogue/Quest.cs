@@ -56,7 +56,7 @@ public class Quest : MonoBehaviour
             currentQuest = data1.questTracker;
             cuMsg = 0;
         }
-        if(playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject))
+        if (playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && dialogBox.activeInHierarchy == false)
 		{
             buttonPrompt.SetActive(true);
 		}
