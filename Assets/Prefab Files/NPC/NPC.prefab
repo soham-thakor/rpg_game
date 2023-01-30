@@ -530,7 +530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6252390334083722027}
   - component: {fileID: 6252390334083722024}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
+  m_OverlapOperation: 1
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
@@ -641,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5510570422427165739}
   - component: {fileID: 5596631889211373069}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button Prompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
