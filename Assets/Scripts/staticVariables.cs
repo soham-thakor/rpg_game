@@ -6,12 +6,16 @@ public class staticVariables : MonoBehaviour
 {
     //Use This to disallow player movement from any script
     public static bool immobile = false;
+    //Use this to make the player invincible
+    public static bool invincible = false;
     //Keep track of guesses
     public static int guesses = 0;
     //declared for now but will be randomized eventually
     public static string realVillain = "Ambassador Dajjal";
     //Store what the last guess was, so that it can be used in the cutscene
     public static string lastGuess = "If you see this message in game an error has occured";
+    //To know from any script if a dialogue box is open and if so which one
+    public static GameObject currentDialogue;
 
     //Cooldowns Slider Values
     [System.NonSerialized] public static Dictionary<int, float> cooldowns = new Dictionary<int, float>();

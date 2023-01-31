@@ -66,8 +66,8 @@ public class Quest : MonoBehaviour
 		}
     //will have a problem once all interactions are linked
     //
-        //dialogue interactions system when key F is pressed AND in range AND this NPC is the one closest to the player
-        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject)){
+        //dialogue interactions system - when key F is pressed AND in range AND this NPC is the one closest to the player AND we arent already talking to someone else
+        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && (staticVariables.currentDialogue == null || staticVariables.currentDialogue == dialogBox)){
             //if its a regular NPC and they have a clue to give you
             //then they will spawn a ghost after interacting with them
             
@@ -92,17 +92,15 @@ public class Quest : MonoBehaviour
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
 
 
-            Debug.Log(cuMsg);
+            
             //controls dialogue boxes
             if(onLastMsg)
-            {
-                dialogBox.SetActive(false);
-                npcPortrait.SetActive(false);
-                cuMsg = 0;
-                onLastMsg = false;
+            { //end the dialogue
+                endDialogue();
             }
             else
-            {
+            { //start or continue the dialogue
+                staticVariables.currentDialogue = dialogBox;
                 dialogBox.SetActive(true);
                 npcPortrait.SetActive(true);
                 string msgToDisplay = messages[data1.questTracker].message[cuMsg];
@@ -118,9 +116,16 @@ public class Quest : MonoBehaviour
             }
         }
     }
-
-    //info that will be collected to keep track of the NPC
-    [System.Serializable]
+	public void endDialogue()
+	{
+        dialogBox.SetActive(false);
+        npcPortrait.SetActive(false);
+        cuMsg = 0;
+        onLastMsg = false;
+        staticVariables.currentDialogue = null;
+    }
+	//info that will be collected to keep track of the NPC
+	[System.Serializable]
     public class Message{
         public string [] message;
     }

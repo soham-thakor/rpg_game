@@ -23,6 +23,10 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetButtonDown("pause"))
         {
+            if(staticVariables.currentDialogue != null)
+			{
+                staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
+			}
             ChangePause();
         }
         
