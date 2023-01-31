@@ -67,9 +67,13 @@ public class Quest : MonoBehaviour
     //will have a problem once all interactions are linked
     //
         //dialogue interactions system - when key F is pressed AND in range AND this NPC is the one closest to the player AND we arent already talking to someone else
-        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && (staticVariables.currentDialogue == null || staticVariables.currentDialogue == dialogBox)){
+        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject)/* && (staticVariables.currentDialogue == null || staticVariables.currentDialogue == dialogBox)*/){
             //if its a regular NPC and they have a clue to give you
             //then they will spawn a ghost after interacting with them
+            if(staticVariables.currentDialogue != gameObject && staticVariables.currentDialogue != null)
+			{
+                staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
+			}
             
             if(data1.npcTalked(actor.name) == 0 && actor.id == 1)
             {
@@ -100,7 +104,7 @@ public class Quest : MonoBehaviour
             }
             else
             { //start or continue the dialogue
-                staticVariables.currentDialogue = dialogBox;
+                staticVariables.currentDialogue = gameObject;
                 dialogBox.SetActive(true);
                 npcPortrait.SetActive(true);
                 string msgToDisplay = messages[data1.questTracker].message[cuMsg];
