@@ -2506,9 +2506,13 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e7a09084e1f00c040b5a8e9b6932e927, type: 3}
+    - target: {fileID: 2959439973966168393, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Text
+      value: Earl Thomas
+      objectReference: {fileID: 0}
     - target: {fileID: 4404104252593525042, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Name
-      value: Earl 1
+      value: Earl Thomas
       objectReference: {fileID: 0}
     - target: {fileID: 4404104252593525043, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Size.x
@@ -2586,6 +2590,22 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ed0ef63402a92f64fa3576c437687c10, type: 2}
+    - target: {fileID: 6904705221131615934, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904705221131615934, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Hello!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904705221131615934, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: How has the investigation gone?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904705221131615934, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: Who do you think is behind this savage killing spree?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
 --- !u!4 &5912143068201119907 stripped

@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        staticVariables.immobile = false;
+
         // set health values from previous scene
         healthBar.SetMaxHealth((int)playerData.maxHealth);
         healthBar.SetHealth((int)currentHealth);

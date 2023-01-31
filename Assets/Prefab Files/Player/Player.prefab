@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 694771790}
   - component: {fileID: 694771789}
   - component: {fileID: 694771788}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -708,7 +708,7 @@ GameObject:
   - component: {fileID: 777782874}
   - component: {fileID: 777782876}
   - component: {fileID: 777782875}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Colon Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +843,7 @@ GameObject:
   - component: {fileID: 806160467}
   - component: {fileID: 806160469}
   - component: {fileID: 806160468}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Hours Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -976,7 +976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837592897}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Clock Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 908641169}
   - component: {fileID: 908641171}
   - component: {fileID: 908641170}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 1034723774}
   - component: {fileID: 1034723776}
   - component: {fileID: 1034723775}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Minutes Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1226,7 +1226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1113521385}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: Ability Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1268,7 +1268,7 @@ GameObject:
   - component: {fileID: 1241075200}
   - component: {fileID: 1241075202}
   - component: {fileID: 1241075201}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Player Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1766,7 +1766,7 @@ GameObject:
   - component: {fileID: 1909597279}
   - component: {fileID: 1909597281}
   - component: {fileID: 1909597280}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1842,7 +1842,7 @@ GameObject:
   - component: {fileID: 1932433595}
   - component: {fileID: 1932433597}
   - component: {fileID: 1932433596}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1919,7 +1919,7 @@ GameObject:
   - component: {fileID: 2104962097}
   - component: {fileID: 2104962096}
   - component: {fileID: 2104962095}
-  m_Layer: 2
+  m_Layer: 5
   m_Name: Ability bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1966,7 +1966,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!114 &2104962096
 MonoBehaviour:
@@ -2020,7 +2020,7 @@ GameObject:
   - component: {fileID: 2132950749}
   - component: {fileID: 2132950748}
   - component: {fileID: 2132950747}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2859,7 +2859,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 920525235, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3625,7 +3625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 43.7, y: -50}
+  m_AnchoredPosition: {x: 43.69995, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3041315178512713103
@@ -4072,6 +4072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlobalLight
       objectReference: {fileID: 0}
+    - target: {fileID: 294779068652087136, guid: 26b2b0f9504dd3240b02b2377e617748, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 294779068652087150, guid: 26b2b0f9504dd3240b02b2377e617748, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4141,6 +4145,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113521385}
     m_Modifications:
+    - target: {fileID: 145525044428231613, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2480905517769939731, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4156,6 +4168,10 @@ PrefabInstance:
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
       value: FireHealSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
@@ -4277,6 +4293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonPrompt
       objectReference: {fileID: 0}
+    - target: {fileID: 7740745573737775983, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
 --- !u!224 &3497244002968771655 stripped
@@ -4314,6 +4334,10 @@ PrefabInstance:
     - target: {fileID: 7022281978209769149, guid: 1809c00583f5e4047883dedc143735ed, type: 3}
       propertyPath: m_Name
       value: GAME MANGER
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022281978209769149, guid: 1809c00583f5e4047883dedc143735ed, type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7022281978209769151, guid: 1809c00583f5e4047883dedc143735ed, type: 3}
       propertyPath: m_RootOrder
@@ -4385,6 +4409,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113521385}
     m_Modifications:
+    - target: {fileID: 145525044428231613, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2480905517769939731, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4400,6 +4432,10 @@ PrefabInstance:
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
       value: BiteSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
@@ -4521,6 +4557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonPrompt
       objectReference: {fileID: 0}
+    - target: {fileID: 7740745573737775983, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
 --- !u!224 &508578100270664065 stripped
@@ -4535,10 +4575,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113521385}
     m_Modifications:
+    - target: {fileID: 145525044428231613, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 171226289335564848, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1de63f756f38a8941902ff3ffd044da1, type: 3}
+    - target: {fileID: 2480905517769939731, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4554,6 +4602,10 @@ PrefabInstance:
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
       value: WindSpeedSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
@@ -4659,6 +4711,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1126804071, guid: 235211d7d4bafd741a9590f9811e5374, type: 3}
+    - target: {fileID: 7740745573737775983, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
 --- !u!224 &737101057185333078 stripped
@@ -4673,10 +4729,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1113521385}
     m_Modifications:
+    - target: {fileID: 145525044428231613, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 171226289335564848, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7029ed795281f1f438db16e3494e18c5, type: 3}
+    - target: {fileID: 2480905517769939731, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2617612676172754234, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4692,6 +4756,10 @@ PrefabInstance:
     - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Name
       value: WaterMineSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799317893271665679, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3497244002684523767, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
       propertyPath: m_Pivot.x
@@ -4797,6 +4865,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2038538522, guid: 235211d7d4bafd741a9590f9811e5374, type: 3}
+    - target: {fileID: 7740745573737775983, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 025fe22d18ac48e4aa4d994e3c39d6d0, type: 3}
 --- !u!224 &5748943308570588523 stripped
