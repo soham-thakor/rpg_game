@@ -20,10 +20,12 @@ public class Quest : MonoBehaviour
     private int cuMsg = 0;
     private bool onLastMsg = false;
     private GameObject buttonPrompt;
-
+    private SelectionMenu selectionBox;
     
     void Start()
     {
+        selectionBox = gameObject.GetComponent<SelectionMenu>();
+
         buttonPrompt = gameObject.transform.Find("Button Prompt").gameObject;
         if(actor.id == 0){
             listName.text = npcTrigger.name;
@@ -64,12 +66,11 @@ public class Quest : MonoBehaviour
 		{
             buttonPrompt.SetActive(false);
 		}
-    //will have a problem once all interactions are linked
-    //
-        //dialogue interactions system - when key F is pressed AND in range AND this NPC is the one closest to the player AND we arent already talking to someone else
-        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject)/* && (staticVariables.currentDialogue == null || staticVariables.currentDialogue == dialogBox)*/){
-            //if its a regular NPC and they have a clue to give you
-            //then they will spawn a ghost after interacting with them
+
+        // dialogue interactions system - when key F is pressed AND in range AND this NPC is the one closest to the player AND we arent already talking to someone else
+        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && !staticVariables.immobile){            
+            // if its a regular NPC and they have a clue to give you
+            // then they will spawn a ghost after interacting with them
             if(staticVariables.currentDialogue != gameObject && staticVariables.currentDialogue != null)
 			{
                 staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
@@ -97,13 +98,20 @@ public class Quest : MonoBehaviour
 
 
             
-            //controls dialogue boxes
+            // controls dialogue boxes
             if(onLastMsg)
-            { //end the dialogue
+            { 
+                // if npc has SelectionMenu component, send message to open menu
+                if(selectionBox)
+                {
+                    selectionBox.OpenMenu();
+                }
+                //end the dialogue
                 endDialogue();
             }
             else
-            { //start or continue the dialogue
+            { 
+                // start or continue the dialogue
                 staticVariables.currentDialogue = gameObject;
                 dialogBox.SetActive(true);
                 npcPortrait.SetActive(true);
@@ -128,7 +136,8 @@ public class Quest : MonoBehaviour
         onLastMsg = false;
         staticVariables.currentDialogue = null;
     }
-	//info that will be collected to keep track of the NPC
+
+	// info that will be collected to keep track of the NPC
 	[System.Serializable]
     public class Message{
         public string [] message;
