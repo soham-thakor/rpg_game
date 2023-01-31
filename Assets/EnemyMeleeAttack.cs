@@ -12,6 +12,7 @@ public class EnemyMeleeAttack : MonoBehaviour
 	private bool inRange = false;
 	private bool pastInRange = false;
 	private GameObject playerTarget;
+	public Animator animator;
 
 	private void Start()
 	{
@@ -26,9 +27,7 @@ public class EnemyMeleeAttack : MonoBehaviour
 		{
 			if(!inRange)
 			{
-				Debug.Log("Got in Range");
 				nextAttackTime = Time.time + attackInterval;
-				Debug.Log(nextAttackTime);
 			}
 			inRange = true;
 		}
@@ -36,7 +35,6 @@ public class EnemyMeleeAttack : MonoBehaviour
 		{
 			if(inRange)
 			{
-				Debug.Log("Got out of range");
 				inRange = false;
 			}
 			
@@ -45,8 +43,7 @@ public class EnemyMeleeAttack : MonoBehaviour
 
 		if(TryDamage())
 		{
-			Debug.Log("Damage");
-			Debug.Log(Time.time);
+			animator.SetTrigger("attack");
 			playerTarget.GetComponent<PlayerController>().TakeDamage(attackDamage);
 			nextAttackTime = Time.time + attackInterval;
 		}
