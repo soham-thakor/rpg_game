@@ -14,24 +14,21 @@ public class CutsceneManager : MonoBehaviour
     public string[] playerDialogue;
 
     private int index = 0;
-    private bool previsoulyActive = false;
-    private bool currentlyTyping = false;
     private bool previouslyTyping = false;
-
 
     // Update is called once per frame
     void Update()
     {
         //Make the player say something every time his dialogue box becomes active
-        if(playerDialogueBox.activeInHierarchy && !previsoulyActive) //if the dialogue box just became active
+        if(playerDialogueBox.activeInHierarchy && !previouslyTyping) //if the dialogue box just became active
 		{
             StartCoroutine(Type(playerDialogueBox.GetComponent<Text>(), playerDialogue[index]));
             index += 1;
-            previsoulyActive = true;
+            previouslyTyping = true;
 		}
-        else if(!playerDialogueBox.activeInHierarchy && previsoulyActive) // if the dialogue box just went inactive
+        else if(!playerDialogueBox.activeInHierarchy && previouslyTyping) // if the dialogue box just went inactive
 		{
-            previsoulyActive = false;
+            previouslyTyping = false;
             playerDialogueBox.GetComponent<Text>().text = "";
 		}
 

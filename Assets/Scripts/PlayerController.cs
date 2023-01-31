@@ -145,7 +145,6 @@ public class PlayerController : MonoBehaviour
         string animState = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
         if(animState != "player_attack" && animState != "player_attack_up" && animState != "player_attack_down")
 		{
-            Debug.Log(animState);
             animator.SetTrigger("swordAttack");
         }
         
