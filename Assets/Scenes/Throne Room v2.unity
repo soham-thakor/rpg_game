@@ -6432,6 +6432,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 3513040121985244961, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513040121985244961, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Hello!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513040121985244961, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: How has the investigation gone?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513040121985244961, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: Who do you think is behind this savage killing spree?
+      objectReference: {fileID: 0}
     - target: {fileID: 5912143068201119907, guid: 33055ed797125114693403f18a137d31, type: 3}
       propertyPath: m_RootOrder
       value: 0
