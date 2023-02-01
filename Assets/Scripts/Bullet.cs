@@ -94,18 +94,7 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject, .8f);
             }
         }
-        /*
-         if(other.tag == "Boss") {
-            RedEyeBoss boss = other.GetComponent<RedEyeBoss>();
-            // if current bullet is a fire bite
-            if(gameObject.name == "Bite(Clone)") {
-                boss.TakeDamage(damageDealt);
-                isMoving = false;
-                animator.SetTrigger("CloseMouth");
-                Destroy(gameObject, .8f);
-            }
-        }
-*/
+
         // if enemy bullet hits player
         if(other.tag == "Player" && origin == "Enemy") {
             PlayerController player = other.GetComponent<PlayerController>();

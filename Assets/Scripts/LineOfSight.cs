@@ -73,10 +73,9 @@ public class LineOfSight : MonoBehaviour
                 enemyChase.destination = player.position;
             }
             // ranged enemy targeting
-            else if(hitInfo.collider.tag == "Player" && rangedEnemy != null) {
+            else if(hitInfo.collider.tag == "Player" && rangedEnemy != null) 
+            {
                 rangedEnemy.setRange(true);
-                //Spawn();
-                //Debug.Log("spawning");
             }
         }
         else {

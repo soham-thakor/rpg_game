@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        staticVariables.immobile = false;
+
         // set health values from previous scene
         healthBar.SetMaxHealth((int)playerData.maxHealth);
         healthBar.SetHealth((int)currentHealth);
@@ -74,7 +76,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        if(canMove) 
+        if(canMove && !staticVariables.immobile) 
         {
             // If movement input is not 0, try to move            
             if(movementInput == Vector2.zero){
@@ -128,7 +130,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnHeal() {
-        if(abilityReady[3] == 1) {
+        if(staticVariables.getCooldown(3) == 1f) {
             fireHeal.SetActive(true);
             var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[3] + "Slot").GetComponent<AbilitySlot>();
             ability.StartCooldown(3);
@@ -142,14 +144,19 @@ public class PlayerController : MonoBehaviour
 
     // called on left click
     void OnSlash() {
-        animator.SetTrigger("swordAttack");
+        string animState = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        if(animState != "player_attack" && animState != "player_attack_up" && animState != "player_attack_down")
+		{
+            animator.SetTrigger("swordAttack");
+        }
+        
         SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
     }
 
     // called on pressing keyboard button 1
     void OnBite() {
         
-        if(abilityReady[0] == 1) {
+        if(staticVariables.getCooldown(0) == 1f) {
             // Create new bullet
             GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
             Bullet bulletScript = newBullet.GetComponent<Bullet>();
@@ -166,7 +173,7 @@ public class PlayerController : MonoBehaviour
 
     // called on pressing keyboard button 2
     void OnDropMine() {
-        if(abilityReady[1] == 1) {
+        if(staticVariables.getCooldown(1) == 1f) {
             // Create new water mine
             GameObject newMine = Instantiate(mine, transform.position, transform.rotation);
             Mine mineScript = newMine.GetComponent<Mine>();
@@ -182,7 +189,7 @@ public class PlayerController : MonoBehaviour
 
     // called on pressing keyboard button 3
     void OnWind() {
-        if(abilityReady[2] == 1) {
+        if(staticVariables.getCooldown(2) == 1f) {
             WindSpeed windScript = wind.GetComponent<WindSpeed>();
 
             wind.SetActive(true);
@@ -194,6 +201,10 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if(staticVariables.invincible)
+		{
+            return;
+		}
         if (currentHealth <= 0) {
             SceneManager.LoadScene("CutSceneGameOver");
         }
@@ -211,10 +222,24 @@ public class PlayerController : MonoBehaviour
     }
 
     // saves player data to scriptable object
-    public void SavePlayerData() 
+    public void SavePlayerData()
     {
         playerData.currentHealth = currentHealth;
     }
+
+    public bool IsClosestNPC(GameObject tryingNPC)
+	{
+        float minDist = 999999999999999999999999999f;
+        GameObject closestNPC = tryingNPC;
+        foreach(GameObject NPC in GameObject.FindGameObjectsWithTag("NPC"))
+		{
+            if(Vector2.Distance(NPC.transform.position, gameObject.transform.position) < minDist){
+                minDist = Vector2.Distance(NPC.transform.position, gameObject.transform.position);
+                closestNPC = NPC;
+            }
+		}
+        return closestNPC == tryingNPC;
+	}
 
     private IEnumerator StartCooldown(int slot, float delayTime) 
     {

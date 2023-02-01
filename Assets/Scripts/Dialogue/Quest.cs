@@ -7,6 +7,7 @@ public class Quest : MonoBehaviour
 {
     public GameObject npcTrigger;
     public GameObject dialogBox;
+    public GameObject npcPortrait;
     public Text dialogText;
     public Text listName;
     public Message [] messages;
@@ -17,16 +18,20 @@ public class Quest : MonoBehaviour
     public int currentQuest = 0;
     private bool playerInRange;
     private int cuMsg = 0;
-
-
+    private bool onLastMsg = false;
+    private GameObject buttonPrompt;
+    private SelectionMenu selectionBox;
     
     void Start()
-    {   
-        
+    {
+        selectionBox = gameObject.GetComponent<SelectionMenu>();
+
+        buttonPrompt = gameObject.transform.Find("Button Prompt").gameObject;
         if(actor.id == 0){
             listName.text = npcTrigger.name;
         }
         dialogBox.SetActive(false);
+        npcPortrait.SetActive(false);
 
         //turns on and off the Ghosts
         //give ghosts an actor id of 2
@@ -53,47 +58,87 @@ public class Quest : MonoBehaviour
             currentQuest = data1.questTracker;
             cuMsg = 0;
         }
+        if (playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && dialogBox.activeInHierarchy == false)
+		{
+            buttonPrompt.SetActive(true);
+		}
+        else
+		{
+            buttonPrompt.SetActive(false);
+		}
 
-    //will have a problem once all interactions are linked
-    //
-        //dialogue interactions system when key F is pressed
-        if(Input.GetKeyDown(KeyCode.F) && playerInRange){
-            //if its a regular NPC and they have a clue to give you
-            //then they will spawn a ghost after interacting with them
+        // dialogue interactions system - when key F is pressed AND in range AND this NPC is the one closest to the player AND we arent already talking to someone else
+        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && !staticVariables.immobile){            
+            // if its a regular NPC and they have a clue to give you
+            // then they will spawn a ghost after interacting with them
+            if(staticVariables.currentDialogue != gameObject && staticVariables.currentDialogue != null)
+			{
+                staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
+			}
             
-            if(data1.npcTalked(actor.name) == 0 && actor.id == 1){
+            if(data1.npcTalked(actor.name) == 0 && actor.id == 1)
+            {
                 data1.interact[actor.name]++;
                 data1.interactions++;
-                if(data1.interactions == 5){
+
+                if(data1.interactions == 5)
+                {
                     data1.questTracker++;
                     cuMsg = 0;
                     data1.interactions++;
                 }
-                Debug.Log(data1.interactions);
-            }else if(data1.npcTalked(actor.name) == 1 && actor.id == 2){
+            } 
+            else if(data1.npcTalked(actor.name) == 1 && actor.id == 2)
+            {
                 data1.interact[actor.name]++;
             }
 
             //sound for the dialogue boxes
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+
+
             
-            //controls dialogue boxes
-            if(dialogBox.activeInHierarchy){
-                dialogBox.SetActive(false);
-            }else{
+            // controls dialogue boxes
+            if(onLastMsg)
+            { 
+                // if npc has SelectionMenu component, send message to open menu
+                if(selectionBox)
+                {
+                    selectionBox.OpenMenu();
+                }
+                //end the dialogue
+                endDialogue();
+            }
+            else
+            { 
+                // start or continue the dialogue
+                staticVariables.currentDialogue = gameObject;
                 dialogBox.SetActive(true);
+                npcPortrait.SetActive(true);
                 string msgToDisplay = messages[data1.questTracker].message[cuMsg];
                 dialogText.text = msgToDisplay;
 
-                if(cuMsg < messages[data1.questTracker].message.Length-1){
+                if(cuMsg < messages[data1.questTracker].message.Length){
                     cuMsg++;
+                    if(cuMsg == messages[data1.questTracker].message.Length)
+					{
+                        onLastMsg = true;
+					}
                 }
             }
         }
     }
+	public void endDialogue()
+	{
+        dialogBox.SetActive(false);
+        npcPortrait.SetActive(false);
+        cuMsg = 0;
+        onLastMsg = false;
+        staticVariables.currentDialogue = null;
+    }
 
-    //info that will be collected to keep track of the NPC
-    [System.Serializable]
+	// info that will be collected to keep track of the NPC
+	[System.Serializable]
     public class Message{
         public string [] message;
     }
@@ -112,6 +157,8 @@ public class Quest : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("Player")){
             playerInRange = false;
+            cuMsg = 0;
+            onLastMsg = false;
             dialogBox.SetActive(false);
         }
     }

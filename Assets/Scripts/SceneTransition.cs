@@ -22,8 +22,21 @@ public class SceneTransition : MonoBehaviour
             playerData.initialValue = playerPosition;
             playerData.movedScene = true;
             player.SavePlayerData();
-            SceneManager.LoadScene(sceneToLoad);
+            //SceneManager.LoadScene(sceneToLoad);
+            StartCoroutine(TransitionScene(sceneToLoad));
         }
 
     }
+
+    public IEnumerator TransitionScene(string scene)
+    {
+        staticVariables.immobile = true;
+        staticVariables.invincible = true;
+        GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        staticVariables.immobile = false;
+        staticVariables.invincible = false;
+        SceneManager.LoadScene(scene);
+    }
+
 }

@@ -33,19 +33,6 @@ public class SoundManager : MonoBehaviour
         soundTimers[Sound.PlayerFootstep] = 0;
     }
 
-    // PlaySound function for 3D sounds
-    /*public static void PlaySound(Sound sound, Vector3 position)
-    {
-        if (CanPlaySound(sound))
-        {
-            GameObject soundObj = new GameObject("Sound");
-            soundObj.transform.position = position;
-            AudioSource audioSrc = soundObj.AddComponent<AudioSource>();
-            audioSrc.clip = GetAudioClip(sound);
-            audioSrc.Play();
-        }
-    }*/
-
     public static void PlaySound(Sound sound)
     {
         if (CanPlaySound(sound))

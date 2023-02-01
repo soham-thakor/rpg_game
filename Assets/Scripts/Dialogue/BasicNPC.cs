@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class BasicNPC : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class BasicNPC : MonoBehaviour
     {
         dialogBox.SetActive(false);
         selectionBox.SetActive(false);
+        
     }
 
     void Update(){
@@ -42,18 +44,22 @@ public class BasicNPC : MonoBehaviour
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
             if(selectionBox.activeInHierarchy){
                 selectionBox.SetActive(false);
+                staticVariables.immobile = false;
                 dialogBox.SetActive(true);
                 string msgToDisplay = "Today is a good day to solve it ya know.";
                 dialogText.text = msgToDisplay;
                 cuMsg--;
-            }else if(dialogBox.activeInHierarchy){
+            }
+            else if(dialogBox.activeInHierarchy){
                 dialogBox.SetActive(false);
 
                 //experimental from here
                 if(cuMsg == messages[questTracker].message.Length-1){
                     selectionBox.SetActive(true);
+                    staticVariables.immobile = true;
                 }
-            }else{
+            }
+            else{
                 dialogBox.SetActive(true);
                 string msgToDisplay = messages[questTracker].message[cuMsg];
                 dialogText.text = msgToDisplay;
@@ -69,6 +75,8 @@ public class BasicNPC : MonoBehaviour
         selectionBox.SetActive(false);
         data2.bossFight = true;
         SceneManager.LoadScene(gameStartScene);
+        staticVariables.immobile = false;
+        staticVariables.guesses += 1;
     }
 
     public void WrongChoice(){
@@ -77,13 +85,36 @@ public class BasicNPC : MonoBehaviour
         if(data2.gameOver){
             SceneManager.LoadScene(14);
         }
+        staticVariables.immobile = false;
+        staticVariables.guesses += 1;
     }
 
+    public void StoreChoice(TextMeshProUGUI textMesh)
+	{
+        staticVariables.lastGuess = textMesh.text;
+        staticVariables.guesses += 1;
+        staticVariables.immobile = false;
+        selectionBox.SetActive(false);
+        //GoToCutscene();
+        StartCoroutine(TransitionScene());
+	}
+
+    public void GoToCutscene()
+	{
+        SceneManager.LoadScene("Accuse Cutscene");
+	}
+
+    public IEnumerator TransitionScene()
+    {
+        GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Accuse Cutscene");
+    }
     // public void sSystem(){
-        
+
     // }
-    
-     [System.Serializable]
+
+    [System.Serializable]
     public class Message{
         public string [] message;
     }
