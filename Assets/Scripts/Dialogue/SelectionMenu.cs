@@ -27,24 +27,6 @@ public class SelectionMenu : MonoBehaviour
         staticVariables.immobile = true;
     }
 
-    // public void CorrectChoice(){
-    //     selectionBox.SetActive(false);
-    //     data2.bossFight = true;
-    //     SceneManager.LoadScene(14);
-    //     staticVariables.immobile = false;
-    //     staticVariables.guesses += 1;
-    // }
-
-    // public void WrongChoice(){
-    //     selectionBox.SetActive(false);
-    //     data2.wrongChoice();
-    //     if(data2.gameOver){
-    //         SceneManager.LoadScene(14);
-    //     }
-    //     staticVariables.immobile = false;
-    //     staticVariables.guesses += 1;
-    // }
-
     public void StoreChoice(TextMeshProUGUI textMesh)
 	{
         staticVariables.lastGuess = textMesh.text;
