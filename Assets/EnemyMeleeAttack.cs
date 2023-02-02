@@ -43,7 +43,10 @@ public class EnemyMeleeAttack : MonoBehaviour
 
 		if(TryDamage())
 		{
-			animator.SetTrigger("attack");
+			if (!this.transform.parent.name.Contains("GOBLIN"))
+			{
+				animator.SetTrigger("attack");
+			}
 			playerTarget.GetComponent<PlayerController>().TakeDamage(attackDamage);
 			nextAttackTime = Time.time + attackInterval;
 		}
