@@ -36,6 +36,10 @@ public class SelectionMenu : MonoBehaviour
         StartCoroutine(TransitionScene());
 	}
 
+    public void Quit(){
+        staticVariables.immobile = false;
+    }
+
     public void GoToCutscene()
 	{
         inMenu = false;
