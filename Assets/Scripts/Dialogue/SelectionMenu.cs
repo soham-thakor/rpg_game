@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+// honestly this entire class could be moved into MenuManager
 public class SelectionMenu : MonoBehaviour
 {
-
     public SelectionData data2;
     public GameObject selectionBox;
 
@@ -19,6 +19,13 @@ public class SelectionMenu : MonoBehaviour
         inMenu = false;
         selectionBox.SetActive(false);
     }
+
+    void Update()
+    {
+		if (Input.GetKeyDown(KeyCode.Escape)){
+			Quit();
+		}
+    }	
 
     public void OpenMenu()
     {
@@ -36,7 +43,8 @@ public class SelectionMenu : MonoBehaviour
         StartCoroutine(TransitionScene());
 	}
 
-    public void Quit(){
+    public void Quit() {
+        selectionBox.SetActive(false);
         staticVariables.immobile = false;
     }
 
