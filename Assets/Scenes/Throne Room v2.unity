@@ -5371,7 +5371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.073
+      value: -3.833
       objectReference: {fileID: 0}
     - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5407,7 +5407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2028284937540347141, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
       propertyPath: m_Name
-      value: SceneTransition
+      value: SceneTransition Large Rooms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
@@ -5493,6 +5493,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3783078599294172745, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
   m_PrefabInstance: {fileID: 889219434}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &967211480
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.060141854
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347139, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: sceneToLoad
+      value: Barracks
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347140, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.21575642
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347140, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2323954
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347140, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.15016556
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347140, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.018722296
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347141, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_Name
+      value: SceneTransition Barracks
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
 --- !u!1001 &1021957607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6251,6 +6328,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3178000094959285315, guid: d954556f8325b3145b258810308302de, type: 3}
   m_PrefabInstance: {fileID: 1189677827}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1282155360
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.060141854
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347139, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: sceneToLoad
+      value: NPC Rooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347139, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: playerPosition.x
+      value: 3.452
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347139, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: playerPosition.y
+      value: 2.281
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347140, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.24953675
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347140, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.98242503
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347140, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.035623193
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347140, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.02210024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028284937540347141, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+      propertyPath: m_Name
+      value: SceneTransition NPC Rooms
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
 --- !u!1001 &1373102715
 PrefabInstance:
   m_ObjectHideFlags: 0
