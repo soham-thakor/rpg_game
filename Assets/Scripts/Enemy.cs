@@ -18,11 +18,7 @@ public class Enemy : MonoBehaviour
     private Transform player;
     private bool isFlipped = false;  // collider starts facing right (false is right, true is left)
     private Rigidbody2D rb;
-    private bool knockedOut = false;     // if set to true, will stop movement
     private string enemyType;
-
-    // getters
-    public bool getKnockedOut() { return knockedOut; }
 
     //public float Health;
     void Start()
