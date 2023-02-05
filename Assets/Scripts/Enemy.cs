@@ -95,6 +95,9 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        flashEffect.Flash();
+        currentHealth -= damage;
+        healthBar.SetHealth((int)currentHealth);
         if (currentHealth <= 0) {
             if(enemyType == "Knight") {
                 SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
@@ -122,8 +125,6 @@ public class Enemy : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("IsEnraged", true);
         }
-        flashEffect.Flash();
-        currentHealth -= damage;
-        healthBar.SetHealth((int)currentHealth);
+        
     }
 }
