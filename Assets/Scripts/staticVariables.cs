@@ -12,6 +12,8 @@ public class staticVariables : MonoBehaviour
     public static int guesses = 0;
     //Know whether or not the player has picked up the room key
     public static bool aquiredRoomKey = false;
+    //Know whether or not the bedroom door has been opened
+    public static bool bedroomDoorOpen = false;
     //declared for now but will be randomized eventually
     public static string realVillain = "Ambassador Dajjal";
     //Store what the last guess was, so that it can be used in the cutscene
