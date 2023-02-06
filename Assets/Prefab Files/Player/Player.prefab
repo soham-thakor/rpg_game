@@ -1696,7 +1696,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 0000000031d0310a5bbd856a
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2857,8 +2857,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1787149659
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 920525235, guid: e3f2d94ed9b70d2499853445b95bda0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4119,6 +4119,18 @@ PrefabInstance:
     - target: {fileID: 294779068652087150, guid: 26b2b0f9504dd3240b02b2377e617748, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 294779068652087151, guid: 26b2b0f9504dd3240b02b2377e617748, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 294779068652087151, guid: 26b2b0f9504dd3240b02b2377e617748, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[1]
+      value: 171036721
+      objectReference: {fileID: 0}
+    - target: {fileID: 294779068652087151, guid: 26b2b0f9504dd3240b02b2377e617748, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[2]
+      value: 1787149659
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26b2b0f9504dd3240b02b2377e617748, type: 3}

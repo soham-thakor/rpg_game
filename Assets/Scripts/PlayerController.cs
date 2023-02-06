@@ -112,16 +112,16 @@ public class PlayerController : MonoBehaviour
     private bool TryMove(Vector2 direction) {
         if(direction == Vector2.zero) {
             return false;
-        }
+		}
 
-        // Check for potential collisions
-        int count = rb.Cast(
-            direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions
-            movementFilter, // The settings that determine where a collision can occur on such as layers to collide with
-            castCollisions, // List of collisions to store the found collisions into after the Cast is finished
-            moveSpeed * Time.fixedDeltaTime + collisionOffset); // The amount to cast equal to the movement plus an offset
+		// Check for potential collisions
+		int count = rb.Cast(
+			direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions
+			movementFilter, // The settings that determine where a collision can occur on such as layers to collide with
+			castCollisions, // List of collisions to store the found collisions into after the Cast is finished
+			moveSpeed * Time.fixedDeltaTime); // The amount to cast equal to the movement
 
-        if(count == 0){
+		if (count == 0){
             rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
             return true;
         } else {
