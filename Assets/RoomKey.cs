@@ -7,10 +7,13 @@ public class RoomKey : MonoBehaviour
     public GameObject buttonPrompt;
 
 	private bool inRange = false;
-    // Start is called before the first frame update
-
-    // Update is called once per frame
-    void Update()
+	// Start is called before the first frame update
+	private void Start()
+	{
+		gameObject.transform.position = staticVariables.keyPos;
+	}
+	// Update is called once per frame
+	void Update()
     {
         if(inRange && Input.GetKeyDown(KeyCode.F))
 		{
