@@ -229,7 +229,7 @@ public class PlayerController : MonoBehaviour
 
     public bool IsClosestNPC(GameObject tryingNPC)
 	{
-        float minDist = 999999999999999999999999999f;
+        float minDist = float.MaxValue; 
         GameObject closestNPC = tryingNPC;
         foreach(GameObject NPC in GameObject.FindGameObjectsWithTag("NPC"))
 		{
