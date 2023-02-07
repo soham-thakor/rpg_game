@@ -20,6 +20,20 @@ public class staticVariables : MonoBehaviour
     public static string lastGuess = "If you see this message in game an error has occured";
     //To know from any script if a dialogue box is open and if so which one
     public static GameObject currentDialogue;
+    //To Generate which scene the secret entrance is in
+    public static GameObject secretBookshelf;
+    public static Dictionary<int, string> secretScenes = new Dictionary<int, string>()
+    {
+        {0, "Halls Left" },
+        {1, "Halls Right" },
+        {2, "Halls Bottom" },
+        {3, "Large Rooms" }
+    };
+    //To Store where you came from to get to the secret room
+    public static string secretEntranceScene = chooseSecretRoom();
+    public static Vector2 secretEntrancePosition;
+    public static bool secretEntranceFound = false;
+
     //For picking the key's spawn location
     public static Dictionary<int, Vector2> keyPositions = new Dictionary<int, Vector2>()
     {
@@ -39,6 +53,10 @@ public class staticVariables : MonoBehaviour
     public static Vector2 placeKey()
 	{
         return keyPositions[Random.Range(0, 4)];
+	}
+    public static string chooseSecretRoom()
+	{
+        return secretScenes[Random.Range(0, 4)];
 	}
     public static void changeTimeLeft(int i, float value)
 	{
