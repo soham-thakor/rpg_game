@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
 	
-	public int gameStartScene;
+	public string gameStartScene;
 	public static bool isPaused;
 	public GameObject pauseMenu;
 	public TextMeshProUGUI numberText;
