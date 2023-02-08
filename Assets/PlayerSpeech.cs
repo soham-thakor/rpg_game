@@ -12,6 +12,7 @@ public class PlayerSpeech : MonoBehaviour
 
 
     private IEnumerator typing;
+    private bool currentlyTyping = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,19 +29,23 @@ public class PlayerSpeech : MonoBehaviour
     public void closeDialogue()
 	{
         dialogueBox.SetActive(false);
-        StopCoroutine(typing);
+        if(currentlyTyping)
+		{
+            StopCoroutine(typing);
+            currentlyTyping = false;
+        }
         playerMessage.text = "";
         
 	}
     IEnumerator Type(Text textDisplay, string sentence)
     {
-
+        currentlyTyping = true;
         foreach (char letter in sentence.ToCharArray())
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
-
+        currentlyTyping = false;
 
     }
 }
