@@ -33,9 +33,13 @@ public class staticVariables : MonoBehaviour
     public static string secretEntranceScene = chooseSecretRoom();
     public static Vector2 secretEntrancePosition;
     public static bool secretEntranceFound = false;
+    //To Store the player's chosen name
+    public static string chosenName = "Player Name";
 
-    //For picking the key's spawn location
-    public static Dictionary<int, Vector2> keyPositions = new Dictionary<int, Vector2>()
+	
+
+	//For picking the key's spawn location
+	public static Dictionary<int, Vector2> keyPositions = new Dictionary<int, Vector2>()
     {
         {0, new Vector2(-0.6388168f, -2.799473f) },
         {1, new Vector2(0.882f, -2.961f) },

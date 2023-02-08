@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SecretRoomController : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if(staticVariables.secretBookshelf == null && staticVariables.secretEntranceScene == SceneManager.GetActiveScene().name)
 		{
@@ -16,5 +16,13 @@ public class SecretRoomController : MonoBehaviour
             staticVariables.secretBookshelf = bookshelves[entrance];
 		}
     }
+	private void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.O))
+		{
+            Debug.Log(staticVariables.secretEntranceScene);
+            Debug.Log(staticVariables.secretBookshelf.name);
+		}
+	}
 
 }
