@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Bookshelf : MonoBehaviour
 {
+	public string failText;
+	public string successText;
+
 
     private bool inRange = false;
+	private PlayerSpeech playerSpeech;
+
 
 	private void Start()
 	{
@@ -14,14 +20,37 @@ public class Bookshelf : MonoBehaviour
 		{
 			disableBookshelf();
 		}
+		playerSpeech = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSpeech>();
 	}
 	// Update is called once per frame
 	void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F) && inRange && gameObject == staticVariables.secretBookshelf)
+        if(Input.GetKeyDown(KeyCode.F) && inRange)
 		{
-			gameObject.GetComponent<Animator>().SetTrigger("Fade");
-			staticVariables.secretEntranceFound = true;
+			if (staticVariables.secretBookshelf == gameObject)
+			{
+				if (playerSpeech.dialogueBox.activeInHierarchy == false) { 
+					playerSpeech.Speak(successText); 
+				}
+				else
+				{
+					gameObject.GetComponent<Animator>().SetTrigger("Fade");
+					staticVariables.secretEntranceFound = true;
+					playerSpeech.closeDialogue();
+				}
+			}
+			else
+			{
+				if(playerSpeech.dialogueBox.activeInHierarchy == false)
+				{
+					playerSpeech.Speak(failText);
+				}
+				else
+				{
+					playerSpeech.closeDialogue();
+				}
+				
+			}
 		}
     }
 
@@ -32,6 +61,7 @@ public class Bookshelf : MonoBehaviour
 	private void OnTriggerExit2D(Collider2D collision)
 	{
         inRange = false;
+		playerSpeech.closeDialogue();
 	}
 
 
@@ -41,4 +71,6 @@ public class Bookshelf : MonoBehaviour
 		gameObject.GetComponent<BoxCollider2D>().enabled = false;
 		gameObject.GetComponent<CircleCollider2D>().enabled = false;
 	}
+
+
 }

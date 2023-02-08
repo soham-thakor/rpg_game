@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class InteractionText : MonoBehaviour
 {
-    public string[] Messages;
+    public string Message;
     public float typingSpeed = 0.02f; 
 
 
-    private CircleCollider2D collider;
     private Text playerName;
     private Text playerMessage;
     private GameObject playerDialogue;
@@ -28,7 +27,7 @@ public class InteractionText : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.F) && playerDialogue.activeInHierarchy == false)
 		{
-            printMessage(0);
+            printMessage();
 		}
     }
 
@@ -45,10 +44,10 @@ public class InteractionText : MonoBehaviour
 		}
 	}
 
-    public void printMessage(int index)
+    public void printMessage()
 	{
         playerDialogue.SetActive(true);
-        StartCoroutine(Type(playerMessage, Messages[index]));
+        StartCoroutine(Type(playerMessage, Message));
     }
     IEnumerator Type(Text textDisplay, string sentence)
     {
