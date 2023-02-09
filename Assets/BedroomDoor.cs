@@ -9,6 +9,7 @@ public class BedroomDoor : MonoBehaviour
 
 	private PlayerSpeech playerSpeech;
 	private bool inRange = false;
+	private AudioSource unlockSound;
 	// Start is called before the first frame update
 	public void Start()
 	{
@@ -17,6 +18,7 @@ public class BedroomDoor : MonoBehaviour
 			gameObject.SetActive(false);
 		}
 		playerSpeech = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSpeech>();
+		unlockSound = GetComponent<AudioSource>();
 	}
 	// Update is called once per frame
 	void Update()
@@ -27,6 +29,7 @@ public class BedroomDoor : MonoBehaviour
 			{
 				gameObject.SetActive(false);
 				staticVariables.bedroomDoorOpen = true;
+				unlockSound.Play();
 			}
 			else
 			{
