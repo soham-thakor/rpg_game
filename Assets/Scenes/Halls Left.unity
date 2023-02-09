@@ -2341,6 +2341,72 @@ Transform:
   m_Father: {fileID: 670526599}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &519721089
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.8008
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.2653
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.40596497
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994625, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a2251401b797f5044bfa7b1e8bd27f87, type: 3}
+    - target: {fileID: 999778766779994628, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: message
+      value: Looks like an archer defending a castle. Maybe if they had archers they
+        could have prevented this.
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994629, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_Name
+      value: Archer Painting
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
 --- !u!1 &537515039
 GameObject:
   m_ObjectHideFlags: 0
