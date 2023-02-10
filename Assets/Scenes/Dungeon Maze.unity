@@ -1025,10 +1025,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 268904240, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 777782874, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1817,6 +1813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3283007440131791999, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4396909729723977686, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: healthBar
       value: 
@@ -1848,10 +1848,6 @@ PrefabInstance:
     - target: {fileID: 8422326680780299509, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8684271802035033002, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}

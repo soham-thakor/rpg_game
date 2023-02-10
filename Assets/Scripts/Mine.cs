@@ -11,7 +11,8 @@ public class Mine : MonoBehaviour
     private string origin = "";
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-
+    private List<Enemy> enemies = new List<Enemy>();
+    public BoxCollider2D damageCollider;
     // setters
     public void setOrigin(string s) {origin = s; }
     
@@ -20,7 +21,7 @@ public class Mine : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        
         // checks if current object is a clone
         if(gameObject.name.Contains("Clone")) {
             Invoke("DestroyMine",lifeTime);   // deletes self whenever lifetime is reached
@@ -38,11 +39,13 @@ public class Mine : MonoBehaviour
         // if player mine comes in contact with enemy
         if(other.tag == "Enemy" && origin == "Player") {
             Enemy enemy = other.GetComponent<Enemy>();
-
+            if(!enemies.Contains(other.gameObject.GetComponent<Enemy>())) {
+                enemies.Add(other.gameObject.GetComponent<Enemy>());
+			}
             // if current mine is water mine
             if(gameObject.name == "Water Mine(Clone)") 
             {
-                enemy.TakeDamage(damageDealt);
+                //enemy.TakeDamage(damageDealt);
                 SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
                 animator.SetTrigger("Explode");
                 Destroy(gameObject, 1f);
@@ -54,6 +57,33 @@ public class Mine : MonoBehaviour
             // TODO: add enemy mines
             Destroy(gameObject);
         }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy" && origin == "Player")
+        {
+            if (enemies.Contains(collision.gameObject.GetComponent<Enemy>()))
+            {
+                enemies.Remove(collision.gameObject.GetComponent<Enemy>());
+            }
+        }
+    }
+
+	public void dealDamage()
+	{
+        foreach(Enemy enemy in enemies)
+		{
+            enemy.TakeDamage(damageDealt);
+		}
+	}
+    public void enableDamageCollider()
+	{
+        damageCollider.enabled = true;
+	}
+
+    public void disableDamageCollider()
+    {
+        damageCollider.enabled = false;
     }
 
 }
