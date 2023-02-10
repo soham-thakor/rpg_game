@@ -30,7 +30,7 @@ public class Bookshelf : MonoBehaviour
 			if (staticVariables.secretBookshelf == gameObject)
 			{
 				if (playerSpeech.dialogueBox.activeInHierarchy == false) { 
-					playerSpeech.Speak(successText); 
+					playerSpeech.Speak(successText);
 				}
 				else
 				{

@@ -7,21 +7,20 @@ public class RoomKey : MonoBehaviour
     public GameObject buttonPrompt;
 
 	private bool inRange = false;
-	private AudioSource pickupSound;
 	// Start is called before the first frame update
 	private void Start()
 	{
 		gameObject.transform.position = staticVariables.keyPos;
-		pickupSound = gameObject.GetComponent<AudioSource>();
 	}
 	// Update is called once per frame
 	void Update()
     {
         if(inRange && Input.GetKeyDown(KeyCode.F))
 		{
+			SoundManager.PlaySound(SoundManager.Sound.PickupKey);
 			gameObject.SetActive(false);
 			staticVariables.aquiredRoomKey = true;
-			pickupSound.Play();
+			
 		}
 
 

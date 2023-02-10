@@ -22,6 +22,7 @@ public class PlayerSpeech : MonoBehaviour
     public void Speak(string message)
 	{
         dialogueBox.SetActive(true);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
         typing = Type(playerMessage, message);
         StartCoroutine(typing);
 	}
