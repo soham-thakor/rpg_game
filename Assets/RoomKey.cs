@@ -17,9 +17,13 @@ public class RoomKey : MonoBehaviour
     {
         if(inRange && Input.GetKeyDown(KeyCode.F))
 		{
+			SoundManager.PlaySound(SoundManager.Sound.PickupKey);
 			gameObject.SetActive(false);
 			staticVariables.aquiredRoomKey = true;
+			
 		}
+
+
     }
 
 

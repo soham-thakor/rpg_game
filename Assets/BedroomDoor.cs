@@ -5,7 +5,9 @@ using UnityEngine;
 public class BedroomDoor : MonoBehaviour
 {
 	public GameObject buttonPrompt;
+	public string lockedMessage;
 
+	private PlayerSpeech playerSpeech;
 	private bool inRange = false;
 	// Start is called before the first frame update
 	public void Start()
@@ -14,14 +16,31 @@ public class BedroomDoor : MonoBehaviour
 		{
 			gameObject.SetActive(false);
 		}
+		playerSpeech = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSpeech>();
 	}
 	// Update is called once per frame
 	void Update()
 	{
-		if (inRange && Input.GetKeyDown(KeyCode.F) && staticVariables.aquiredRoomKey)
+		if (inRange && Input.GetKeyDown(KeyCode.F))
 		{
-			gameObject.SetActive(false);
-			staticVariables.bedroomDoorOpen = true;
+			if (staticVariables.aquiredRoomKey)
+			{
+				SoundManager.PlaySound(SoundManager.Sound.UnlockDoor);
+				gameObject.SetActive(false);
+				staticVariables.bedroomDoorOpen = true;
+				
+			}
+			else
+			{
+				if(playerSpeech.dialogueBox.activeInHierarchy == false)
+				{
+					playerSpeech.Speak(lockedMessage);
+				}
+				else
+				{
+					playerSpeech.closeDialogue();
+				}
+			}
 		}
 	}
 
@@ -40,6 +59,7 @@ public class BedroomDoor : MonoBehaviour
 		{
 			inRange = false;
 			buttonPrompt.SetActive(false);
+			playerSpeech.closeDialogue();
 		}
 	}
 }

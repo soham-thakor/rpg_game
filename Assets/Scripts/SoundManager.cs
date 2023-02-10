@@ -22,7 +22,9 @@ public class SoundManager : MonoBehaviour
         GoblinDamaged,
         GoblinDeath,
         Fireball,
-        CulpritFound
+        CulpritFound,
+        PickupKey,
+        UnlockDoor
     }
 
     private static Dictionary<Sound, float> soundTimers;
