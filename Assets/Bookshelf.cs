@@ -41,15 +41,7 @@ public class Bookshelf : MonoBehaviour
 			}
 			else
 			{
-				if(playerSpeech.dialogueBox.activeInHierarchy == false)
-				{
 					playerSpeech.Speak(failText);
-				}
-				else
-				{
-					playerSpeech.closeDialogue();
-				}
-				
 			}
 		}
     }

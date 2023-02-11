@@ -20,14 +20,7 @@ public class InteractionText : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.F))
 		{
-            if (playerSpeech.dialogueBox.activeInHierarchy == false)
-            {
                 playerSpeech.Speak(message);
-            }
-            else
-			{
-                playerSpeech.closeDialogue();
-			}
 		}
     }
 

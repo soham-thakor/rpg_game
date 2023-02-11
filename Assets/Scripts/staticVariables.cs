@@ -15,7 +15,7 @@ public class staticVariables : MonoBehaviour
     //Know whether or not the bedroom door has been opened
     public static bool bedroomDoorOpen = false;
     //declared for now but will be randomized eventually
-    public static string realVillain = "Ambassador Dajjal";
+    public static string realVillain = NPCStatic.chooseCulprit();
     //Store what the last guess was, so that it can be used in the cutscene
     public static string lastGuess = "Error Message";
     //To know from any script if a dialogue box is open and if so which one
@@ -113,6 +113,7 @@ public class staticVariables : MonoBehaviour
 	{
         keyPos = placeKey();
         secretEntranceScene = chooseSecretRoom();
+        realVillain = NPCStatic.chooseCulprit();
         //insert line for realVillain = NPCStatic.chooseCulprit();
 	}
     public static void resetStatics()

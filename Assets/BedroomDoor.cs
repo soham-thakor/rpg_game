@@ -32,14 +32,7 @@ public class BedroomDoor : MonoBehaviour
 			}
 			else
 			{
-				if(playerSpeech.dialogueBox.activeInHierarchy == false)
-				{
 					playerSpeech.Speak(lockedMessage);
-				}
-				else
-				{
-					playerSpeech.closeDialogue();
-				}
 			}
 		}
 	}
