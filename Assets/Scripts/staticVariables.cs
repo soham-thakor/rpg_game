@@ -17,7 +17,7 @@ public class staticVariables : MonoBehaviour
     //declared for now but will be randomized eventually
     public static string realVillain = "Ambassador Dajjal";
     //Store what the last guess was, so that it can be used in the cutscene
-    public static string lastGuess = "If you see this message in game an error has occured";
+    public static string lastGuess = "Error Message";
     //To know from any script if a dialogue box is open and if so which one
     public static GameObject currentDialogue;
     //To Generate which scene the secret entrance is in
@@ -107,5 +107,24 @@ public class staticVariables : MonoBehaviour
         {
             cooldowns[entry.Key] = 1f;
         }
+	}
+
+    public static void GenerateWorld()
+	{
+        keyPos = placeKey();
+        secretEntranceScene = chooseSecretRoom();
+        //insert line for realVillain = NPCStatic.chooseCulprit();
+	}
+    public static void resetStatics()
+	{
+        secretEntranceFound = false;
+        secretBookshelf = null;
+        chosenName = "Player Name";
+        lastGuess = "Error Message";
+        aquiredRoomKey = false;
+        bedroomDoorOpen = false;
+        guesses = 0;
+        immobile = false;
+        invincible = false;
 	}
 }
