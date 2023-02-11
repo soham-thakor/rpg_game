@@ -18,6 +18,11 @@ public class SelectionMenu : MonoBehaviour
     {
         inMenu = false;
         selectionBox.SetActive(false);
+        //This is so that if the cutscene ends and youre out of flasks it will game over you
+        if(staticVariables.guesses == 3)
+		{
+            SceneManager.LoadScene("CutSceneGameOver");
+		}
     }
 
     void Update()
@@ -40,7 +45,7 @@ public class SelectionMenu : MonoBehaviour
         staticVariables.guesses += 1;
         staticVariables.immobile = false;
         selectionBox.SetActive(false);
-        StartCoroutine(TransitionScene());
+        StartCoroutine(TransitionScene("Accuse Cutscene"));
 	}
 
     public void Quit() {
@@ -54,10 +59,10 @@ public class SelectionMenu : MonoBehaviour
         SceneManager.LoadScene("Accuse Cutscene");
 	}
 
-    public IEnumerator TransitionScene()
+    public IEnumerator TransitionScene(string scene)
     {
         GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("Start");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Accuse Cutscene");
+        SceneManager.LoadScene(scene);
     }
 }
