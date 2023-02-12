@@ -47,6 +47,10 @@ public class PlayerSpeech : MonoBehaviour
 
     public void closeDialogue()
 	{
+        if(dialogueBox.activeInHierarchy)
+		{// this gets called when players leave the range of something they can interact with, so I dont want the sound to play if they just walk by without pulling up the dialogue box
+            SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        }
         dialogueBox.SetActive(false);
         if (currentlyTyping)
 		{

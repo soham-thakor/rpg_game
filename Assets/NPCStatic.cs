@@ -45,15 +45,33 @@ public class NPCStatic : MonoBehaviour
         {15, new NPC("Lord Andre", "Lackadaisical", "Rude", "Prideful", "Male") }
     };
 
+    public static string getTrait(int npcKey, int trait)
+    {
+        NPC npc = NPCnames[npcKey];
+        switch (trait) {
+            case 1:
+                return npc.trait1;
+            case 2:
+                return npc.trait2;
+            case 3:
+                return npc.trait3;
+            default:
+                return "Error trait";
+        }
+    }
     //keeps track of who we have already given out clues for so that we dont give duplicate clues
     public static List<int> trait1Clues = new List<int>();
+
+    //Just to get the key of the person who is the culprit
+    public static int culpritKey;
     public static string chooseCulprit()
 	{
-        return NPCnames[UnityEngine.Random.Range(0, NPCnames.Count)].name;
+        culpritKey = UnityEngine.Random.Range(0, NPCnames.Count);
+        return NPCnames[culpritKey].name;
 	}
 
     
-
+    //START: Generation of diaries that tell you "This NPC IS..."
 	public static List<Tuple<string, string, string>> diaryTransitions = new List<Tuple<string, string, string>>() {
         {new Tuple<string, string, string>("\"I've come to realize that ", " is ", ".\"" ) },
         {new Tuple<string, string, string>("\"Turns out ", " is very ", ".\"") },
@@ -102,9 +120,83 @@ public class NPCStatic : MonoBehaviour
         {"Lady Balthazar", ladyBalthazarDiary },
         {"Lord Balthazar", lordBalthazarDiary },
         {"Lord Andre", lordAndreDiary }
+	};
+    
+    //START: Generation of ghost clues of the structure "The culprit IS..."
+    public static List<Tuple<string, string>> ghostClueTransitions = new List<Tuple<string, string>>() {
+        new Tuple<string, string>("The one who did this to me was ", "..."),
+        new Tuple<string, string>("I can't believe the person who did this was so ", "...")
     };
 
-    
+    public static string ghostClue1 = generateGhostClue(1);
+    public static string ghostClue2 = generateGhostClue(2);
+    public static string ghostClue3 = generateGhostClue(3);
+
+    public static string generateGhostClue(int trait)
+	{
+        string addOn = "";
+        int randomTransition = UnityEngine.Random.Range(0, ghostClueTransitions.Count);
+        addOn += ghostClueTransitions[randomTransition].Item1;
+        addOn += getTrait(culpritKey, trait);
+        addOn += ghostClueTransitions[randomTransition].Item2;
+        return addOn;
+    }
+    public static void generateGhostClues()
+	{
+        ghostClue1 = generateGhostClue(1);
+        ghostClue2 = generateGhostClue(2);
+        ghostClue3 = generateGhostClue(3);
+	}
+
+    //START: Generation of clues that tell the player "The culprit ISN'T..."
+
+    //Keep track of what traits we have given clues out for
+    public static List<string> antiCluesGiven = new List<string>();
+    //List of traits that the culprit has
+    public static List<string> culpritTraits = getCulpritTraits();
+    public static List<string> getCulpritTraits()
+	{
+        List<string> traits = new List<string>();
+        traits.Add(NPCnames[culpritKey].trait1);
+        traits.Add(NPCnames[culpritKey].trait2);
+        traits.Add(NPCnames[culpritKey].trait3);
+        return traits;
+    }
+    //Start Generation
+    public static List<Tuple<string, string>> antiClueTransitions = new List<Tuple<string, string>>()
+    {
+        new Tuple<string, string>("At least the person who did this to me wasn't ", "..."),
+        new Tuple<string, string>("Knowing that the culprit of this disaster wasn't ", " puts me at peace...")
+    };
+    public static string antiClue1 = generateAntiClue();
+    public static string antiClue2 = generateAntiClue();
+    public static string antiClue3 = generateAntiClue();
+    public static string generateAntiClue()
+	{
+        int randomNPC = UnityEngine.Random.Range(0, NPCnames.Count);
+        string randomTrait = getTrait(randomNPC, UnityEngine.Random.Range(0, 4));
+
+        while(antiCluesGiven.Contains(randomTrait) || culpritTraits.Contains(randomTrait))
+		{//keep picking traits until we get one that we havent reveled, and that the culprit doesnt have
+            randomNPC = UnityEngine.Random.Range(0, NPCnames.Count);
+            randomTrait = getTrait(randomNPC, UnityEngine.Random.Range(0, 4));
+        }
+
+        string addOn = "";
+        int randomTransition = UnityEngine.Random.Range(0, antiClueTransitions.Count);
+
+        addOn += antiClueTransitions[randomTransition].Item1;
+        addOn += randomTrait;
+        addOn += antiClueTransitions[randomTransition].Item2;
+
+        return addOn;
+	}
+    public static void generateAntiClues()
+	{
+        antiClue1 = generateAntiClue();
+        antiClue2 = generateAntiClue();
+        antiClue3 = generateAntiClue();
+    }
 
 
 

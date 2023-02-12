@@ -115,7 +115,8 @@ public class staticVariables : MonoBehaviour
         secretEntranceScene = chooseSecretRoom();
         realVillain = NPCStatic.chooseCulprit();
         NPCStatic.generateDiaries();
-        
+        NPCStatic.generateGhostClues();
+        NPCStatic.generateAntiClues();
 	}
     public static void resetStatics()
 	{
