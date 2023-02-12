@@ -37,6 +37,7 @@ public class PlayerSpeech : MonoBehaviour
         }
         else // otherwise that means that we are trying to say something that isnt already on the screen,  so type as usual
         {
+            playerMessage.text = "";
             dialogueBox.SetActive(true);
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
             typing = Type(playerMessage, message);
@@ -47,7 +48,6 @@ public class PlayerSpeech : MonoBehaviour
     public void closeDialogue()
 	{
         dialogueBox.SetActive(false);
-        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
         if (currentlyTyping)
 		{
             StopCoroutine(typing);
