@@ -55,14 +55,16 @@ public class NPCStatic : MonoBehaviour
     
 
 	public static List<Tuple<string, string, string>> diaryTransitions = new List<Tuple<string, string, string>>() {
-        {new Tuple<string, string, string>("\"I' come to realize that ", " is ", ".\"" ) },
+        {new Tuple<string, string, string>("\"I've come to realize that ", " is ", ".\"" ) },
         {new Tuple<string, string, string>("\"Turns out ", " is very ", ".\"") },
         {new Tuple<string, string, string>("\"", " is kind of ", " once you get to know him.\"") },
         {new Tuple<string, string, string>("\"I've found that ", " can be quite ", ".\"") },
         {new Tuple<string, string, string>("\"In my opinion ", " embodies the word ", ".\"") },
         {new Tuple<string, string, string>("\"Recently I've realized that ", " is so ", " sometimes.\"") }
     };
-    public static List<string> diary = generateDiary("Lady Balthazar");
+    public static List<string> ladyBalthazarDiary = generateDiary("Lady Balthazar");
+    public static List<string> lordBalthazarDiary = generateDiary("Lord Balthazar");
+    public static List<string> lordAndreDiary = generateDiary("Lord Andre");
     public static List<string> generateDiary(string characterName)
 	{
         List<string> diary = new List<string>();
@@ -87,11 +89,22 @@ public class NPCStatic : MonoBehaviour
         }
         return diary;
 	}
-
+    //This is just a function to call when using GenerateWorld()
+    public static void generateDiaries()
+	{
+        trait1Clues.Clear();
+        ladyBalthazarDiary = generateDiary("Lady Balthazar");
+        lordBalthazarDiary = generateDiary("Lord Balthazar");
+        lordAndreDiary = generateDiary("Lord Andre");
+	}
     public static Dictionary<string, List<string>> diaryDict = new Dictionary<string, List<string>>()
     {
-        {"Lady Balthazar", diary }
+        {"Lady Balthazar", ladyBalthazarDiary },
+        {"Lord Balthazar", lordBalthazarDiary },
+        {"Lord Andre", lordAndreDiary }
     };
+
+    
 
 
 

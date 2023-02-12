@@ -114,7 +114,8 @@ public class staticVariables : MonoBehaviour
         keyPos = placeKey();
         secretEntranceScene = chooseSecretRoom();
         realVillain = NPCStatic.chooseCulprit();
-        //insert line for realVillain = NPCStatic.chooseCulprit();
+        NPCStatic.generateDiaries();
+        
 	}
     public static void resetStatics()
 	{
