@@ -10055,6 +10055,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
+--- !u!1 &588614765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5414855937555125231, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+  m_PrefabInstance: {fileID: 1047143390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &624668526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13334,6 +13339,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2679104485999911964, guid: 1687a25742d297b40aef521b8487dc5e, type: 3}
   m_PrefabInstance: {fileID: 624668526}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &864294151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7273422206053740959, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+  m_PrefabInstance: {fileID: 1296663102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &935525043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6857259621309394591, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+  m_PrefabInstance: {fileID: 1047143390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &951811778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382731706115709937, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+  m_PrefabInstance: {fileID: 1047143390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &952239319 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 106096165806272595, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
@@ -14802,6 +14822,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2948151965569695823, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273422206053740959, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8141643324470052945, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_Name
       value: Second Knight Charles
@@ -14852,6 +14880,61 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+--- !u!1 &1296663103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8141643324470052945, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+  m_PrefabInstance: {fileID: 1296663102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1296663104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296663103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52100e3776c846d4b9e7768927aa5795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 864294151}
+  message: {fileID: 1776150088}
+  NPCPortrait: {fileID: 1712116482}
+  typingSpeed: 0.02
+  finishTypingDelay: 1
+  dialogue:
+  - STOP RIGHT THERE!
+  - The Castle is not currently safe, you must turn back!
+--- !u!114 &1296663105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296663103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 61b71b9f82ec7f3458c6b0d27b05a115, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1296663104}
+          m_TargetAssemblyTypeName: NPCCutsceneManager, Assembly-CSharp
+          m_MethodName: SayDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1335999410
 GameObject:
   m_ObjectHideFlags: 0
@@ -15230,6 +15313,8 @@ PlayableDirector:
     value: {fileID: 952239319}
   - key: {fileID: -7479267024584463715, guid: adb7b7be2ca56384c96997cf48b7dd1a, type: 2}
     value: {fileID: 1698326389}
+  - key: {fileID: -3140310427440888780, guid: adb7b7be2ca56384c96997cf48b7dd1a, type: 2}
+    value: {fileID: 1296663105}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1404996875 stripped
@@ -15251,6 +15336,66 @@ Transform:
 Animator:
   m_CorrespondingSourceObject: {fileID: 4224779249887570925, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
   m_PrefabInstance: {fileID: 1047143390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1698326395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588614765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 61b71b9f82ec7f3458c6b0d27b05a115, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1296663104}
+          m_TargetAssemblyTypeName: NPCCutsceneManager, Assembly-CSharp
+          m_MethodName: SayDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1698326396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588614765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52100e3776c846d4b9e7768927aa5795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1972165683}
+  message: {fileID: 935525043}
+  NPCPortrait: {fileID: 951811778}
+  typingSpeed: 0.02
+  finishTypingDelay: 1
+  dialogue:
+  - STOP RIGHT THERE!
+  - The Castle is not currently safe, you must turn back!
+--- !u!1 &1712116482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2948151965569695823, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+  m_PrefabInstance: {fileID: 1296663102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1776150088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7273422206062966049, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+  m_PrefabInstance: {fileID: 1296663102}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1781983967
 GameObject:
@@ -36754,6 +36899,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New NPC
+--- !u!1 &1972165683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6857259621301742113, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+  m_PrefabInstance: {fileID: 1047143390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2147265941
 PrefabInstance:
   m_ObjectHideFlags: 0
