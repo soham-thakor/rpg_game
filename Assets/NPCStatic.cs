@@ -6,7 +6,7 @@ using UnityEngine;
 public class NPCStatic : MonoBehaviour
 {
 
-    public class NPC
+	public class NPC
     {
         public string name;
         public string trait1;
@@ -59,8 +59,12 @@ public class NPCStatic : MonoBehaviour
                 return "Error trait";
         }
     }
+
+    
     //keeps track of who we have already given out clues for so that we dont give duplicate clues
     public static List<int> trait1Clues = new List<int>();
+    //keep track of what clues we have given out, in the form <NPCkey, trait#>
+    public static List<Tuple<int, int>> traitCluesGiven = new List<Tuple<int, int>>();
 
     //Just to get the key of the person who is the culprit
     public static int culpritKey;
@@ -87,21 +91,24 @@ public class NPCStatic : MonoBehaviour
 	{
         List<string> diary = new List<string>();
         string addOn = "";
-        int randomPerson = UnityEngine.Random.Range(0, NPCnames.Count);
-        for(int i = 0; i < 3; i++)
+        
+        for(int i = 1; i < 4; i++)
 		{//Get 3 clues
-            while(trait1Clues.Contains(randomPerson) || NPCnames[randomPerson].name == characterName) 
+            int randomPerson = UnityEngine.Random.Range(0, NPCnames.Count);
+            Tuple<int, int> checker = new Tuple<int, int>(randomPerson, i);
+            while(traitCluesGiven.Contains(checker) || NPCnames[randomPerson].name == characterName) 
 			{//get a character that isnt the person writing the diary and doesnt have a diary clue for them yet
                 randomPerson = UnityEngine.Random.Range(0, NPCnames.Count);
+                checker = new Tuple<int, int>(randomPerson, i);
 			}
             //make a sentence for that character, add it to the diary and add that character to the list of characters that have clues already
             int randomTransitions = UnityEngine.Random.Range(0, diaryTransitions.Count);
             addOn += diaryTransitions[randomTransitions].Item1;
             addOn += NPCnames[randomPerson].name;
             addOn += diaryTransitions[randomTransitions].Item2;
-            addOn += NPCnames[randomPerson].trait1;
+            addOn += getTrait(randomPerson, i);
             addOn += diaryTransitions[randomTransitions].Item3;
-            trait1Clues.Add(randomPerson);
+            traitCluesGiven.Add(new Tuple<int, int>(randomPerson, i));
             diary.Add(addOn);
             addOn = "";
         }
