@@ -89,6 +89,8 @@ public class NPCStatic : MonoBehaviour
     public static List<string> lordAndreDiary = generateDiary("Lord Andre");
     public static List<string> honorableCobraDiary = generateDiary("Honorable Cobra");
     public static List<string> sirEdgarDiary = generateDiary("Sir Edgar");
+    public static List<string> sirDavidDiary = generateDiary("Sir David");
+    public static List<string> ladyElanorDiary = generateDiary("Lady Elanor");
     public static List<string> generateDiary(string characterName)
 	{
         List<string> diary = new List<string>();
@@ -119,12 +121,14 @@ public class NPCStatic : MonoBehaviour
     //This is just a function to call when using GenerateWorld()
     public static void generateDiaries()
 	{
-        trait1Clues.Clear();
+        traitCluesGiven.Clear();
         ladyBalthazarDiary = generateDiary("Lady Balthazar");
         lordBalthazarDiary = generateDiary("Lord Balthazar");
         lordAndreDiary = generateDiary("Lord Andre");
         honorableCobraDiary = generateDiary("Honorable Cobra");
         sirEdgarDiary = generateDiary("Sir Edgar");
+        sirDavidDiary = generateDiary("Sir David");
+        ladyElanorDiary = generateDiary("Lady Elanor");
 	}
     public static Dictionary<string, List<string>> diaryDict = new Dictionary<string, List<string>>()
     {
@@ -132,7 +136,9 @@ public class NPCStatic : MonoBehaviour
         {"Lord Balthazar", lordBalthazarDiary },
         {"Lord Andre", lordAndreDiary },
         {"Sir Edgar", sirEdgarDiary },
-        {"Honorable Cobra", honorableCobraDiary }
+        {"Honorable Cobra", honorableCobraDiary },
+        {"Sir David", sirDavidDiary },
+        {"Lady Elanor", ladyElanorDiary }
 	};
     
     //START: Generation of ghost clues of the structure "The culprit IS..."
@@ -206,6 +212,7 @@ public class NPCStatic : MonoBehaviour
 	}
     public static void generateAntiClues()
 	{
+        antiCluesGiven.Clear();
         antiClue1 = generateAntiClue();
         antiClue2 = generateAntiClue();
         antiClue3 = generateAntiClue();
