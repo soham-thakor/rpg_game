@@ -22066,6 +22066,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5547178787279013758, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Greetings Detective, a real misfortunate event that occurred here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547178787279013758, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: We are just fortunate that none of us were victims.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547178787279013758, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: "If you need anything from me, I\u2019ll be in the throne room or the
+        garden. "
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
 --- !u!1001 &492816948036227172
@@ -22123,6 +22136,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: First Knight Alexandre
       objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "Ah! So the, *ahem* \u201Cdetective\u201D, has come to see me."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: Just do your job and make sure the culprit is found.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: "We have searched to no avail so don\u2019t waste our time and money."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[3]
+      value: "Though if you do fail, I guess we don\u2019t look as incompetent."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[4]
+      value: "Away with you now, don\u2019t bother me unless its something important."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
 --- !u!1001 &936458123875643437
@@ -22132,6 +22169,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 3743990006296859209, guid: db9ac9eeedc9c2d479a13cb7da909965, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Hey, can you hurry this investigation up?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743990006296859209, guid: db9ac9eeedc9c2d479a13cb7da909965, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: Already sat through this once for naught, and now we have to repeat
+        everything?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743990006296859209, guid: db9ac9eeedc9c2d479a13cb7da909965, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: Just make sure you actually deliver results. Ill be in the throne room
+        if you have to bother me.
+      objectReference: {fileID: 0}
     - target: {fileID: 5852892507568192965, guid: db9ac9eeedc9c2d479a13cb7da909965, type: 3}
       propertyPath: m_Name
       value: Lord Andre
@@ -22189,6 +22240,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 3616952223544398994, guid: 144513ee591f2324da11009fa7da8858, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616952223544398994, guid: 144513ee591f2324da11009fa7da8858, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "Detective! Greetings, I\u2019d be glad to help in any way I can."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616952223544398994, guid: 144513ee591f2324da11009fa7da8858, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: Business as slowed so if there is any info you believe I may know, I
+        will tell you at no cost.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616952223544398994, guid: 144513ee591f2324da11009fa7da8858, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: Just take it as compensation for getting our businesses running again.
+        Ill be in this throne room if you need me.
+      objectReference: {fileID: 0}
     - target: {fileID: 5835833102385429264, guid: 144513ee591f2324da11009fa7da8858, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -22294,6 +22363,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Greeting detective, not much to say but ill be here in the throne room,
+        the garden, or the barracks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: Welcome!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
 --- !u!1001 &1568560008915108100
@@ -22351,6 +22433,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6562543523379218377, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Detective. If you believe I have information that could help you, talk
+        to me in the throne room or garden.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562543523379218377, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "Don\u2019t waste our time however, and make sure you catch the culprit."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
 --- !u!1001 &3777133078668078014
@@ -22360,6 +22451,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 2135817146031707511, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135817146031707511, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Hello Detective, Glad you could make it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135817146031707511, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: If you need any rumors or gossip that you believe might help with your
+        case ill be here most of the day, resting in my quarters later.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135817146031707511, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: Do promote any trades you feel has merit as well!
+      objectReference: {fileID: 0}
     - target: {fileID: 9182566737711921909, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -22417,6 +22525,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 2269922106216808646, guid: 1b0f9f5abb6a0624984e3fa9ad32150b, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269922106216808646, guid: 1b0f9f5abb6a0624984e3fa9ad32150b, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "Greetings Detective, I\u2019ll be available in the throne room if you
+        need me for anything."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269922106216808646, guid: 1b0f9f5abb6a0624984e3fa9ad32150b, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: Please find the culprit so we can return to our lives.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269922106216808646, guid: 1b0f9f5abb6a0624984e3fa9ad32150b, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: Singing is all I have and now I fear even bringing attention to myself.
+      objectReference: {fileID: 0}
     - target: {fileID: 9028757972755836740, guid: 1b0f9f5abb6a0624984e3fa9ad32150b, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -22522,6 +22647,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Detective!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "Granted what has happened I don\u2019t want to believe anyone could
+        have murdered another, but the facts are the facts."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: If even we struggle to believe it then how will we face the facts?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[3]
+      value: "As you investigate don\u2019t let your feelings cloud your judgement,
+        maybe you will see what we missed."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
 --- !u!4 &4607756766024800148
@@ -22599,6 +22746,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Hello Detective. Glad to have someone who may be able to help solve
+        these incidents.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "If you need me I\u2019ll be the throne room, the garden, or the barracks,
+        like the knights."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: We may as well perish with the others...
+      objectReference: {fileID: 0}
     - target: {fileID: 8141643324470052945, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_Name
       value: Second Knight Charles
@@ -22704,6 +22869,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8051407375825454824, guid: 903faf10563227e4a8071ded4365ce45, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "\u2026Let me know if you need anything, meat, alibis, or any use I
+        may offer."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051407375825454824, guid: 903faf10563227e4a8071ded4365ce45, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: I'll be in this throne room.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 903faf10563227e4a8071ded4365ce45, type: 3}
 --- !u!1001 &5869258629718095927
@@ -22713,6 +22887,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 2280431321357084917, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280431321357084917, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Hello Detective.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280431321357084917, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "Don\u2019t go questioning people not relevant to the investigation.
+        They have gone through enough."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280431321357084917, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: Anyways ill be in the garden or this throne room if you must speak to
+        me.
+      objectReference: {fileID: 0}
     - target: {fileID: 9036839474300159863, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -22770,6 +22962,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "Detective! I\u2019m a bit busy right now checking on the residents
+        but if you need me I\u2019ll be in the throne room, the garden, or the barracks."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: Good luck investigating!
+      objectReference: {fileID: 0}
     - target: {fileID: 5970938843630343552, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: m_Name
       value: First Knight Benjamin
@@ -22875,6 +23076,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4963141393457134076, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Greetings, Mr. Detective, I hope there has been progress in the investigation.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963141393457134076, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: My husband being one of the victims has made it tough to return to daily
+        life.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963141393457134076, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: It pains me to know that one of us in this room, possibly even an acquaintance
+        may have done this.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963141393457134076, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[3]
+      value: Do let me know if you need anything from me, ill be here most days,
+        apart from when I head to the quarters to rest.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
 --- !u!1001 &9197862509349733570
@@ -22884,6 +23104,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "Detective, you may not believe it but I\u2019m convinced it was Charles."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: He may be a knight, but he does seem like the type to feel nothing after
+        harming another.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: "Don\u2019t share your source though, I don\u2019t want people thinking
+        I\u2019m a rat."
+      objectReference: {fileID: 0}
     - target: {fileID: 5414855937555125217, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: m_RootOrder
       value: 6
