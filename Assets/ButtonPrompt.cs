@@ -6,12 +6,12 @@ public class ButtonPrompt : MonoBehaviour
 {
 
 
-    private GameObject buttonPrompt;
+    public GameObject buttonPrompt;
     
     // Start is called before the first frame update
     void Start()
     {
-        buttonPrompt = gameObject.transform.GetChild(0).gameObject;
+        //buttonPrompt = gameObject.transform.GetChild(0).gameObject;
     }
 
 	private void OnTriggerEnter2D(Collider2D collision)

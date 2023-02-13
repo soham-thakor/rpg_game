@@ -27,22 +27,22 @@ public class NPCStatic : MonoBehaviour
     
 	public static Dictionary<int, NPC> NPCnames = new Dictionary<int, NPC>()
     {
-        {0, new NPC("Earl Thomas", "Lazy", "Prideful", "Shameless", "Male") },
-        {1, new NPC("Sir Alexandre", "Calculative", "Resourceful", "Greedy", "Male") },
-        {2, new NPC("Sir Charles", "Pompous", "Strong-Willed", "Lackadaisical", "Male") },
-        {3, new NPC("Sir Edgar", "Irritable", "Timid", "Lustful", "Male") },
-        {4, new NPC("Sir Benjamin", "Honorable", "Attentive", "Resourceful", "Male") },
-        {5, new NPC("Sir David", "Strong-Willed", "Open-Minded", "Lackadaisical", "Male") },
-        {6, new NPC("Sir Ferrante", "Lazy", "Shameless", "Brash", "Male") },
-        {7, new NPC("Ambassador Dajjal", "Resourceful", "Understanding", "Adaptive", "Male") },
-        {8, new NPC("Honorable Cobra", "Intimidating", "Overprotective", "Pessimistic", "Male") },
-        {9, new NPC("Honorable Neferiti", "Serious", "Rude", "Direct", "Male") },
-        {10, new NPC("Lady Oliva Armstrong", "Calculative", "Attentive", "Charitable", "Female") },
-        {11, new NPC("Lady Elanor", "Irritable", "Strong-Willed", "Attentive", "Female") },
-        {12, new NPC("Lady Balthazar", "Pretentious", "Reserved", "Carefree", "Female") },
-        {13, new NPC("Lord Alex Louis Armstrong", "Ruthless", "Greedy", "Loyal", "Male") },
-        {14, new NPC("Lord Balthazar", "Reserved", "Dogmatic", "Prideful", "Male") },
-        {15, new NPC("Lord Andre", "Lackadaisical", "Rude", "Prideful", "Male") }
+        {0, new NPC("Earl Thomas", "Lazy", "Prideful", "Shameless", "Man") },
+        {1, new NPC("Sir Alexandre", "Calculative", "Resourceful", "Greedy", "Man") },
+        {2, new NPC("Sir Charles", "Pompous", "Strong-Willed", "Lackadaisical", "Man") },
+        {3, new NPC("Sir Edgar", "Irritable", "Timid", "Lustful", "Man") },
+        {4, new NPC("Sir Benjamin", "Honorable", "Attentive", "Resourceful", "Man") },
+        {5, new NPC("Sir David", "Strong-Willed", "Open-Minded", "Lackadaisical", "Man") },
+        {6, new NPC("Sir Ferrante", "Lazy", "Shameless", "Brash", "Man") },
+        {7, new NPC("Ambassador Dajjal", "Resourceful", "Understanding", "Adaptive", "Man") },
+        {8, new NPC("Honorable Cobra", "Intimidating", "Overprotective", "Pessimistic", "Man") },
+        {9, new NPC("Honorable Neferiti", "Serious", "Rude", "Direct", "Man") },
+        {10, new NPC("Lady Oliva Armstrong", "Calculative", "Attentive", "Charitable", "Woman") },
+        {11, new NPC("Lady Elanor", "Irritable", "Strong-Willed", "Attentive", "Woman") },
+        {12, new NPC("Lady Balthazar", "Pretentious", "Reserved", "Carefree", "Woman") },
+        {13, new NPC("Lord Alex Louis Armstrong", "Ruthless", "Greedy", "Loyal", "Man") },
+        {14, new NPC("Lord Balthazar", "Reserved", "Dogmatic", "Prideful", "Man") },
+        {15, new NPC("Lord Andre", "Lackadaisical", "Rude", "Prideful", "Man") }
     };
 
     public static string getTrait(int npcKey, int trait)
@@ -198,6 +198,29 @@ public class NPCStatic : MonoBehaviour
         antiClue3 = generateAntiClue();
     }
 
+    //Generation of strange man's gender clue
+    public static List<Tuple<string, string>> genderClueTransitions = new List<Tuple<string, string>>
+    {
+        {new Tuple<string, string>("All I know is that they were a ", ".") },
+        {new Tuple<string, string>("I didn't see them very well but thye were definitely a ", ".") },
+        {new Tuple<string, string>("I only saw a glimpse of them but they were a ", " I think.") },
+        {new Tuple<string, string>("A ", " passed by at some point and I think they did it, but thats all I know about them.") }
+    };
+
+    public static string genderClue = generateGenderClue();
+
+    
+    public static string generateGenderClue()
+	{
+        string addOn = "";
+        int randomTransition = UnityEngine.Random.Range(0, genderClueTransitions.Count);
+
+        addOn += genderClueTransitions[randomTransition].Item1;
+        addOn += NPCnames[culpritKey].gender;
+        addOn += genderClueTransitions[randomTransition].Item2;
+
+        return addOn;
+	}
     //Dictionary so that scripts can find what clues they should be using
     public static Dictionary<string, string> clues = new Dictionary<string, string>()
     {
@@ -206,7 +229,8 @@ public class NPCStatic : MonoBehaviour
         {"Cobra", ghostClue3 },
         {"Balthazar", antiClue1 },
         {"Elanor", antiClue2 },
-        {"Dajjal", antiClue3 }
+        {"Dajjal", antiClue3 },
+        {"Strange Man", genderClue }
     };
 
 

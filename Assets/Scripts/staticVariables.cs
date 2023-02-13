@@ -117,6 +117,7 @@ public class staticVariables : MonoBehaviour
         NPCStatic.generateDiaries();
         NPCStatic.generateGhostClues();
         NPCStatic.generateAntiClues();
+        NPCStatic.generateGenderClue();
 	}
     public static void resetStatics()
 	{
