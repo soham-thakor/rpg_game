@@ -87,6 +87,8 @@ public class NPCStatic : MonoBehaviour
     public static List<string> ladyBalthazarDiary = generateDiary("Lady Balthazar");
     public static List<string> lordBalthazarDiary = generateDiary("Lord Balthazar");
     public static List<string> lordAndreDiary = generateDiary("Lord Andre");
+    public static List<string> honorableCobraDiary = generateDiary("Honorable Cobra");
+    public static List<string> sirEdgarDiary = generateDiary("Sir Edgar");
     public static List<string> generateDiary(string characterName)
 	{
         List<string> diary = new List<string>();
@@ -121,12 +123,16 @@ public class NPCStatic : MonoBehaviour
         ladyBalthazarDiary = generateDiary("Lady Balthazar");
         lordBalthazarDiary = generateDiary("Lord Balthazar");
         lordAndreDiary = generateDiary("Lord Andre");
+        honorableCobraDiary = generateDiary("Honorable Cobra");
+        sirEdgarDiary = generateDiary("Sir Edgar");
 	}
     public static Dictionary<string, List<string>> diaryDict = new Dictionary<string, List<string>>()
     {
         {"Lady Balthazar", ladyBalthazarDiary },
         {"Lord Balthazar", lordBalthazarDiary },
-        {"Lord Andre", lordAndreDiary }
+        {"Lord Andre", lordAndreDiary },
+        {"Sir Edgar", sirEdgarDiary },
+        {"Honorable Cobra", honorableCobraDiary }
 	};
     
     //START: Generation of ghost clues of the structure "The culprit IS..."

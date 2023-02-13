@@ -275,7 +275,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &91112973
 PrefabInstance:
@@ -577,7 +577,7 @@ Transform:
   - {fileID: 1903657836}
   - {fileID: 447622078}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &162513865
 PrefabInstance:
@@ -1218,7 +1218,7 @@ Transform:
   - {fileID: 411495869}
   - {fileID: 454543352}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &300760313
 PrefabInstance:
@@ -2331,6 +2331,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6999614153382774408, guid: 04b829b35ff773544bf4c31652d6acfe, type: 3}
   m_PrefabInstance: {fileID: 684133785}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &734841735
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.699
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066913, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066914, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: diaryOwner
+      value: Sir Edgar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066914, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: openMessages.Array.data[0]
+      value: The name on the cover says "Sir Edgar."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066914, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: openMessages.Array.data[1]
+      value: Whatever is in here was either written by him, or about him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066914, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: openMessages.Array.data[2]
+      value: Either way I can definitely get useful information out of this.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066927, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_Name
+      value: Diary
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
 --- !u!1 &747485107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,7 +2435,7 @@ Transform:
   - {fileID: 1915349594}
   - {fileID: 1093427354}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &795625624
 PrefabInstance:
@@ -3443,7 +3516,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1291349265
 PrefabInstance:
@@ -24904,7 +24977,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1903657835
 PrefabInstance:
@@ -25039,7 +25112,7 @@ Transform:
   - {fileID: 795625625}
   - {fileID: 135013226}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1915349594 stripped
 Transform:
@@ -30793,7 +30866,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2140245944
 GameObject:
@@ -30877,7 +30950,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &999778766544174845
 PrefabInstance:
