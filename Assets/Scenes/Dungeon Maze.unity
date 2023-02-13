@@ -53667,6 +53667,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: Edgar
       objectReference: {fileID: 0}
+    - target: {fileID: 8237354410139023952, guid: 8feef7ec3c71ff4478f1e6eaca7c5901, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8feef7ec3c71ff4478f1e6eaca7c5901, type: 3}
 --- !u!4 &1763679036 stripped
@@ -53849,6 +53853,14 @@ PrefabInstance:
     - target: {fileID: 328916807625583634, guid: 8feef7ec3c71ff4478f1e6eaca7c5901, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[1]
       value: HE NEVER CARED SO MUCH FOR FASHION BEFOREHAND!
+      objectReference: {fileID: 0}
+    - target: {fileID: 713236194244987253, guid: 8feef7ec3c71ff4478f1e6eaca7c5901, type: 3}
+      propertyPath: openMessages.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 713236194244987253, guid: 8feef7ec3c71ff4478f1e6eaca7c5901, type: 3}
+      propertyPath: openMessages.Array.data[0]
+      value: I can't believe that im actually dead...
       objectReference: {fileID: 0}
     - target: {fileID: 7375904100487512976, guid: 8feef7ec3c71ff4478f1e6eaca7c5901, type: 3}
       propertyPath: m_RootOrder

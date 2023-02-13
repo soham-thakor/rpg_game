@@ -198,6 +198,17 @@ public class NPCStatic : MonoBehaviour
         antiClue3 = generateAntiClue();
     }
 
+    //Dictionary so that scripts can find what clues they should be using
+    public static Dictionary<string, string> clues = new Dictionary<string, string>()
+    {
+        {"Alexandre", ghostClue1 },
+        {"Edgar", ghostClue2 },
+        {"Cobra", ghostClue3 },
+        {"Balthazar", antiClue1 },
+        {"Elanor", antiClue2 },
+        {"Dajjal", antiClue3 }
+    };
+
 
 
 

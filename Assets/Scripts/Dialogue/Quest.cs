@@ -140,6 +140,10 @@ public class Quest : MonoBehaviour
     }
 	public void endDialogue()
 	{
+        if(dialogBox.activeInHierarchy)
+		{
+            SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        }
         dialogBox.SetActive(false);
         npcPortrait.SetActive(false);
         cuMsg = 0;

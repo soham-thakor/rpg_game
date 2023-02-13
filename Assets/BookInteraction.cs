@@ -24,11 +24,11 @@ public class BookInteraction : MonoBehaviour
             if(messageIndex == openMessages.Count - 1)
 			{// if on the last message
                 if(playerSpeech.playerMessage.text != openMessages[messageIndex])
-				{//finish skip to the completed message
+				{//skip to the completed message if we arent there already
                     playerSpeech.Speak(openMessages[messageIndex]);
                 }
                 else
-				{
+				{// if we have the last message out and completed, close dialogue and reset
                     messageIndex = 0;
                     playerSpeech.closeDialogue();
                 }
