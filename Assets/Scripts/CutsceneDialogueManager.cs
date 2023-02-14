@@ -23,7 +23,6 @@ public class CutsceneDialogueManager : MonoBehaviour
         foreach(string i in dialogue){
             dialogueQueue.Enqueue(i);
         }
-        dialogueQueue.Enqueue("AHHHHHHHHHHHHHHHHHHHHHHHHHH");
     }
 
     public void SayDialogue()
