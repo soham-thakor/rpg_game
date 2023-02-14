@@ -10,6 +10,10 @@ public class RoomKey : MonoBehaviour
 	// Start is called before the first frame update
 	private void Start()
 	{
+		if(staticVariables.aquiredRoomKey)
+		{
+			gameObject.SetActive(false);
+		}
 		gameObject.transform.position = staticVariables.keyPos;
 	}
 	// Update is called once per frame
