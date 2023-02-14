@@ -22,8 +22,8 @@ public class CutsceneDialogueManager : MonoBehaviour
         messageBox = message.GetComponent<Text>();
         foreach(string i in dialogue){
             dialogueQueue.Enqueue(i);
-            Debug.Log(i);
         }
+        dialogueQueue.Enqueue("AHHHHHHHHHHHHHHHHHHHHHHHHHH");
     }
 
     public void SayDialogue()
@@ -31,6 +31,11 @@ public class CutsceneDialogueManager : MonoBehaviour
         dialogueBox.SetActive(true);
         NPCPortrait.SetActive(true);
         StartCoroutine(Type(messageBox, dialogueQueue.Dequeue()));
+    }
+
+    public void MoveScene(string scene)
+    {
+        TransitionScene(scene);
     }
 
     public IEnumerator TransitionScene(string scene)
@@ -43,6 +48,7 @@ public class CutsceneDialogueManager : MonoBehaviour
 
     IEnumerator Type(Text textDisplay, string sentence)
     {
+        Debug.Log("Dequeued " + sentence);
         foreach (char letter in sentence.ToCharArray())
         {
             textDisplay.text += letter;
@@ -52,5 +58,6 @@ public class CutsceneDialogueManager : MonoBehaviour
         
         textDisplay.text = "";
         dialogueBox.SetActive(false);
+        NPCPortrait.SetActive(false);
     }
 }
