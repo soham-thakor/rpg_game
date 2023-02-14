@@ -47,7 +47,6 @@ public class CutsceneDialogueManager : MonoBehaviour
 
     IEnumerator Type(Text textDisplay, string sentence)
     {
-        Debug.Log("Dequeued " + sentence);
         foreach (char letter in sentence.ToCharArray())
         {
             textDisplay.text += letter;
