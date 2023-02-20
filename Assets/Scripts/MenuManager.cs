@@ -14,6 +14,8 @@ public class MenuManager : MonoBehaviour
 	public GameObject pauseMenu;
 	public TextMeshProUGUI numberText;
 	private Slider slider;
+	public TextMeshProUGUI nameInput;
+	public GameObject nameInputBox;
 		
 	
 	
@@ -29,7 +31,7 @@ public class MenuManager : MonoBehaviour
 		staticVariables.resetStatics();
 		staticVariables.resetCooldowns();
 		staticVariables.GenerateWorld();
-		SceneManager.LoadScene(gameStartScene);
+		StartCoroutine(FadeWithoutTransition());
 	}
 	
 	public void QuitGame() {
@@ -62,10 +64,30 @@ public class MenuManager : MonoBehaviour
 		
 		SceneManager.LoadScene(gameStartScene);
 	}
-	
+	public IEnumerator FadeWithoutTransition()
+	{
+		staticVariables.immobile = true;
+		staticVariables.invincible = true;
+		GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("Start");
+		yield return new WaitForSeconds(1f);
+		staticVariables.immobile = false;
+		staticVariables.invincible = false;
+		nameInputBox.SetActive(true);
+		
+	}
+	public void goToStart()
+	{
+		if(nameInput.text == "")
+		{
+			return;
+		}
+		staticVariables.chosenName = nameInput.text;
+		SceneManager.LoadScene("Tutorial");
+	}
 
-    // Update is called once per frame
-    void Update()
+
+	// Update is called once per frame
+	void Update()
     {
 		if (Input.GetKeyDown(KeyCode.Escape)){
 			if (isPaused){

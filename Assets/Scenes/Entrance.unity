@@ -15281,6 +15281,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Third Knight Ferrante
       objectReference: {fileID: 0}
+    - target: {fileID: 6857259621301742112, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857259621301742112, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
 --- !u!4 &1099317153 stripped
@@ -15417,6 +15425,14 @@ PrefabInstance:
     - target: {fileID: 2948151965569695823, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273422206053740958, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273422206053740958, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
       objectReference: {fileID: 0}
     - target: {fileID: 7273422206053740959, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_IsActive
@@ -15691,6 +15707,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 1195509379, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -6.090027
+      objectReference: {fileID: 0}
     - target: {fileID: 1241075199, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_Layer
       value: 1
@@ -15699,6 +15719,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1668804281, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: playerName
+      value: 
+      objectReference: {fileID: 1602333589}
     - target: {fileID: 1753598191, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_IsActive
       value: 0
