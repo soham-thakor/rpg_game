@@ -95,4 +95,9 @@ public class GameTime : MonoBehaviour
         hoursText.text = hoursToDisplay.ToString("D2");
         minutesText.text = minutesToDisplay.ToString("D2");
     }
+
+    public float getMinutes()
+	{
+        return minutes;
+	}
 }

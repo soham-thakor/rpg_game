@@ -1534,7 +1534,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -6.09, y: 141}
+  m_AnchoredPosition: {x: -6.090027, y: 141}
   m_SizeDelta: {x: -30.099, y: 182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1195509381
@@ -4760,6 +4760,10 @@ PrefabInstance:
     - target: {fileID: 7022281978209769149, guid: 1809c00583f5e4047883dedc143735ed, type: 3}
       propertyPath: m_Layer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022281978209769149, guid: 1809c00583f5e4047883dedc143735ed, type: 3}
+      propertyPath: m_TagString
+      value: Clock
       objectReference: {fileID: 0}
     - target: {fileID: 7022281978209769151, guid: 1809c00583f5e4047883dedc143735ed, type: 3}
       propertyPath: m_RootOrder
