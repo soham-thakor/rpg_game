@@ -29,26 +29,12 @@ public class Quest : MonoBehaviour
         selectionBox = gameObject.GetComponent<SelectionMenu>();
 
         buttonPrompt = gameObject.transform.Find("Button Prompt").gameObject;
-        if(actor.id == 0){
+        if (actor.id == 0)
+        {
             listName.text = npcTrigger.name;
         }
         dialogBox.SetActive(false);
         npcPortrait.SetActive(false);
-
-        //turns on and off the Ghosts
-        //give ghosts an actor id of 2
-        //all other NPCs give them a 1
-        if((data1.npcTalked(actor.name) == 1) && (actor.id == 2)){
-            npcTrigger.SetActive(true);
-        }else if(actor.id == 2 && data1.npcTalked(actor.name) == 0){
-            npcTrigger.SetActive(false);
-        }
-        
-        if((actor.id == 1 || actor.id == 0) && timeData.isNight){
-            npcTrigger.SetActive(false);
-        }else if(actor.id != 2){
-            npcTrigger.SetActive(true);
-        }
 
     }
 

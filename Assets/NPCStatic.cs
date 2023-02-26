@@ -79,7 +79,7 @@ public class NPCStatic : MonoBehaviour
 	public static List<Tuple<string, string, string>> diaryTransitions = new List<Tuple<string, string, string>>() {
         {new Tuple<string, string, string>("\"I've come to realize that ", " is ", ".\"" ) },
         {new Tuple<string, string, string>("\"Turns out ", " is very ", ".\"") },
-        {new Tuple<string, string, string>("\"", " is kind of ", " once you get to know him.\"") },
+        {new Tuple<string, string, string>("\"", " is kind of ", " once you get to know them.\"") },
         {new Tuple<string, string, string>("\"I've found that ", " can be quite ", ".\"") },
         {new Tuple<string, string, string>("\"In my opinion ", " embodies the word ", ".\"") },
         {new Tuple<string, string, string>("\"Recently I've realized that ", " is so ", " sometimes.\"") }
