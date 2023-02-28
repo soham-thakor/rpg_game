@@ -77,7 +77,7 @@ public class MenuManager : MonoBehaviour
 	}
 	public void goToStart()
 	{
-		if(nameInput.text == "")
+		if(!string.IsNullOrWhiteSpace(nameInput.text))
 		{
 			return;
 		}
