@@ -77,10 +77,7 @@ public class MenuManager : MonoBehaviour
 	}
 	public void goToStart()
 	{
-		if(!string.IsNullOrWhiteSpace(nameInput.text))
-		{
-			return;
-		}
+		if(nameInput.text.Length == 1) { return; }
 		staticVariables.chosenName = nameInput.text;
 		SceneManager.LoadScene("Tutorial");
 	}
