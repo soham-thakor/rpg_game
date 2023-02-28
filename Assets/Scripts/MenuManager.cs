@@ -54,7 +54,6 @@ public class MenuManager : MonoBehaviour
 		pauseMenu.SetActive(true);
 		Time.timeScale = 0f;
 		isPaused = true;
-		
 	}
 	
 	public void ResumeGame() {
@@ -64,6 +63,7 @@ public class MenuManager : MonoBehaviour
 		
 		SceneManager.LoadScene(gameStartScene);
 	}
+	
 	public IEnumerator FadeWithoutTransition()
 	{
 		staticVariables.immobile = true;
@@ -75,11 +75,16 @@ public class MenuManager : MonoBehaviour
 		nameInputBox.SetActive(true);
 		
 	}
-	public void goToStart()
+
+	public void registerName()
 	{
 		if(nameInput.text.Length == 1) { return; }
 		staticVariables.chosenName = nameInput.text;
-		SceneManager.LoadScene("Tutorial");
+	}
+
+	public void loadScene(string sceneName)
+	{
+		SceneManager.LoadScene(sceneName);
 	}
 
 
