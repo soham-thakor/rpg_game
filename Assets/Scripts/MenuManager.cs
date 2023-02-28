@@ -39,8 +39,8 @@ public class MenuManager : MonoBehaviour
 	}
 
 	public void BackToStart(){
-		staticVariables.resetStatics();
 		staticVariables.resetCooldowns();
+		staticVariables.resetStatics();
 		SceneManager.LoadScene(0);
 	}
 
