@@ -5324,6 +5324,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3706857331876734833, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706857331876734833, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706857331876734833, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4188966215403437336, guid: 33055ed797125114693403f18a137d31, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5364,6 +5376,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4700255854687146969, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4965431681409783568, guid: 33055ed797125114693403f18a137d31, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5395,6 +5411,14 @@ PrefabInstance:
     - target: {fileID: 5446404871032333833, guid: 33055ed797125114693403f18a137d31, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448608568809242352, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448608568809242352, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 5455395034587286865, guid: 33055ed797125114693403f18a137d31, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5474,7 +5498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5912143068201119917, guid: 33055ed797125114693403f18a137d31, type: 3}
       propertyPath: m_Name
-      value: Earl 1
+      value: Earl Thomas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114689865520239010, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7474037091897939306, guid: 33055ed797125114693403f18a137d31, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5523,6 +5551,26 @@ PrefabInstance:
     - target: {fileID: 7977917742068703907, guid: 33055ed797125114693403f18a137d31, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328057281404011138, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.58461237
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328057281404011138, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.58461237
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328057281404011138, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.58461237
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328057281404011138, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0000061690807
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328057281404011138, guid: 33055ed797125114693403f18a137d31, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 8484104528569908738, guid: 33055ed797125114693403f18a137d31, type: 3}
       propertyPath: m_AnchorMax.x
@@ -22066,6 +22114,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4196215341365449021, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196215341365449021, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 5547178787279013758, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
       value: Greetings Detective, a real misfortunate event that occurred here.
@@ -22088,6 +22144,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 2763635757497700480, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763635757497700480, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 3627341182692321601, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -22183,6 +22247,14 @@ PrefabInstance:
       value: Just make sure you actually deliver results. Ill be in the throne room
         if you have to bother me.
       objectReference: {fileID: 0}
+    - target: {fileID: 4986937498607748106, guid: db9ac9eeedc9c2d479a13cb7da909965, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986937498607748106, guid: db9ac9eeedc9c2d479a13cb7da909965, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 5852892507568192965, guid: db9ac9eeedc9c2d479a13cb7da909965, type: 3}
       propertyPath: m_Name
       value: Lord Andre
@@ -22257,6 +22329,14 @@ PrefabInstance:
       propertyPath: messages.Array.data[0].message.Array.data[2]
       value: Just take it as compensation for getting our businesses running again.
         Ill be in this throne room if you need me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967897871708095185, guid: 144513ee591f2324da11009fa7da8858, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967897871708095185, guid: 144513ee591f2324da11009fa7da8858, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
       objectReference: {fileID: 0}
     - target: {fileID: 5835833102385429264, guid: 144513ee591f2324da11009fa7da8858, type: 3}
       propertyPath: m_RootOrder
@@ -22363,6 +22443,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3704927640078726766, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704927640078726766, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
       propertyPath: messages.Array.data[0].message.Array.size
       value: 2
@@ -22385,6 +22473,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 3301891391016653194, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301891391016653194, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 4169809044384868421, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
       propertyPath: m_Name
       value: Honorable Nefertiti
@@ -22468,6 +22564,14 @@ PrefabInstance:
       propertyPath: messages.Array.data[0].message.Array.data[2]
       value: Do promote any trades you feel has merit as well!
       objectReference: {fileID: 0}
+    - target: {fileID: 7738178434015183668, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 7738178434015183668, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 9182566737711921909, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -22541,6 +22645,14 @@ PrefabInstance:
     - target: {fileID: 2269922106216808646, guid: 1b0f9f5abb6a0624984e3fa9ad32150b, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[2]
       value: Singing is all I have and now I fear even bringing attention to myself.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584088196718581381, guid: 1b0f9f5abb6a0624984e3fa9ad32150b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584088196718581381, guid: 1b0f9f5abb6a0624984e3fa9ad32150b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
       objectReference: {fileID: 0}
     - target: {fileID: 9028757972755836740, guid: 1b0f9f5abb6a0624984e3fa9ad32150b, type: 3}
       propertyPath: m_RootOrder
@@ -22646,6 +22758,14 @@ PrefabInstance:
     - target: {fileID: 950271843686939883, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818474272888276266, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818474272888276266, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
       objectReference: {fileID: 0}
     - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
       propertyPath: messages.Array.data[0].message.Array.size
@@ -22764,6 +22884,14 @@ PrefabInstance:
       propertyPath: messages.Array.data[0].message.Array.data[2]
       value: We may as well perish with the others...
       objectReference: {fileID: 0}
+    - target: {fileID: 7273422206053740958, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273422206053740958, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 8141643324470052945, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_Name
       value: Second Knight Charles
@@ -22869,6 +22997,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1836380616593084587, guid: 903faf10563227e4a8071ded4365ce45, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836380616593084587, guid: 903faf10563227e4a8071ded4365ce45, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 8051407375825454824, guid: 903faf10563227e4a8071ded4365ce45, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
       value: "\u2026Let me know if you need anything, meat, alibis, or any use I
@@ -22904,6 +23040,14 @@ PrefabInstance:
       propertyPath: messages.Array.data[0].message.Array.data[2]
       value: Anyways ill be in the garden or this throne room if you must speak to
         me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594689776613146294, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594689776613146294, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
       objectReference: {fileID: 0}
     - target: {fileID: 9036839474300159863, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
       propertyPath: m_RootOrder
@@ -22970,6 +23114,14 @@ PrefabInstance:
     - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[1]
       value: Good luck investigating!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103007995900046415, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103007995900046415, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
       objectReference: {fileID: 0}
     - target: {fileID: 5970938843630343552, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: m_Name
@@ -23076,6 +23228,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3612138571092488127, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612138571092488127, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 4963141393457134076, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
       value: Greetings, Mr. Detective, I hope there has been progress in the investigation.
@@ -23169,6 +23329,14 @@ PrefabInstance:
     - target: {fileID: 5414855937555125231, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: m_Name
       value: Third Knight Ferrante
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857259621301742112, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857259621301742112, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
