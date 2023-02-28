@@ -5,6 +5,17 @@ using UnityEngine;
 
 public class NPCStatic : MonoBehaviour
 {
+	public class Clue 
+    { 
+        public List<string> clues;
+        public List<Tuple<int, int>> clueIDs;
+
+        public Clue(List<string> strings, List<Tuple<int, int>> IDs)
+		{
+            clues = strings;
+            clueIDs = IDs;
+		}
+    }
 
 	public class NPC
     {
@@ -61,10 +72,10 @@ public class NPCStatic : MonoBehaviour
     }
 
     
-    //keeps track of who we have already given out clues for so that we dont give duplicate clues
-    public static List<int> trait1Clues = new List<int>();
-    //keep track of what clues we have given out, in the form <NPCkey, trait#>
-    public static List<Tuple<int, int>> traitCluesGiven = new List<Tuple<int, int>>();
+
+
+	//keep track of what clues we have given out, in the form <NPCkey, trait#>
+	public static List<Tuple<int, int>> traitCluesGiven = new List<Tuple<int, int>>();
 
     //Just to get the key of the person who is the culprit
     public static int culpritKey;
@@ -84,16 +95,18 @@ public class NPCStatic : MonoBehaviour
         {new Tuple<string, string, string>("\"In my opinion ", " embodies the word ", ".\"") },
         {new Tuple<string, string, string>("\"Recently I've realized that ", " is so ", " sometimes.\"") }
     };
-    public static List<string> ladyBalthazarDiary = generateDiary("Lady Balthazar");
-    public static List<string> lordBalthazarDiary = generateDiary("Lord Balthazar");
-    public static List<string> lordAndreDiary = generateDiary("Lord Andre");
-    public static List<string> honorableCobraDiary = generateDiary("Honorable Cobra");
-    public static List<string> sirEdgarDiary = generateDiary("Sir Edgar");
-    public static List<string> sirDavidDiary = generateDiary("Sir David");
-    public static List<string> ladyElanorDiary = generateDiary("Lady Elanor");
-    public static List<string> generateDiary(string characterName)
+    
+    public static Clue ladyBalthazarDiary = generateDiary("Lady Balthazar");
+    public static Clue lordBalthazarDiary = generateDiary("Lord Balthazar");
+    public static Clue lordAndreDiary = generateDiary("Lord Andre");
+    public static Clue honorableCobraDiary = generateDiary("Honorable Cobra");
+    public static Clue sirEdgarDiary = generateDiary("Sir Edgar");
+    public static Clue sirDavidDiary = generateDiary("Sir David");
+    public static Clue ladyElanorDiary = generateDiary("Lady Elanor");
+    public static Clue generateDiary(string characterName)
 	{
         List<string> diary = new List<string>();
+        List<Tuple<int, int>> diaryIDs = new List<Tuple<int, int>>();
         string addOn = "";
         
         for(int i = 1; i < 4; i++)
@@ -113,10 +126,13 @@ public class NPCStatic : MonoBehaviour
             addOn += getTrait(randomPerson, i);
             addOn += diaryTransitions[randomTransitions].Item3;
             traitCluesGiven.Add(new Tuple<int, int>(randomPerson, i));
+            diaryIDs.Add(new Tuple<int, int>(randomPerson, i));
             diary.Add(addOn);
             addOn = "";
         }
-        return diary;
+
+        Clue returnClue = new Clue(diary, diaryIDs);
+        return returnClue;
 	}
     //This is just a function to call when using GenerateWorld()
     public static void generateDiaries()
@@ -130,7 +146,7 @@ public class NPCStatic : MonoBehaviour
         sirDavidDiary = generateDiary("Sir David");
         ladyElanorDiary = generateDiary("Lady Elanor");
 	}
-    public static Dictionary<string, List<string>> diaryDict = new Dictionary<string, List<string>>()
+    public static Dictionary<string, Clue> diaryDict = new Dictionary<string, Clue>()
     {
         {"Lady Balthazar", ladyBalthazarDiary },
         {"Lord Balthazar", lordBalthazarDiary },
@@ -252,6 +268,18 @@ public class NPCStatic : MonoBehaviour
         {"Dajjal", antiClue3 },
         {"Strange Man", genderClue }
     };
+
+    //START: keep track of clue discovery
+
+    public static List<Tuple<int, int>> discoveredClues = new List<Tuple<int, int>>();
+    public static void discoverClue(Tuple<int, int> clue)
+	{
+        if(discoveredClues.Contains(clue))
+		{
+            return;
+		}
+        discoveredClues.Add(clue);
+	}
 
 
 

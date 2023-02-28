@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     private bool isPaused;
-    public GameObject pausePanel, inventoryPanel, settingsPanel, controlPanel;
+    public GameObject pausePanel, notebookPanel, settingsPanel, controlPanel;
     public string mainMenu;
     // Start is called before the first frame update
     void Start()
     {
         pausePanel.SetActive(false);
-        inventoryPanel.SetActive(false);
+        notebookPanel.SetActive(false);
         settingsPanel.SetActive(false);
         controlPanel.SetActive(false);
         isPaused = false;
@@ -50,10 +50,10 @@ public class PauseManager : MonoBehaviour
     }
 
     // TODO: use an enumerator or make these into templates
-    public void showInventory()
+    public void showNotebook()
     {
         pausePanel.SetActive(false);
-        inventoryPanel.SetActive(true);
+        notebookPanel.SetActive(true);
         //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
@@ -80,7 +80,7 @@ public class PauseManager : MonoBehaviour
     public void hidePanels()
     {
         pausePanel.SetActive(false);
-        inventoryPanel.SetActive(false);
+        notebookPanel.SetActive(false);
         settingsPanel.SetActive(false);
         controlPanel.SetActive(false);
     }

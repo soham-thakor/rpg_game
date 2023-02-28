@@ -130,5 +130,6 @@ public class staticVariables : MonoBehaviour
         guesses = 0;
         immobile = false;
         invincible = false;
+        NPCStatic.discoveredClues.Clear();
 	}
 }
