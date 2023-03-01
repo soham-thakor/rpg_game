@@ -19,11 +19,16 @@ public class notebookManager : MonoBehaviour
 
     void Start()
     {
+        inputField.onEndEdit.AddListener(SubmitName);
         changePage(0);
         
     }
+    private void SubmitName(string arg0)
+    {
+        inputField.text = arg0;
+        savePlayerNotes();
+    }
 
-  
     void pickPortrait(string name)
 	{
         //Debug.Log(name);
@@ -59,7 +64,7 @@ public class notebookManager : MonoBehaviour
     public void changePage(int page)
 	{
         int newIndex = NotebookStatic.currentPage + page;
-        savePlayerNotes();
+        //savePlayerNotes();
         inputField.text = NotebookStatic.playerNotes[newIndex];
         //playerNotes. = NotebookStatic.playerNotes[newIndex];
         Debug.Log(newIndex);

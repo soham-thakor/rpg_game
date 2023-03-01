@@ -67,6 +67,10 @@ public class PauseManager : MonoBehaviour
 
     public void showOptions(GameObject previous_panel)
     {
+        /*if (previous_panel == notebookPanel)
+        {
+            notebookPanel.GetComponent<notebookManager>().savePlayerNotes();
+        }*/
         previous_panel.SetActive(false);
         pausePanel.SetActive(true);
         //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
@@ -80,10 +84,10 @@ public class PauseManager : MonoBehaviour
 
     public void hidePanels()
     {
-        if(notebookPanel.activeInHierarchy)
+        /*if(notebookPanel.activeInHierarchy)
 		{
             notebookPanel.GetComponent<notebookManager>().savePlayerNotes();
-		}
+		}*/
         pausePanel.SetActive(false);
         notebookPanel.SetActive(false);
         settingsPanel.SetActive(false);
