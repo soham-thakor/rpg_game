@@ -11,7 +11,6 @@ public class notebookManager : MonoBehaviour
     public GameObject nextButton;
     public TextMeshProUGUI pageName;
     public TextMeshProUGUI[] traits;
-    //public TextMeshProUGUI playerNotes;
     public TMP_InputField inputField;
 
     public Image pagePortrait;
@@ -64,11 +63,7 @@ public class notebookManager : MonoBehaviour
     public void changePage(int page)
 	{
         int newIndex = NotebookStatic.currentPage + page;
-        //savePlayerNotes();
         inputField.text = NotebookStatic.playerNotes[newIndex];
-        //playerNotes. = NotebookStatic.playerNotes[newIndex];
-        Debug.Log(newIndex);
-        Debug.Log(NotebookStatic.playerNotes[newIndex]);
         NotebookStatic.currentPage = newIndex;
         NPCStatic.NPC pageNPC;
         if (newIndex == 0)

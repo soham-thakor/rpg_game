@@ -228,12 +228,12 @@ public class NPCStatic : MonoBehaviour
     public static ghostClue generateAntiClue()
 	{
         int randomNPC = UnityEngine.Random.Range(0, NPCnames.Count);
-        string randomTrait = getTrait(randomNPC, UnityEngine.Random.Range(0, 4));
+        string randomTrait = getTrait(randomNPC, UnityEngine.Random.Range(1, 4));
 
         while(antiCluesGiven.Contains(randomTrait) || culpritTraits.Contains(randomTrait))
 		{//keep picking traits until we get one that we havent reveled, and that the culprit doesnt have
             randomNPC = UnityEngine.Random.Range(0, NPCnames.Count);
-            randomTrait = getTrait(randomNPC, UnityEngine.Random.Range(0, 4));
+            randomTrait = getTrait(randomNPC, UnityEngine.Random.Range(1, 4));
         }
 
         string addOn = "";
