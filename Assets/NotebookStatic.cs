@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NotebookStatic : MonoBehaviour
 {
-    public static List<string> playerNotes = emptyNotes(); // 1 extra for the culprit
+    public static List<string> playerNotes = emptyNotes(); 
 
     public static List<string> emptyNotes()
 	{

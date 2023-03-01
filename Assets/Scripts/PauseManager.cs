@@ -53,6 +53,7 @@ public class PauseManager : MonoBehaviour
     public void showNotebook()
     {
         pausePanel.SetActive(false);
+        notebookPanel.GetComponent<notebookManager>().changePage(0);
         notebookPanel.SetActive(true);
         //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
