@@ -18,11 +18,7 @@ public class Enemy : MonoBehaviour
     private Transform player;
     private bool isFlipped = false;  // collider starts facing right (false is right, true is left)
     private Rigidbody2D rb;
-    private bool knockedOut = false;     // if set to true, will stop movement
     private string enemyType;
-
-    // getters
-    public bool getKnockedOut() { return knockedOut; }
 
     //public float Health;
     void Start()
@@ -95,6 +91,9 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        flashEffect.Flash();
+        currentHealth -= damage;
+        healthBar.SetHealth((int)currentHealth);
         if (currentHealth <= 0) {
             if(enemyType == "Knight") {
                 SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
@@ -122,8 +121,6 @@ public class Enemy : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("IsEnraged", true);
         }
-        flashEffect.Flash();
-        currentHealth -= damage;
-        healthBar.SetHealth((int)currentHealth);
+        
     }
 }

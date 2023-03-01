@@ -19,10 +19,23 @@ public class SceneTransition : MonoBehaviour
         
         if(other.CompareTag("Player"))
         {
+            //If we are leaving the secret room we dont necessarily know what scene to go to, so it gets stored when you go in an used when you leave
+            if(SceneManager.GetActiveScene().name == "Secret Room")
+			{
+                playerPosition = staticVariables.secretEntrancePosition;
+                sceneToLoad = staticVariables.secretEntranceScene;
+			}
             playerData.initialValue = playerPosition;
             playerData.movedScene = true;
             player.SavePlayerData();
             //SceneManager.LoadScene(sceneToLoad);
+            //Store the data of where to put the player when they leave the secret room, if thats where they are going
+            if(sceneToLoad == "Secret Room")
+			{
+                staticVariables.secretEntrancePosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+                staticVariables.secretEntrancePosition.y -= 0.2f;
+                staticVariables.secretEntranceScene = SceneManager.GetActiveScene().name;
+			}
             StartCoroutine(TransitionScene(sceneToLoad));
         }
 

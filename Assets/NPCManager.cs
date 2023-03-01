@@ -97,7 +97,15 @@ public class NPCManager : MonoBehaviour
 				}
                 else
 				{
-                    StartCoroutine(TransitionScene("Throne Room v2"));
+                    if(staticVariables.guesses == 3)
+					{
+                        StartCoroutine(TransitionScene("CutSceneGameOver"));
+					}
+                    else
+					{
+                        StartCoroutine(TransitionScene("Throne Room v2"));
+                    }
+                    
 				}
 			}
         }

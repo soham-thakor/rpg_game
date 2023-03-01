@@ -9,11 +9,13 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
 	
-	public int gameStartScene;
+	public string gameStartScene;
 	public static bool isPaused;
 	public GameObject pauseMenu;
 	public TextMeshProUGUI numberText;
 	private Slider slider;
+	public TextMeshProUGUI nameInput;
+	public GameObject nameInputBox;
 		
 	
 	
@@ -26,7 +28,10 @@ public class MenuManager : MonoBehaviour
 	}
 	
 	public void StartGame(){
-		SceneManager.LoadScene(gameStartScene);
+		staticVariables.resetStatics();
+		staticVariables.resetCooldowns();
+		staticVariables.GenerateWorld();
+		StartCoroutine(FadeWithoutTransition());
 	}
 	
 	public void QuitGame() {
@@ -34,6 +39,8 @@ public class MenuManager : MonoBehaviour
 	}
 
 	public void BackToStart(){
+		staticVariables.resetCooldowns();
+		staticVariables.resetStatics();
 		SceneManager.LoadScene(0);
 	}
 
@@ -47,7 +54,6 @@ public class MenuManager : MonoBehaviour
 		pauseMenu.SetActive(true);
 		Time.timeScale = 0f;
 		isPaused = true;
-		
 	}
 	
 	public void ResumeGame() {
@@ -58,9 +64,32 @@ public class MenuManager : MonoBehaviour
 		SceneManager.LoadScene(gameStartScene);
 	}
 	
+	public IEnumerator FadeWithoutTransition()
+	{
+		staticVariables.immobile = true;
+		staticVariables.invincible = true;
+		GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("Start");
+		yield return new WaitForSeconds(1f);
+		staticVariables.immobile = false;
+		staticVariables.invincible = false;
+		nameInputBox.SetActive(true);
+		
+	}
 
-    // Update is called once per frame
-    void Update()
+	public void registerName()
+	{
+		if(nameInput.text.Length == 1) { return; }
+		staticVariables.chosenName = nameInput.text;
+	}
+
+	public void loadScene(string sceneName)
+	{
+		SceneManager.LoadScene(sceneName);
+	}
+
+
+	// Update is called once per frame
+	void Update()
     {
 		if (Input.GetKeyDown(KeyCode.Escape)){
 			if (isPaused){

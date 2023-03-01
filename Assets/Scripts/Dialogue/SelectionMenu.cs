@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+// honestly this entire class could be moved into MenuManager
 public class SelectionMenu : MonoBehaviour
 {
-
     public SelectionData data2;
     public GameObject selectionBox;
 
@@ -18,7 +18,19 @@ public class SelectionMenu : MonoBehaviour
     {
         inMenu = false;
         selectionBox.SetActive(false);
+        //This is so that if the cutscene ends and youre out of flasks it will game over you
+        if(staticVariables.guesses == 3)
+		{
+            SceneManager.LoadScene("CutSceneGameOver");
+		}
     }
+
+    void Update()
+    {
+		if (Input.GetKeyDown(KeyCode.Escape)){
+			Quit();
+		}
+    }	
 
     public void OpenMenu()
     {
@@ -33,8 +45,13 @@ public class SelectionMenu : MonoBehaviour
         staticVariables.guesses += 1;
         staticVariables.immobile = false;
         selectionBox.SetActive(false);
-        StartCoroutine(TransitionScene());
+        StartCoroutine(TransitionScene("Accuse Cutscene"));
 	}
+
+    public void Quit() {
+        selectionBox.SetActive(false);
+        staticVariables.immobile = false;
+    }
 
     public void GoToCutscene()
 	{
@@ -42,10 +59,10 @@ public class SelectionMenu : MonoBehaviour
         SceneManager.LoadScene("Accuse Cutscene");
 	}
 
-    public IEnumerator TransitionScene()
+    public IEnumerator TransitionScene(string scene)
     {
         GameObject.FindGameObjectWithTag("Fade").GetComponent<Animator>().SetTrigger("Start");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Accuse Cutscene");
+        SceneManager.LoadScene(scene);
     }
 }

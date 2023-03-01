@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TileAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+    - {fileID: 2800000, guid: 8ec9727281a8eef4595a2c6499dd6c78, type: 3}
+    - {fileID: 2800000, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 543556831, guid: 8ec9727281a8eef4595a2c6499dd6c78, type: 3}
+  - {fileID: -557541188, guid: 8ec9727281a8eef4595a2c6499dd6c78, type: 3}
+  - {fileID: 77606367, guid: 8ec9727281a8eef4595a2c6499dd6c78, type: 3}
+  - {fileID: -755799717, guid: 8ec9727281a8eef4595a2c6499dd6c78, type: 3}
+  - {fileID: 1173337299, guid: 8ec9727281a8eef4595a2c6499dd6c78, type: 3}
+  - {fileID: -114585080, guid: 8ec9727281a8eef4595a2c6499dd6c78, type: 3}
+  - {fileID: -1108891631, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: 420898535, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: 1300205388, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: 154039472, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: -542792719, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: -269469121, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: 1341110531, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: 516209490, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: -741127636, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: -1038915232, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: 813348047, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: -725039699, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: 1151209479, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: -1412588116, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: 378149231, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
+  - {fileID: 1509619824, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: -704971230, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: -459489731, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 1106901626, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 1752591492, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 245636332, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 1091928010, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: -382259854, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 2083666389, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: -66105272, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 713178229, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: -1710643197, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 313166680, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: -1954376437, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 1833880043, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 852269039, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 1735072081, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 1340898158, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: 1057624577, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  - {fileID: -1319976963, guid: f22496b6e03a0b2438a68d78cfae1c11, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - dungeon tileset_2
+  - dungeon tileset_3
+  - dungeon tileset_0
+  - dungeon tileset_1
+  - dungeon tileset_4
+  - dungeon tileset_5
+  - garden_tiles_12
+  - garden_tiles_13
+  - garden_tiles_10
+  - garden_tiles_11
+  - garden_tiles_14
+  - garden_tiles_9
+  - garden_tiles_8
+  - garden_tiles_7
+  - garden_tiles_6
+  - garden_tiles_5
+  - garden_tiles_4
+  - garden_tiles_3
+  - garden_tiles_2
+  - garden_tiles_1
+  - garden_tiles_0
+  - brown room tileset_12
+  - brown room tileset_13
+  - brown room tileset_10
+  - brown room tileset_11
+  - brown room tileset_16
+  - brown room tileset_17
+  - brown room tileset_14
+  - brown room tileset_15
+  - brown room tileset_18
+  - brown room tileset_19
+  - brown room tileset_7
+  - brown room tileset_6
+  - brown room tileset_5
+  - brown room tileset_4
+  - brown room tileset_3
+  - brown room tileset_2
+  - brown room tileset_1
+  - brown room tileset_0
+  - brown room tileset_9
+  - brown room tileset_8
+  m_RenderDataMap: {}
+  m_Tag: TileAtlas
+  m_IsVariant: 0

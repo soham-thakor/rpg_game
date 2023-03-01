@@ -667,7 +667,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -736307300, guid: 4b6519ebf8f0d354ab5b39fe4b198ede, type: 3}
+  m_Sprite: {fileID: -1829837577, guid: e22af1cd5018b2449bbb1f1fbfcc686d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -695,7 +695,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.15}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.18, y: 0.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -762,9 +762,8 @@ MonoBehaviour:
   currentHealth: 0
   speed: 5
   swordHitbox: {fileID: 8599979717147791743}
-  spawnPoints: []
-  enemyPrefabs: []
   Timer: 2
+  isBoss: 0
 --- !u!114 &6907723682020959916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,8 +908,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 1000
   visionDistance: 100
-  canMove: 0
   enemy: {fileID: 6907723682020959923}
+  isSpawner: 0
   spawnPoints: []
   enemyPrefabs: []
   Timer: 15

@@ -21,32 +21,20 @@ public class Quest : MonoBehaviour
     private bool onLastMsg = false;
     private GameObject buttonPrompt;
     private SelectionMenu selectionBox;
-    
+    private bool currentlyTyping = false;
+    private IEnumerator typing;
+
     void Start()
     {
         selectionBox = gameObject.GetComponent<SelectionMenu>();
 
         buttonPrompt = gameObject.transform.Find("Button Prompt").gameObject;
-        if(actor.id == 0){
+        if (actor.id == 0)
+        {
             listName.text = npcTrigger.name;
         }
         dialogBox.SetActive(false);
         npcPortrait.SetActive(false);
-
-        //turns on and off the Ghosts
-        //give ghosts an actor id of 2
-        //all other NPCs give them a 1
-        if((data1.npcTalked(actor.name) == 1) && (actor.id == 2)){
-            npcTrigger.SetActive(true);
-        }else if(actor.id == 2 && data1.npcTalked(actor.name) == 0){
-            npcTrigger.SetActive(false);
-        }
-        
-        if((actor.id == 1 || actor.id == 0) && timeData.isNight){
-            npcTrigger.SetActive(false);
-        }else if(actor.id != 2){
-            npcTrigger.SetActive(true);
-        }
 
     }
 
@@ -116,20 +104,32 @@ public class Quest : MonoBehaviour
                 dialogBox.SetActive(true);
                 npcPortrait.SetActive(true);
                 string msgToDisplay = messages[data1.questTracker].message[cuMsg];
-                dialogText.text = msgToDisplay;
-
-                if(cuMsg < messages[data1.questTracker].message.Length){
-                    cuMsg++;
-                    if(cuMsg == messages[data1.questTracker].message.Length)
-					{
-                        onLastMsg = true;
-					}
+                if (!currentlyTyping)
+                {
+                    typing = Type(dialogText.GetComponent<Text>(), msgToDisplay);
+                    StartCoroutine(typing);
                 }
+                else
+				{
+                    StopCoroutine(typing);
+                    currentlyTyping = false;
+                    dialogText.text = msgToDisplay;
+                    cuMsg++;
+				}
+                //If the current message is the last one in the list
+                if(dialogText.text == messages[data1.questTracker].message[messages[data1.questTracker].message.Length - 1])
+				{
+                    onLastMsg = true;
+				}
             }
         }
     }
 	public void endDialogue()
 	{
+        if(dialogBox.activeInHierarchy)
+		{
+            SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        }
         dialogBox.SetActive(false);
         npcPortrait.SetActive(false);
         cuMsg = 0;
@@ -161,5 +161,18 @@ public class Quest : MonoBehaviour
             onLastMsg = false;
             dialogBox.SetActive(false);
         }
+    }
+
+    IEnumerator Type(Text textDisplay, string sentence)
+    {
+        textDisplay.text = "";
+        currentlyTyping = true;
+        foreach (char letter in sentence.ToCharArray())
+        {
+            textDisplay.text += letter;
+            yield return new WaitForSeconds(0.02f);
+        }
+        currentlyTyping = false;
+        cuMsg++;
     }
 }
