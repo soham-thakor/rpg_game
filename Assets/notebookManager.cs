@@ -20,21 +20,10 @@ public class notebookManager : MonoBehaviour
     void Start()
     {
         changePage(0);
-        /*if(NotebookStatic.currentPage == 0)
-        {//if we are on the first page dont show the prev page button
-            prevButton.SetActive(false);
-		}
-        if(NotebookStatic.currentPage == NotebookStatic.playerNotes.Count - 1)
-        {//if we are on the last page dont show the next page button
-            prevButton.SetActive(false);
-		}*/
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
+
+  
     void pickPortrait(string name)
 	{
         //Debug.Log(name);
@@ -96,11 +85,27 @@ public class notebookManager : MonoBehaviour
 
         pageName.text = pageNPC.name;
         pickPortrait(pageName.text);
+
+        //traits need to be filled differently for the culprit and a regular NPC
+        //CULPRIT
         if (pageNPC == NotebookStatic.culpritNPC)
 		{// this is just here so i dont have to think about it for now
+            for (int i = 1; i < 4; ++i)
+            {
+                if (NPCStatic.culpritCluesFound.Contains(i))
+                {
+                    traits[i - 1].text = NPCStatic.getTrait(NPCStatic.culpritKey, i);
+                }
+                else
+                {
+                    traits[i - 1].text = "Unknown";
+                }
+            }
             return;
 		}
         
+
+        //REGULAR NPC
         //reveal clues as needed
         for(int i = 1; i < 4; ++i)
 		{

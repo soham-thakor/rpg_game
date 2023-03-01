@@ -79,6 +79,10 @@ public class PauseManager : MonoBehaviour
 
     public void hidePanels()
     {
+        if(notebookPanel.activeInHierarchy)
+		{
+            notebookPanel.GetComponent<notebookManager>().savePlayerNotes();
+		}
         pausePanel.SetActive(false);
         notebookPanel.SetActive(false);
         settingsPanel.SetActive(false);
