@@ -312,9 +312,4 @@ public class NPCStatic : MonoBehaviour
 	}
 
 
-
-
-
-
-
 }

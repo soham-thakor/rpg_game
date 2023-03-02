@@ -20,17 +20,18 @@ public class MenuManager : MonoBehaviour
 	
 	
     // Start is called before the first frame update	
-	void start() {
-		pauseMenu.SetActive(false);
-		slider = GetComponent<Slider>();
-		SetSliderNumberText(slider.value);
+	void Start() {
+		int blank = staticVariables.guesses;
+		blank = NPCStatic.culpritKey;
 		
 	}
 	
 	public void StartGame(){
+		Debug.Log("Start Game");
 		staticVariables.resetStatics();
 		staticVariables.resetCooldowns();
 		staticVariables.GenerateWorld();
+		
 		StartCoroutine(FadeWithoutTransition());
 	}
 	
