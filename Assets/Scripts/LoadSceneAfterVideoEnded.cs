@@ -19,6 +19,14 @@ public class LoadSceneAfterVideoEnded : MonoBehaviour
 
     void LoadScene(VideoPlayer vp)
     {
-        SceneManager.LoadScene(SceneName);
+		if (staticVariables.skipTutorial)
+		{
+            SceneManager.LoadScene("Entrance");
+		}
+        else
+		{
+            SceneManager.LoadScene("Tutorial");
+		}
+        //SceneManager.LoadScene(SceneName);
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class staticVariables : MonoBehaviour
 {
-
+    //static variable to tell the video whether or not it should go to the tutorial or the entrance cutscene after it completes
+    public static bool skipTutorial;
 	//Use This to disallow player movement from any script
 	public static bool immobile = false;
     //Use this to make the player invincible

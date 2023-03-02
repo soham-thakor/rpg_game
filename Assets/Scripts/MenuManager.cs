@@ -88,6 +88,12 @@ public class MenuManager : MonoBehaviour
 		SceneManager.LoadScene(sceneName);
 	}
 
+	public void skipTutorial(bool b)
+	{
+		staticVariables.skipTutorial = b;
+		loadScene("CutSceneInstruct");
+	}
+
 
 	// Update is called once per frame
 	void Update()
