@@ -14,13 +14,18 @@ public class BookInteraction : MonoBehaviour
     void Start()
     {
         playerSpeech = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSpeech>();
-        openMessages.AddRange(NPCStatic.diaryDict[diaryOwner]);
+        openMessages.AddRange(NPCStatic.diaryDict[diaryOwner].clues);
     }
 
     void Update()
     {
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
+            if(messageIndex >= openMessages.Count - 3)
+			{//if we are reading one of the clues
+                int clueIndex = messageIndex - (openMessages.Count - 3);
+                NPCStatic.discoverClue(NPCStatic.diaryDict[diaryOwner].clueIDs[clueIndex]);
+			}
             if(messageIndex == openMessages.Count - 1)
 			{// if on the last message
                 if(playerSpeech.playerMessage.text != openMessages[messageIndex])

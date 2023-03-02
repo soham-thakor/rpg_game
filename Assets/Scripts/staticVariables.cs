@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class staticVariables : MonoBehaviour
 {
-    //Use This to disallow player movement from any script
-    public static bool immobile = false;
+
+	//Use This to disallow player movement from any script
+	public static bool immobile = false;
     //Use this to make the player invincible
     public static bool invincible = false;
     //Keep track of guesses
@@ -111,8 +112,10 @@ public class staticVariables : MonoBehaviour
 
     public static void GenerateWorld()
 	{
+        Debug.Log("Generateworld");
         keyPos = placeKey();
         secretEntranceScene = chooseSecretRoom();
+        NPCStatic.culpritKey = NPCStatic.pickCulpritKey();
         realVillain = NPCStatic.chooseCulprit();
         NPCStatic.generateDiaries();
         NPCStatic.generateGhostClues();
@@ -121,6 +124,7 @@ public class staticVariables : MonoBehaviour
 	}
     public static void resetStatics()
 	{
+
         secretEntranceFound = false;
         secretBookshelf = null;
         chosenName = "Player Name";
@@ -130,5 +134,7 @@ public class staticVariables : MonoBehaviour
         guesses = 0;
         immobile = false;
         invincible = false;
+        NPCStatic.discoveredClues.Clear();
+        NPCStatic.culpritCluesFound.Clear();
 	}
 }

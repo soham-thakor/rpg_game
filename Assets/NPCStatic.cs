@@ -5,6 +5,17 @@ using UnityEngine;
 
 public class NPCStatic : MonoBehaviour
 {
+	public class Clue 
+    { 
+        public List<string> clues;
+        public List<Tuple<int, int>> clueIDs;
+
+        public Clue(List<string> strings, List<Tuple<int, int>> IDs)
+		{
+            clues = strings;
+            clueIDs = IDs;
+		}
+    }
 
 	public class NPC
     {
@@ -61,16 +72,21 @@ public class NPCStatic : MonoBehaviour
     }
 
     
-    //keeps track of who we have already given out clues for so that we dont give duplicate clues
-    public static List<int> trait1Clues = new List<int>();
-    //keep track of what clues we have given out, in the form <NPCkey, trait#>
-    public static List<Tuple<int, int>> traitCluesGiven = new List<Tuple<int, int>>();
+
+
+	//keep track of what clues we have given out, in the form <NPCkey, trait#>
+	public static List<Tuple<int, int>> traitCluesGiven = new List<Tuple<int, int>>();
 
     //Just to get the key of the person who is the culprit
-    public static int culpritKey;
+    public static int culpritKey = pickCulpritKey();
+
+    public static int pickCulpritKey()
+	{
+        return UnityEngine.Random.Range(0, NPCnames.Count);
+    }
     public static string chooseCulprit()
 	{
-        culpritKey = UnityEngine.Random.Range(0, NPCnames.Count);
+        
         return NPCnames[culpritKey].name;
 	}
 
@@ -84,16 +100,18 @@ public class NPCStatic : MonoBehaviour
         {new Tuple<string, string, string>("\"In my opinion ", " embodies the word ", ".\"") },
         {new Tuple<string, string, string>("\"Recently I've realized that ", " is so ", " sometimes.\"") }
     };
-    public static List<string> ladyBalthazarDiary = generateDiary("Lady Balthazar");
-    public static List<string> lordBalthazarDiary = generateDiary("Lord Balthazar");
-    public static List<string> lordAndreDiary = generateDiary("Lord Andre");
-    public static List<string> honorableCobraDiary = generateDiary("Honorable Cobra");
-    public static List<string> sirEdgarDiary = generateDiary("Sir Edgar");
-    public static List<string> sirDavidDiary = generateDiary("Sir David");
-    public static List<string> ladyElanorDiary = generateDiary("Lady Elanor");
-    public static List<string> generateDiary(string characterName)
+    
+    public static Clue ladyBalthazarDiary = generateDiary("Lady Balthazar");
+    public static Clue lordBalthazarDiary = generateDiary("Lord Balthazar");
+    public static Clue lordAndreDiary = generateDiary("Lord Andre");
+    public static Clue honorableCobraDiary = generateDiary("Honorable Cobra");
+    public static Clue sirEdgarDiary = generateDiary("Sir Edgar");
+    public static Clue sirDavidDiary = generateDiary("Sir David");
+    public static Clue ladyElanorDiary = generateDiary("Lady Elanor");
+    public static Clue generateDiary(string characterName)
 	{
         List<string> diary = new List<string>();
+        List<Tuple<int, int>> diaryIDs = new List<Tuple<int, int>>();
         string addOn = "";
         
         for(int i = 1; i < 4; i++)
@@ -113,10 +131,13 @@ public class NPCStatic : MonoBehaviour
             addOn += getTrait(randomPerson, i);
             addOn += diaryTransitions[randomTransitions].Item3;
             traitCluesGiven.Add(new Tuple<int, int>(randomPerson, i));
+            diaryIDs.Add(new Tuple<int, int>(randomPerson, i));
             diary.Add(addOn);
             addOn = "";
         }
-        return diary;
+
+        Clue returnClue = new Clue(diary, diaryIDs);
+        return returnClue;
 	}
     //This is just a function to call when using GenerateWorld()
     public static void generateDiaries()
@@ -130,7 +151,7 @@ public class NPCStatic : MonoBehaviour
         sirDavidDiary = generateDiary("Sir David");
         ladyElanorDiary = generateDiary("Lady Elanor");
 	}
-    public static Dictionary<string, List<string>> diaryDict = new Dictionary<string, List<string>>()
+    public static Dictionary<string, Clue> diaryDict = new Dictionary<string, Clue>()
     {
         {"Lady Balthazar", ladyBalthazarDiary },
         {"Lord Balthazar", lordBalthazarDiary },
@@ -140,25 +161,39 @@ public class NPCStatic : MonoBehaviour
         {"Sir David", sirDavidDiary },
         {"Lady Elanor", ladyElanorDiary }
 	};
-    
+
     //START: Generation of ghost clues of the structure "The culprit IS..."
+    public class ghostClue
+    {
+        public string clue;
+        public int traitNum;
+
+        public ghostClue(string c, int trait)
+		{
+            clue = c;
+            traitNum = trait;
+		}
+    }
+
     public static List<Tuple<string, string>> ghostClueTransitions = new List<Tuple<string, string>>() {
         new Tuple<string, string>("The one who did this to me was ", "..."),
         new Tuple<string, string>("I can't believe the person who did this was so ", "...")
     };
 
-    public static string ghostClue1 = generateGhostClue(1);
-    public static string ghostClue2 = generateGhostClue(2);
-    public static string ghostClue3 = generateGhostClue(3);
+    public static ghostClue ghostClue1 = generateGhostClue(1);
+    public static ghostClue ghostClue2 = generateGhostClue(2);
+    public static ghostClue ghostClue3 = generateGhostClue(3);
 
-    public static string generateGhostClue(int trait)
+    public static ghostClue generateGhostClue(int trait)
 	{
         string addOn = "";
         int randomTransition = UnityEngine.Random.Range(0, ghostClueTransitions.Count);
         addOn += ghostClueTransitions[randomTransition].Item1;
         addOn += getTrait(culpritKey, trait);
         addOn += ghostClueTransitions[randomTransition].Item2;
-        return addOn;
+
+
+        return new ghostClue(addOn, trait);
     }
     public static void generateGhostClues()
 	{
@@ -187,18 +222,18 @@ public class NPCStatic : MonoBehaviour
         new Tuple<string, string>("At least the person who did this to me wasn't ", "..."),
         new Tuple<string, string>("Knowing that the culprit of this disaster wasn't ", " puts me at peace...")
     };
-    public static string antiClue1 = generateAntiClue();
-    public static string antiClue2 = generateAntiClue();
-    public static string antiClue3 = generateAntiClue();
-    public static string generateAntiClue()
+    public static ghostClue antiClue1 = generateAntiClue();
+    public static ghostClue antiClue2 = generateAntiClue();
+    public static ghostClue antiClue3 = generateAntiClue();
+    public static ghostClue generateAntiClue()
 	{
         int randomNPC = UnityEngine.Random.Range(0, NPCnames.Count);
-        string randomTrait = getTrait(randomNPC, UnityEngine.Random.Range(0, 4));
+        string randomTrait = getTrait(randomNPC, UnityEngine.Random.Range(1, 4));
 
         while(antiCluesGiven.Contains(randomTrait) || culpritTraits.Contains(randomTrait))
 		{//keep picking traits until we get one that we havent reveled, and that the culprit doesnt have
             randomNPC = UnityEngine.Random.Range(0, NPCnames.Count);
-            randomTrait = getTrait(randomNPC, UnityEngine.Random.Range(0, 4));
+            randomTrait = getTrait(randomNPC, UnityEngine.Random.Range(1, 4));
         }
 
         string addOn = "";
@@ -208,7 +243,7 @@ public class NPCStatic : MonoBehaviour
         addOn += randomTrait;
         addOn += antiClueTransitions[randomTransition].Item2;
 
-        return addOn;
+        return new ghostClue(addOn, -1);
 	}
     public static void generateAntiClues()
 	{
@@ -227,10 +262,10 @@ public class NPCStatic : MonoBehaviour
         {new Tuple<string, string>("A ", " passed by at some point and I think they did it, but thats all I know about them.") }
     };
 
-    public static string genderClue = generateGenderClue();
+    public static ghostClue genderClue = generateGenderClue();
 
     
-    public static string generateGenderClue()
+    public static ghostClue generateGenderClue()
 	{
         string addOn = "";
         int randomTransition = UnityEngine.Random.Range(0, genderClueTransitions.Count);
@@ -239,10 +274,10 @@ public class NPCStatic : MonoBehaviour
         addOn += NPCnames[culpritKey].gender;
         addOn += genderClueTransitions[randomTransition].Item2;
 
-        return addOn;
+        return new ghostClue(addOn, -1);
 	}
     //Dictionary so that scripts can find what clues they should be using
-    public static Dictionary<string, string> clues = new Dictionary<string, string>()
+    public static Dictionary<string, ghostClue> clues = new Dictionary<string, ghostClue>()
     {
         {"Alexandre", ghostClue1 },
         {"Edgar", ghostClue2 },
@@ -253,10 +288,28 @@ public class NPCStatic : MonoBehaviour
         {"Strange Man", genderClue }
     };
 
+    //START: keep track of clue discovery
 
+    public static List<Tuple<int, int>> discoveredClues = new List<Tuple<int, int>>();
+    public static void discoverClue(Tuple<int, int> clue)
+	{
+        if(discoveredClues.Contains(clue))
+		{
+            return;
+		}
+        discoveredClues.Add(clue);
+	}
 
+    public static List<int> culpritCluesFound = new List<int>();
 
-
+    public static void discoverCulpritClue(int i)
+	{
+        if(culpritCluesFound.Contains(i))
+		{
+            return;
+		}
+        culpritCluesFound.Add(i);
+	}
 
 
 }

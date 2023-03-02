@@ -10,18 +10,26 @@ public class Ghost : MonoBehaviour
     private PlayerSpeech playerSpeech;
     private bool inRange = false;
     private int messageIndex = 0;
+    private NPCStatic.ghostClue ghostClue;
     // Start is called before the first frame update
     void Start()
     {
         playerSpeech = GetComponent<PlayerSpeech>();
-        openMessages.Add(NPCStatic.clues[playerSpeech.playerName.text]); 
+        ghostClue = NPCStatic.clues[playerSpeech.playerName.text];
+        openMessages.Add(ghostClue.clue); 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
+            if (ghostClue.traitNum != -1)
+            {//if this is a clue about one of the traits of the culprit
+                NPCStatic.discoverCulpritClue(ghostClue.traitNum);
+            }
             if (messageIndex == openMessages.Count - 1)
             {// if on the last message
                 if (playerSpeech.playerMessage.text != openMessages[messageIndex])

@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     private bool isPaused;
-    public GameObject pausePanel, inventoryPanel, settingsPanel, controlPanel;
+    public GameObject pausePanel, notebookPanel, settingsPanel, controlPanel;
     public string mainMenu;
     // Start is called before the first frame update
     void Start()
     {
         pausePanel.SetActive(false);
-        inventoryPanel.SetActive(false);
+        notebookPanel.SetActive(false);
         settingsPanel.SetActive(false);
         controlPanel.SetActive(false);
         isPaused = false;
@@ -50,10 +50,11 @@ public class PauseManager : MonoBehaviour
     }
 
     // TODO: use an enumerator or make these into templates
-    public void showInventory()
+    public void showNotebook()
     {
         pausePanel.SetActive(false);
-        inventoryPanel.SetActive(true);
+        notebookPanel.GetComponent<notebookManager>().changePage(0);
+        notebookPanel.SetActive(true);
         //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
@@ -66,6 +67,10 @@ public class PauseManager : MonoBehaviour
 
     public void showOptions(GameObject previous_panel)
     {
+        /*if (previous_panel == notebookPanel)
+        {
+            notebookPanel.GetComponent<notebookManager>().savePlayerNotes();
+        }*/
         previous_panel.SetActive(false);
         pausePanel.SetActive(true);
         //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
@@ -79,8 +84,12 @@ public class PauseManager : MonoBehaviour
 
     public void hidePanels()
     {
+        /*if(notebookPanel.activeInHierarchy)
+		{
+            notebookPanel.GetComponent<notebookManager>().savePlayerNotes();
+		}*/
         pausePanel.SetActive(false);
-        inventoryPanel.SetActive(false);
+        notebookPanel.SetActive(false);
         settingsPanel.SetActive(false);
         controlPanel.SetActive(false);
     }
