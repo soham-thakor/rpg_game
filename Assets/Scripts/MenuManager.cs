@@ -28,9 +28,9 @@ public class MenuManager : MonoBehaviour
 	
 	public void StartGame(){
 		Debug.Log("Start Game");
-		staticVariables.resetStatics();
+		/*staticVariables.resetStatics();
 		staticVariables.resetCooldowns();
-		staticVariables.GenerateWorld();
+		staticVariables.GenerateWorld();*/
 		
 		StartCoroutine(FadeWithoutTransition());
 	}
