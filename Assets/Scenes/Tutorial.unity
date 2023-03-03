@@ -12648,9 +12648,9 @@ Tilemap:
   - first: {x: 63, y: -42, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 26
-      m_TileSpriteIndex: 26
-      m_TileMatrixIndex: 5
+      m_TileIndex: 30
+      m_TileSpriteIndex: 30
+      m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -16999,7 +16999,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 13
+  - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: cf20fd92300c722429aa66092ba0a045, type: 2}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: d4475e7cdbf599a468926a4e5aede53c, type: 2}
@@ -17007,7 +17007,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d6a36b4416d830f48852af194e6e6490, type: 2}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: d34f9a1ee6b7a974fb90451a3edb23d6, type: 2}
-  - m_RefCount: 449
+  - m_RefCount: 450
     m_Data: {fileID: 11400000, guid: 8b6dc0794fe0aca46bd5bdbe31cb1e5a, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -17062,7 +17062,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 13
+  - m_RefCount: 12
     m_Data: {fileID: -1730329818, guid: 29ef2dda7f5bcaa48bf11b9f1786edf8, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: -741127636, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
@@ -17070,7 +17070,7 @@ Tilemap:
     m_Data: {fileID: -1038915232, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: -1108891631, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
-  - m_RefCount: 449
+  - m_RefCount: 450
     m_Data: {fileID: 420898535, guid: dfd6f58505ec5b04f8d87244c5d1cdec, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 0
@@ -17091,7 +17091,7 @@ Tilemap:
       e31: 7.34684e-40
       e32: 2.47e-43
       e33: 1
-  - m_RefCount: 51
+  - m_RefCount: 52
     m_Data:
       e00: 0.000000059604645
       e01: 0.99999994
@@ -17163,7 +17163,7 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 145
+  - m_RefCount: 144
     m_Data:
       e00: 1
       e01: 0
@@ -17934,6 +17934,10 @@ PrefabInstance:
     - target: {fileID: 1034723774, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195509379, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -6.090088
       objectReference: {fileID: 0}
     - target: {fileID: 1753598191, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_IsActive

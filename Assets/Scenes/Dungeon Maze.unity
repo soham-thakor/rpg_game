@@ -1075,7 +1075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195509379, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -6.090027
+      value: -6.090088
       objectReference: {fileID: 0}
     - target: {fileID: 1753598192, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_RootOrder
@@ -26944,6 +26944,14 @@ PrefabInstance:
     - target: {fileID: 4023445396123424821, guid: d0e3e5d3c6dd7694b9b4d6ae3d9d7485, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023445396123424821, guid: d0e3e5d3c6dd7694b9b4d6ae3d9d7485, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023445396123424821, guid: d0e3e5d3c6dd7694b9b4d6ae3d9d7485, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4023445396123424821, guid: d0e3e5d3c6dd7694b9b4d6ae3d9d7485, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54784,6 +54792,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1260022390}
     m_Modifications:
+    - target: {fileID: 1635511164, guid: 0dbe792d11984c148a046b92e3c69c56, type: 3}
+      propertyPath: message
+      value: If only I could have gotten here sooner.
+      objectReference: {fileID: 0}
     - target: {fileID: 7194508382379370903, guid: 0dbe792d11984c148a046b92e3c69c56, type: 3}
       propertyPath: m_Name
       value: Interactable Skeleton
