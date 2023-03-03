@@ -21,7 +21,6 @@ public class LoadSceneAfterVideoEnded : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "CutSceneInstruct")
         {
-            Debug.Log("AAAA");
             if (staticVariables.skipTutorial)
             {
                 SceneManager.LoadScene("Tutorial");

@@ -77,10 +77,12 @@ public class MenuManager : MonoBehaviour
 		
 	}
 
-	public void registerName()
+	public void registerName(GameObject nextInputBox)
 	{
 		if(nameInput.text.Length == 1) { return; }
 		staticVariables.chosenName = nameInput.text;
+		nameInputBox.SetActive(false);
+		nextInputBox.SetActive(true);	
 	}
 
 	public void loadScene(string sceneName)
