@@ -17,16 +17,23 @@ public class LoadSceneAfterVideoEnded : MonoBehaviour
         video.loopPointReached += LoadScene;
     }
 
-    void LoadScene(VideoPlayer vp)
+    public void LoadScene(VideoPlayer vp)
     {
         if (SceneManager.GetActiveScene().name == "CutSceneInstruct")
         {
+            Debug.Log("AAAA");
             if (staticVariables.skipTutorial)
             {
+                SceneManager.LoadScene("Tutorial");
+            }
+            else {
                 SceneManager.LoadScene("Entrance");
             }
-            SceneManager.LoadScene("Tutorial");
 		}
-        SceneManager.LoadScene(SceneName);
+        else
+        {
+            SceneManager.LoadScene(SceneName);
+        }
+        
     }
 }
