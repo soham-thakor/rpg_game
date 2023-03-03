@@ -81,6 +81,11 @@ public class Bullet : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+
+        if(other.tag == "Obstacle"){
+            Destroy(gameObject);
+        }
+
         // if player shoots enemy
         if(other.tag == "Enemy" && origin == "Player") {
 
