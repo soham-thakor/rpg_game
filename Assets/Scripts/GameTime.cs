@@ -10,7 +10,7 @@ public class GameTime : MonoBehaviour
 
     private float minutes;
     private int minutesToDisplay, hoursToDisplay, previoiusHoursToDisplay;
-    private float percentageDayCompleted, maxMinutesInADay = 1440, timeIncrement = 1, nextIncrement, nextRate = 1;
+    private float percentageDayCompleted, maxMinutesInADay = 1440, timeIncrement = 1, nextIncrement, nextRate = 0.5f;
     public TimeData timeData;
 
     // turning this to false, will prevent the clock from brightness in the scene.
