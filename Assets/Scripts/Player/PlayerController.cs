@@ -152,6 +152,10 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("swordAttack");
         }
         
+        //SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
+    }
+    public void playSwordSound()
+	{
         SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
     }
 
