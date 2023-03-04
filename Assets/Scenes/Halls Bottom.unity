@@ -275,7 +275,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &91112973
 PrefabInstance:
@@ -717,6 +717,22 @@ PrefabInstance:
     - target: {fileID: 3283007440131791999, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183628123373755076, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183628123373755076, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183628123373755076, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183628123373755076, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6562674031345208486, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -24460,6 +24476,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2679104485999911964, guid: 1687a25742d297b40aef521b8487dc5e, type: 3}
   m_PrefabInstance: {fileID: 1540567620}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1542340639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.411
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.6752
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.40596497
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994624, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994625, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9d7271b626e840a43b1af4bb4a2df664, type: 3}
+    - target: {fileID: 999778766779994628, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: message
+      value: That looks like a rendition of the Grim Reaper, and in a very strange
+        looking building too.
+      objectReference: {fileID: 0}
+    - target: {fileID: 999778766779994629, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
+      propertyPath: m_Name
+      value: Reaper Seer Painting
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
 --- !u!1001 &1650837028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31065,7 +31147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 999778766779994629, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
       propertyPath: m_Name
-      value: Painting
+      value: Earl Painting
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14baceaa39bdec04993dc64e3f9637c4, type: 3}
