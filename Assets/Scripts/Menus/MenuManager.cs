@@ -31,6 +31,7 @@ public class MenuManager : MonoBehaviour
 		/*staticVariables.resetStatics();
 		staticVariables.resetCooldowns();
 		staticVariables.GenerateWorld();*/
+		staticVariables.guesses = 0;
 		
 		StartCoroutine(FadeWithoutTransition());
 	}
