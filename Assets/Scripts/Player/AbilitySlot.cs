@@ -5,45 +5,23 @@ using UnityEngine.UI;
 
 public class AbilitySlot : MonoBehaviour
 {
-    
-    
-    private PlayerController player;
     [System.NonSerialized] public bool inCooldown;
     [SerializeField] private float cooldownTime;
-
-    private int[] abilityReady;
-    private float timeLeft;
     [SerializeField] private Slider slider;
-    [System.NonSerialized] private int index;
-    
 
+    private PlayerController player;
+    private float timeLeft;
+    private string abilityName;
+    
     void Start() {
-        string name = gameObject.name;
-        switch(name)
-		{
-			case "BiteSlot":
-                index = 0;
-                break;
-            case "WaterMineSlot":
-                index = 1;
-                break;
-            case "WindSpeedSlot":
-                index = 2;
-                break;
-            case "FireHealSlot":
-                index = 3;
-                break;
-            default:
-                index = 0;
-                break;
-		}
-        timeLeft = staticVariables.getTimeLeft(index);
+        abilityName = gameObject.name.Replace("Slot", "");
+        timeLeft = staticVariables.getTimeLeft(abilityName);
         if(timeLeft > 0)
 		{
             inCooldown = true;
 		}
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        slider.value = staticVariables.getCooldown(index);
+        slider.value = staticVariables.getCooldown(abilityName);
     }
 
     void FixedUpdate() {
@@ -52,32 +30,32 @@ public class AbilitySlot : MonoBehaviour
         }
     }
 
-    public void StartCooldown(int i) {
-        staticVariables.changeTimeLeft(index, cooldownTime);
+    public void StartCooldown() {
+        staticVariables.changeTimeLeft(abilityName, cooldownTime);
         timeLeft = cooldownTime;
-        index = i;
         inCooldown = true;
-        // disable ability
-        player.abilityReady[index] = 0;
 
-        // set value to 0
-        staticVariables.changeCooldown(index, 0);
+        staticVariables.changeCooldown(abilityName, 0);
         slider.value = 0;
     }
 
-
     public void RunCooldown() 
     {
-        staticVariables.changeTimeLeft(index, staticVariables.getTimeLeft(index) - 1f);
+        staticVariables.changeTimeLeft(abilityName, staticVariables.getTimeLeft(abilityName) - 1f);
         timeLeft -= 1f;
-        staticVariables.changeCooldown(index, ((cooldownTime - timeLeft) / cooldownTime));
-        slider.value = staticVariables.getCooldown(index);
+        staticVariables.changeCooldown(abilityName, ((cooldownTime - timeLeft) / cooldownTime));
+        slider.value = staticVariables.getCooldown(abilityName);
 
         if(timeLeft <= 0) {
-            player.abilityReady[index] = 1;
-            staticVariables.changeCooldown(index, 1f);
+            staticVariables.changeCooldown(abilityName, 1f);
             slider.value = 1f;
             inCooldown = false;
         }
+    }
+
+    // only used with bite and mine since there can be multiple at a time
+    public void CreateNewInstance()
+    {
+
     }
 }

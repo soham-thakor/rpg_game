@@ -19,12 +19,13 @@ public class PlayerController : MonoBehaviour
     public HealthBar healthBar;
     public float currentHealth = 100f;
 
-    // public ability variables
+    // equippable abilities
     public GameObject projectile;
-    public GameObject mine;
-    public GameObject wind;
-    public GameObject fireHeal;
-    
+    public GameObject[] abilities = {};
+
+    // used for detecting when a number key is pressed
+    private KeyCode[] keyCodes = new KeyCode []{ KeyCode.Alpha0, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5,
+                                                 KeyCode.Alpha6, KeyCode.Alpha7, KeyCode.Alpha8, KeyCode.Alpha9 };
     // scriptable object
     public PlayerData playerData;
 
@@ -37,10 +38,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-
-    // for ability cooldowns (cooldown times are set in playerdata)
-    [System.NonSerialized] public int[] abilityReady = { 1, 1, 1, 1};  // 1 represents that ability is ready
-    private string[] abilityNames = { "Bite", "WaterMine", "WindSpeed", "FireHeal"};
 
     //To keep track of the ghosts that need to spawn
     public QuestTrackerData questData; //isn't used, but it acts as a global variable
@@ -74,10 +71,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        var index = CheckForNumericKeyPress(0, 5);
+        if(index >= 0) { UseAbility(index); }
+    }
+
     private void FixedUpdate() 
     {
-
-
         if (canMove && !staticVariables.immobile) 
         {
             // If movement input is not 0, try to move            
@@ -111,6 +112,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void UseAbility(int index)
+    {
+        if(staticVariables.getCooldown(abilities[index].name) != 1f) { return; }
+
+        abilities[index].SetActive(true);
+        var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilities[index].name + "Slot").GetComponent<AbilitySlot>();
+        ability.StartCooldown();
+    }
+
+    private int CheckForNumericKeyPress(int minimum, int maximum)
+    {
+        for(int i = minimum; i < maximum; i++)
+        {
+            if(Input.GetKeyDown(keyCodes[i])) { 
+                Debug.Log(i-1);
+                return i-1; 
+            }
+        }
+        return -1;
+    }
+
     private bool TryMove(Vector2 direction) {
         if(direction == Vector2.zero) {
             return false;
@@ -126,17 +148,8 @@ public class PlayerController : MonoBehaviour
 		if (count == 0){
             rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
             return true;
-        } else {
-            return false;
         }
-    }
-
-    void OnHeal() {
-        if(staticVariables.getCooldown(3) == 1f) {
-            fireHeal.SetActive(true);
-            var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[3] + "Slot").GetComponent<AbilitySlot>();
-            ability.StartCooldown(3);
-        }
+        return false;
     }
 
     void OnMove(InputValue movementValue) {
@@ -144,66 +157,46 @@ public class PlayerController : MonoBehaviour
         SoundManager.PlaySound(SoundManager.Sound.PlayerFootstep);
     }
 
-    // called on left click
     void OnSlash() {
         string animState = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
         if(animState != "player_attack" && animState != "player_attack_up" && animState != "player_attack_down")
 		{
             animator.SetTrigger("swordAttack");
         }
-        
-        //SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
-    }
-    public void playSwordSound()
-	{
-        SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
     }
 
     // called on pressing keyboard button 1
-    void OnBite() {
-        
-        if(staticVariables.getCooldown(0) == 1f) {
-            // Create new bullet
-            GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
-            Bullet bulletScript = newBullet.GetComponent<Bullet>();
+    // void OnBite() {
+    //     if(staticVariables.getCooldown(0) == 1f) {
+    //         // Create new bullet
+    //         GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
+    //         Bullet bulletScript = newBullet.GetComponent<Bullet>();
 
-            bulletScript.setOrigin("Player");   // where bullet came from
-            newBullet.SetActive(true);  // activate game object
-            SoundManager.PlaySound(SoundManager.Sound.FireBite);
+    //         bulletScript.setOrigin("Player");   // where bullet came from
+    //         newBullet.SetActive(true);  // activate game object
+    //         SoundManager.PlaySound(SoundManager.Sound.FireBite);
             
-            // start cooldown
-            var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[0] + "Slot").GetComponent<AbilitySlot>();
-            ability.StartCooldown(0);
-        }
-    }
+    //         // start cooldown
+    //         var ability = transform.Find("Abilities/Ability bar/Ability Bar/BiteSlot").GetComponent<AbilitySlot>();
+    //         ability.StartCooldown(0);
+    //     }
+    // }
 
-    // called on pressing keyboard button 2
-    void OnDropMine() {
-        if(staticVariables.getCooldown(1) == 1f) {
-            // Create new water mine
-            GameObject newMine = Instantiate(mine, transform.position, transform.rotation);
-            Mine mineScript = newMine.GetComponent<Mine>();
+    // // called on pressing keyboard button 2
+    // void OnDropMine() {
+    //     if(staticVariables.getCooldown(1) == 1f) {
+    //         // Create new water mine
+    //         GameObject newMine = Instantiate(mine, transform.position, transform.rotation);
+    //         Mine mineScript = newMine.GetComponent<Mine>();
 
-            mineScript.setOrigin("Player");
-            newMine.SetActive(true);
-            SoundManager.PlaySound(SoundManager.Sound.PlaceWaterBomb);
+    //         mineScript.setOrigin("Player");
+    //         newMine.SetActive(true);
+    //         SoundManager.PlaySound(SoundManager.Sound.PlaceWaterBomb);
 
-            var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[1] + "Slot").GetComponent<AbilitySlot>();
-            ability.StartCooldown(1);
-        }
-    }
-
-    // called on pressing keyboard button 3
-    void OnWind() {
-        if(staticVariables.getCooldown(2) == 1f) {
-            WindSpeed windScript = wind.GetComponent<WindSpeed>();
-
-            wind.SetActive(true);
-            var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[2] + "Slot").GetComponent<AbilitySlot>();
-            ability.StartCooldown(2);
-            //SoundManager.PlaySound(SoundManager.Sound.SpeedUpBoost);
-        }
-    }
+    //         var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[1] + "Slot").GetComponent<AbilitySlot>();
+    //         ability.StartCooldown(1);
+    //     }
+    // }
 
     public void TakeDamage(float damage)
     {
@@ -246,11 +239,4 @@ public class PlayerController : MonoBehaviour
 		}
         return closestNPC == tryingNPC;
 	}
-
-    private IEnumerator StartCooldown(int slot, float delayTime) 
-    {
-        abilityReady[slot] = 0; // disable ability
-        yield return new WaitForSeconds(delayTime);
-        abilityReady[slot] = 1; // enable ability
-    }
 }

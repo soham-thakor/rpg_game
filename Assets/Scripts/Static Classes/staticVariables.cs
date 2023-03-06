@@ -51,10 +51,10 @@ public class staticVariables : MonoBehaviour
     public static Vector2 keyPos = placeKey();
 
     //Cooldowns Slider Values
-    [System.NonSerialized] public static Dictionary<int, float> cooldowns = new Dictionary<int, float>();
+    [System.NonSerialized] public static Dictionary<string, float> cooldowns = new Dictionary<string, float>();
 
     //Cooldowns Time left Values
-    [System.NonSerialized] public static Dictionary<int, float> timeLeft = new Dictionary<int, float>();
+    [System.NonSerialized] public static Dictionary<string, float> timeLeft = new Dictionary<string, float>();
 
     public static Vector2 placeKey()
 	{
@@ -64,7 +64,7 @@ public class staticVariables : MonoBehaviour
 	{
         return secretScenes[Random.Range(0, 4)];
 	}
-    public static void changeTimeLeft(int i, float value)
+    public static void changeTimeLeft(string i, float value)
 	{
         if(timeLeft.ContainsKey(i)) {
             timeLeft[i] = value;
@@ -73,7 +73,7 @@ public class staticVariables : MonoBehaviour
             timeLeft.Add(i, value);
         }
     }
-    public static float getTimeLeft(int i)
+    public static float getTimeLeft(string i)
 	{
         if(timeLeft.ContainsKey(i)){
             return timeLeft[i];
@@ -83,7 +83,7 @@ public class staticVariables : MonoBehaviour
             return 1f;
         }
     }
-    public static void changeCooldown(int i, float value)
+    public static void changeCooldown(string i, float value)
     {
         if(cooldowns.ContainsKey(i)) {
             cooldowns[i] = value;
@@ -92,7 +92,7 @@ public class staticVariables : MonoBehaviour
             cooldowns.Add(i, value);
         }
     }
-    public static float getCooldown(int i)
+    public static float getCooldown(string i)
 	{
         if(cooldowns.ContainsKey(i)){
             return cooldowns[i];
@@ -105,7 +105,7 @@ public class staticVariables : MonoBehaviour
 
 	public static void resetCooldowns()
 	{
-        foreach(KeyValuePair<int, float> entry in cooldowns)
+        foreach(KeyValuePair<string, float> entry in cooldowns)
         {
             cooldowns[entry.Key] = 1f;
         }
