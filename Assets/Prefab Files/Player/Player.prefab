@@ -3388,9 +3388,10 @@ MonoBehaviour:
   healthBar: {fileID: 1241075201}
   currentHealth: 1000
   projectile: {fileID: 98859758125486669}
-  mine: {fileID: 268904236}
-  wind: {fileID: 700079395}
-  fireHeal: {fileID: 1124123973469116107}
+  abilities:
+  - {fileID: 1124123973469116107}
+  - {fileID: 268904236}
+  - {fileID: 700079395}
   playerData: {fileID: 11400000, guid: 3b5d3a0d220d98549a9c1e34dd0f7a08, type: 2}
   questData: {fileID: 11400000, guid: f31c1745af12a924ba194d97f6737341, type: 2}
 --- !u!61 &8454170824699123502
