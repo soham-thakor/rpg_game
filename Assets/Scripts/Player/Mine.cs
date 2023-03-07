@@ -11,8 +11,6 @@ public class Mine : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private List<Enemy> enemies = new List<Enemy>();
     public BoxCollider2D damageCollider;
-    // setters
-    public void setOrigin(string s) {origin = s; }
     
     // Start is called before the first frame update
     void Start()
