@@ -7,8 +7,6 @@ public class Mine : MonoBehaviour
     public float lifeTime;
     public float damageDealt;
 
-    // only used for player made projectiles
-    private string origin = "";
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private List<Enemy> enemies = new List<Enemy>();
