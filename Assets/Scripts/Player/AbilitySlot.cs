@@ -11,6 +11,7 @@ public class AbilitySlot : MonoBehaviour
     [SerializeField] private Slider slider;
 
     [System.NonSerialized] public string abilityName;
+    private GameObject playerObj;
     private PlayerController player;
     private float timeLeft;
     
@@ -21,7 +22,8 @@ public class AbilitySlot : MonoBehaviour
 		{
             inCooldown = true;
 		}
-		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        playerObj = GameObject.FindGameObjectWithTag("Player");
+		player = playerObj.GetComponent<PlayerController>();
         slider.value = staticVariables.getCooldown(abilityName);
     }
 
@@ -56,7 +58,8 @@ public class AbilitySlot : MonoBehaviour
 
     public void Activate(Vector2 playerPosition)
     {
-        Instantiate(prefab, playerPosition, Quaternion.identity);
+        GameObject obj = Instantiate(prefab, playerPosition, Quaternion.identity);
+        obj.transform.SetParent(playerObj);
         StartCooldown();
     }
 }
