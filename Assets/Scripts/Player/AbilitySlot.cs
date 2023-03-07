@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class AbilitySlot : MonoBehaviour
 {
     [System.NonSerialized] public bool inCooldown;
+    [SerializeField] private GameObject prefab;
     [SerializeField] private float cooldownTime;
     [SerializeField] private Slider slider;
 
+    [System.NonSerialized] public string abilityName;
     private PlayerController player;
     private float timeLeft;
-    private string abilityName;
     
     void Start() {
         abilityName = gameObject.name.Replace("Slot", "");
@@ -30,7 +31,7 @@ public class AbilitySlot : MonoBehaviour
         }
     }
 
-    public void StartCooldown() {
+    private void StartCooldown() {
         staticVariables.changeTimeLeft(abilityName, cooldownTime);
         timeLeft = cooldownTime;
         inCooldown = true;
@@ -39,7 +40,7 @@ public class AbilitySlot : MonoBehaviour
         slider.value = 0;
     }
 
-    public void RunCooldown() 
+    private void RunCooldown() 
     {
         staticVariables.changeTimeLeft(abilityName, staticVariables.getTimeLeft(abilityName) - 1f);
         timeLeft -= 1f;
@@ -53,9 +54,9 @@ public class AbilitySlot : MonoBehaviour
         }
     }
 
-    // only used with bite and mine since there can be multiple at a time
-    public void CreateNewInstance()
+    public void Activate(Vector2 playerPosition)
     {
-
+        Instantiate(prefab, playerPosition, Quaternion.identity);
+        StartCooldown();
     }
 }

@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        var index = CheckForNumericKeyPress(0, 5);
+        var index = CheckForNumericKeyPress(1, 3);
         if(index >= 0) { UseAbility(index); }
     }
 
@@ -114,19 +114,16 @@ public class PlayerController : MonoBehaviour
 
     private void UseAbility(int index)
     {
-        if(staticVariables.getCooldown(abilities[index].name) != 1f) { return; }
-
-        abilities[index].SetActive(true);
-        var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilities[index].name + "Slot").GetComponent<AbilitySlot>();
-        ability.StartCooldown();
+        AbilitySlot abilitySlot = abilities[index].GetComponent<AbilitySlot>();
+        if(staticVariables.getCooldown(abilitySlot.abilityName) != 1f) { return; }
+        abilitySlot.Activate(gameObject.transform.position);
     }
 
     private int CheckForNumericKeyPress(int minimum, int maximum)
     {
-        for(int i = minimum; i < maximum; i++)
+        for(int i = minimum; i <= maximum; i++)
         {
             if(Input.GetKeyDown(keyCodes[i])) { 
-                Debug.Log(i-1);
                 return i-1; 
             }
         }
@@ -164,6 +161,14 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("swordAttack");
         }
     }
+
+    // void OnHeal() {
+    //     if(staticVariables.getCooldown(3) == 1f) {
+    //         fireHeal.SetActive(true);
+    //         var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[3] + "Slot").GetComponent<AbilitySlot>();
+    //         ability.StartCooldown(3);
+    //     }
+    // }
 
     // called on pressing keyboard button 1
     // void OnBite() {
