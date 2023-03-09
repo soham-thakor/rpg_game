@@ -33,23 +33,15 @@ public class Mine : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) 
     {
         // if player mine comes in contact with enemy
-        if(other.tag == "Enemy") {
-            Enemy enemy = other.GetComponent<Enemy>();
-            if(!enemies.Contains(other.gameObject.GetComponent<Enemy>())) {
-                enemies.Add(other.gameObject.GetComponent<Enemy>());
-			}
-
+        if(other.tag == "Enemy") 
+        {
             SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
             animator.SetTrigger("Explode");
             Destroy(gameObject, 1f);
         }
     }
 
-	public void dealDamage()
-	{
-        foreach(Enemy enemy in enemies)
-		{
-            enemy.TakeDamage(damageDealt);
-		}
-	}
+    // called via animation events
+    public void enableDamageCollider() { damageCollider.enabled = true; }
+    public void disableDamageCollider() { damageCollider.enabled = false; }
 }

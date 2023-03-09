@@ -68,6 +68,13 @@ public class AbilitySlot : MonoBehaviour
         {
             obj.transform.SetParent(playerObj.transform);
         }
+
+        if(abilityName == "Bite") 
+        {
+            Bullet bullet = obj.GetComponent<Bullet>();
+            bullet.setOrigin("Player");
+        }
+        
         StartCooldown();
     }
 }

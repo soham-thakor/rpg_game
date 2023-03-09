@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public float currentHealth = 100f;
 
     // equippable abilities
-    public GameObject projectile;
+    public GameObject projectileSlot;
     public GameObject[] abilities = {};
 
     // used for detecting when a number key is pressed
@@ -162,46 +162,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // void OnHeal() {
-    //     if(staticVariables.getCooldown(3) == 1f) {
-    //         fireHeal.SetActive(true);
-    //         var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[3] + "Slot").GetComponent<AbilitySlot>();
-    //         ability.StartCooldown(3);
-    //     }
-    // }
-
-    // called on pressing keyboard button 1
-    // void OnBite() {
-    //     if(staticVariables.getCooldown(0) == 1f) {
-    //         // Create new bullet
-    //         GameObject newBullet = Instantiate(projectile, transform.position, transform.rotation);
-    //         Bullet bulletScript = newBullet.GetComponent<Bullet>();
-
-    //         bulletScript.setOrigin("Player");   // where bullet came from
-    //         newBullet.SetActive(true);  // activate game object
-    //         SoundManager.PlaySound(SoundManager.Sound.FireBite);
-            
-    //         // start cooldown
-    //         var ability = transform.Find("Abilities/Ability bar/Ability Bar/BiteSlot").GetComponent<AbilitySlot>();
-    //         ability.StartCooldown(0);
-    //     }
-    // }
-
-    // // called on pressing keyboard button 2
-    // void OnDropMine() {
-    //     if(staticVariables.getCooldown(1) == 1f) {
-    //         // Create new water mine
-    //         GameObject newMine = Instantiate(mine, transform.position, transform.rotation);
-    //         Mine mineScript = newMine.GetComponent<Mine>();
-
-    //         mineScript.setOrigin("Player");
-    //         newMine.SetActive(true);
-    //         SoundManager.PlaySound(SoundManager.Sound.PlaceWaterBomb);
-
-    //         var ability = transform.Find("Abilities/Ability bar/Ability Bar/" + abilityNames[1] + "Slot").GetComponent<AbilitySlot>();
-    //         ability.StartCooldown(1);
-    //     }
-    // }
+    void OnShoot()
+    {
+        AbilitySlot abilitySlot = projectileSlot.GetComponent<AbilitySlot>();
+        if(staticVariables.getCooldown(abilitySlot.abilityName) != 1f) { return; }
+        abilitySlot.Activate(gameObject.transform.position);
+    }
 
     public void TakeDamage(float damage)
     {
@@ -244,4 +210,9 @@ public class PlayerController : MonoBehaviour
 		}
         return closestNPC == tryingNPC;
 	}
+
+    public void playSwordSound()
+	{
+        SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
+    }
 }
