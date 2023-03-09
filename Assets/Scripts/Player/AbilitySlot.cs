@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class AbilitySlot : MonoBehaviour
 {
+    // offsets ability instantiation position
+    public float xOffset;
+    public float yOffset;
+
     [System.NonSerialized] public bool inCooldown;
     [SerializeField] private GameObject prefab;
     [SerializeField] private float cooldownTime;
@@ -58,8 +62,12 @@ public class AbilitySlot : MonoBehaviour
 
     public void Activate(Vector2 playerPosition)
     {
-        GameObject obj = Instantiate(prefab, playerPosition, Quaternion.identity);
-        obj.transform.SetParent(playerObj);
+        GameObject obj = Instantiate(prefab, new Vector2(playerPosition.x + xOffset, playerPosition.y + yOffset), Quaternion.identity);
+        
+        if(abilityName == "FireHeal" || abilityName == "WindSpeed")
+        {
+            obj.transform.SetParent(playerObj.transform);
+        }
         StartCooldown();
     }
 }

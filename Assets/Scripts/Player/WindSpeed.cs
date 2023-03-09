@@ -25,14 +25,14 @@ public class WindSpeed : MonoBehaviour
         origSpeed = player.moveSpeed;
         player.moveSpeed = player.moveSpeed + grantedSpeed;
 
-        Invoke("DisableWind", lifeTime);
+        Invoke("DeleteWind", lifeTime);
     }
 
-    private void DisableWind() {
+    private void DeleteWind() {
         if(player) {
             // set player speed back to original speed
             player.moveSpeed = origSpeed;
         }
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
