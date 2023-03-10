@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Mine : MonoBehaviour
@@ -58,19 +59,9 @@ public class Mine : MonoBehaviour
 	public void dealDamage()
 	{
         SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
-        foreach(Enemy enemy in enemies)
+        foreach(Enemy enemy in enemies.ToList())
 		{
             enemy.TakeDamage(damageDealt);
 		}
 	}
-
-    // called via animation events
-    public void enableDamageCollider() {
-        Debug.Log("enable collider");
-        damageCollider.enabled = true; 
-    }
-    public void disableDamageCollider() { 
-        Debug.Log("disable collider");
-        damageCollider.enabled = false; 
-    }
 }
