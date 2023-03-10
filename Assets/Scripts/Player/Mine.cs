@@ -35,13 +35,43 @@ public class Mine : MonoBehaviour
         // if player mine comes in contact with enemy
         if(other.tag == "Enemy") 
         {
+            Enemy enemy = other.GetComponent<Enemy>();
+            if(!enemies.Contains(other.gameObject.GetComponent<Enemy>())) {
+                enemies.Add(other.gameObject.GetComponent<Enemy>());
+			}
+
             SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
             animator.SetTrigger("Explode");
             Destroy(gameObject, 1f);
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            if (enemies.Contains(collision.gameObject.GetComponent<Enemy>()))
+            {
+                enemies.Remove(collision.gameObject.GetComponent<Enemy>());
+            }
+        }
+    }
+
+	public void dealDamage()
+	{
+        foreach(Enemy enemy in enemies)
+		{
+            enemy.TakeDamage(damageDealt);
+		}
+	}
+
     // called via animation events
-    public void enableDamageCollider() { damageCollider.enabled = true; }
-    public void disableDamageCollider() { damageCollider.enabled = false; }
+    public void enableDamageCollider() {
+        Debug.Log("enable collider");
+        damageCollider.enabled = true; 
+    }
+    public void disableDamageCollider() { 
+        Debug.Log("disable collider");
+        damageCollider.enabled = false; 
+    }
 }
