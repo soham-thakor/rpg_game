@@ -39,8 +39,6 @@ public class Mine : MonoBehaviour
             if(!enemies.Contains(other.gameObject.GetComponent<Enemy>())) {
                 enemies.Add(other.gameObject.GetComponent<Enemy>());
 			}
-
-            SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
             animator.SetTrigger("Explode");
             Destroy(gameObject, 1f);
         }
@@ -59,6 +57,7 @@ public class Mine : MonoBehaviour
 
 	public void dealDamage()
 	{
+        SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
         foreach(Enemy enemy in enemies)
 		{
             enemy.TakeDamage(damageDealt);
