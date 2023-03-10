@@ -27,7 +27,9 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        //damageDealt =1;
+
+        if(origin == "Player") { SoundManager.PlaySound(SoundManager.Sound.FireBite); }
+        
         // checks if current object is a clone
         if(gameObject.name.Contains("Clone")) {
             Invoke("DestroyProjectile",lifeTime);   // deletes self whenever lifetime is reached
@@ -81,6 +83,11 @@ public class Bullet : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+
+        if(other.tag == "Obstacle" && other.name != "Player") {
+            Destroy(gameObject);
+        }
+
         // if player shoots enemy
         if(other.tag == "Enemy" && origin == "Player") {
 

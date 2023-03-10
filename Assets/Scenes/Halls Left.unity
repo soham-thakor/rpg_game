@@ -136,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8650415205445520253, guid: 7be10e50224c0a547a49f31431a8b1e6, type: 3}
       propertyPath: message
-      value: The earl sure likes these carpets
+      value: The Earl sure likes these carpets
       objectReference: {fileID: 0}
     - target: {fileID: 8650415205445520254, guid: 7be10e50224c0a547a49f31431a8b1e6, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8650415205445520254, guid: 7be10e50224c0a547a49f31431a8b1e6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -662,6 +662,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1195509379, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -6.090088
+      objectReference: {fileID: 0}
     - target: {fileID: 1932433595, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1157,11 +1161,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8650415205445520253, guid: 7be10e50224c0a547a49f31431a8b1e6, type: 3}
       propertyPath: message
-      value: I wonder why they picked red for these
+      value: I wonder why they picked red for these.
       objectReference: {fileID: 0}
     - target: {fileID: 8650415205445520254, guid: 7be10e50224c0a547a49f31431a8b1e6, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8650415205445520254, guid: 7be10e50224c0a547a49f31431a8b1e6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2840,7 +2844,7 @@ Transform:
   m_Children:
   - {fileID: 975183538}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &632576964
 MonoBehaviour:
@@ -26297,7 +26301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8650415205445520254, guid: 7be10e50224c0a547a49f31431a8b1e6, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8650415205445520254, guid: 7be10e50224c0a547a49f31431a8b1e6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27640,7 +27644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6064143059431221627, guid: 5e4ab61ebadae2a4ebd6e1c5f3fe7238, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6064143059431221627, guid: 5e4ab61ebadae2a4ebd6e1c5f3fe7238, type: 3}
       propertyPath: m_AnchorMax.x
@@ -32365,7 +32369,7 @@ Transform:
   - {fileID: 2095606498}
   - {fileID: 189484952}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5638781728534123209
 PrefabInstance:

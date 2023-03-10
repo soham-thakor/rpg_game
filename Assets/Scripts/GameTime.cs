@@ -10,7 +10,7 @@ public class GameTime : MonoBehaviour
 
     private float minutes;
     private int minutesToDisplay, hoursToDisplay, previoiusHoursToDisplay;
-    private float percentageDayCompleted, maxMinutesInADay = 1440, timeIncrement = 1, nextIncrement, nextRate = 1;
+    private float percentageDayCompleted, maxMinutesInADay = 1440, timeIncrement = 1, nextIncrement, nextRate = 0.5f;
     public TimeData timeData;
 
     // turning this to false, will prevent the clock from brightness in the scene.
@@ -21,6 +21,7 @@ public class GameTime : MonoBehaviour
 
     public TMP_Text hoursText;
     public TMP_Text minutesText;
+    public TMP_Text amPM;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,14 @@ public class GameTime : MonoBehaviour
         {
             minutes = 0;
         }
+        if(minutes >= maxMinutesInADay / 2)
+		{
+            amPM.text = "pm";
+		}
+        else
+		{
+            amPM.text = "am";
+		}
 
         // set minutes in scriptable object
         timeData.currMinutes = minutes;
@@ -71,11 +80,15 @@ public class GameTime : MonoBehaviour
     void SetClock()
     {
         hoursToDisplay = Mathf.FloorToInt(minutes / 60);
-
-        if(hoursToDisplay >= 24)
+        hoursToDisplay = hoursToDisplay % 12;
+        if(hoursToDisplay == 0)
+		{
+            hoursToDisplay = 12;
+		}
+        /*if(hoursToDisplay >= 24)
         {
             hoursToDisplay = 0;
-        }
+        }*/
 
         minutesToDisplay = (int)(minutes % 60);
 
