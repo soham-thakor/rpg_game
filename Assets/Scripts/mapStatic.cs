@@ -5,17 +5,18 @@ using UnityEngine;
 public class mapStatic : MonoBehaviour
 {
 	public class Discoveries {
-		public int diaries;
-		public int interactables;
-		public int dialogues;
+		
+		public List<GameObject> diaries;
+		public List<GameObject> interactables;
+		public List<GameObject> dialogues;
 
 		public string areaName;
 
 		public Discoveries(string name)
 		{
-			diaries = 0;
-			interactables = 0;
-			dialogues = 0;
+			diaries = new List<GameObject>();
+			interactables = new List<GameObject>();
+			dialogues = new List<GameObject>();
 			areaName = name;
 		}
 	}
@@ -31,6 +32,8 @@ public class mapStatic : MonoBehaviour
 		{"Garden Maze", new Discoveries("Hedge Maze") },
 		{"Dungeon Maze", new Discoveries("Deungeon") },
 		{"Halls Bottom", new Discoveries("South Halls") },
+		{"Secret Room", new Discoveries("Secret Room") },
+		{"ThroneBoss", new Discoveries("Throne Room") },
 		{"Large Rooms", new Discoveries("Center Chamber") }
 	};
 

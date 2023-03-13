@@ -37,9 +37,9 @@ public class mapDiscoveries : MonoBehaviour
         Debug.Log("made it");
         mapStatic.Discoveries areaData = mapStatic.mapData[sceneName];
         areaName.text = areaData.areaName;
-        interactablesDiscovered.text = "Interactables: " + areaData.interactables.ToString() + "/" + (getAreaCount("Bookshelf") + getAreaCount("Interactable")).ToString();
-        dialoguesDiscovered.text = "Dialogues: " + areaData.dialogues.ToString() + "/" + getAreaCount("NPC").ToString();
-        diariesDiscovered.text = "Diaries: " + areaData.dialogues.ToString() + "/" + getAreaCount("Diary").ToString();
+        interactablesDiscovered.text = "Interactables: " + areaData.interactables.Count.ToString() + "/" + (getAreaCount("Bookshelf") + getAreaCount("Interactable")).ToString();
+        dialoguesDiscovered.text = "Dialogues: " + areaData.dialogues.Count.ToString() + "/" + getAreaCount("NPC").ToString();
+        diariesDiscovered.text = "Diaries: " + areaData.dialogues.Count.ToString() + "/" + getAreaCount("Diary").ToString();
     }
   
 

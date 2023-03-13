@@ -27,6 +27,10 @@ public class Bookshelf : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F) && inRange)
 		{
+			if(!mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Contains(gameObject))
+			{
+				mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Add(gameObject);
+			}
 			if (staticVariables.secretBookshelf == gameObject)
 			{
 				if (playerSpeech.dialogueBox.activeInHierarchy == false) { 
