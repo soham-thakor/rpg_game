@@ -59,7 +59,13 @@ public class SoundManager : MonoBehaviour
     {
         foreach(SoundAssets.SoundClip soundClip in SoundAssets.i.soundClips)
         {
-            if (soundClip.sound == sound) return soundClip.group;
+            if (soundClip.sound == sound){
+                if(soundClip.group){
+                    return soundClip.group;
+                }
+                Debug.LogError("Sound group for " + sound + " not found!");
+                return null;
+            }
         }
         Debug.LogError("Sound " + sound + " not found!");
         return null;
