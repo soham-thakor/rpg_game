@@ -194,6 +194,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 73.79999
       objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: The monsters have been growing in number as if they thrive on our misery.
+        I wonder if it's just a coincidence.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "Ferrante? He could have done it but I don\u2019t see him putting in
+        that much effort into anything. Charles? He could have done it, he is strong
+        like me. Not that I'm trying to incriminate myself too. "
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
 --- !u!1001 &77897352
@@ -432,7 +443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9000311645712532750, guid: 74d4616e89cfcea4794850fcc9d40875, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 9000311645712532750, guid: 74d4616e89cfcea4794850fcc9d40875, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30791,6 +30802,19 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 73.79999
       objectReference: {fileID: 0}
+    - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Are you going to help clear the monsters, or just sit back and do nothing?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "The Earl is the Earl, there isn\u2019t much else to say about him."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: "Why don\u2019t you ask your questions to Ferrante, I don\u2019t feel
+        like talking."
+      objectReference: {fileID: 0}
     - target: {fileID: 8910373155024940492, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
       propertyPath: endActiveHour
       value: 0
@@ -30876,7 +30900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3330266912261368060, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3330266912261368060, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30933,6 +30957,20 @@ PrefabInstance:
     - target: {fileID: 5009609660410892870, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
       propertyPath: startActiveHour
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547178787279013758, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547178787279013758, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "I heard the Earl recounting a funny story earlier, he mentioned getting
+        lost in the garden looking for something\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547178787279013758, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "The weirdest part is that he said he heard sounds that he couldn\u2019t
+        identify."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
@@ -31297,6 +31335,25 @@ PrefabInstance:
     - target: {fileID: 2507870293521915202, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: endActiveHour
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "I didn\u2019t know the victims any closer than the majority of us,
+        however the fact that this could happen in the castle is baffling."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "Recently people have been saying Sir Edgar is the bomb. I haven\u2019t
+        quite figured out what that means though."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: ' Any talk of the Earl should be done in private, you never know who
+        is listening.'
       objectReference: {fileID: 0}
     - target: {fileID: 5970938843630343552, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: m_Name
@@ -31668,11 +31725,35 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 61509101147801685, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61509101147801685, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1429260862171607116, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1429260862171607116, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918879469071241363, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918879469071241363, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162896769271505780, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162896769271505780, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -31694,7 +31775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283007440131791997, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3283007440131791997, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31765,6 +31846,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6562674031345208486, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658007567475183206, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658007567475183206, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -32084,7 +32173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6064143059431221627, guid: 5e4ab61ebadae2a4ebd6e1c5f3fe7238, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6064143059431221627, guid: 5e4ab61ebadae2a4ebd6e1c5f3fe7238, type: 3}
       propertyPath: m_AnchorMax.x
@@ -32308,6 +32397,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "How can you blame me for referring you to others? I\u2019m no help
+        otherwise and I didn\u2019t do anything so that\u2019s all I can do."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "By the way don\u2019t read too deep into what Edgar says. Sometimes
+        he just says whatever comes to mind."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: The Earl? I can only say that if the Earl can be the Earl without handling
+        his own responsibilities, then maybe other people get by underhandedly as
+        well.
+      objectReference: {fileID: 0}
     - target: {fileID: 3408573909421677460, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: endActiveHour
       value: 0
@@ -40216,7 +40325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8935925590553055086, guid: 5fd6220398d682c49b17c5f0a9f51916, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8935925590553055086, guid: 5fd6220398d682c49b17c5f0a9f51916, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40451,6 +40560,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2280431321357084917, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "Why did the victims have to appear right after we arrived\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280431321357084917, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "We are prime suspects and I\u2019ll be imprisoned for something we
+        didn\u2019t do, this is horrible."
+      objectReference: {fileID: 0}
     - target: {fileID: 5660188877293874856, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
       propertyPath: endActiveHour
       value: 2
@@ -40469,7 +40587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9036839474300159863, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9036839474300159863, guid: 290c13ec5865951469f2b3b8a2dad2b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40524,6 +40642,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: The monsters are past this point, you should be careful once you go
+        through here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: It's crazy how David is adamant on one thing, and the next day lacks
+        any care. Makes me wonder what goes on in his head.
+      objectReference: {fileID: 0}
     - target: {fileID: 2357593804188933325, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: endActiveHour
       value: 8
@@ -40546,7 +40678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141643324470052959, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8141643324470052959, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40763,7 +40895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4169809044384868427, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4169809044384868427, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40804,6 +40936,15 @@ PrefabInstance:
     - target: {fileID: 4169809044384868427, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562543523379218377, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562543523379218377, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: Must you continue to question us? While this is preferable to bothering
+        the ambassador, it remains quite annoying.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d359846a74dcb14f9551cf45f1eec46, type: 3}
@@ -41146,7 +41287,7 @@ PrefabInstance:
       objectReference: {fileID: 1029941751}
     - target: {fileID: 2977266930249518369, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2977266930249518369, guid: 8a3c896d4a860ff49a5a745ed99dde37, type: 3}
       propertyPath: m_LocalPosition.x

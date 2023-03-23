@@ -546,6 +546,24 @@ PrefabInstance:
       propertyPath: endActiveHour
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "I just can't fathom what made the culprit hurt our town to this extent,
+        weren\u2019t they a resident here?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "It makes me wish it wasn\u2019t one of the residents."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: "My partner? Edgar is pretty quiet and reserved so you don\u2019t always
+        know what he's thinking, but ladies do bring him out for some reason."
+      objectReference: {fileID: 0}
     - target: {fileID: 5970938843630343552, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: m_Name
       value: First Knight Benjamin Variant
@@ -867,7 +885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6064143059431221627, guid: 5e4ab61ebadae2a4ebd6e1c5f3fe7238, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6064143059431221627, guid: 5e4ab61ebadae2a4ebd6e1c5f3fe7238, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1200,6 +1218,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "Knights wouldn\u2019t be knights if they killed the very people they
+        should be protecting."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: If one of us did that then our knighthood must be reformed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: "David may have different ideals, but I wouldn\u2019t want any partner
+        other than him."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[3]
+      value: He always finds a way to get us out of tough situations.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[4]
+      value: "The Earl didn\u2019t even properly investigate the murders, and just
+        hired you to do all the work. It\u2019s a disgrace."
+      objectReference: {fileID: 0}
     - target: {fileID: 2357593804188933325, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: startActiveHour
       value: 16
@@ -1518,6 +1563,34 @@ PrefabInstance:
     - target: {fileID: 4882430939918586020, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: endActiveHour
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: 'All I know is that while it could have been anyone, all of us also
+        wish for it not to have been any of us. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: Who knows if personal bias covers the tracks of the culprit.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: Even then, I wouldn't bother Benjamin, I doubt anyone can push him to
+        the point of murder, but beyond that I can't clear him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[3]
+      value: As for the Earl, I'd be stunned if he did such a thing, but at the same
+        time if anyone could get away with it, it would be him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[4]
+      value: It would be more in character for him to just order someone else to
+        and deny his part in it.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
@@ -6155,6 +6228,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: I hope you do your job properly and catch the culprit before anything
+        worse happens. We may have allowed this once, but it is on you if it happens
+        again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "I don\u2019t know how Edgar could have the energy to be the way he
+        is. It seems so exhausting."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: "I don\u2019t think any knights like the Earl, but they are responsible
+        for his safety, it's an awkward relation really. I just stay out of his way
+        and do my job."
+      objectReference: {fileID: 0}
     - target: {fileID: 5414855937555125217, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6518,6 +6612,20 @@ PrefabInstance:
     - target: {fileID: 3704927640078726766, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 73.79999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "and there goes my break as well\u2026did I do something to you?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: "Why don\u2019t you interrogate my partner over there? He is bound to
+        be of more help than me."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: "If the Earl wasn\u2019t in his position nobody would like or tolerate
+        him, how did he even become the Earl with that behavior?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
@@ -10949,7 +11057,7 @@ Transform:
   - {fileID: 1886391679}
   - {fileID: 1678739245}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1959430692
 PrefabInstance:
@@ -11083,6 +11191,33 @@ PrefabInstance:
     - target: {fileID: 1818474272888276266, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 73.79999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[0]
+      value: "It shocks me that besides the murder, we haven\u2019t seen anything
+        out of the ordinary since the incident, other than more monsters."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[1]
+      value: Was this planned?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: " I don\u2019t know anything, for all I know maybe Ferrante got annoyed
+        when they didn't handle stuff he didn\u2019t want to do either."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[3]
+      value: "I wasn\u2019t with the victims so I really don\u2019t know anything.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069604587885663081, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[4]
+      value: "The Earl is odd. For someone so shameless, he really is proud to be
+        the Earl. It's inspiring really\u2026"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
