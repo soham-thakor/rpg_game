@@ -23,6 +23,7 @@ public class staticVariables : MonoBehaviour
     //To know from any script if a dialogue box is open and if so which one
     public static GameObject currentDialogue;
     //To Generate which scene the secret entrance is in
+    public static int? secretBookshelfIndex = null;
     public static GameObject secretBookshelf;
     public static Dictionary<int, string> secretScenes = new Dictionary<int, string>()
     {
