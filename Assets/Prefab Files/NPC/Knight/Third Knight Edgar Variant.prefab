@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172743, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_Name
-      value: Third Knight Edgar
+      value: Third Knight Edgar Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172745, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_RootOrder
@@ -77,3 +77,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+--- !u!1 &2838960520551829409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3783078599294172743, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+  m_PrefabInstance: {fileID: 1433889039699030502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8910373155024940492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2838960520551829409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22ee92c652f1694b9108ed558de6dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startActiveHour: 0
+  startActiveMinutes: 0
+  endActiveHour: 8
+  endActiveMinutes: 0

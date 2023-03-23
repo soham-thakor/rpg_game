@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172743, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_Name
-      value: Third Knight Ferrante
+      value: Third Knight Ferrante Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172745, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_RootOrder
@@ -77,3 +77,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+--- !u!1 &5414855937555125231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3783078599294172743, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+  m_PrefabInstance: {fileID: 9197862510238952872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3408573909421677460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5414855937555125231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22ee92c652f1694b9108ed558de6dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startActiveHour: 0
+  startActiveMinutes: 0
+  endActiveHour: 8
+  endActiveMinutes: 0
