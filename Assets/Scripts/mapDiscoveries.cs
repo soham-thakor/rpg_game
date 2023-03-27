@@ -13,8 +13,19 @@ public class mapDiscoveries : MonoBehaviour
     public TextMeshProUGUI diariesDiscovered;
     public TextMeshProUGUI dialoguesDiscovered;
 
-    // Update is called once per frame
-    void Update()
+    private string interactablesMax;
+    private string dialoguesMax;
+    private string diariesMax;
+
+	private void Awake()
+	{
+        interactablesMax = (getAreaCount("Bookshelf") + getAreaCount("Interactable")).ToString();
+        dialoguesMax = getAreaCount("NPC").ToString();
+        diariesMax = getAreaCount("Diary").ToString();
+
+    }
+	// Update is called once per frame
+	void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -37,9 +48,9 @@ public class mapDiscoveries : MonoBehaviour
         Debug.Log("made it");
         mapStatic.Discoveries areaData = mapStatic.mapData[sceneName];
         areaName.text = areaData.areaName;
-        interactablesDiscovered.text = "Interactables: " + areaData.interactables.Count.ToString() + "/" + (getAreaCount("Bookshelf") + getAreaCount("Interactable")).ToString();
-        dialoguesDiscovered.text = "Dialogues: " + areaData.dialogues.Count.ToString() + "/" + getAreaCount("NPC").ToString();
-        diariesDiscovered.text = "Diaries: " + areaData.dialogues.Count.ToString() + "/" + getAreaCount("Diary").ToString();
+        interactablesDiscovered.text = "Interactables: " + areaData.interactables.Count.ToString() + " of " + interactablesMax;
+        dialoguesDiscovered.text = "Dialogues: " + areaData.dialogues.Count.ToString() + " of " + dialoguesMax;
+        diariesDiscovered.text = "Diaries: " + areaData.diaries.Count.ToString() + " of " + diariesMax;
     }
   
 
