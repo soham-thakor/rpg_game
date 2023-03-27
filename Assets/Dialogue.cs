@@ -11,33 +11,51 @@ public class Dialogue : MonoBehaviour
     public float typingSpeed;
     public TextMeshProUGUI textDisplay;
     public float timeBetweenSentences;
+    [TextArea]
     public string[] sentences;
 
-    private int index;
+    private int index = 0;
+    private IEnumerator typing;
+    private bool currentlyTyping;
 	private void Start()
 	{
-        StartCoroutine(write());
+        typing = Type();
+        StartCoroutine(typing);
 	}
 
-    IEnumerator write()
-	{
-        for(int i = 0; i < sentences.Length; ++i)
-		{
-            textDisplay.text = "";
-            StartCoroutine(Type());
-            yield return new WaitForSeconds(timeBetweenSentences);
-            ++index;
-        }
-        changeScenes();
-    }
 	IEnumerator Type()
     {
+        currentlyTyping = true;
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+        currentlyTyping = false;
     }
+    public void nextSentence()
+	{
+        if(textDisplay.text == sentences[index])
+		{
+            if (index == sentences.Length - 1)
+            {
+                changeScenes();
+            }
+            index += 1;
+            textDisplay.text = "";
+            typing = Type();
+            StartCoroutine(typing);
+		}
+        else
+		{
+
+            if(currentlyTyping)
+			{
+                StopCoroutine(typing);
+			}
+            textDisplay.text = sentences[index];
+		}
+	}
 
     void changeScenes()
 	{
