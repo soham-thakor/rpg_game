@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178000094959285325, guid: d954556f8325b3145b258810308302de, type: 3}
       propertyPath: m_Name
-      value: Honorable Nefertiti
+      value: Honorable Nefertiti Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4041428425178817590, guid: d954556f8325b3145b258810308302de, type: 3}
       propertyPath: m_Text
@@ -73,3 +73,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d954556f8325b3145b258810308302de, type: 3}
+--- !u!1 &4169809044384868421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3178000094959285325, guid: d954556f8325b3145b258810308302de, type: 3}
+  m_PrefabInstance: {fileID: 1568560007164845064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2773683315126786162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169809044384868421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22ee92c652f1694b9108ed558de6dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startActiveHour: 11
+  startActiveMinutes: 0
+  endActiveHour: 17
+  endActiveMinutes: 0

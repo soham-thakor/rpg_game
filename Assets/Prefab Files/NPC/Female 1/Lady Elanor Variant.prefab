@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5405468877707035810, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
       propertyPath: m_Name
-      value: Lady Elanor
+      value: Lady Elanor Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5405468877707035820, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
       propertyPath: m_RootOrder
@@ -81,3 +81,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+--- !u!1 &2750691558629496432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5405468877707035810, guid: 530f837091eb4c94ea232b4f35257875, type: 3}
+  m_PrefabInstance: {fileID: 7865675459918205650}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7567736026584113823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2750691558629496432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22ee92c652f1694b9108ed558de6dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startActiveHour: 8
+  startActiveMinutes: 0
+  endActiveHour: 0
+  endActiveMinutes: 0
