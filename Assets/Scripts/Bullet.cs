@@ -15,7 +15,6 @@ public class Bullet : MonoBehaviour
     private Renderer bulletRenderer;
     private Rigidbody2D rb;
     private Collider2D bulletCollider;
-    private ParticleSystem particles;
 
     // for mouse targetting
     private Vector3 mousePos;
@@ -28,13 +27,10 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        particles = explosion.GetComponent<ParticleSystem>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         bulletRenderer = GetComponent<SpriteRenderer>().GetComponent<Renderer>();
         bulletCollider = GetComponent<Collider2D>();
-
-        particles.Stop();
 
         if(origin == "Player") { SoundManager.PlaySound(SoundManager.Sound.FireBite); }
         
@@ -84,22 +80,22 @@ public class Bullet : MonoBehaviour
 
     private void Explode()
     {
-        particles.Play();
-        rb.velocity = Vector2.zero;
-
+        Instantiate(explosion, transform.position, transform.rotation);
+       
         if(gameObject.name == "Bite(Clone)") 
         {
+            rb.velocity = Vector2.zero;
             animator.SetTrigger("CloseMouth");
-            Destroy(gameObject, .5f + particles.main.duration);
+            Destroy(gameObject, .5f);
         }
         else 
         {
-            Destroy(gameObject, particles.main.duration);
+            Destroy(gameObject);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
         if(other.tag == "Obstacle") 
         {
             Explode();    
@@ -128,8 +124,8 @@ public class Bullet : MonoBehaviour
 
             if(player != null) 
             {
-                Explode();
                 player.TakeDamage(damageDealt);
+                Explode();
             }
         }
     }
