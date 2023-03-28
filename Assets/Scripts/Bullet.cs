@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour
     private Renderer bulletRenderer;
     private Rigidbody2D rb;
     private Collider2D bulletCollider;
+    private ParticleSystem particles;
 
     // for mouse targetting
     private Vector3 mousePos;
@@ -27,10 +28,13 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        particles = explosion.GetComponent<ParticleSystem>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         bulletRenderer = GetComponent<SpriteRenderer>().GetComponent<Renderer>();
         bulletCollider = GetComponent<Collider2D>();
+
+        particles.Stop();
 
         if(origin == "Player") { SoundManager.PlaySound(SoundManager.Sound.FireBite); }
         
@@ -65,28 +69,32 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    void DestroyProjectile(){
+    void DestroyProjectile()
+    {   
+        float delay = 0f;
+
+        if(gameObject.name == "Bite(Clone)")
+        {
+            animator.SetTrigger("CloseMouth");
+            delay = delay + 5f;
+        }
+
+        Destroy(gameObject, delay);
+    }
+
+    private void Explode()
+    {
+        particles.Play();
+        rb.velocity = Vector2.zero;
 
         if(gameObject.name == "Bite(Clone)") 
         {
             animator.SetTrigger("CloseMouth");
-            Destroy(gameObject, .5f);
+            Destroy(gameObject, .5f + particles.main.duration);
         }
-        else {
-            Destroy(gameObject);
-        }
-    }
-
-    private void Explode(string tag)
-    {
-        explosion.SetActive(true);
-        rb.velocity = Vector2.zero;
-
-        if(tag == "Obstacle" || tag == "Player")
+        else 
         {
-            bulletLight.SetActive(false);
-            bulletCollider.isTrigger = false;
-            bulletRenderer.enabled = false;
+            Destroy(gameObject, particles.main.duration);
         }
     }
 
@@ -94,7 +102,7 @@ public class Bullet : MonoBehaviour
 
         if(other.tag == "Obstacle") 
         {
-            Explode(other.tag);    
+            Explode();    
         }
 
         // if player shoots enemy
@@ -105,7 +113,7 @@ public class Bullet : MonoBehaviour
             // if current bullet is a fire bite
             if(gameObject.name == "Bite(Clone)") 
             {    
-                Explode(other.tag);
+                Explode();
                 animator.SetTrigger("CloseMouth");
                 enemy.TakeDamage(damageDealt);
                 
@@ -120,7 +128,7 @@ public class Bullet : MonoBehaviour
 
             if(player != null) 
             {
-                Explode(other.tag);
+                Explode();
                 player.TakeDamage(damageDealt);
             }
         }
