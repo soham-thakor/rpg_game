@@ -46,12 +46,6 @@ public class MenuManager : MonoBehaviour
 		SceneManager.LoadScene(0);
 	}
 
-	
-	public void SetSliderNumberText(float value) {
-		numberText.text = value.ToString();
-	}
-	
-
 	public void PauseGame() {
 		pauseMenu.SetActive(true);
 		Time.timeScale = 0f;
