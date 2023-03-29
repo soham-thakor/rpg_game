@@ -47,7 +47,7 @@ public class NPCStatic : MonoBehaviour
         {6, new NPC("Sir Ferrante", "Lazy", "Shameless", "Brash", "Man") },
         {7, new NPC("Ambassador Dajjal", "Resourceful", "Understanding", "Adaptive", "Man") },
         {8, new NPC("Honorable Cobra", "Intimidating", "Overprotective", "Pessimistic", "Man") },
-        {9, new NPC("Honorable Neferiti", "Serious", "Rude", "Direct", "Man") },
+        {9, new NPC("Honorable Neferiti", "Serious", "Rude", "Direct", "Woman") },
         {10, new NPC("Lady Oliva Armstrong", "Calculative", "Attentive", "Charitable", "Woman") },
         {11, new NPC("Lady Elanor", "Irritable", "Strong-Willed", "Attentive", "Woman") },
         {12, new NPC("Lady Balthazar", "Pretentious", "Reserved", "Carefree", "Woman") },
@@ -279,12 +279,12 @@ public class NPCStatic : MonoBehaviour
     //Dictionary so that scripts can find what clues they should be using
     public static Dictionary<string, ghostClue> clues = new Dictionary<string, ghostClue>()
     {
-        {"Alexandre", ghostClue1 },
-        {"Edgar", ghostClue2 },
-        {"Cobra", ghostClue3 },
-        {"Balthazar", antiClue1 },
-        {"Elanor", antiClue2 },
-        {"Dajjal", antiClue3 },
+        {"Lord Eddard", ghostClue1 },
+        {"Lady Abigail", ghostClue2 },
+        {"Sir Robert", ghostClue3 },
+        {"Lady Madalyn", antiClue1 },
+        {"Lord Elanor", antiClue2 },
+        {"Sir Caine", antiClue3 },
         {"Strange Man", genderClue }
     };
 

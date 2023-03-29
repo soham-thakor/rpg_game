@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3649789632365306830, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+      propertyPath: m_Text
+      value: Lord Alex Louis Armstrong
+      objectReference: {fileID: 0}
     - target: {fileID: 4542905661596670709, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
       value: My muscles are the only light I need to illuminate the faces of all
@@ -62,7 +66,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757458869391127929, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
       propertyPath: m_Name
-      value: Lord Alex Louis Armstrong
+      value: Lord Alex Louis Armstrong Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+--- !u!1 &5835833102385429278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6757458869391127929, guid: a99d2f0b0a7fcd243a4fdde71a8ffcbf, type: 3}
+  m_PrefabInstance: {fileID: 953173517006327399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8692741354914860625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5835833102385429278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22ee92c652f1694b9108ed558de6dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startActiveHour: 8
+  startActiveMinutes: 0
+  endActiveHour: 0
+  endActiveMinutes: 0

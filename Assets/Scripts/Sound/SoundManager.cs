@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -37,38 +38,11 @@ public class SoundManager : MonoBehaviour
 
     public static void PlaySound(Sound sound)
     {
-        if (CanPlaySound(sound))
-        {
-            GameObject soundObj = new GameObject("Sound");
-            AudioSource audioSrc = soundObj.AddComponent<AudioSource>();
-            audioSrc.PlayOneShot(GetAudioClip(sound));
-            Destroy(soundObj, 5f);
-        }
-    }
-
-    private static bool CanPlaySound(Sound sound)
-    {
-        switch(sound)
-        {
-            default:
-                return true;
-            // to prevent footsteps from constantly overlapping (error currently)
-            case Sound.PlayerFootstep:
-                /*if (soundTimers.ContainsKey(sound))
-                {
-                    float lastTimePlayed = soundTimers[sound];
-                    float playerMoveTimerMax = .05f;
-                    if (lastTimePlayed + playerMoveTimerMax < Time.time)
-                    {
-                        soundTimers[sound] = Time.time;
-                        return true;
-                    } else {*/
-                        return false;
-                    /*}
-                } else {
-                    return true;
-                }*/
-        }
+        GameObject soundObj = new GameObject("Sound");
+        AudioSource audioSrc = soundObj.AddComponent<AudioSource>();
+        audioSrc.outputAudioMixerGroup = GetSoundGroup(sound);
+        audioSrc.PlayOneShot(GetAudioClip(sound));
+        Destroy(soundObj, 5f);
     }
 
     private static AudioClip GetAudioClip(Sound sound)
@@ -77,7 +51,22 @@ public class SoundManager : MonoBehaviour
         {
             if (soundClip.sound == sound) return soundClip.audioClip;
         }
-        // Log if error occurs when trying to fetch sound
+        Debug.LogError("Sound " + sound + " not found!");
+        return null;
+    }
+
+    private static AudioMixerGroup GetSoundGroup(Sound sound)
+    {
+        foreach(SoundAssets.SoundClip soundClip in SoundAssets.i.soundClips)
+        {
+            if (soundClip.sound == sound){
+                if(soundClip.group){
+                    return soundClip.group;
+                }
+                Debug.LogError("Sound group for " + sound + " not found!");
+                return null;
+            }
+        }
         Debug.LogError("Sound " + sound + " not found!");
         return null;
     }

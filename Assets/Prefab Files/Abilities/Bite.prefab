@@ -124,6 +124,8 @@ MonoBehaviour:
   bulletSpeed: 1.5
   lifeTime: 12
   damageDealt: 100
+  explosion: {fileID: 1314000295079015243, guid: 8c51837ebb5b4f74d9d2850be82f527b, type: 3}
+  bulletLight: {fileID: 2701534627131522783}
 --- !u!61 &2701534626850244641
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137,7 +139,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006354928, y: -0.026826609}
+  m_Offset: {x: -0.040749066, y: -0.039724424}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -148,7 +150,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.30845863, y: 0.26951346}
+  m_Size: {x: 0.19495799, y: 0.11645958}
   m_EdgeRadius: 0
 --- !u!50 &1947890736458018201
 Rigidbody2D:
@@ -182,7 +184,7 @@ GameObject:
   - component: {fileID: 2701534627131522782}
   - component: {fileID: 2701534627131522781}
   m_Layer: 2
-  m_Name: BiteLight
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,7 +222,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.8
   m_Color: {r: 0.9433962, g: 0.54110646, b: 0, a: 1}
-  m_Intensity: 6
+  m_Intensity: 3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000

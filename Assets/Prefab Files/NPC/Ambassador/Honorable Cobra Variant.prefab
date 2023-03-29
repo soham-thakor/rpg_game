@@ -53,9 +53,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178000094959285325, guid: d954556f8325b3145b258810308302de, type: 3}
       propertyPath: m_Name
-      value: Honorable Cobra
+      value: Honorable Cobra Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4041428425178817590, guid: d954556f8325b3145b258810308302de, type: 3}
+      propertyPath: m_Text
+      value: Honorable Cobra
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862620276936139514, guid: d954556f8325b3145b258810308302de, type: 3}
       propertyPath: m_Text
       value: Honorable Cobra
       objectReference: {fileID: 0}
@@ -74,3 +78,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d954556f8325b3145b258810308302de, type: 3}
+--- !u!1 &9036839474300159865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3178000094959285325, guid: d954556f8325b3145b258810308302de, type: 3}
+  m_PrefabInstance: {fileID: 5869258630701200180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5660188877293874856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9036839474300159865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22ee92c652f1694b9108ed558de6dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startActiveHour: 2
+  startActiveMinutes: 0
+  endActiveHour: 11
+  endActiveMinutes: 0
