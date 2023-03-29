@@ -15,6 +15,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2959439972755400957, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959439972755400957, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 4404104252593525042, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Name
       value: Knight 1
@@ -87,9 +95,17 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.newSize.y
       value: 0.22
       objectReference: {fileID: 0}
+    - target: {fileID: 5439533147660113875, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8798c29994ec3af40966ad9f0e94f180, type: 3}
     - target: {fileID: 5519871537282410800, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 3bf21d1fd7425754ab88b75a61bc405f, type: 2}
+    - target: {fileID: 5944606529658849157, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Text
+      value: New NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}

@@ -2696,10 +2696,22 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.24
       objectReference: {fileID: 0}
+    - target: {fileID: 5439533147660113875, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e7a09084e1f00c040b5a8e9b6932e927, type: 3}
+    - target: {fileID: 5510570422427165739, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5519871537282410800, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ed0ef63402a92f64fa3576c437687c10, type: 2}
+    - target: {fileID: 5944606529658849157, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Text
+      value: Earl Thomas
+      objectReference: {fileID: 0}
     - target: {fileID: 6904705221131615934, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: messages.Array.data[0].message.Array.size
       value: 3

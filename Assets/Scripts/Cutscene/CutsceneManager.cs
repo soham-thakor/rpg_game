@@ -9,7 +9,7 @@ public class CutsceneManager : MonoBehaviour
 {
     public PlayableDirector timeline;
     public AnimationClip runUp;
-    public GameObject playerDialogueBox;
+    public GameObject playerMessage;
     public float typingSpeed;
     public string[] playerDialogue;
 
@@ -20,16 +20,16 @@ public class CutsceneManager : MonoBehaviour
     void Update()
     {
         //Make the player say something every time his dialogue box becomes active
-        if(playerDialogueBox.activeInHierarchy && !previouslyTyping) //if the dialogue box just became active
+        if(playerMessage.activeInHierarchy && !previouslyTyping) //if the dialogue box just became active
 		{
-            StartCoroutine(Type(playerDialogueBox.GetComponent<Text>(), playerDialogue[index]));
+            StartCoroutine(Type(playerMessage.GetComponent<Text>(), playerDialogue[index]));
             index += 1;
             previouslyTyping = true;
 		}
-        else if(!playerDialogueBox.activeInHierarchy && previouslyTyping) // if the dialogue box just went inactive
+        else if(!playerMessage.activeInHierarchy && previouslyTyping) // if the dialogue box just went inactive
 		{
             previouslyTyping = false;
-            playerDialogueBox.GetComponent<Text>().text = "";
+            playerMessage.GetComponent<Text>().text = "";
 		}
 
     }

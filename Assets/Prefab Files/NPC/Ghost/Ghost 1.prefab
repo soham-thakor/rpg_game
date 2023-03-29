@@ -91,10 +91,18 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.32
       objectReference: {fileID: 0}
+    - target: {fileID: 5439533147660113875, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2f71aaef3bae3524faf636646270482e, type: 3}
     - target: {fileID: 5519871537282410800, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4d4de192a36eda541a1e520068d9d09f, type: 2}
+    - target: {fileID: 5944606529658849157, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
+      propertyPath: m_Text
+      value: Ghost
+      objectReference: {fileID: 0}
     - target: {fileID: 6252390334083722024, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Color.b
       value: 0.029119253
