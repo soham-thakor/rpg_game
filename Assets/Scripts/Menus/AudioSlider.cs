@@ -15,6 +15,13 @@ public class AudioSlider : MonoBehaviour
 
 	void Start()
 	{
+		// keeps sound levels persistent between scenes
+		float existingSoundLevel;
+		if (staticVariables.soundLevels.TryGetValue(gameObject.name, out existingSoundLevel))
+		{ 
+			startValue = existingSoundLevel; 
+		}
+
 		SetSliderNumberText(startValue);
 		SetVolume(startValue);
 	}
@@ -27,6 +34,7 @@ public class AudioSlider : MonoBehaviour
 
 	public void SetVolume(float value)
 	{
+		staticVariables.soundLevels[gameObject.name] = value;
 		mixer.SetFloat(volumeName, Mathf.Log10(value) * 20);
 	}
 }

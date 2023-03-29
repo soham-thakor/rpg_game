@@ -25,6 +25,9 @@ public class staticVariables : MonoBehaviour
     //To Generate which scene the secret entrance is in
     public static int? secretBookshelfIndex = null;
     public static GameObject secretBookshelf;
+
+    public static Dictionary<string, float> soundLevels = new Dictionary<string, float>();
+
     public static Dictionary<int, string> secretScenes = new Dictionary<int, string>()
     {
         {0, "Halls Left" },
