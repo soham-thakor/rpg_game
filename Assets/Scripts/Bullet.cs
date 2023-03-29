@@ -7,11 +7,14 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed;
     public float lifeTime;
     public float damageDealt;
+    public GameObject explosion;
+    public GameObject bulletLight;
 
     private string origin = "";
     private Animator animator;
-    private SpriteRenderer spriteRenderer;
+    private Renderer bulletRenderer;
     private Rigidbody2D rb;
+    private Collider2D bulletCollider;
 
     // for mouse targetting
     private Vector3 mousePos;
@@ -26,13 +29,14 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        bulletRenderer = GetComponent<SpriteRenderer>().GetComponent<Renderer>();
+        bulletCollider = GetComponent<Collider2D>();
 
         if(origin == "Player") { SoundManager.PlaySound(SoundManager.Sound.FireBite); }
         
         // checks if current object is a clone
         if(gameObject.name.Contains("Clone")) {
-            Invoke("DestroyProjectile",lifeTime);   // deletes self whenever lifetime is reached
+            Invoke("DestroyProjectile", lifeTime);   // deletes self whenever lifetime is reached
         } 
 
 
@@ -54,38 +58,47 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {   
-        // if enemy is firing bullet, run this
         if(origin == "Enemy") {
             transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
-
-            // destroy object when it hits wall
-            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, 1, 8);
-            if(hitInfo) {
-                if(hitInfo.collider.tag == "Obstacle") {
-                    Destroy(gameObject);
-                }
-            }
         }
     }
 
-    void DestroyProjectile(){
+    void DestroyProjectile()
+    {   
+        float delay = 0f;
 
-        if(gameObject.name == "Bite(Clone)") {
+        if(gameObject.name == "Bite(Clone)")
+        {
+            animator.SetTrigger("CloseMouth");
+            delay = delay + 5f;
+        }
+
+        Destroy(gameObject, delay);
+    }
+
+    private void Explode()
+    {
+        Instantiate(explosion, transform.position, transform.rotation);
+       
+        if(gameObject.name == "Bite(Clone)") 
+        {
+            rb.velocity = Vector2.zero;
             animator.SetTrigger("CloseMouth");
             Destroy(gameObject, .5f);
         }
-        else {
+        else 
+        {
             Destroy(gameObject);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-
-        if(other.tag == "Obstacle" && other.name != "Player") {
-            Destroy(gameObject);
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.tag == "Obstacle") 
+        {
+            Explode();    
         }
 
         // if player shoots enemy
@@ -94,22 +107,26 @@ public class Bullet : MonoBehaviour
             Enemy enemy = other.GetComponent<Enemy>();
            
             // if current bullet is a fire bite
-            if(gameObject.name == "Bite(Clone)") {
-                enemy.TakeDamage(damageDealt);
+            if(gameObject.name == "Bite(Clone)") 
+            {    
+                Explode();
                 animator.SetTrigger("CloseMouth");
-                rb.velocity = Vector2.zero; // stop bullet from moving
+                enemy.TakeDamage(damageDealt);
+                
                 Destroy(gameObject, .8f);
             }
         }
 
         // if enemy bullet hits player
-        if(other.tag == "Player" && origin == "Enemy") {
+        if(other.tag == "Player" && origin == "Enemy") 
+        {
             PlayerController player = other.GetComponent<PlayerController>();
 
-            if(player != null) {
+            if(player != null) 
+            {
                 player.TakeDamage(damageDealt);
+                Explode();
             }
-            Destroy(gameObject);
         }
     }
 }
