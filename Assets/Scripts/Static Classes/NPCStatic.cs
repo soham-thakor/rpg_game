@@ -108,6 +108,8 @@ public class NPCStatic : MonoBehaviour
     public static Clue sirEdgarDiary = generateDiary("Sir Edgar");
     public static Clue sirDavidDiary = generateDiary("Sir David");
     public static Clue ladyElanorDiary = generateDiary("Lady Elanor");
+    public static Clue sirFerranteDiary = generateDiary("Sir Ferrante");
+    public static Clue sirCharlesDiary = generateDiary("Sir Charles");
     public static Clue generateDiary(string characterName)
 	{
         List<string> diary = new List<string>();
@@ -150,6 +152,8 @@ public class NPCStatic : MonoBehaviour
         sirEdgarDiary = generateDiary("Sir Edgar");
         sirDavidDiary = generateDiary("Sir David");
         ladyElanorDiary = generateDiary("Lady Elanor");
+        sirFerranteDiary = generateDiary("Sir Ferrante");
+        sirCharlesDiary = generateDiary("Sir Charles");
 	}
     public static Dictionary<string, Clue> diaryDict = new Dictionary<string, Clue>()
     {
@@ -159,7 +163,9 @@ public class NPCStatic : MonoBehaviour
         {"Sir Edgar", sirEdgarDiary },
         {"Honorable Cobra", honorableCobraDiary },
         {"Sir David", sirDavidDiary },
-        {"Lady Elanor", ladyElanorDiary }
+        {"Lady Elanor", ladyElanorDiary },
+        {"Sir Ferrante", sirFerranteDiary },
+        {"Sir Charles", sirCharlesDiary }
 	};
 
     //START: Generation of ghost clues of the structure "The culprit IS..."
