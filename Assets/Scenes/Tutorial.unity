@@ -12013,6 +12013,105 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &274820901
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1682402130}
+    m_Modifications:
+    - target: {fileID: 8566802007861709337, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 19.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709337, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 13.466
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709337, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709337, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.067
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_text
+      value: The Castle is quite large, you can access a map of it at any time by
+        pressing 'M'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770693, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_Name
+      value: Map hint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04507248
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.051830065
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.182
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.073
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.062035654
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+--- !u!4 &274820902 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+  m_PrefabInstance: {fileID: 274820901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &282433479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2028284937540347138, guid: 159bfa7b1cb655a4f919f755d731168b, type: 3}
@@ -25110,6 +25209,7 @@ Transform:
   - {fileID: 893770949}
   - {fileID: 1763873540}
   - {fileID: 549084267}
+  - {fileID: 274820902}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25208,12 +25308,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_text
-      value: You have 3 truth serums to accuse potential culprits, refer to top left
-        of UI
+      value: You have 3 truth serums to accuse potential culprits. They are beneath
+        your health bar
       objectReference: {fileID: 0}
     - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_fontSize
-      value: 18.5
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_enableAutoSizing
