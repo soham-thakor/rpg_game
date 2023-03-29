@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BookInteraction : MonoBehaviour
 {
@@ -21,7 +22,10 @@ public class BookInteraction : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
-            if(messageIndex >= openMessages.Count - 3)
+            trackDialogueDiscovery();
+
+
+            if (messageIndex >= openMessages.Count - 3)
 			{//if we are reading one of the clues
                 int clueIndex = messageIndex - (openMessages.Count - 3);
                 NPCStatic.discoverClue(NPCStatic.diaryDict[diaryOwner].clueIDs[clueIndex]);
@@ -51,6 +55,26 @@ public class BookInteraction : MonoBehaviour
 			}
             
         }
+    }
+
+    void trackDialogueDiscovery()
+	{
+        if(gameObject.CompareTag("NPC"))
+		{
+            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Contains(gameObject))
+            {
+                mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Add(gameObject);
+            }
+        }
+        else if(gameObject.CompareTag("Diary")) {
+            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].diaries.Contains(gameObject))
+            {
+                mapStatic.mapData[SceneManager.GetActiveScene().name].diaries.Add(gameObject);
+            }
+        }
+        return;
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

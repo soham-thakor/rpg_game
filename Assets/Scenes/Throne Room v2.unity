@@ -11160,6 +11160,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5937264685467415940, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937264685467415940, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6562674031345208486, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -22182,6 +22190,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 73.79999
       objectReference: {fileID: 0}
+    - target: {fileID: 5009609660410892870, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
+      propertyPath: endActiveHour
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009609660410892870, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
+      propertyPath: startActiveHour
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 5547178787279013758, guid: 132a09e8da631cb4e89dbf499ba39712, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
       value: Greetings Detective, a real misfortunate event that occurred here.
@@ -22218,11 +22234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3627341182692321601, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.3070538
+      value: -0.958
       objectReference: {fileID: 0}
     - target: {fileID: 3627341182692321601, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0427401
+      value: 1.689
       objectReference: {fileID: 0}
     - target: {fileID: 3627341182692321601, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22260,25 +22276,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: First Knight Alexandre
       objectReference: {fileID: 0}
+    - target: {fileID: 4882430939918586020, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
+      propertyPath: startActiveHour
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: messages.Array.data[0].message.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: "Ah! So the, *ahem* \u201Cdetective\u201D, has come to see me."
+      value: "I didn\u2019t expect to be questioned honestly, are you suspecting
+        the knights of this? That\u2019s disturbing."
       objectReference: {fileID: 0}
     - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: Just do your job and make sure the culprit is found.
+      value: Are you purposefully interrogating me in front of the Earl?
       objectReference: {fileID: 0}
     - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[2]
-      value: "We have searched to no avail so don\u2019t waste our time and money."
+      value: "Benjamin wouldn\u2019t allow that, nor will I."
       objectReference: {fileID: 0}
     - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[3]
-      value: "Though if you do fail, I guess we don\u2019t look as incompetent."
+      value: Talk to me later in the gardens or barracks when I have gathered my
+        thoughts.
       objectReference: {fileID: 0}
     - target: {fileID: 5807974724399990467, guid: 24e8f1bbffa6e4f438b3e5910fd7c1c5, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[4]
@@ -22306,6 +22328,10 @@ PrefabInstance:
       propertyPath: messages.Array.data[0].message.Array.data[2]
       value: Just make sure you actually deliver results. Ill be in the throne room
         if you have to bother me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784889050575081079, guid: db9ac9eeedc9c2d479a13cb7da909965, type: 3}
+      propertyPath: endActiveHour
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 4986937498607748106, guid: db9ac9eeedc9c2d479a13cb7da909965, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -22446,6 +22472,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lord Alex Louis Armstrong
       objectReference: {fileID: 0}
+    - target: {fileID: 8692741354914860625, guid: 144513ee591f2324da11009fa7da8858, type: 3}
+      propertyPath: endActiveHour
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692741354914860625, guid: 144513ee591f2324da11009fa7da8858, type: 3}
+      propertyPath: startActiveHour
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692741354914860625, guid: 144513ee591f2324da11009fa7da8858, type: 3}
+      propertyPath: endActiveMinutes
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 144513ee591f2324da11009fa7da8858, type: 3}
 --- !u!1001 &1433889039864976389
@@ -22465,11 +22503,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2838960520551829423, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2975373
+      value: -1.042
       objectReference: {fileID: 0}
     - target: {fileID: 2838960520551829423, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1625777
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 2838960520551829423, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22517,12 +22555,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: Greeting detective, not much to say but ill be here in the throne room,
-        the garden, or the barracks.
+      value: Why am I being questioned here, you are suspecting knights?
       objectReference: {fileID: 0}
     - target: {fileID: 5020095379724820525, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: Welcome!
+      value: Talk to me later in private.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05319f846c03bd94598e0250ba4b3cac, type: 3}
@@ -22607,6 +22644,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 2067321156349291969, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
+      propertyPath: endActiveHour
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067321156349291969, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
+      propertyPath: startActiveHour
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2135817146031707511, guid: 0c61a06c8c0777b48a0aefc5d6a66ed2, type: 3}
       propertyPath: messages.Array.data[0].message.Array.size
       value: 3
@@ -22781,11 +22826,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950271843686939883, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0025511682
+      value: -1.04
       objectReference: {fileID: 0}
     - target: {fileID: 950271843686939883, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.43732244
+      value: -1.748
       objectReference: {fileID: 0}
     - target: {fileID: 950271843686939883, guid: fc658504a815eda4fb3bbaa3cf8b2474, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22928,21 +22973,25 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: messages.Array.data[0].message.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: Hello Detective. Glad to have someone who may be able to help solve
-        these incidents.
+      value: Our job is simply to protect the residents, granted this still happened
+        under our watch.
       objectReference: {fileID: 0}
     - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: "If you need me I\u2019ll be the throne room, the garden, or the barracks,
-        like the knights."
+      value: "That\u2019s about all I really have to say, come back later if you
+        need anything else."
       objectReference: {fileID: 0}
     - target: {fileID: 1310574827341195229, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[2]
       value: We may as well perish with the others...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357593804188933325, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
+      propertyPath: endActiveHour
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7273422206053740958, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -22962,11 +23011,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141643324470052959, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.3029385
+      value: -0.296
       objectReference: {fileID: 0}
     - target: {fileID: 8141643324470052959, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4414523
+      value: 1.697
       objectReference: {fileID: 0}
     - target: {fileID: 8141643324470052959, guid: fb8319b298f6b084b85c653c0cc8ac54, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23166,22 +23215,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 640846854}
     m_Modifications:
+    - target: {fileID: 2507870293521915202, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: startActiveHour
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: "Detective! I\u2019m a bit busy right now checking on the residents
-        but if you need me I\u2019ll be in the throne room, the garden, or the barracks."
+      value: The knights surely are responsible for this predicament. We failed to
+        protect the victims, and that is inexcusable.
       objectReference: {fileID: 0}
     - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: Good luck investigating!
+      value: Suspecting a knight however is pushing it a bit far, granted we could
+        have been betrayed as well.
       objectReference: {fileID: 0}
-    - target: {fileID: 5103007995900046415, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.3408203
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[2]
+      value: whole situation is just tragic!
       objectReference: {fileID: 0}
-    - target: {fileID: 5103007995900046415, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 73.79999
+    - target: {fileID: 3463827305705601548, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
+      propertyPath: messages.Array.data[0].message.Array.data[3]
+      value: "It\u2019s no wonder Alexandre is on edge, he never could have planned
+        for this scenario."
       objectReference: {fileID: 0}
     - target: {fileID: 5970938843630343552, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: m_Name
@@ -23193,11 +23252,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5970938843630343566, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01080209
+      value: -0.269
       objectReference: {fileID: 0}
     - target: {fileID: 5970938843630343566, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0344908
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 5970938843630343566, guid: ed8aab608f4629b49847e0425144ded3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23315,6 +23374,22 @@ PrefabInstance:
       value: Do let me know if you need anything from me, ill be here most days,
         apart from when I head to the quarters to rest.
       objectReference: {fileID: 0}
+    - target: {fileID: 7567736026584113823, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
+      propertyPath: endActiveHour
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567736026584113823, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
+      propertyPath: startActiveHour
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567736026584113823, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
+      propertyPath: endActiveMinutes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567736026584113823, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
+      propertyPath: startActiveMinutes
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aec679ee43cd4042b5ec0b504f50abe, type: 3}
 --- !u!1001 &9197862509349733570
@@ -23330,17 +23405,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: "Detective, you may not believe it but I\u2019m convinced it was Charles."
+      value: You do realize questioning us here harms our reputation, right?
       objectReference: {fileID: 0}
     - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: He may be a knight, but he does seem like the type to feel nothing after
-        harming another.
+      value: David might be able to give you new insight if that is what you are
+        faster.
       objectReference: {fileID: 0}
     - target: {fileID: 3020115870373985379, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[2]
-      value: "Don\u2019t share your source though, I don\u2019t want people thinking
-        I\u2019m a rat."
+      value: "I don\u2019t feel like talking excessively while I\u2019m guarding
+        the Earl. Find me later at the garden or barracks if it\u2019s really important."
       objectReference: {fileID: 0}
     - target: {fileID: 5414855937555125217, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: m_RootOrder
@@ -23348,11 +23423,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414855937555125217, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0015671849
+      value: -0.287
       objectReference: {fileID: 0}
     - target: {fileID: 5414855937555125217, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.16395809
+      value: 2.431
       objectReference: {fileID: 0}
     - target: {fileID: 5414855937555125217, guid: 8792c62690a98a14781a2d131215cfaa, type: 3}
       propertyPath: m_LocalPosition.z

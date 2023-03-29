@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ghost : MonoBehaviour
 {
@@ -26,6 +27,11 @@ public class Ghost : MonoBehaviour
 
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
+            //discover this dialogue
+            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Contains(gameObject))
+            {
+                mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Add(gameObject);
+            }
             if (ghostClue.traitNum != -1)
             {//if this is a clue about one of the traits of the culprit
                 NPCStatic.discoverCulpritClue(ghostClue.traitNum);

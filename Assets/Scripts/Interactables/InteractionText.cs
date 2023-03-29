@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InteractionText : MonoBehaviour
 {
@@ -20,7 +21,12 @@ public class InteractionText : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.F))
 		{
-                playerSpeech.Speak(message);
+            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Contains(gameObject))
+            {
+                mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Add(gameObject);
+            }
+
+            playerSpeech.Speak(message);
 		}
     }
 

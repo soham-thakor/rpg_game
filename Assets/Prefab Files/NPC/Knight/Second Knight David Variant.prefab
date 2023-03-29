@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172743, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_Name
-      value: Second Knight David
+      value: Second Knight David Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172745, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_RootOrder
@@ -75,5 +75,30 @@ PrefabInstance:
       propertyPath: messages.Array.data[0].message.Array.data[1]
       value: Some of my fellow knights don't share the same enthusiasm as me.
       objectReference: {fileID: 0}
+    - target: {fileID: 6620793577064163568, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+      propertyPath: m_Text
+      value: Second Knight David
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+--- !u!1 &950271843686939877 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3783078599294172743, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+  m_PrefabInstance: {fileID: 4156887070747148962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1676208122983587901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950271843686939877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22ee92c652f1694b9108ed558de6dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startActiveHour: 8
+  startActiveMinutes: 0
+  endActiveHour: 16
+  endActiveMinutes: 0

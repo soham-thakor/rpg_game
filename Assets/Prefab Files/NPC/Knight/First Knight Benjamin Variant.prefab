@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2345458907821705096, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3408203
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345458907821705096, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 2345458908753571388, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_Text
       value: First Knight Benjamin
@@ -17,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172743, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_Name
-      value: First Knight Benjamin
+      value: First Knight Benjamin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172745, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_RootOrder
@@ -25,11 +33,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172745, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01080209
+      value: -0.269
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172745, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0344908
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 3783078599294172745, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -69,11 +77,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6218561078423835083, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: 'Welcome! '
+      value: "Detective! I\u2019m a bit busy right now checking on the residents
+        but if you need me I\u2019ll be in the throne room, the garden, or the barracks."
       objectReference: {fileID: 0}
     - target: {fileID: 6218561078423835083, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: Let's use each other's strengths to uncover this creature!
+      value: Good luck investigating!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620793577064163568, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+      propertyPath: m_Text
+      value: First Knight Benjamin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+--- !u!1 &5970938843630343552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3783078599294172743, guid: 5536de73ea181b344b95d2ec8171d36d, type: 3}
+  m_PrefabInstance: {fileID: 7376114228197108679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2507870293521915202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5970938843630343552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22ee92c652f1694b9108ed558de6dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startActiveHour: 8
+  startActiveMinutes: 0
+  endActiveHour: 0
+  endActiveMinutes: 0

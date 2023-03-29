@@ -24,7 +24,7 @@ public class GameTime : MonoBehaviour
     public TMP_Text amPM;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // read time from scriptable object
         minutes = timeData.currMinutes;

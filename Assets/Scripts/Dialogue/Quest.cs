@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Quest : MonoBehaviour
 {
@@ -56,10 +57,14 @@ public class Quest : MonoBehaviour
 		}
 
         // dialogue interactions system - when key F is pressed AND in range AND this NPC is the one closest to the player AND we arent already talking to someone else
-        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && !staticVariables.immobile){            
+        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && !staticVariables.immobile){
             // if its a regular NPC and they have a clue to give you
             // then they will spawn a ghost after interacting with them
-            if(staticVariables.currentDialogue != gameObject && staticVariables.currentDialogue != null)
+            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Contains(gameObject))
+            { // try and discover this dialogue
+                mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Add(gameObject);
+            }
+            if (staticVariables.currentDialogue != gameObject && staticVariables.currentDialogue != null)
 			{
                 staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
 			}

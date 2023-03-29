@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoomKey : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class RoomKey : MonoBehaviour
     {
         if(inRange && Input.GetKeyDown(KeyCode.F))
 		{
+			if (!mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Contains(gameObject))
+			{
+				mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Add(gameObject);
+			}
+
 			SoundManager.PlaySound(SoundManager.Sound.PickupKey);
 			gameObject.SetActive(false);
 			staticVariables.aquiredRoomKey = true;

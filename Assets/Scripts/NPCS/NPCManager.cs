@@ -63,7 +63,7 @@ public class NPCManager : MonoBehaviour
 
 
         NPCName.text = staticVariables.lastGuess;
-        NPCPortrait.sprite = activeNPC.transform.Find("Canvas/DialogueBox/Portrait").GetComponent<Image>().sprite;
+        NPCPortrait.sprite = activeNPC.transform.Find("DialogueBox/DialogueBox/Portrait").GetComponent<Image>().sprite;
     }
 
     // Update is called once per frame
