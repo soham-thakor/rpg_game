@@ -24,6 +24,7 @@ public class Quest : MonoBehaviour
     private SelectionMenu selectionBox;
     private bool currentlyTyping = false;
     private IEnumerator typing;
+    private discoveryTracker mapTracker;
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class Quest : MonoBehaviour
         }
         dialogBox.SetActive(false);
         npcPortrait.SetActive(false);
+        mapTracker = GameObject.FindGameObjectWithTag("Discovery Tracker").GetComponent<discoveryTracker>();
 
     }
 
@@ -60,10 +62,7 @@ public class Quest : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && !staticVariables.immobile){
             // if its a regular NPC and they have a clue to give you
             // then they will spawn a ghost after interacting with them
-            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Contains(gameObject))
-            { // try and discover this dialogue
-                mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Add(gameObject);
-            }
+            mapTracker.track("Dialogue", gameObject);
             if (staticVariables.currentDialogue != gameObject && staticVariables.currentDialogue != null)
 			{
                 staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
