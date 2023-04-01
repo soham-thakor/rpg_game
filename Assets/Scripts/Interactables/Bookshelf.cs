@@ -56,8 +56,11 @@ public class Bookshelf : MonoBehaviour
 	}
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-        inRange = false;
-		playerSpeech.closeDialogue();
+		if(collision.CompareTag("Player"))
+		{
+			inRange = false;
+			playerSpeech.closeDialogue();
+		}
 	}
 
 
