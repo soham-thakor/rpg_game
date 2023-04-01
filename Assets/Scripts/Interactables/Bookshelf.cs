@@ -52,7 +52,10 @@ public class Bookshelf : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-        inRange = true;
+		if(collision.CompareTag("Player"))
+		{
+			inRange = true;
+		}
 	}
 	private void OnTriggerExit2D(Collider2D collision)
 	{
