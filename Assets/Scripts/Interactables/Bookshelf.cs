@@ -12,6 +12,7 @@ public class Bookshelf : MonoBehaviour
 
     private bool inRange = false;
 	private PlayerSpeech playerSpeech;
+	private discoveryTracker mapTracker;
 
 
 	private void Start()
@@ -21,16 +22,15 @@ public class Bookshelf : MonoBehaviour
 			disableBookshelf();
 		}
 		playerSpeech = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSpeech>();
+		mapTracker = GameObject.FindGameObjectWithTag("Discovery Tracker").GetComponent<discoveryTracker>();
+
 	}
 	// Update is called once per frame
 	void Update()
     {
         if(Input.GetKeyDown(KeyCode.F) && inRange)
 		{
-			if(!mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Contains(gameObject))
-			{
-				mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Add(gameObject);
-			}
+			mapTracker.track("Interactable", gameObject);
 			if (staticVariables.secretBookshelf == gameObject)
 			{
 				if (playerSpeech.dialogueBox.activeInHierarchy == false) { 

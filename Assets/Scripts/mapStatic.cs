@@ -6,18 +6,18 @@ public class mapStatic : MonoBehaviour
 {
 	public class Discoveries {
 		
-		public List<GameObject> diaries;
-		public List<GameObject> interactables;
-		public List<GameObject> dialogues;
+		public List<int> diaries;
+		public List<int> interactables;
+		public List<int> dialogues;
 
 		public string areaName;
 
 		public Vector2 iconLocation;
 		public Discoveries(string name, Vector2 iconLoc)
 		{
-			diaries = new List<GameObject>();
-			interactables = new List<GameObject>();
-			dialogues = new List<GameObject>();
+			diaries = new List<int>();
+			interactables = new List<int>();
+			dialogues = new List<int>();
 			areaName = name;
 			iconLocation = iconLoc;
 		}
