@@ -453,8 +453,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44529f141c501884abbd5fbb625fe577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 5
-  attackInterval: 1
+  attackDamage: 20
+  initialAttackInterval: 0.18
+  subsequentAttackInterval: 0.8
   animator: {fileID: 898669765441829097}
 --- !u!58 &6151987261584102249
 CircleCollider2D:
