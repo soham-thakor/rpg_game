@@ -66,8 +66,10 @@ public class PlayerController : MonoBehaviour
         flashEffect = GetComponent<SimpleFlash>();
         
         // move player in scene if necessary
-        if(playerData.movedScene){
+        if(playerData.movedScene)
+        {
             transform.position = playerData.initialValue;
+            playerData.movedScene = false;
         }
     }
 
@@ -79,6 +81,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() 
     {
+        if(Input.GetKeyDown(KeyCode.LeftShift)) {
+            Debug.Log("Culprit is: " + staticVariables.realVillain);
+        }
+
         if (canMove && !staticVariables.immobile) 
         {
             // If movement input is not 0, try to move            
