@@ -117,7 +117,7 @@ public class Enemy : MonoBehaviour
                 SoundManager.PlaySound(SoundManager.Sound.KnightDamaged);
             }
         }
-        if(currentHealth <= 800 && isBoss)
+        if(currentHealth <= maxHealth/2 && isBoss)
         {
             GetComponent<Animator>().SetBool("IsEnraged", true);
         }

@@ -688,8 +688,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44529f141c501884abbd5fbb625fe577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 25
-  attackInterval: 1
+  attackDamage: 50
+  initialAttackInterval: 0.18
+  subsequentAttackInterval: 1
   animator: {fileID: 5940368533430915155}
 --- !u!1 &5584992189321486663
 GameObject:
