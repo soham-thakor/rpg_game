@@ -47,18 +47,6 @@ AnimationClip:
       value: {fileID: 365242000, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
     - time: 0.8125
       value: {fileID: -526398744, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - time: 0.875
-      value: {fileID: 1320353710, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - time: 0.9375
-      value: {fileID: 1975484970, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - time: 1
-      value: {fileID: -366856609, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - time: 1.0625
-      value: {fileID: -1638376014, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - time: 1.125
-      value: {fileID: 340430755, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - time: 1.1875
-      value: {fileID: -758163639, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -92,18 +80,12 @@ AnimationClip:
     - {fileID: -1712223032, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
     - {fileID: 365242000, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
     - {fileID: -526398744, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - {fileID: 1320353710, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - {fileID: 1975484970, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - {fileID: -366856609, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - {fileID: -1638376014, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - {fileID: 340430755, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
-    - {fileID: -758163639, guid: 7fefd98331a2dde4ab347c53cde015c5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.25
+    m_StopTime: 0.875
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -122,4 +104,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.8125
+    functionName: PrepareExplosion
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
