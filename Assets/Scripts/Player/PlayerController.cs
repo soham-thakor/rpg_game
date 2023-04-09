@@ -82,7 +82,17 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() 
     {
         if(Input.GetKeyDown(KeyCode.LeftShift)) {
+            string test = "";
             Debug.Log("Culprit is: " + staticVariables.realVillain);
+            if(NPCStatic.traitCluesGiven.Contains(new Tuple<int, int>(16, 2)) || NPCStatic.traitCluesGiven.Contains(new Tuple<int, int>(16, 1)) || NPCStatic.traitCluesGiven.Contains(new Tuple<int, int>(16, 3)))
+			{
+                test = "Court mage has a trait clue";
+			}
+            else
+			{
+                test = "Court made doesnt have a trait clue";
+			}
+            Debug.Log(test);
         }
 
         if (canMove && !staticVariables.immobile) 
