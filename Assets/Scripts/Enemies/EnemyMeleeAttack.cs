@@ -57,8 +57,6 @@ public class EnemyMeleeAttack : MonoBehaviour
 
 	private bool TryDamage()
 	{
-		string debug = pastInRange.ToString() + "|" + Time.time.ToString() + "|" + nextAttackTime.ToString();
-		Debug.Log(debug);
 		return pastInRange && Time.time >= nextAttackTime;
 	}
 }

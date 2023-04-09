@@ -37,7 +37,9 @@ public class AbilitySlot : MonoBehaviour
         }
     }
 
-    private void StartCooldown() {
+    private void StartCooldown() 
+    {
+        Debug.Log("Starting cooldown for " + abilityName);
         staticVariables.changeTimeLeft(abilityName, cooldownTime);
         timeLeft = cooldownTime;
         inCooldown = true;
