@@ -54,12 +54,12 @@ public class RockHammer : MonoBehaviour
 
         if(spriteRenderer.flipX)
         {
-            transform.position = new Vector2(transform.position.x - .3f, transform.position.y);
+            transform.position = new Vector2(transform.position.x - .5f, transform.position.y - .1f);
             Debug.Log("Moving rock hammer left");
         }
         else
         {
-            transform.position = new Vector2(transform.position.x + .3f, transform.position.y);
+            transform.position = new Vector2(transform.position.x + .5f, transform.position.y - .1f);
             Debug.Log("Moving rock hammer right");
         }
     }
