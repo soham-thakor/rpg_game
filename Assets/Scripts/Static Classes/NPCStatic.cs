@@ -53,7 +53,8 @@ public class NPCStatic : MonoBehaviour
         {12, new NPC("Lady Balthazar", "Pretentious", "Reserved", "Carefree", "Woman") },
         {13, new NPC("Lord Alex Louis Armstrong", "Ruthless", "Greedy", "Loyal", "Man") },
         {14, new NPC("Lord Balthazar", "Reserved", "Dogmatic", "Prideful", "Man") },
-        {15, new NPC("Lord Andre", "Lackadaisical", "Rude", "Prideful", "Man") }
+        {15, new NPC("Lord Andre", "Lackadaisical", "Rude", "Prideful", "Man") },
+        {16, new NPC("Court Mage Melanie", "Reserved", "Calculative", "Greedy", "Woman") }
     };
 
     public static string getTrait(int npcKey, int trait)

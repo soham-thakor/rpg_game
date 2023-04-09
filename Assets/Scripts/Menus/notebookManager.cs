@@ -51,6 +51,10 @@ public class notebookManager : MonoBehaviour
 		{
             pagePortrait.sprite = portraits[4];
 		}
+        else if(name.Contains("Court Mage"))
+		{
+            pagePortrait.sprite = portraits[6];
+		}
 		else
 		{
             pagePortrait.sprite = portraits[5];
