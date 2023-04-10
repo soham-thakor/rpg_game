@@ -57,8 +57,6 @@ public class ActiveTime : MonoBehaviour
 		string debug = startActiveTime.ToString() + "/" + mins.ToString() + "/" + endActiveTime.ToString() + "-" + gameObject.name;
 
 		Debug.Log(debug);
-        //Debug.Log(endActiveTime);
-        //Debug.Log(mins);
         //I know these if statments arent great, but they should be simple to understand
         if(startActiveTime < endActiveTime)
 		{// Kind of a crude way to do this, but this is to make sure the below statement only happens if the times selected dont reset to zero at noon somewhere inebtween 

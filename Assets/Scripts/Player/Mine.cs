@@ -64,6 +64,23 @@ public class Mine : MonoBehaviour
 
     public void DestroyMine()
     {
+        // dont destroy if enemies are petrified
+        if(TryGetComponent(out Petrify petrify))
+        {
+            if(petrify.petrified){
+                animator.enabled = false;
+                StartCoroutine(WaitForDestroy(petrify.duration));
+            }
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public IEnumerator WaitForDestroy(float time)
+    {
+        yield return new WaitForSeconds(time);
         Destroy(gameObject);
     }
 }
