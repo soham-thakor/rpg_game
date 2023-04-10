@@ -79,10 +79,33 @@ public class PlayerController : MonoBehaviour
         if(index >= 0) { UseAbility(index); }
     }
 
+    private void getAllCluesDebug()
+	{
+        string debugString = "CLUES DEBUG STATEMENT: \n";
+        debugString += "CULPRIT CLUES: \n";
+        debugString += "Culprit is: " + staticVariables.realVillain + "\n";
+        debugString += "Culprit Traits: \n" +
+            "Key: " + NPCStatic.culpritKey.ToString() + "\n" +
+            "Traits: \n" + NPCStatic.NPCnames[NPCStatic.culpritKey].trait1 + "\n"
+            + NPCStatic.NPCnames[NPCStatic.culpritKey].trait2 + "\n"
+            + NPCStatic.NPCnames[NPCStatic.culpritKey].trait3 + "\n";
+        debugString += "Ghost 'CULPRIT IS' Clues: \n";
+        debugString += NPCStatic.ghostClue1.clue + "\n"
+            + NPCStatic.ghostClue2.clue + "\n"
+            + NPCStatic.ghostClue3.clue + "\n";
+        debugString += "Ghost 'CULPRIT ISN'T Clues: \n";
+        debugString += NPCStatic.antiClue1.clue + "\n"
+            + NPCStatic.antiClue2.clue + "\n"
+            + NPCStatic.antiClue3.clue + "\n";
+
+
+        Debug.Log(debugString);
+    }
+
     private void FixedUpdate() 
     {
         if(Input.GetKeyDown(KeyCode.LeftShift)) {
-            Debug.Log("Culprit is: " + staticVariables.realVillain);
+            getAllCluesDebug();
         }
 
         if (canMove && !staticVariables.immobile) 

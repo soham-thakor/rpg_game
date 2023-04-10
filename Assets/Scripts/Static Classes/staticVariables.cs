@@ -109,15 +109,16 @@ public class staticVariables : MonoBehaviour
 
 	public static void resetCooldowns()
 	{
-        foreach(KeyValuePair<string, float> entry in cooldowns)
+        /*foreach(KeyValuePair<string, float> entry in cooldowns)
         {
             cooldowns[entry.Key] = 1f;
-        }
+        }*/
+        int i = 0;
 	}
 
     public static void GenerateWorld()
 	{
-        Debug.Log("Generateworld");
+        Debug.Log("Generating World...");
         keyPos = placeKey();
         secretEntranceScene = chooseSecretRoom();
         NPCStatic.culpritKey = NPCStatic.pickCulpritKey();
@@ -126,10 +127,11 @@ public class staticVariables : MonoBehaviour
         NPCStatic.generateGhostClues();
         NPCStatic.generateAntiClues();
         NPCStatic.generateGenderClue();
+        Debug.Log("Done Generating World.");
 	}
     public static void resetStatics()
 	{
-
+        Debug.Log("Resetting statics...");
         secretEntranceFound = false;
         secretBookshelf = null;
         chosenName = "Player Name";
@@ -141,5 +143,8 @@ public class staticVariables : MonoBehaviour
         invincible = false;
         NPCStatic.discoveredClues.Clear();
         NPCStatic.culpritCluesFound.Clear();
+        NotebookStatic.playerNotes = NotebookStatic.emptyNotes() ;
+        NotebookStatic.currentPage = 0;
+        Debug.Log("Done Resetting statics.");
 	}
 }
