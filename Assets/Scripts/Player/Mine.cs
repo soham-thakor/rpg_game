@@ -11,24 +11,21 @@ public class Mine : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private List<Enemy> enemies = new List<Enemy>();
-    public BoxCollider2D damageCollider;
     
-    // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         
-        // checks if current object is a clone
-        if(gameObject.name.Contains("Clone")) {
-            Invoke("DestroyMine",lifeTime);   // deletes self whenever lifetime is reached
-        } 
+        Invoke("LifetimeReached", lifeTime);  // play explosion animation after lifetime
     }
 
-    void DestroyMine() {
-        SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
+    private void LifetimeReached() 
+    {
+        if(gameObject.name.Contains("Water")){
+            SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
+        }
         animator.SetTrigger("Explode");
-        Destroy(gameObject, 1f);
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -41,7 +38,6 @@ public class Mine : MonoBehaviour
                 enemies.Add(other.gameObject.GetComponent<Enemy>());
 			}
             animator.SetTrigger("Explode");
-            Destroy(gameObject, 1f);
         }
     }
 
@@ -56,7 +52,8 @@ public class Mine : MonoBehaviour
         }
     }
 
-	public void dealDamage()
+    // below methods are referenced in animation events
+	public void DealDamage()
 	{
         SoundManager.PlaySound(SoundManager.Sound.WaterBombExplode);
         foreach(Enemy enemy in enemies.ToList())
@@ -64,4 +61,9 @@ public class Mine : MonoBehaviour
             enemy.TakeDamage(damageDealt);
 		}
 	}
+
+    public void DestroyMine()
+    {
+        Destroy(gameObject);
+    }
 }
