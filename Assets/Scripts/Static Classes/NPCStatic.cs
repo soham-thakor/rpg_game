@@ -188,6 +188,8 @@ public class NPCStatic : MonoBehaviour
 
     public static List<Tuple<string, string>> ghostClueTransitions = new List<Tuple<string, string>>() {
         new Tuple<string, string>("The one who did this to me was ", "..."),
+        new Tuple<string, string>("Why was the one that did this to me so ", "..."),
+        new Tuple<string, string>("It's strange...knowing now that the one who betrayed me was so ", " all along..."),
         new Tuple<string, string>("I can't believe the person who did this was so ", "...")
     };
 
@@ -231,6 +233,7 @@ public class NPCStatic : MonoBehaviour
     public static List<Tuple<string, string>> antiClueTransitions = new List<Tuple<string, string>>()
     {
         new Tuple<string, string>("At least the person who did this to me wasn't ", "..."),
+        new Tuple<string, string>("All this time I thought I would be brought down by someone ", ". I suppose I was wrong..."),
         new Tuple<string, string>("Knowing that the culprit of this disaster wasn't ", " puts me at peace...")
     };
     public static ghostClue antiClue1 = generateAntiClue();
