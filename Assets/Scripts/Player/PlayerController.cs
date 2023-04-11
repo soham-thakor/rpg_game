@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        var index = CheckForNumericKeyPress(1, 3);
+        var index = CheckForNumericKeyPress(1, abilities.Length);
         if(index >= 0) { UseAbility(index); }
     }
 
@@ -145,6 +145,7 @@ public class PlayerController : MonoBehaviour
 
     private void UseAbility(int index)
     {
+        Debug.Log("Using ability " + index);
         AbilitySlot abilitySlot = abilities[index].GetComponent<AbilitySlot>();
         if(staticVariables.getCooldown(abilitySlot.abilityName) != 1f) { return; }
         abilitySlot.Activate(gameObject.transform.position);
