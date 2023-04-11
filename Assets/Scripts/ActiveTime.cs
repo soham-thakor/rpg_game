@@ -54,9 +54,7 @@ public class ActiveTime : MonoBehaviour
         float mins = gameTime.getMinutes();
         float startActiveTime = ((int)startActiveHour * 60) + ((int)startActiveMinutes * 15);
         float endActiveTime = ((int)endActiveHour * 60) + ((int)endActiveMinutes * 15);
-		string debug = startActiveTime.ToString() + "/" + mins.ToString() + "/" + endActiveTime.ToString() + "-" + gameObject.name;
 
-		Debug.Log(debug);
         //Debug.Log(endActiveTime);
         //Debug.Log(mins);
         //I know these if statments arent great, but they should be simple to understand
