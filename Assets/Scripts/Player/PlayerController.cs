@@ -100,6 +100,8 @@ public class PlayerController : MonoBehaviour
 
 
         Debug.Log(debugString);
+        Debug.Log("Gender by call: " + NPCStatic.genderClue.clue);
+        Debug.Log("Gender by dict: " + NPCStatic.clues["Strange Man"].clue);
     }
 
     private void FixedUpdate() 

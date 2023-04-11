@@ -277,6 +277,7 @@ public class NPCStatic : MonoBehaviour
     
     public static ghostClue generateGenderClue()
 	{
+        Debug.Log("NPC ID: " + culpritKey.ToString());
         string addOn = "";
         int randomTransition = UnityEngine.Random.Range(0, genderClueTransitions.Count);
 

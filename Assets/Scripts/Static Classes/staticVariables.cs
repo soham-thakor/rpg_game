@@ -126,7 +126,7 @@ public class staticVariables : MonoBehaviour
         NPCStatic.generateDiaries();
         NPCStatic.generateGhostClues();
         NPCStatic.generateAntiClues();
-        NPCStatic.generateGenderClue();
+        NPCStatic.genderClue = NPCStatic.generateGenderClue();
         NPCStatic.clues = NPCStatic.assignClues();
         NPCStatic.diaryDict = NPCStatic.assignDiaryClues();
         Debug.Log("Done Generating World.");
