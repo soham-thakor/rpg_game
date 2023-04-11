@@ -39,14 +39,15 @@ public class PauseManager : MonoBehaviour
         {
             pausePanel.SetActive(true);
             Time.timeScale = 0f;
-            AudioListener.pause = true;
+            //AudioListener.pause = true;
         }
         else
         {
             hidePanels();
             Time.timeScale = 1f;
-            AudioListener.pause = false;
+            //AudioListener.pause = false;
         }
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     // TODO: use an enumerator or make these into templates
@@ -55,14 +56,14 @@ public class PauseManager : MonoBehaviour
         pausePanel.SetActive(false);
         notebookPanel.GetComponent<notebookManager>().changePage(0);
         notebookPanel.SetActive(true);
-        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     public void showSettings()
     {
         pausePanel.SetActive(false);
         settingsPanel.SetActive(true);
-        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     public void showOptions(GameObject previous_panel)
@@ -73,7 +74,7 @@ public class PauseManager : MonoBehaviour
         }*/
         previous_panel.SetActive(false);
         pausePanel.SetActive(true);
-        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     public void showControls() {
@@ -99,6 +100,6 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene(mainMenu);
         Time.timeScale = 1f;
         AudioListener.pause = false;
-        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 }

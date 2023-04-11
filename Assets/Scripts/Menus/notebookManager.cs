@@ -66,6 +66,10 @@ public class notebookManager : MonoBehaviour
 	}
     public void changePage(int page)
 	{
+        if(page !=0)
+		{// just so that the sound is only playing when changing pages
+            SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        }
         int newIndex = NotebookStatic.currentPage + page;
         inputField.text = NotebookStatic.playerNotes[newIndex];
         NotebookStatic.currentPage = newIndex;
