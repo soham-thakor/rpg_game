@@ -5,38 +5,38 @@ using UnityEngine;
 
 public class NPCStatic : MonoBehaviour
 {
-	public class Clue 
-    { 
+    public class Clue
+    {
         public List<string> clues;
         public List<Tuple<int, int>> clueIDs;
 
         public Clue(List<string> strings, List<Tuple<int, int>> IDs)
-		{
+        {
             clues = strings;
             clueIDs = IDs;
-		}
+        }
     }
 
-	public class NPC
+    public class NPC
     {
         public string name;
         public string trait1;
         public string trait2;
         public string trait3;
         public string gender;
-        
+
         public NPC(string inputName, string t1, string t2, string t3, string g)
-		{
+        {
             name = inputName;
             trait1 = t1;
             trait2 = t2;
             trait3 = t3;
             gender = g;
-            
-		}
+
+        }
     }
-    
-	public static Dictionary<int, NPC> NPCnames = new Dictionary<int, NPC>()
+
+    public static Dictionary<int, NPC> NPCnames = new Dictionary<int, NPC>()
     {
         {0, new NPC("Earl Thomas", "Lazy", "Prideful", "Shameless", "Man") },
         {1, new NPC("Sir Alexandre", "Calculative", "Resourceful", "Greedy", "Man") },
@@ -71,28 +71,28 @@ public class NPCStatic : MonoBehaviour
         }
     }
 
-    
 
 
-	//keep track of what clues we have given out, in the form <NPCkey, trait#>
-	public static List<Tuple<int, int>> traitCluesGiven = new List<Tuple<int, int>>();
+
+    //keep track of what clues we have given out, in the form <NPCkey, trait#>
+    public static List<Tuple<int, int>> traitCluesGiven = new List<Tuple<int, int>>();
 
     //Just to get the key of the person who is the culprit
     public static int culpritKey = pickCulpritKey();
 
     public static int pickCulpritKey()
-	{
+    {
         return UnityEngine.Random.Range(0, NPCnames.Count);
     }
     public static string chooseCulprit()
-	{
-        
-        return NPCnames[culpritKey].name;
-	}
+    {
 
-    
+        return NPCnames[culpritKey].name;
+    }
+
+
     //START: Generation of diaries that tell you "This NPC IS..."
-	public static List<Tuple<string, string, string>> diaryTransitions = new List<Tuple<string, string, string>>() {
+    public static List<Tuple<string, string, string>> diaryTransitions = new List<Tuple<string, string, string>>() {
         {new Tuple<string, string, string>("\"I've come to realize that ", " is ", ".\"" ) },
         {new Tuple<string, string, string>("\"Turns out ", " is very ", ".\"") },
         {new Tuple<string, string, string>("\"", " is kind of ", " once you get to know them.\"") },
@@ -100,7 +100,7 @@ public class NPCStatic : MonoBehaviour
         {new Tuple<string, string, string>("\"In my opinion ", " embodies the word ", ".\"") },
         {new Tuple<string, string, string>("\"Recently I've realized that ", " is so ", " sometimes.\"") }
     };
-    
+
     public static Clue ladyBalthazarDiary = generateDiary("Lady Balthazar");
     public static Clue lordBalthazarDiary = generateDiary("Lord Balthazar");
     public static Clue lordAndreDiary = generateDiary("Lord Andre");
@@ -111,20 +111,20 @@ public class NPCStatic : MonoBehaviour
     public static Clue sirFerranteDiary = generateDiary("Sir Ferrante");
     public static Clue sirCharlesDiary = generateDiary("Sir Charles");
     public static Clue generateDiary(string characterName)
-	{
+    {
         List<string> diary = new List<string>();
         List<Tuple<int, int>> diaryIDs = new List<Tuple<int, int>>();
         string addOn = "";
-        
-        for(int i = 1; i < 4; i++)
-		{//Get 3 clues
+
+        for (int i = 1; i < 4; i++)
+        {//Get 3 clues
             int randomPerson = UnityEngine.Random.Range(0, NPCnames.Count);
             Tuple<int, int> checker = new Tuple<int, int>(randomPerson, i);
-            while(traitCluesGiven.Contains(checker) || NPCnames[randomPerson].name == characterName) 
-			{//get a character that isnt the person writing the diary and doesnt have a diary clue for them yet
+            while (traitCluesGiven.Contains(checker) || NPCnames[randomPerson].name == characterName)
+            {//get a character that isnt the person writing the diary and doesnt have a diary clue for them yet
                 randomPerson = UnityEngine.Random.Range(0, NPCnames.Count);
                 checker = new Tuple<int, int>(randomPerson, i);
-			}
+            }
             //make a sentence for that character, add it to the diary and add that character to the list of characters that have clues already
             int randomTransitions = UnityEngine.Random.Range(0, diaryTransitions.Count);
             addOn += diaryTransitions[randomTransitions].Item1;
@@ -140,10 +140,10 @@ public class NPCStatic : MonoBehaviour
 
         Clue returnClue = new Clue(diary, diaryIDs);
         return returnClue;
-	}
+    }
     //This is just a function to call when using GenerateWorld()
     public static void generateDiaries()
-	{
+    {
         traitCluesGiven.Clear();
         ladyBalthazarDiary = generateDiary("Lady Balthazar");
         lordBalthazarDiary = generateDiary("Lord Balthazar");
@@ -154,20 +154,24 @@ public class NPCStatic : MonoBehaviour
         ladyElanorDiary = generateDiary("Lady Elanor");
         sirFerranteDiary = generateDiary("Sir Ferrante");
         sirCharlesDiary = generateDiary("Sir Charles");
-	}
-    public static Dictionary<string, Clue> diaryDict = new Dictionary<string, Clue>()
-    {
-        {"Lady Balthazar", ladyBalthazarDiary },
-        {"Lord Balthazar", lordBalthazarDiary },
-        {"Lord Andre", lordAndreDiary },
-        {"Sir Edgar", sirEdgarDiary },
-        {"Honorable Cobra", honorableCobraDiary },
-        {"Sir David", sirDavidDiary },
-        {"Lady Elanor", ladyElanorDiary },
-        {"Sir Ferrante", sirFerranteDiary },
-        {"Sir Charles", sirCharlesDiary }
-	};
+    }
 
+    public static Dictionary<string, Clue> diaryDict = assignDiaryClues();
+    public static Dictionary<string, Clue> assignDiaryClues()
+    {
+        return new Dictionary<string, Clue>()
+        {
+            {"Lady Balthazar", ladyBalthazarDiary },
+            {"Lord Balthazar", lordBalthazarDiary },
+            {"Lord Andre", lordAndreDiary },
+            {"Sir Edgar", sirEdgarDiary },
+            {"Honorable Cobra", honorableCobraDiary },
+            {"Sir David", sirDavidDiary },
+            {"Lady Elanor", ladyElanorDiary },
+            {"Sir Ferrante", sirFerranteDiary },
+            {"Sir Charles", sirCharlesDiary }
+        };
+    }
     //START: Generation of ghost clues of the structure "The culprit IS..."
     public class ghostClue
     {
@@ -283,16 +287,21 @@ public class NPCStatic : MonoBehaviour
         return new ghostClue(addOn, -1);
 	}
     //Dictionary so that scripts can find what clues they should be using
-    public static Dictionary<string, ghostClue> clues = new Dictionary<string, ghostClue>()
-    {
-        {"Lord Eddard", ghostClue1 },
-        {"Lady Abigail", ghostClue2 },
-        {"Sir Robert", ghostClue3 },
-        {"Lady Madalyn", antiClue1 },
-        {"Lord Elanor", antiClue2 },
-        {"Sir Caine", antiClue3 },
-        {"Strange Man", genderClue }
-    };
+    public static Dictionary<string, ghostClue> clues = assignClues();
+    public static Dictionary<string, ghostClue> assignClues()
+	{
+        return new Dictionary<string, ghostClue>()
+        {
+            {"Lord Eddard", ghostClue1 },
+            {"Lady Abigail", ghostClue2 },
+            {"Sir Robert", ghostClue3 },
+            {"Lady Madalyn", antiClue1 },
+            {"Lord Elanor", antiClue2 },
+            {"Sir Caine", antiClue3 },
+            {"Strange Man", genderClue }
+        };
+    }
+    
 
     //START: keep track of clue discovery
 
