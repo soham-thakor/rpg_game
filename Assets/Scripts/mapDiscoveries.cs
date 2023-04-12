@@ -39,13 +39,14 @@ public class mapDiscoveries : MonoBehaviour
                 return;
 			}
             mapUI.SetActive(!mapUI.activeInHierarchy);
+            if(mapUI.activeInHierarchy) { Time.timeScale = 0f; }
+            else { Time.timeScale = 1f; }
             showArea(SceneManager.GetActiveScene().name);
 		}
     }
 
     void showArea(string sceneName)
 	{
-        Debug.Log("made it");
         mapStatic.Discoveries areaData = mapStatic.mapData[sceneName];
         areaName.text = areaData.areaName;
         interactablesDiscovered.text = "Interactables: " + areaData.interactables.Count.ToString() + " of " + interactablesMax;
