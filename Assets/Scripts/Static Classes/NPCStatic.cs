@@ -249,6 +249,7 @@ public class NPCStatic : MonoBehaviour
 
         string addOn = "";
         int randomTransition = UnityEngine.Random.Range(0, antiClueTransitions.Count);
+        antiCluesGiven.Add(randomTrait);
 
         addOn += antiClueTransitions[randomTransition].Item1;
         addOn += randomTrait;

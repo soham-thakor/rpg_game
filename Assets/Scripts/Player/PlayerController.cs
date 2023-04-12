@@ -97,11 +97,13 @@ public class PlayerController : MonoBehaviour
         debugString += NPCStatic.antiClue1.clue + "\n"
             + NPCStatic.antiClue2.clue + "\n"
             + NPCStatic.antiClue3.clue + "\n";
-
+        debugString += "Anti-Clues List: \n";
+        foreach (string trait in NPCStatic.antiCluesGiven)
+        {
+            debugString += trait + "\n";
+        }
 
         Debug.Log(debugString);
-        Debug.Log("Gender by call: " + NPCStatic.genderClue.clue);
-        Debug.Log("Gender by dict: " + NPCStatic.clues["Strange Man"].clue);
     }
 
     private void FixedUpdate() 
