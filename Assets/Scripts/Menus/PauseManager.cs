@@ -27,6 +27,10 @@ public class PauseManager : MonoBehaviour
 			{
                 staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
 			}
+            if(!isPaused)
+			{
+                pausePanel.SetActive(true);
+			}
             ChangePause();
         }
         
@@ -37,7 +41,6 @@ public class PauseManager : MonoBehaviour
         isPaused = !isPaused;
         if (isPaused)
         {
-            pausePanel.SetActive(true);
             Time.timeScale = 0f;
             //AudioListener.pause = true;
         }
