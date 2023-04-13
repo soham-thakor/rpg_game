@@ -46,10 +46,7 @@ public class Petrify : MonoBehaviour
         // petrify enemies
         foreach(GameObject enemy in enemies.ToList())
         {
-            enemy.transform.Find("LineOfSight").GetComponent<LineOfSight>().enabled = false;
-            enemy.transform.Find("EnemySwordHitbox").gameObject.SetActive(false);
-            enemy.GetComponent<Animator>().enabled = false;
-            enemy.GetComponent<IAstarAI>().destination = enemy.transform.position;
+            TogglePetrification(false, enemy);
         }
 
         yield return new WaitForSeconds(duration);
@@ -57,10 +54,23 @@ public class Petrify : MonoBehaviour
         // unpetrify enemies
         foreach(GameObject enemy in enemies.ToList())
         {
-            enemy.transform.Find("LineOfSight").GetComponent<LineOfSight>().enabled = true;
-            enemy.transform.Find("EnemySwordHitbox").gameObject.SetActive(true);
-            enemy.GetComponent<Animator>().enabled = true;
+            TogglePetrification(true, enemy);
         }
         petrified = false;
+    }
+
+    private void TogglePetrification(bool status, GameObject enemy)
+    {
+        if (TryGetComponent<RangedEnemyController>(out RangedEnemyController rangedEnemy))
+        {
+            Debug.Log("set ranged enemy controller to inactive");
+            rangedEnemy.enabled = status;
+        }
+
+        Transform hitbox = enemy.transform.Find("EnemySwordHitbox");
+        if ( hitbox ) {hitbox.gameObject.SetActive(status);}
+
+        enemy.transform.Find("LineOfSight").GetComponent<LineOfSight>().enabled = status;
+        enemy.GetComponent<Animator>().enabled = status;
     }
 }
