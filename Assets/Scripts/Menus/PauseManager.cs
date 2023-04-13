@@ -27,11 +27,12 @@ public class PauseManager : MonoBehaviour
 			{
                 staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
 			}
-            if(!isPaused)
+            ChangePause();
+            if (isPaused)
 			{
                 pausePanel.SetActive(true);
 			}
-            ChangePause();
+            
         }
         
     }

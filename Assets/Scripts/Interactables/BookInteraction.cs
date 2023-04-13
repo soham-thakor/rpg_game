@@ -27,7 +27,12 @@ public class BookInteraction : MonoBehaviour
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
             mapTracker.track("Diary", gameObject);
-
+            //display the clue pop up if we need to
+            if(!staticVariables.seenNotebookPopUp)
+			{
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PopUps>().checkNotebookPopUp();
+                return;
+			}
 
             if (messageIndex >= openMessages.Count - 3)
 			{//if we are reading one of the clues

@@ -66,7 +66,9 @@ public class Quest : MonoBehaviour
             if(gameObject.name == "Earl Thomas" && !staticVariables.seenSerumPopUp)
 			{
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PopUps>().checkSerumPopUp();
+                return;
 			}
+
             if (staticVariables.currentDialogue != gameObject && staticVariables.currentDialogue != null)
 			{
                 staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();

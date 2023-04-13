@@ -25,16 +25,17 @@ public class Ghost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftShift) && playerSpeech.playerName.text == "Sir Robert")
-		{
-            Debug.Log("Clue Through Dict: " + NPCStatic.clues[playerSpeech.playerName.text].clue);
-            Debug.Log("Clue Through Call: " + NPCStatic.ghostClue3.clue);
-		}
 
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
             //discover this dialogue
             mapTracker.track("Dialogue", gameObject);
+            //display the pop up if this is the first clue they have found
+            if (!staticVariables.seenNotebookPopUp)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PopUps>().checkNotebookPopUp();
+                return;
+            }
 
             if (ghostClue.traitNum != -1)
             {//if this is a clue about one of the traits of the culprit

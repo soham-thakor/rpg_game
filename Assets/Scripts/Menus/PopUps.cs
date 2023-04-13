@@ -25,6 +25,10 @@ public class PopUps : MonoBehaviour
 		{
             checkMapPopUp();
 		}
+        if(Input.GetButtonDown("pause"))
+		{
+            closePopUps();
+		}
     }
 
     public void checkMapPopUp()
@@ -57,6 +61,12 @@ public class PopUps : MonoBehaviour
         mapPopUp.SetActive(false);
         serumPopUp.SetActive(false);
         notebookPopUp.SetActive(false);
+
+	}
+
+    public void backButton()
+	{
+        closePopUps();
         pauseManager.ChangePause();
 	}
 }
