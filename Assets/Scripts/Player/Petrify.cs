@@ -63,8 +63,12 @@ public class Petrify : MonoBehaviour
     {
         if (enemy.TryGetComponent<RangedEnemyController>(out RangedEnemyController rangedEnemy))
         {
-            Debug.Log("set ranged enemy controller to inactive");
             rangedEnemy.enabled = status;
+        }
+
+        if (enemy.TryGetComponent<IAstarAI>(out IAstarAI ai))
+        {
+            ai.destination = enemy.transform.position;
         }
 
         Transform hitbox = enemy.transform.Find("EnemySwordHitbox");
