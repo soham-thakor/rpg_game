@@ -60,9 +60,13 @@ public class Quest : MonoBehaviour
 
         // dialogue interactions system - when key F is pressed AND in range AND this NPC is the one closest to the player AND we arent already talking to someone else
         if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && !staticVariables.immobile){
-            // if its a regular NPC and they have a clue to give you
-            // then they will spawn a ghost after interacting with them
+            //Track this dialogue on the map
             mapTracker.track("Dialogue", gameObject);
+            //check if we need to show the earl pop up
+            if(gameObject.name == "Earl Thomas" && !staticVariables.seenSerumPopUp)
+			{
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PopUps>().checkSerumPopUp();
+			}
             if (staticVariables.currentDialogue != gameObject && staticVariables.currentDialogue != null)
 			{
                 staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
