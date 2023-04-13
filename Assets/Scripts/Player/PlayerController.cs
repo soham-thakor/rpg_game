@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    private CurrencyController currencyController;
 
     //To keep track of the ghosts that need to spawn
     public QuestTrackerData questData; //isn't used, but it acts as a global variable
@@ -49,7 +50,6 @@ public class PlayerController : MonoBehaviour
         moveSpeed = playerData.moveSpeed;        
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         staticVariables.immobile = false;
@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         flashEffect = GetComponent<SimpleFlash>();
+        currencyController = GetComponent<CurrencyController>();
         
         // move player in scene if necessary
         if(playerData.movedScene)

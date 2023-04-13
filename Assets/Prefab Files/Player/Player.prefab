@@ -1593,6 +1593,7 @@ GameObject:
   - component: {fileID: 3623622513716773179}
   - component: {fileID: 6175205338193437050}
   - component: {fileID: 1668804281}
+  - component: {fileID: 4712737460356678870}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1856,6 +1857,27 @@ MonoBehaviour:
   dialogueBox: {fileID: 2069060494390123930}
   playerName: {fileID: 2713419487736079128}
   playerMessage: {fileID: 1528500477653379318}
+--- !u!114 &4712737460356678870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283007440131791999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f73d0f96c5f9a42af526b65aeed16d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewards:
+  - prefab: {fileID: 8481735856549416990, guid: 001c134ab8177054ab537356cef450aa, type: 3}
+    payout: 20
+  - prefab: {fileID: 3151946911013386404, guid: aa24187083cb4464f8cf19752d82341b, type: 3}
+    payout: 30
+  - prefab: {fileID: 444079326137328145, guid: 5b47d3352dede4b4ab8d21abbb3f40ea, type: 3}
+    payout: 40
+  - prefab: {fileID: 444079326137328145, guid: 5b47d3352dede4b4ab8d21abbb3f40ea, type: 3}
+    payout: 40
 --- !u!1 &5745439185810455500
 GameObject:
   m_ObjectHideFlags: 0
