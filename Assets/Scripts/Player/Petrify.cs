@@ -61,7 +61,7 @@ public class Petrify : MonoBehaviour
 
     private void TogglePetrification(bool status, GameObject enemy)
     {
-        if (TryGetComponent<RangedEnemyController>(out RangedEnemyController rangedEnemy))
+        if (enemy.TryGetComponent<RangedEnemyController>(out RangedEnemyController rangedEnemy))
         {
             Debug.Log("set ranged enemy controller to inactive");
             rangedEnemy.enabled = status;
