@@ -1,14 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 
 public class CurrencyController : MonoBehaviour
 {
-    
+    public TextMeshProUGUI counter;
     public KillReward[] rewards;
 
-    public int GetPayout(GameObject enemy)
+    public void UpdateCurrencyAmount(GameObject enemy)
+    {
+        staticVariables.currencyAmount += GetPayout(enemy);
+        counter.text = staticVariables.currencyAmount.ToString();
+    }
+
+    private int GetPayout(GameObject enemy)
     {
         foreach(KillReward reward in rewards)
         {

@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     {
         flashEffect = GetComponent<SimpleFlash>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        currencyController = player.GetComponent<CurrencyController>();
+        currencyController = player.Find("UI Canvas/Arcana Counter").GetComponent<CurrencyController>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -105,7 +105,8 @@ public class Enemy : MonoBehaviour
         if(currentHealth <= 0)
         {
             PlayDeathSFX();
-            staticVariables.currencyAmount += currencyController.GetPayout(gameObject);
+            currencyController.UpdateCurrencyAmount(gameObject);
+
             if(isBoss) {
                 SceneManager.LoadScene("CutSceneEnding");
             }
