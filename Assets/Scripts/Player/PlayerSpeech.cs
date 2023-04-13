@@ -25,6 +25,7 @@ public class PlayerSpeech : MonoBehaviour
 
     public void Speak(string message)
 	{
+        if (PauseManager.isPaused) { return; }
         if (currentMessage == message && currentlyTyping) // if we are trying to say something that is already being said finish it
         {
             StopCoroutine(typing);

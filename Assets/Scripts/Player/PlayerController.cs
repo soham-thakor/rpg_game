@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
 
     private void UseAbility(int index)
     {
-        Debug.Log("Using ability " + index);
+        if (PauseManager.isPaused) { return; }
         AbilitySlot abilitySlot = abilities[index].GetComponent<AbilitySlot>();
         if(staticVariables.getCooldown(abilitySlot.abilityName) != 1f) { return; }
         abilitySlot.Activate(gameObject.transform.position);
@@ -190,6 +190,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnSlash() {
+        if (PauseManager.isPaused) { return; }
         string animState = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
         if(animState != "player_attack" && animState != "player_attack_up" && animState != "player_attack_down")
 		{
@@ -199,6 +200,7 @@ public class PlayerController : MonoBehaviour
 
     void OnShoot()
     {
+        if (PauseManager.isPaused) { return; }
         AbilitySlot abilitySlot = projectileSlot.GetComponent<AbilitySlot>();
         if(staticVariables.getCooldown(abilitySlot.abilityName) != 1f) { return; }
         abilitySlot.Activate(gameObject.transform.position);

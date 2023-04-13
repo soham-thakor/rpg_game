@@ -16,13 +16,14 @@ public class mapDiscoveries : MonoBehaviour
     private string interactablesMax;
     private string dialoguesMax;
     private string diariesMax;
+    private PauseManager pauseManager;
 
 	private void Awake()
 	{
         interactablesMax = (getAreaCount("Bookshelf") + getAreaCount("Interactable")).ToString();
         dialoguesMax = getAreaCount("NPC").ToString();
         diariesMax = getAreaCount("Diary").ToString();
-
+        pauseManager = GameObject.FindGameObjectWithTag("Pause Menu").GetComponent<PauseManager>();
     }
 	// Update is called once per frame
 	void Update()
@@ -34,18 +35,15 @@ public class mapDiscoveries : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.M))
 		{
-            if(PauseManager.isPaused)
-			{
-                return;
-			}
+
             mapUI.SetActive(!mapUI.activeInHierarchy);
+            pauseManager.ChangePause();
             showArea(SceneManager.GetActiveScene().name);
 		}
     }
 
     void showArea(string sceneName)
 	{
-        Debug.Log("made it");
         mapStatic.Discoveries areaData = mapStatic.mapData[sceneName];
         areaName.text = areaData.areaName;
         interactablesDiscovered.text = "Interactables: " + areaData.interactables.Count.ToString() + " of " + interactablesMax;
