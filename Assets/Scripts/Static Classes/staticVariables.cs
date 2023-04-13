@@ -22,6 +22,10 @@ public class staticVariables : MonoBehaviour
     public static string lastGuess = "Error Message";
     //To know from any script if a dialogue box is open and if so which one
     public static GameObject currentDialogue;
+    //Tracking which pop ups the player has seen already
+    public static bool seenSerumPopUp;
+    public static bool seenMapPopUp;
+    public static bool seenNotebookPopUp;
     //To Generate which scene the secret entrance is in
     public static int? secretBookshelfIndex = null;
     public static GameObject secretBookshelf;

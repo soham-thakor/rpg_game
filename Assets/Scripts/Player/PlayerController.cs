@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
         }
 
         Debug.Log(debugString);
+        Debug.Log(Time.time);
     }
 
     private void FixedUpdate() 
