@@ -19,10 +19,16 @@ public class Enemy : MonoBehaviour
     private bool isFlipped = false;  // collider starts facing right (false is right, true is left)
     private Rigidbody2D rb;
     private string enemyType;
+    private CurrencyController currencyController;
 
-    //public float Health;
     void Start()
     {
+        flashEffect = GetComponent<SimpleFlash>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        currencyController = player.Find("UI Canvas/Arcana Counter").GetComponent<CurrencyController>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+
         if(isBoss) {
             SoundManager.PlaySound(SoundManager.Sound.CulpritFound);
         }
@@ -30,10 +36,6 @@ public class Enemy : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth((int)maxHealth);
 
-        flashEffect = GetComponent<SimpleFlash>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
         if(gameObject.name.Contains("Antagonist") || gameObject.name.Contains("Gargoyle") || gameObject.name.Contains("Boss") )
         {
             enemyType = "Knight";
@@ -94,33 +96,57 @@ public class Enemy : MonoBehaviour
         flashEffect.Flash();
         currentHealth -= damage;
         healthBar.SetHealth((int)currentHealth);
-        if (currentHealth <= 0) {
-            if(enemyType == "Knight") {
-                SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
-            } else if(enemyType == "Goblin") {
-                SoundManager.PlaySound(SoundManager.Sound.GoblinDeath);
-            } else {
-                SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
-            }
-            
-            if(isBoss) {
-                SceneManager.LoadScene("CutSceneEnding");
-            }
-            Destroy(gameObject);
-        }
-        else {
-            if (enemyType == "Knight") {
-                SoundManager.PlaySound(SoundManager.Sound.KnightDamaged);
-            } else if (enemyType == "Goblin") {
-                SoundManager.PlaySound(SoundManager.Sound.GoblinDamaged);
-            } else {
-                SoundManager.PlaySound(SoundManager.Sound.KnightDamaged);
-            }
-        }
+
         if(currentHealth <= maxHealth/2 && isBoss)
         {
             GetComponent<Animator>().SetBool("IsEnraged", true);
         }
-        
+
+        if(currentHealth <= 0)
+        {
+            PlayDeathSFX();
+            currencyController.UpdateCurrencyAmount(gameObject);
+
+            if(isBoss) {
+                SceneManager.LoadScene("CutSceneEnding");
+            }
+
+            Destroy(gameObject);
+        }
+        else
+        {
+            PlayDamagedSFX();
+        }
+    }
+
+    private void PlayDeathSFX()
+    {
+        if(enemyType == "Knight") 
+        {
+            SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
+        } 
+        else if(enemyType == "Goblin") 
+        {
+            SoundManager.PlaySound(SoundManager.Sound.GoblinDeath);
+        } 
+        else 
+        {
+            SoundManager.PlaySound(SoundManager.Sound.KnightDeath);
+        }
+    }
+
+    private void PlayDamagedSFX()
+    {
+        if (enemyType == "Knight") 
+        {
+            SoundManager.PlaySound(SoundManager.Sound.KnightDamaged);
+        } 
+        else if (enemyType == "Goblin") 
+        {
+            SoundManager.PlaySound(SoundManager.Sound.GoblinDamaged);
+        } else 
+        {
+           SoundManager.PlaySound(SoundManager.Sound.KnightDamaged);
+        }
     }
 }
