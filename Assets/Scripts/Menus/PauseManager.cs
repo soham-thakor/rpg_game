@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
     public static bool isPaused;
     public GameObject pausePanel, notebookPanel, settingsPanel, controlPanel;
     public string mainMenu;
+    public GameObject popUpToggle;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,9 @@ public class PauseManager : MonoBehaviour
         settingsPanel.SetActive(false);
         controlPanel.SetActive(false);
         isPaused = false;
+        popUpToggle.GetComponent<Toggle>().isOn = staticVariables.popUpsEnabled;
+        changeTutorialPopUpSetting();
+        
     }
 
     // Update is called once per frame
@@ -105,5 +110,16 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
         AudioListener.pause = false;
         SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+    }
+
+    public void changeTutorialPopUpSetting()
+	{
+        if(popUpToggle.GetComponent<Toggle>().isOn == staticVariables.popUpsEnabled)
+		{
+            return;
+		}
+        staticVariables.popUpsEnabled = !staticVariables.popUpsEnabled;
+        Debug.Log("Changing pop up setting to " + staticVariables.popUpsEnabled.ToString());
+
     }
 }

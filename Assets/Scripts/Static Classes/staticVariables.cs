@@ -28,6 +28,7 @@ public class staticVariables : MonoBehaviour
     public static bool seenSerumPopUp;
     public static bool seenMapPopUp;
     public static bool seenNotebookPopUp;
+    public static bool popUpsEnabled = true;
     //To Generate which scene the secret entrance is in
     public static int? secretBookshelfIndex = null;
     public static GameObject secretBookshelf;
