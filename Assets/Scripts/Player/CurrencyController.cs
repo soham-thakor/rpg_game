@@ -9,6 +9,11 @@ public class CurrencyController : MonoBehaviour
     public TextMeshProUGUI counter;
     public KillReward[] rewards;
 
+    void Start()
+    {
+        counter.text = staticVariables.currencyAmount.ToString();
+    }
+
     public void UpdateCurrencyAmount(GameObject enemy)
     {
         staticVariables.currencyAmount += GetPayout(enemy);
