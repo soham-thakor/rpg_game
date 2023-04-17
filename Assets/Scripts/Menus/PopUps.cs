@@ -52,6 +52,10 @@ public class PopUps : MonoBehaviour
 	}
     public void popUp(GameObject panel)
 	{
+        if(!staticVariables.popUpsEnabled)
+		{
+            return;
+		}
         panel.SetActive(true);
         pauseManager.ChangePause();
 	}

@@ -119,7 +119,6 @@ public class PauseManager : MonoBehaviour
             return;
 		}
         staticVariables.popUpsEnabled = !staticVariables.popUpsEnabled;
-        Debug.Log("Changing pop up setting to " + staticVariables.popUpsEnabled.ToString());
 
     }
 }
