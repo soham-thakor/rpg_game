@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PauseManager : MonoBehaviour
 {
     public static bool isPaused;
-    public GameObject pausePanel, notebookPanel, settingsPanel, controlPanel;
+    public GameObject pausePanel, notebookPanel, settingsPanel, controlPanel, controlChangePanel;
     public string mainMenu;
     public GameObject popUpToggle;
     // Start is called before the first frame update
@@ -70,10 +70,18 @@ public class PauseManager : MonoBehaviour
 
     public void showSettings()
     {
+        controlChangePanel.SetActive(false);
         pausePanel.SetActive(false);
         settingsPanel.SetActive(true);
         SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
+    
+    public void showControlChange()
+	{
+        //settingsPanel.SetActive(false);
+        controlChangePanel.SetActive(true);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+	}
 
     public void showOptions(GameObject previous_panel)
     {
@@ -102,6 +110,7 @@ public class PauseManager : MonoBehaviour
         notebookPanel.SetActive(false);
         settingsPanel.SetActive(false);
         controlPanel.SetActive(false);
+        controlChangePanel.SetActive(false);
     }
 
     public void Quit()
