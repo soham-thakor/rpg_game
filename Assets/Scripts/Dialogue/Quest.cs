@@ -22,6 +22,7 @@ public class Quest : MonoBehaviour
     private bool onLastMsg = false;
     private GameObject buttonPrompt;
     private SelectionMenu selectionBox;
+    private Shop shopMenu;
     private bool currentlyTyping = false;
     private IEnumerator typing;
     private discoveryTracker mapTracker;
@@ -29,6 +30,7 @@ public class Quest : MonoBehaviour
     void Start()
     {
         selectionBox = gameObject.GetComponent<SelectionMenu>();
+        shopMenu = gameObject.GetComponent<Shop>();
 
         buttonPrompt = gameObject.transform.Find("Button Prompt").gameObject;
         if (actor.id == 0)
@@ -94,15 +96,18 @@ public class Quest : MonoBehaviour
             //sound for the dialogue boxes
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
 
-
-            
             // controls dialogue boxes
-            if(onLastMsg)
+            if(onLastMsg || cuMsg == messages[data1.questTracker].message.Length)
             { 
                 // if npc has SelectionMenu component, send message to open menu
                 if(selectionBox)
                 {
                     selectionBox.OpenMenu();
+                }
+
+                if(shopMenu)
+                {
+                    shopMenu.OpenMenu();
                 }
                 //end the dialogue
                 endDialogue();
@@ -113,7 +118,9 @@ public class Quest : MonoBehaviour
                 staticVariables.currentDialogue = gameObject;
                 dialogBox.SetActive(true);
                 npcPortrait.SetActive(true);
+                print(data1.questTracker + " " + cuMsg);
                 string msgToDisplay = messages[data1.questTracker].message[cuMsg];
+                
                 if (!currentlyTyping)
                 {
                     typing = Type(dialogText.GetComponent<Text>(), msgToDisplay);
