@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour
             transform.position = playerData.initialValue;
             playerData.movedScene = false;
         }
+
+        FetchSpells();
     }
 
     private void Update()
@@ -248,8 +250,26 @@ public class PlayerController : MonoBehaviour
         return closestNPC == tryingNPC;
 	}
 
+    public void FetchSpells()
+    {
+        foreach(GameObject ability in abilities)
+        {
+            if(staticVariables.abilityActiveStatus.TryGetValue(ability.name, out bool _))
+            {
+                Debug.Log("Ability " + ability.name + " found in dictionary");
+                ability.SetActive(true);
+            }
+            else
+            {
+                Debug.Log("Ability " + ability.name + " not found in dictionary");
+                ability.SetActive(false);
+            }
+
+        }
+    }
+
     public void playSwordSound()
-	{
+    {
         SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
     }
 }

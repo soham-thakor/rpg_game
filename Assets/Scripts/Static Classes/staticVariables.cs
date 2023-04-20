@@ -33,6 +33,8 @@ public class staticVariables : MonoBehaviour
     public static GameObject secretBookshelf;
 
     public static int currencyAmount = 0;
+    public static Dictionary<string, bool> abilityActiveStatus= new Dictionary<string, bool>();
+    
     public static int guesses = 0;
     public static bool aquiredRoomKey = false;
 

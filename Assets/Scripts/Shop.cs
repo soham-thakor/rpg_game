@@ -12,6 +12,7 @@ public class Shop : MonoBehaviour
 
     private Dictionary<string, Item> itemDict = new Dictionary<string, Item>();
     private TextMeshProUGUI costText;
+    private string selectedAbility;
 
     // Start is called before the first frame update
     void Start()
@@ -44,16 +45,40 @@ public class Shop : MonoBehaviour
     {
         costPanel.SetActive(true);
         buyButton.SetActive(true);
+
         costText.text = itemDict[name].cost.ToString();
 
-        foreach (Item item in items) {
+        foreach (Item item in items) 
+        {
             if (item.name == name) {
                 item.descriptionPanel.SetActive(true);
+                selectedAbility = name;
             }
             else {
                 item.descriptionPanel.SetActive(false);
             }
         }
+    }
+
+    public void PurchaseItem()
+    {
+        if(staticVariables.currencyAmount >= itemDict[selectedAbility].cost) 
+        {
+            staticVariables.currencyAmount -= itemDict[selectedAbility].cost;
+            
+            costPanel.SetActive(false);
+            buyButton.SetActive(false);
+
+            GiveItemToPlayer(selectedAbility);
+        }
+        
+    }
+
+    // literally just activate the spell for the player
+    private void GiveItemToPlayer(string name)
+    {
+        staticVariables.abilityActiveStatus[name + "Slot"] = true;
+        GameObject.FindWithTag("Player").GetComponent<PlayerController>().FetchSpells();
     }
 
     [System.Serializable]

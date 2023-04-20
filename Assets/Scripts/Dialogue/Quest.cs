@@ -118,7 +118,6 @@ public class Quest : MonoBehaviour
                 staticVariables.currentDialogue = gameObject;
                 dialogBox.SetActive(true);
                 npcPortrait.SetActive(true);
-                print(data1.questTracker + " " + cuMsg);
                 string msgToDisplay = messages[data1.questTracker].message[cuMsg];
                 
                 if (!currentlyTyping)
