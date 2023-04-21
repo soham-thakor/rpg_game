@@ -263,7 +263,7 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Ability " + ability.abilitySlot.name + " found in dictionary");
                 ability.abilitySlot.SetActive(true);
-                ability.abilitySlot.UpdateUI(ability.bindedKey);
+                //ability.abilitySlot.UpdateUI(ability.bindedKey);
             }
             else
             {
