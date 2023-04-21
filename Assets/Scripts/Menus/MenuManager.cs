@@ -29,7 +29,6 @@ public class MenuManager : MonoBehaviour
 	public void StartGame(){
 		Debug.Log("Start Game");
 		staticVariables.resetStatics();
-		staticVariables.resetCooldowns();
 		staticVariables.GenerateWorld();
 		staticVariables.guesses = 0;
 		
@@ -41,7 +40,6 @@ public class MenuManager : MonoBehaviour
 	}
 
 	public void BackToStart(){
-		staticVariables.resetCooldowns();
 		staticVariables.resetStatics();
 		SceneManager.LoadScene(0);
 	}

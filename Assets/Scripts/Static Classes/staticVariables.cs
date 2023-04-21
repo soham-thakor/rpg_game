@@ -34,7 +34,8 @@ public class staticVariables : MonoBehaviour
     public static GameObject secretBookshelf;
 
     public static int currencyAmount = 0;
-    public static Dictionary<string, bool> abilityActiveStatus= new Dictionary<string, bool>();
+    public static Dictionary<string, bool> abilityActiveStatus = new Dictionary<string, bool>();
+    public static Dictionary<string, KeyCode> abilityBindings = new Dictionary<string, KeyCode>();
     
     public static int guesses = 0;
     public static bool aquiredRoomKey = false;
@@ -118,15 +119,6 @@ public class staticVariables : MonoBehaviour
             cooldowns.Add(i, 1f);
             return 0f;
         }
-	}
-
-	public static void resetCooldowns()
-	{
-        /*foreach(KeyValuePair<string, float> entry in cooldowns)
-        {
-            cooldowns[entry.Key] = 1f;
-        }*/
-        int i = 0;
 	}
 
     public static void GenerateWorld()
