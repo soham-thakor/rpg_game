@@ -2011,10 +2011,18 @@ MonoBehaviour:
   currentHealth: 1000
   projectileSlot: {fileID: 1741686493107454374}
   abilities:
-  - {fileID: 166644341439355232}
-  - {fileID: 2057770303094305345}
-  - {fileID: 7551473733124267859}
-  - {fileID: 2150495005990736591}
+  - isStartingAbility: 1
+    abilitySlot: {fileID: 166644341439355232}
+    bindedKey: 49
+  - isStartingAbility: 0
+    abilitySlot: {fileID: 2057770303094305345}
+    bindedKey: 50
+  - isStartingAbility: 0
+    abilitySlot: {fileID: 7551473733124267859}
+    bindedKey: 304
+  - isStartingAbility: 0
+    abilitySlot: {fileID: 2150495005990736591}
+    bindedKey: 52
   playerData: {fileID: 11400000, guid: 3b5d3a0d220d98549a9c1e34dd0f7a08, type: 2}
   questData: {fileID: 11400000, guid: f31c1745af12a924ba194d97f6737341, type: 2}
 --- !u!61 &8454170824699123502
@@ -3433,13 +3441,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterMineSlot
       objectReference: {fileID: 0}
-    - target: {fileID: 259008682495938727, guid: 3cdb3317a1c67ed44a30411fc8e0ddcf, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 77303435332256146, guid: 3cdb3317a1c67ed44a30411fc8e0ddcf, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 259008682495938727, guid: 3cdb3317a1c67ed44a30411fc8e0ddcf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 259008682495938727, guid: 3cdb3317a1c67ed44a30411fc8e0ddcf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1676248625193150826, guid: 3cdb3317a1c67ed44a30411fc8e0ddcf, type: 3}
       propertyPath: m_Pivot.x
@@ -3560,13 +3572,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: PetrifyMineSlot
       objectReference: {fileID: 0}
-    - target: {fileID: 3344763683491346219, guid: c5fd6d5c87a3d2a4e904ae3239863179, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 3233708569348859422, guid: c5fd6d5c87a3d2a4e904ae3239863179, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3344763683491346219, guid: c5fd6d5c87a3d2a4e904ae3239863179, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344763683491346219, guid: c5fd6d5c87a3d2a4e904ae3239863179, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3344763683491346219, guid: c5fd6d5c87a3d2a4e904ae3239863179, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4156,15 +4172,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4360773301998536458, guid: c3d6d589876806441b00f87149f50a6a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4360773301998536458, guid: c3d6d589876806441b00f87149f50a6a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4471538007365473855, guid: c3d6d589876806441b00f87149f50a6a, type: 3}
       propertyPath: m_Name
       value: WindSpeedSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471538007365473855, guid: c3d6d589876806441b00f87149f50a6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d6d589876806441b00f87149f50a6a, type: 3}

@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     // equippable abilities
     public GameObject projectileSlot;
-    public GameObject[] abilities = {};
+    public Ability[] abilities = {};
 
     // used for detecting when a number key is pressed
     private KeyCode[] keyCodes = new KeyCode []{ KeyCode.Alpha0, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5,
@@ -73,12 +73,12 @@ public class PlayerController : MonoBehaviour
             playerData.movedScene = false;
         }
 
-        FetchSpells();
+        FetchAbilities();
     }
 
     private void Update()
     {
-        var index = CheckForNumericKeyPress(1, abilities.Length);
+        var index = CheckForValidKeyPress();
         if(index >= 0) { UseAbility(index); }
     }
 
@@ -152,18 +152,23 @@ public class PlayerController : MonoBehaviour
     private void UseAbility(int index)
     {
         if (PauseManager.isPaused) { return; }
-        AbilitySlot abilitySlot = abilities[index].GetComponent<AbilitySlot>();
+        AbilitySlot abilitySlot = abilities[index].abilitySlot.GetComponent<AbilitySlot>();
+
+        if(abilitySlot == null) { return; }
         if(staticVariables.getCooldown(abilitySlot.abilityName) != 1f) { return; }
         abilitySlot.Activate(gameObject.transform.position);
     }
 
-    private int CheckForNumericKeyPress(int minimum, int maximum)
-    {
-        for(int i = minimum; i <= maximum; i++)
+    private int CheckForValidKeyPress()
+    {   
+        int index = 0;
+        foreach(Ability ability in abilities)
         {
-            if(Input.GetKeyDown(keyCodes[i])) { 
-                return i-1; 
+            if(Input.GetKeyDown(ability.bindedKey))
+            {
+                return index;
             }
+            index += 1;
         }
         return -1;
     }
@@ -250,26 +255,34 @@ public class PlayerController : MonoBehaviour
         return closestNPC == tryingNPC;
 	}
 
-    public void FetchSpells()
+    public void FetchAbilities()
     {
-        foreach(GameObject ability in abilities)
+        foreach(Ability ability in abilities)
         {
-            if(staticVariables.abilityActiveStatus.TryGetValue(ability.name, out bool _))
+            if(staticVariables.abilityActiveStatus.TryGetValue(ability.abilitySlot.name, out bool _) || ability.isStartingAbility)
             {
-                Debug.Log("Ability " + ability.name + " found in dictionary");
-                ability.SetActive(true);
+                Debug.Log("Ability " + ability.abilitySlot.name + " found in dictionary");
+                ability.abilitySlot.SetActive(true);
+                ability.abilitySlot.UpdateUI(ability.bindedKey);
             }
             else
             {
-                Debug.Log("Ability " + ability.name + " not found in dictionary");
-                ability.SetActive(false);
+                Debug.Log("Ability " + ability.abilitySlot.name + " not found in dictionary");
+                ability.abilitySlot.SetActive(false);
             }
-
         }
     }
 
     public void playSwordSound()
     {
         SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
+    }
+
+    [System.Serializable]
+    public class Ability
+    {
+        public bool isStartingAbility;
+        public GameObject abilitySlot;
+        public KeyCode bindedKey;
     }
 }

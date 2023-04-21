@@ -79,4 +79,9 @@ public class AbilitySlot : MonoBehaviour
         
         StartCooldown();
     }
+
+    public void UpdateUI()
+    {
+
+    }
 }

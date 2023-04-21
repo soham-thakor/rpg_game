@@ -78,7 +78,7 @@ public class Shop : MonoBehaviour
     private void GiveItemToPlayer(string name)
     {
         staticVariables.abilityActiveStatus[name + "Slot"] = true;
-        GameObject.FindWithTag("Player").GetComponent<PlayerController>().FetchSpells();
+        GameObject.FindWithTag("Player").GetComponent<PlayerController>().FetchAbilities();
     }
 
     [System.Serializable]
