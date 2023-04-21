@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
     // pull data from scriptable object
     void Awake() 
     {
+        FetchControls();
+        FetchAbilities();
         currentHealth = playerData.currentHealth;
         moveSpeed = playerData.moveSpeed;        
     }
@@ -69,8 +71,6 @@ public class PlayerController : MonoBehaviour
             transform.position = playerData.initialValue;
             playerData.movedScene = false;
         }
-
-        FetchAbilities();
     }
 
     private void Update()
@@ -260,12 +260,26 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Ability " + ability.abilitySlot.name + " found in dictionary");
                 ability.abilitySlot.SetActive(true);
-                //ability.abilitySlot.UpdateUI(ability.bindedKey);
             }
             else
             {
                 Debug.Log("Ability " + ability.abilitySlot.name + " not found in dictionary");
                 ability.abilitySlot.SetActive(false);
+            }
+        }
+    }
+
+    public void FetchControls()
+    {
+        foreach(Ability ability in abilities)
+        {
+            if(staticVariables.abilityBindings.TryGetValue(ability.abilitySlot.name, out KeyCode bindedKey))
+            {
+                ability.bindedKey = bindedKey;
+            }
+            else
+            {
+                staticVariables.abilityBindings[ability.abilitySlot.name] = ability.bindedKey;
             }
         }
     }

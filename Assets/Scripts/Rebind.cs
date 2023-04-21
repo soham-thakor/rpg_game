@@ -8,8 +8,9 @@ public class Rebind : MonoBehaviour
     public string ability;
     public Text keyUI;
 
-    void Start()
+    void OnEnable()
     {
+        ability += "Slot";
         UpdateUI(staticVariables.abilityBindings[ability].ToString());
     }
 
@@ -23,23 +24,29 @@ public class Rebind : MonoBehaviour
         StartCoroutine(WaitForInput());
     }
 
-    IEnumerator WaitForInput()
+    public IEnumerator WaitForInput()
     {
         while (true)
         {
             if (Input.anyKeyDown)
             {
-                foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
+                foreach (KeyCode kCode in System.Enum.GetValues(typeof(KeyCode)))
                 {
-                    if (Input.GetKeyDown(vKey))
+                    if (Input.GetKeyDown(kCode))
                     {
-                        staticVariables.abilityBindings[ability] = vKey;
-                        UpdateUI(vKey.ToString());
+                        bindKey(kCode);
                         yield break;
                     }
                 }
             }
             yield return null;
         }
+    }
+
+    private void bindKey(KeyCode newKey)
+    {
+        staticVariables.abilityBindings[ability] = newKey;
+        UpdateUI(newKey.ToString());
+        GameObject.FindWithTag("Player").GetComponent<PlayerController>().FetchControls();
     }
 }
