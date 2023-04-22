@@ -27,6 +27,13 @@ public class Shop : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if(Input.GetButtonDown("pause")) {
+            CloseMenu();
+        }
+    }
+
     public void CloseMenu() {
         shopMenu.SetActive(false);
     }
