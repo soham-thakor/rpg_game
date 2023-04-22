@@ -107,6 +107,7 @@ public class Quest : MonoBehaviour
 
                 if(shopMenu)
                 {
+                    staticVariables.immobile = true;
                     shopMenu.OpenMenu();
                 }
                 //end the dialogue

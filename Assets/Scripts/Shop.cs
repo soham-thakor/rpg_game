@@ -36,6 +36,7 @@ public class Shop : MonoBehaviour
 
     public void CloseMenu() {
         shopMenu.SetActive(false);
+        staticVariables.immobile = false;
     }
 
     public void OpenMenu() {
