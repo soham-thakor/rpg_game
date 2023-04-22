@@ -12,8 +12,6 @@ public class Rebind : MonoBehaviour
 
     void OnEnable()
     {   
-        ability += "Slot";
-
         try {
             unlocked = staticVariables.abilityActiveStatus[ability];
         }

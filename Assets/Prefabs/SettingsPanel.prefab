@@ -4899,7 +4899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9056868034831371931, guid: 6455fc3d3756bbb429297668706d16a3, type: 3}
       propertyPath: ability
-      value: WaterMine
+      value: WaterMineSlot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6455fc3d3756bbb429297668706d16a3, type: 3}
@@ -5025,7 +5025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9056868034831371931, guid: 6455fc3d3756bbb429297668706d16a3, type: 3}
       propertyPath: ability
-      value: WindSpeed
+      value: WindSpeedSlot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6455fc3d3756bbb429297668706d16a3, type: 3}
@@ -5151,7 +5151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9056868034831371931, guid: 6455fc3d3756bbb429297668706d16a3, type: 3}
       propertyPath: ability
-      value: PetrifyMine
+      value: PetrifyMineSlot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6455fc3d3756bbb429297668706d16a3, type: 3}
@@ -5274,6 +5274,10 @@ PrefabInstance:
     - target: {fileID: 8809581383591151478, guid: 6455fc3d3756bbb429297668706d16a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9056868034831371931, guid: 6455fc3d3756bbb429297668706d16a3, type: 3}
+      propertyPath: ability
+      value: FireHealSlot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6455fc3d3756bbb429297668706d16a3, type: 3}
