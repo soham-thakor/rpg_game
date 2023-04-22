@@ -27,7 +27,19 @@ public class Shop : MonoBehaviour
         }
     }
 
-    public void CloseMenu() {
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            CloseMenu();
+
+            // this is such a dumb workaround, cus if the pause button ever changes from Escape, then this will pause the game without a menu being open
+            // this line prevents the pause menu from being opened when closing the shop menu with Escape
+            GameObject.Find("Pause Menu").GetComponent<PauseManager>().ChangePause();
+        }
+    }
+
+    public void CloseMenu()
+    {
         shopMenu.SetActive(false);
     }
 
