@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AbilitySlot : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class AbilitySlot : MonoBehaviour
     [SerializeField] private GameObject prefab;
     [SerializeField] private float cooldownTime;
     [SerializeField] private Slider slider;
+    [SerializeField] private TextMeshProUGUI keyPrompt;
 
     [System.NonSerialized] public string abilityName;
     private GameObject playerObj;
@@ -80,8 +82,9 @@ public class AbilitySlot : MonoBehaviour
         StartCooldown();
     }
 
-    public void UpdateUI()
+    public void UpdateKeyPrompt()
     {
-
+        if(gameObject.name == "Bite"){return;}
+        keyPrompt.text = staticVariables.abilityBindings[gameObject.name].ToString();
     }
 }

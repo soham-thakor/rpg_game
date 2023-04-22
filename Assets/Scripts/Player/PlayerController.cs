@@ -258,13 +258,11 @@ public class PlayerController : MonoBehaviour
         {
             if(staticVariables.abilityActiveStatus.TryGetValue(ability.abilitySlot.name, out bool _) || ability.isStartingAbility)
             {
-                Debug.Log("Ability " + ability.abilitySlot.name + " found in dictionary");
                 staticVariables.abilityActiveStatus[ability.abilitySlot.name] = true;
                 ability.abilitySlot.SetActive(true);
             }
             else
             {
-                Debug.Log("Ability " + ability.abilitySlot.name + " not found in dictionary");
                 ability.abilitySlot.SetActive(false);
             }
         }
@@ -282,6 +280,8 @@ public class PlayerController : MonoBehaviour
             {
                 staticVariables.abilityBindings[ability.abilitySlot.name] = ability.bindedKey;
             }
+
+            ability.abilitySlot.GetComponent<AbilitySlot>().UpdateKeyPrompt();
         }
     }
 
