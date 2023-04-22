@@ -85,6 +85,6 @@ public class AbilitySlot : MonoBehaviour
     public void UpdateKeyPrompt()
     {
         if(gameObject.name == "Bite"){return;}
-        keyPrompt.text = staticVariables.abilityBindings[gameObject.name].ToString();
+        keyPrompt.text = staticVariables.abilityBindings[gameObject.name].ToString().Replace("Alpha", "");
     }
 }
