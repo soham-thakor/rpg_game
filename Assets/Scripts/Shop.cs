@@ -37,6 +37,7 @@ public class Shop : MonoBehaviour
     public void CloseMenu() {
         shopMenu.SetActive(false);
         staticVariables.immobile = false;
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     public void OpenMenu() {

@@ -38,7 +38,8 @@ public class Rebind : MonoBehaviour
 
     public void RebindKeys()
     {
-        if(!unlocked){ return; }
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        if (!unlocked){ return; }
         StartCoroutine(WaitForInput());
     }
 
