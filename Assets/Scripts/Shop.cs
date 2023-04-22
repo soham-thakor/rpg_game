@@ -27,12 +27,6 @@ public class Shop : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void CloseMenu() {
         shopMenu.SetActive(false);
     }
@@ -78,7 +72,10 @@ public class Shop : MonoBehaviour
     private void GiveItemToPlayer(string name)
     {
         staticVariables.abilityActiveStatus[name + "Slot"] = true;
-        GameObject.FindWithTag("Player").GetComponent<PlayerController>().FetchAbilities();
+
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        player.FetchControls();
+        player.FetchAbilities();
     }
 
     [System.Serializable]

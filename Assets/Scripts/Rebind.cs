@@ -8,10 +8,29 @@ public class Rebind : MonoBehaviour
     public string ability;
     public Text keyUI;
 
+    private bool unlocked;
+
     void OnEnable()
-    {
+    {   
         ability += "Slot";
-        UpdateUI(staticVariables.abilityBindings[ability].ToString());
+
+        try {
+            unlocked = staticVariables.abilityActiveStatus[ability];
+        }
+        catch(KeyNotFoundException)
+        {
+            unlocked = false;
+        }
+
+        if(unlocked)
+        {
+            UpdateUI(staticVariables.abilityBindings[ability].ToString());
+        }
+        else
+        {
+            UpdateUI("Not Unlocked");
+        }
+        
     }
 
     public void UpdateUI(string key)
@@ -21,6 +40,7 @@ public class Rebind : MonoBehaviour
 
     public void RebindKeys()
     {
+        if(!unlocked){ return; }
         StartCoroutine(WaitForInput());
     }
 

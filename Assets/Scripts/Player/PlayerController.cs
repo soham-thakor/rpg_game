@@ -149,9 +149,9 @@ public class PlayerController : MonoBehaviour
     private void UseAbility(int index)
     {
         if (PauseManager.isPaused) { return; }
-        AbilitySlot abilitySlot = abilities[index].abilitySlot.GetComponent<AbilitySlot>();
+        if(!abilities[index].abilitySlot.activeSelf) { return; }
 
-        if(abilitySlot == null) { return; }
+        AbilitySlot abilitySlot = abilities[index].abilitySlot.GetComponent<AbilitySlot>();
         if(staticVariables.getCooldown(abilitySlot.abilityName) != 1f) { return; }
         abilitySlot.Activate(gameObject.transform.position);
     }
@@ -259,6 +259,7 @@ public class PlayerController : MonoBehaviour
             if(staticVariables.abilityActiveStatus.TryGetValue(ability.abilitySlot.name, out bool _) || ability.isStartingAbility)
             {
                 Debug.Log("Ability " + ability.abilitySlot.name + " found in dictionary");
+                staticVariables.abilityActiveStatus[ability.abilitySlot.name] = true;
                 ability.abilitySlot.SetActive(true);
             }
             else
