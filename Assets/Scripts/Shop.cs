@@ -68,7 +68,7 @@ public class Shop : MonoBehaviour
         if(staticVariables.currencyAmount >= itemDict[selectedAbility].cost) 
         {
             staticVariables.currencyAmount -= itemDict[selectedAbility].cost;
-            costText = staticVariables.currencyAmount;
+            costText.text = staticVariables.currencyAmount.ToString();
             
             costPanel.SetActive(false);
             buyButton.SetActive(false);
