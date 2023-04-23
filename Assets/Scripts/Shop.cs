@@ -75,22 +75,22 @@ public class Shop : MonoBehaviour
 
     public void PurchaseItem()
     {
-        if(staticVariables.currencyAmount >= itemDict[selectedAbility].cost) 
+        if(staticVariables.currencyAmount < itemDict[selectedAbility].cost)
         {
-            if(itemDict[selectedAbility].purchased) { return; }
-
-            currencyController.RemoveCurrency(itemDict[selectedAbility].cost);
-            itemDict[selectedAbility].abilityPanel.SetActive(false);
-            itemDict[selectedAbility].descriptionPanel.SetActive(false);
-            
-            itemDict[selectedAbility].purchased = true;
-            
-            costPanel.SetActive(false);
-            buyButton.SetActive(false);
-
-            GiveItemToPlayer(selectedAbility);
+            return;
         }
-        
+
+        if(itemDict[selectedAbility].purchased) { return; }
+
+        currencyController.RemoveCurrency(itemDict[selectedAbility].cost);
+        itemDict[selectedAbility].purchased = true;
+
+        itemDict[selectedAbility].abilityPanel.SetActive(false);
+        itemDict[selectedAbility].descriptionPanel.SetActive(false);
+        costPanel.SetActive(false);
+        buyButton.SetActive(false);
+
+        GiveItemToPlayer(selectedAbility);
     }
 
     // literally just activate the spell for the player
@@ -101,7 +101,6 @@ public class Shop : MonoBehaviour
         PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         player.FetchControls();
         player.FetchAbilities();
-
     }
 
     [System.Serializable]
