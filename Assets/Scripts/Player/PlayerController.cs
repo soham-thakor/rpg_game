@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     // equippable abilities
     public GameObject projectileSlot;
     public Ability[] abilities = {};
+    private List<Vector2> abilityPositions = new List<Vector2>();
 
     // scriptable object
     public PlayerData playerData;
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour
     // pull data from scriptable object
     void Awake() 
     {
+        getAbilityPositions();
         FetchControls();
         FetchAbilities();
         currentHealth = playerData.currentHealth;
@@ -254,11 +256,13 @@ public class PlayerController : MonoBehaviour
 
     public void FetchAbilities()
     {
+        int index = 0;
         foreach(Ability ability in abilities)
         {
             if(staticVariables.abilityActiveStatus.TryGetValue(ability.abilitySlot.name, out bool _) || ability.isStartingAbility)
             {
                 staticVariables.abilityActiveStatus[ability.abilitySlot.name] = true;
+                ability.abilitySlot.transform.position = abilityPositions[index++];
                 ability.abilitySlot.SetActive(true);
             }
             else
@@ -284,6 +288,14 @@ public class PlayerController : MonoBehaviour
             ability.abilitySlot.GetComponent<AbilitySlot>().UpdateKeyPrompt();
         }
     }
+
+    public void getAbilityPositions()
+	{
+        foreach(Ability ability in abilities)
+		{
+            abilityPositions.Add(ability.abilitySlot.transform.position);
+		}
+	}
 
     public void playSwordSound()
     {
