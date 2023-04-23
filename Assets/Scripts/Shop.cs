@@ -11,13 +11,17 @@ public class Shop : MonoBehaviour
     public List<Item> items = new List<Item>();
 
     private Dictionary<string, Item> itemDict = new Dictionary<string, Item>();
+    private CurrencyController currencyController;
     private TextMeshProUGUI costText;
     private string selectedAbility;
 
     // Start is called before the first frame update
     void Start()
     {
+        staticVariables.currencyAmount += 5000;
+        
         costText = costPanel.transform.Find("Number").GetComponent<TextMeshProUGUI>();
+        currencyController = GameObject.Find("Arcana Counter").GetComponent<CurrencyController>();
 
         costPanel.SetActive(false);
         buyButton.SetActive(false);
@@ -67,8 +71,7 @@ public class Shop : MonoBehaviour
     {
         if(staticVariables.currencyAmount >= itemDict[selectedAbility].cost) 
         {
-            staticVariables.currencyAmount -= itemDict[selectedAbility].cost;
-            costText.text = staticVariables.currencyAmount.ToString();
+            currencyController.RemoveCurrency(itemDict[selectedAbility].cost);
             
             costPanel.SetActive(false);
             buyButton.SetActive(false);
@@ -86,6 +89,7 @@ public class Shop : MonoBehaviour
         PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         player.FetchControls();
         player.FetchAbilities();
+
     }
 
     [System.Serializable]

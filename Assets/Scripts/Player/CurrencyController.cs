@@ -20,6 +20,12 @@ public class CurrencyController : MonoBehaviour
         counter.text = staticVariables.currencyAmount.ToString();
     }
 
+    public void RemoveCurrency(int amount)
+    {
+        staticVariables.currencyAmount -= amount;
+        counter.text = staticVariables.currencyAmount.ToString();
+    }
+
     private int GetPayout(GameObject enemy)
     {
         foreach(KillReward reward in rewards)
