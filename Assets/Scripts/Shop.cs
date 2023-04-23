@@ -17,9 +17,7 @@ public class Shop : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        staticVariables.currencyAmount += 5000;
-        
+    {        
         costText = costPanel.transform.Find("Number").GetComponent<TextMeshProUGUI>();
         currencyController = GameObject.Find("Arcana Counter").GetComponent<CurrencyController>();
 
