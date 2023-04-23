@@ -20098,13 +20098,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1682402130}
     m_Modifications:
+    - target: {fileID: 8566802007861709337, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 12.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709337, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.38
+      objectReference: {fileID: 0}
     - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_text
-      value: Press to 3 to gain a speed boost
+      value: You can change the controls of your abilities from the settings menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8566802009729770693, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_Name
       value: Hint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770693, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_RootOrder
@@ -20112,11 +20132,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.2256794
+      value: 9.085
       objectReference: {fileID: 0}
     - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.0199165
+      value: -6.013
       objectReference: {fileID: 0}
     - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20164,13 +20184,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1682402130}
     m_Modifications:
+    - target: {fileID: 8566802007861709337, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 12.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709337, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.38
+      objectReference: {fileID: 0}
     - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_text
-      value: Press 2 to drop a mine
+      value: Have fun exploring the veiled castle!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_fontSize
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802007861709338, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8566802009729770693, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_Name
       value: Hint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566802009729770693, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_RootOrder
@@ -20178,11 +20218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.21224
+      value: 9.18
       objectReference: {fileID: 0}
     - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.919595
+      value: -4.68
       objectReference: {fileID: 0}
     - target: {fileID: 8566802009729770694, guid: af1a2b2657d91464ea25e4670f67104e, type: 3}
       propertyPath: m_LocalPosition.z
