@@ -46,24 +46,30 @@ public class Shop : MonoBehaviour
 
     public void OpenMenu() {
         shopMenu.SetActive(true);
+
+        foreach(Item item in items) {
+            if(item.purchased) {
+                item.abilityPanel.SetActive(false);
+            }
+            else {
+                item.abilityPanel.SetActive(true);
+            }
+        }
     }
 
     public void SelectDescriptionPanel(string name) 
     {
         costPanel.SetActive(true);
         buyButton.SetActive(true);
-
-        costText.text = itemDict[name].cost.ToString();
-
-        foreach (Item item in items) 
+        selectedAbility = name;
+        
+        if(itemDict[name].purchased) 
         {
-            if (item.name == name) {
-                item.descriptionPanel.SetActive(true);
-                selectedAbility = name;
-            }
-            else {
-                item.descriptionPanel.SetActive(false);
-            }
+            buyButton.SetActive(false);
+        }
+        else
+        {
+            costText.text = itemDict[name].cost.ToString();
         }
     }
 
@@ -71,7 +77,13 @@ public class Shop : MonoBehaviour
     {
         if(staticVariables.currencyAmount >= itemDict[selectedAbility].cost) 
         {
+            if(itemDict[selectedAbility].purchased) { return; }
+
             currencyController.RemoveCurrency(itemDict[selectedAbility].cost);
+            itemDict[selectedAbility].abilityPanel.SetActive(false);
+            itemDict[selectedAbility].descriptionPanel.SetActive(false);
+            
+            itemDict[selectedAbility].purchased = true;
             
             costPanel.SetActive(false);
             buyButton.SetActive(false);
@@ -93,10 +105,11 @@ public class Shop : MonoBehaviour
     }
 
     [System.Serializable]
-    public class Item{
+    public class Item {
         public string name;
         public int cost;
         public GameObject abilityPanel;
         public GameObject descriptionPanel;
+        public bool purchased = false;
     }
 }
