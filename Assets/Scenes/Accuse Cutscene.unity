@@ -696,6 +696,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 55.180054
       objectReference: {fileID: 0}
+    - target: {fileID: 1949815795958311464, guid: 559385d4031c5034485b0ef7fb8403e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1949815795958311465, guid: 559385d4031c5034485b0ef7fb8403e6, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.052246094
@@ -6671,6 +6675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC DialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 9152110380736450059, guid: a00d3d63bef26094a9e6e2badfccf55a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e7a09084e1f00c040b5a8e9b6932e927, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a00d3d63bef26094a9e6e2badfccf55a, type: 3}
 --- !u!114 &1540745509 stripped
