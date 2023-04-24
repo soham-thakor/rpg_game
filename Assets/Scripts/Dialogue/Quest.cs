@@ -61,7 +61,7 @@ public class Quest : MonoBehaviour
 		}
 
         // dialogue interactions system - when key F is pressed AND in range AND this NPC is the one closest to the player AND we arent already talking to someone else
-        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && !staticVariables.immobile){
+        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && !staticVariables.immobile && !PauseManager.isPaused){
             //Track this dialogue on the map
             mapTracker.track("Dialogue", gameObject);
             //check if we need to show the earl pop up
