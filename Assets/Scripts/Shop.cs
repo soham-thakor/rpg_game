@@ -17,7 +17,7 @@ public class Shop : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {       
         costText = costPanel.transform.Find("Number").GetComponent<TextMeshProUGUI>();
         currencyController = GameObject.Find("Arcana Counter").GetComponent<CurrencyController>();
 
@@ -44,12 +44,16 @@ public class Shop : MonoBehaviour
 
     public void OpenMenu() {
         shopMenu.SetActive(true);
-
+    
         foreach(Item item in items) {
-            if(item.purchased) {
+            bool status;
+            staticVariables.abilityActiveStatus.TryGetValue(item.name + "Slot", out status);
+
+            if(status) {
                 item.abilityPanel.SetActive(false);
             }
-            else {
+            else
+            {
                 item.abilityPanel.SetActive(true);
             }
         }
