@@ -140,6 +140,7 @@ public class staticVariables : MonoBehaviour
     public static void resetStatics()
 	{
         Debug.Log("Resetting statics...");
+        abilityActiveStatus.Clear();
         secretEntranceFound = false;
         secretBookshelf = null;
         chosenName = "Player Name";
