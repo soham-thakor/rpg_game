@@ -120,7 +120,6 @@ public class staticVariables : MonoBehaviour
             return 0f;
         }
 	}
-
     public static void GenerateWorld()
 	{
         Debug.Log("Generating World...");

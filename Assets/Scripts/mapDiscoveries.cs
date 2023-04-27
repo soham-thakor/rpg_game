@@ -35,7 +35,10 @@ public class mapDiscoveries : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.M))
 		{
-
+            if(pauseManager.notebookPanel.activeInHierarchy)
+			{
+                return;
+			}
             mapUI.SetActive(!mapUI.activeInHierarchy);
             pauseManager.ChangePause();
             showArea(SceneManager.GetActiveScene().name);
