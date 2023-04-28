@@ -109,6 +109,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log(Time.time);
     }
 
+    public int getMaxHealth()
+	{
+        return (int)currentHealth;
+
+    }
     private void FixedUpdate() 
     {
         if(Input.GetKeyDown(KeyCode.LeftShift)) {
@@ -230,6 +235,10 @@ public class PlayerController : MonoBehaviour
 
     public void AddHealth(float heal)
     {
+        if(currentHealth + heal > (int)currentHealth)
+		{
+            heal = (int)currentHealth - currentHealth;
+		}
         currentHealth += heal;
         healthBar.SetHealth((int)currentHealth);
     }
