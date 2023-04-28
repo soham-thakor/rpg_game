@@ -97,11 +97,15 @@ public class Shop : MonoBehaviour
 
     public void healPlayerToFull()
 	{
+        if (staticVariables.currencyAmount < 100)
+        {
+            return;
+        }
         Debug.Log("healing");
+        
         PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         if (player.currentHealth >= player.getMaxHealth())
 		{
-            Debug.Log("Player is already full health");
             return;
 		}
         currencyController.RemoveCurrency(100);

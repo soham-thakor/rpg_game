@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
 
     public int getMaxHealth()
 	{
-        return (int)currentHealth;
+        return (int)playerData.maxHealth;
 
     }
     private void FixedUpdate() 
@@ -235,11 +235,12 @@ public class PlayerController : MonoBehaviour
 
     public void AddHealth(float heal)
     {
-        if(currentHealth + heal > (int)currentHealth)
-		{
-            heal = (int)currentHealth - currentHealth;
-		}
+        
         currentHealth += heal;
+        if (currentHealth > playerData.maxHealth)
+		{
+            currentHealth = playerData.maxHealth;
+		}
         healthBar.SetHealth((int)currentHealth);
     }
 
