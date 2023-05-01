@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     // pull data from scriptable object
     void Awake() 
     {
+        if(staticVariables.respawning) { Respawn(); }
         getAbilityPositions();
         FetchControls();
         FetchAbilities();
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         staticVariables.immobile = false;
-
+        staticVariables.updateRespawnScene(SceneManager.GetActiveScene().name);
         // set health values from previous scene
         healthBar.SetMaxHealth((int)playerData.maxHealth);
         healthBar.SetHealth((int)currentHealth);
@@ -311,6 +312,20 @@ public class PlayerController : MonoBehaviour
     {
         SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
     }
+
+    public void Respawn()
+	{
+        Debug.Log("Respawning");
+        Debug.Log("Max Health: " + getMaxHealth().ToString());
+        currentHealth = getMaxHealth() / 2;
+        //Debug.Log("Current Health: " + currentHealth.ToString());
+        //healthBar.SetHealth((int)currentHealth);
+        playerData.currentHealth = currentHealth;
+        if (staticVariables.guesses == 3) { staticVariables.guesses -= 1; }
+        staticVariables.currencyAmount = 0;
+
+        staticVariables.respawning = false;
+	}
 
     [System.Serializable]
     public class Ability

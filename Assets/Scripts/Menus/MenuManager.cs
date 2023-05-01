@@ -89,7 +89,11 @@ public class MenuManager : MonoBehaviour
 		loadScene("CutSceneInstruct");
 	}
 
-
+	public void respawnInLastPlayableScene()
+	{
+		staticVariables.respawning = true;
+		SceneManager.LoadScene(staticVariables.lastRespawnableScene);
+	}
 	// Update is called once per frame
 	void Update()
     {

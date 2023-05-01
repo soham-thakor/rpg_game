@@ -120,6 +120,18 @@ public class staticVariables : MonoBehaviour
             return 0f;
         }
 	}
+
+    //respawn information
+    public static string lastRespawnableScene;
+    public static bool respawning = false;
+    public static List<string> respawnableScenes = new List<string>() { 
+    "Halls Left", "Halls Right", "Halls Bottom", "Large Rooms", "Throne Room", "NPC Rooms", "Garden", "Garden Maze", "Dungeon Maze", "Barracks"};
+    public static void updateRespawnScene(string scene)
+	{
+        if (respawnableScenes.Contains(scene)) {
+            lastRespawnableScene = scene;
+        }
+	}
     public static void GenerateWorld()
 	{
         Debug.Log("Generating World...");
