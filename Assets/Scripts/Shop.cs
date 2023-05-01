@@ -95,6 +95,23 @@ public class Shop : MonoBehaviour
         GiveItemToPlayer(selectedAbility);
     }
 
+    public void healPlayerToFull()
+	{
+        if (staticVariables.currencyAmount < 100)
+        {
+            return;
+        }
+        Debug.Log("healing");
+        
+        PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        if (player.currentHealth >= player.getMaxHealth())
+		{
+            return;
+		}
+        currencyController.RemoveCurrency(100);
+        player.AddHealth(player.getMaxHealth());
+    }
+
     // literally just activate the spell for the player
     private void GiveItemToPlayer(string name)
     {
