@@ -125,7 +125,7 @@ public class staticVariables : MonoBehaviour
     public static string lastRespawnableScene;
     public static bool respawning = false;
     public static List<string> respawnableScenes = new List<string>() { 
-    "Halls Left", "Halls Right", "Halls Bottom", "Large Rooms", "Throne Room", "NPC Rooms", "Garden", "Garden Maze", "Dungeon Maze", "Barracks"};
+    "Halls Left", "Halls Right", "Halls Bottom", "Large Rooms", "Throne Room v2", "NPC Rooms", "Garden", "Garden Maze", "Dungeon Maze", "Barracks"};
     public static void updateRespawnScene(string scene)
 	{
         if (respawnableScenes.Contains(scene)) {
