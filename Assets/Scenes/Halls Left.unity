@@ -728,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3283007440131791997, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.55
+      value: 3.99
       objectReference: {fileID: 0}
     - target: {fileID: 3283007440131791997, guid: 3dd2d18d4fd562744b86b18d41941ed3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2873,7 +2873,7 @@ GameObject:
   - component: {fileID: 632576967}
   m_Layer: 0
   m_Name: Key
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6354,6 +6354,18 @@ PrefabInstance:
       propertyPath: openMessages.Array.data[2]
       value: I'll see what information in this book could tell me more about the
         people here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066915, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_Radius
+      value: 0.15364727
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066915, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03408076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862887565429066915, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.009566516
       objectReference: {fileID: 0}
     - target: {fileID: 5862887565429066927, guid: 308dc6de5f885514092d96fa8bd42c0a, type: 3}
       propertyPath: m_Name

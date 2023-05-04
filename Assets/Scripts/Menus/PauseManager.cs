@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
     public static bool isPaused;
-    public GameObject pausePanel, notebookPanel, settingsPanel, controlPanel;
+    public GameObject pausePanel, notebookPanel, settingsPanel, controlPanel, controlChangePanel;
     public string mainMenu;
+    public GameObject popUpToggle;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,9 @@ public class PauseManager : MonoBehaviour
         settingsPanel.SetActive(false);
         controlPanel.SetActive(false);
         isPaused = false;
+        popUpToggle.GetComponent<Toggle>().isOn = staticVariables.popUpsEnabled;
+        changeTutorialPopUpSetting();
+        
     }
 
     // Update is called once per frame
@@ -28,6 +33,11 @@ public class PauseManager : MonoBehaviour
                 staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
 			}
             ChangePause();
+            if (isPaused)
+			{
+                pausePanel.SetActive(true);
+			}
+            
         }
         
     }
@@ -37,16 +47,16 @@ public class PauseManager : MonoBehaviour
         isPaused = !isPaused;
         if (isPaused)
         {
-            pausePanel.SetActive(true);
             Time.timeScale = 0f;
-            AudioListener.pause = true;
+            //AudioListener.pause = true;
         }
         else
         {
             hidePanels();
             Time.timeScale = 1f;
-            AudioListener.pause = false;
+            //AudioListener.pause = false;
         }
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     // TODO: use an enumerator or make these into templates
@@ -55,15 +65,23 @@ public class PauseManager : MonoBehaviour
         pausePanel.SetActive(false);
         notebookPanel.GetComponent<notebookManager>().changePage(0);
         notebookPanel.SetActive(true);
-        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     public void showSettings()
     {
+        controlChangePanel.SetActive(false);
         pausePanel.SetActive(false);
         settingsPanel.SetActive(true);
-        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
+    
+    public void showControlChange()
+	{
+        //settingsPanel.SetActive(false);
+        controlChangePanel.SetActive(true);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+	}
 
     public void showOptions(GameObject previous_panel)
     {
@@ -73,7 +91,7 @@ public class PauseManager : MonoBehaviour
         }*/
         previous_panel.SetActive(false);
         pausePanel.SetActive(true);
-        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
     }
 
     public void showControls() {
@@ -92,6 +110,7 @@ public class PauseManager : MonoBehaviour
         notebookPanel.SetActive(false);
         settingsPanel.SetActive(false);
         controlPanel.SetActive(false);
+        controlChangePanel.SetActive(false);
     }
 
     public void Quit()
@@ -99,6 +118,16 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene(mainMenu);
         Time.timeScale = 1f;
         AudioListener.pause = false;
-        //SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+        SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
+    }
+
+    public void changeTutorialPopUpSetting()
+	{
+        if(popUpToggle.GetComponent<Toggle>().isOn == staticVariables.popUpsEnabled)
+		{
+            return;
+		}
+        staticVariables.popUpsEnabled = !staticVariables.popUpsEnabled;
+
     }
 }

@@ -12,26 +12,31 @@ public class Ghost : MonoBehaviour
     private bool inRange = false;
     private int messageIndex = 0;
     private NPCStatic.ghostClue ghostClue;
+    private discoveryTracker mapTracker;
     // Start is called before the first frame update
     void Start()
     {
         playerSpeech = GetComponent<PlayerSpeech>();
         ghostClue = NPCStatic.clues[playerSpeech.playerName.text];
-        openMessages.Add(ghostClue.clue); 
+        openMessages.Add(ghostClue.clue);
+        mapTracker = GameObject.FindGameObjectWithTag("Discovery Tracker").GetComponent<discoveryTracker>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
             //discover this dialogue
-            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Contains(gameObject))
+            mapTracker.track("Dialogue", gameObject);
+            //display the pop up if this is the first clue they have found
+            if (!staticVariables.seenNotebookPopUp)
             {
-                mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Add(gameObject);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PopUps>().checkNotebookPopUp();
+                return;
             }
+
             if (ghostClue.traitNum != -1)
             {//if this is a clue about one of the traits of the culprit
                 NPCStatic.discoverCulpritClue(ghostClue.traitNum);

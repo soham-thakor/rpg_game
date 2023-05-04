@@ -10,9 +10,13 @@ public class InteractionText : MonoBehaviour
 
     private PlayerSpeech playerSpeech;
     private bool inRange = false;
+    private discoveryTracker mapTracker;
+
     // Start is called before the first frame update
     void Start()
     {
+        mapTracker = GameObject.FindGameObjectWithTag("Discovery Tracker").GetComponent<discoveryTracker>();
+
         playerSpeech = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSpeech>();
     }
 
@@ -21,10 +25,7 @@ public class InteractionText : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.F))
 		{
-            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Contains(gameObject))
-            {
-                mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Add(gameObject);
-            }
+            mapTracker.track("Interactable", gameObject);
 
             playerSpeech.Speak(message);
 		}

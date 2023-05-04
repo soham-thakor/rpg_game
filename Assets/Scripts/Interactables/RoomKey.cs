@@ -8,6 +8,8 @@ public class RoomKey : MonoBehaviour
     public GameObject buttonPrompt;
 
 	private bool inRange = false;
+	private discoveryTracker mapTracker;
+
 	// Start is called before the first frame update
 	private void Start()
 	{
@@ -16,16 +18,16 @@ public class RoomKey : MonoBehaviour
 			gameObject.SetActive(false);
 		}
 		gameObject.transform.position = staticVariables.keyPos;
+		mapTracker = GameObject.FindGameObjectWithTag("Discovery Tracker").GetComponent<discoveryTracker>();
+
 	}
 	// Update is called once per frame
 	void Update()
     {
         if(inRange && Input.GetKeyDown(KeyCode.F))
 		{
-			if (!mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Contains(gameObject))
-			{
-				mapStatic.mapData[SceneManager.GetActiveScene().name].interactables.Add(gameObject);
-			}
+			mapTracker.track("Interactable", gameObject);
+
 
 			SoundManager.PlaySound(SoundManager.Sound.PickupKey);
 			gameObject.SetActive(false);

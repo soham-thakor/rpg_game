@@ -21,11 +21,9 @@ public class PlayerController : MonoBehaviour
 
     // equippable abilities
     public GameObject projectileSlot;
-    public GameObject[] abilities = {};
+    public Ability[] abilities = {};
+    private List<Vector2> abilityPositions = new List<Vector2>();
 
-    // used for detecting when a number key is pressed
-    private KeyCode[] keyCodes = new KeyCode []{ KeyCode.Alpha0, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5,
-                                                 KeyCode.Alpha6, KeyCode.Alpha7, KeyCode.Alpha8, KeyCode.Alpha9 };
     // scriptable object
     public PlayerData playerData;
 
@@ -38,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    private CurrencyController currencyController;
 
     //To keep track of the ghosts that need to spawn
     public QuestTrackerData questData; //isn't used, but it acts as a global variable
@@ -45,15 +44,18 @@ public class PlayerController : MonoBehaviour
     // pull data from scriptable object
     void Awake() 
     {
+        if(staticVariables.respawning) { Respawn(); }
+        getAbilityPositions();
+        FetchControls();
+        FetchAbilities();
         currentHealth = playerData.currentHealth;
         moveSpeed = playerData.moveSpeed;        
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         staticVariables.immobile = false;
-
+        staticVariables.updateRespawnScene(SceneManager.GetActiveScene().name);
         // set health values from previous scene
         healthBar.SetMaxHealth((int)playerData.maxHealth);
         healthBar.SetHealth((int)currentHealth);
@@ -64,21 +66,61 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         flashEffect = GetComponent<SimpleFlash>();
+        currencyController = GetComponent<CurrencyController>();
         
         // move player in scene if necessary
-        if(playerData.movedScene){
+        if(playerData.movedScene)
+        {
             transform.position = playerData.initialValue;
+            playerData.movedScene = false;
         }
     }
 
     private void Update()
     {
-        var index = CheckForNumericKeyPress(1, 3);
+        var index = CheckForValidKeyPress();
         if(index >= 0) { UseAbility(index); }
     }
 
+    private void getAllCluesDebug()
+	{
+        string debugString = "CLUES DEBUG STATEMENT: \n";
+        debugString += "CULPRIT CLUES: \n";
+        debugString += "Culprit is: " + staticVariables.realVillain + "\n";
+        debugString += "Culprit Traits: \n" +
+            "Key: " + NPCStatic.culpritKey.ToString() + "\n" +
+            "Traits: \n" + NPCStatic.NPCnames[NPCStatic.culpritKey].trait1 + "\n"
+            + NPCStatic.NPCnames[NPCStatic.culpritKey].trait2 + "\n"
+            + NPCStatic.NPCnames[NPCStatic.culpritKey].trait3 + "\n";
+        debugString += "Ghost 'CULPRIT IS' Clues: \n";
+        debugString += NPCStatic.ghostClue1.clue + "\n"
+            + NPCStatic.ghostClue2.clue + "\n"
+            + NPCStatic.ghostClue3.clue + "\n";
+        debugString += "Ghost 'CULPRIT ISN'T Clues: \n";
+        debugString += NPCStatic.antiClue1.clue + "\n"
+            + NPCStatic.antiClue2.clue + "\n"
+            + NPCStatic.antiClue3.clue + "\n";
+        debugString += "Anti-Clues List: \n";
+        foreach (string trait in NPCStatic.antiCluesGiven)
+        {
+            debugString += trait + "\n";
+        }
+
+        Debug.Log(debugString);
+        Debug.Log(Time.time);
+    }
+
+    public int getMaxHealth()
+	{
+        return (int)playerData.maxHealth;
+
+    }
     private void FixedUpdate() 
     {
+        if(Input.GetKeyDown(KeyCode.LeftShift)) {
+            getAllCluesDebug();
+        }
+
         if (canMove && !staticVariables.immobile) 
         {
             // If movement input is not 0, try to move            
@@ -114,18 +156,24 @@ public class PlayerController : MonoBehaviour
 
     private void UseAbility(int index)
     {
-        AbilitySlot abilitySlot = abilities[index].GetComponent<AbilitySlot>();
+        if (PauseManager.isPaused) { return; }
+        if(!abilities[index].abilitySlot.activeSelf) { return; }
+
+        AbilitySlot abilitySlot = abilities[index].abilitySlot.GetComponent<AbilitySlot>();
         if(staticVariables.getCooldown(abilitySlot.abilityName) != 1f) { return; }
         abilitySlot.Activate(gameObject.transform.position);
     }
 
-    private int CheckForNumericKeyPress(int minimum, int maximum)
-    {
-        for(int i = minimum; i <= maximum; i++)
+    private int CheckForValidKeyPress()
+    {   
+        int index = 0;
+        foreach(Ability ability in abilities)
         {
-            if(Input.GetKeyDown(keyCodes[i])) { 
-                return i-1; 
+            if(Input.GetKeyDown(ability.bindedKey))
+            {
+                return index;
             }
+            index += 1;
         }
         return -1;
     }
@@ -154,6 +202,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnSlash() {
+        if (PauseManager.isPaused) { return; }
         string animState = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
         if(animState != "player_attack" && animState != "player_attack_up" && animState != "player_attack_down")
 		{
@@ -163,6 +212,7 @@ public class PlayerController : MonoBehaviour
 
     void OnShoot()
     {
+        if (PauseManager.isPaused) { return; }
         AbilitySlot abilitySlot = projectileSlot.GetComponent<AbilitySlot>();
         if(staticVariables.getCooldown(abilitySlot.abilityName) != 1f) { return; }
         abilitySlot.Activate(gameObject.transform.position);
@@ -186,7 +236,12 @@ public class PlayerController : MonoBehaviour
 
     public void AddHealth(float heal)
     {
+        
         currentHealth += heal;
+        if (currentHealth > playerData.maxHealth)
+		{
+            currentHealth = playerData.maxHealth;
+		}
         healthBar.SetHealth((int)currentHealth);
     }
 
@@ -210,8 +265,73 @@ public class PlayerController : MonoBehaviour
         return closestNPC == tryingNPC;
 	}
 
-    public void playSwordSound()
+    public void FetchAbilities()
+    {
+        int index = 0;
+        foreach(Ability ability in abilities)
+        {
+            if(staticVariables.abilityActiveStatus.TryGetValue(ability.abilitySlot.name, out bool _) || ability.isStartingAbility)
+            {
+                staticVariables.abilityActiveStatus[ability.abilitySlot.name] = true;
+                ability.abilitySlot.transform.position = abilityPositions[index++];
+                ability.abilitySlot.SetActive(true);
+            }
+            else
+            {
+                ability.abilitySlot.SetActive(false);
+            }
+        }
+    }
+
+    public void FetchControls()
+    {
+        foreach(Ability ability in abilities)
+        {
+            if(staticVariables.abilityBindings.TryGetValue(ability.abilitySlot.name, out KeyCode bindedKey))
+            {
+                ability.bindedKey = bindedKey;
+            }
+            else
+            {
+                staticVariables.abilityBindings[ability.abilitySlot.name] = ability.bindedKey;
+            }
+
+            ability.abilitySlot.GetComponent<AbilitySlot>().UpdateKeyPrompt();
+        }
+    }
+
+    public void getAbilityPositions()
 	{
+        foreach(Ability ability in abilities)
+		{
+            abilityPositions.Add(ability.abilitySlot.transform.position);
+		}
+	}
+
+    public void playSwordSound()
+    {
         SoundManager.PlaySound(SoundManager.Sound.SwordSlash);
+    }
+
+    public void Respawn()
+	{
+        Debug.Log("Respawning");
+        Debug.Log("Max Health: " + getMaxHealth().ToString());
+        currentHealth = getMaxHealth() / 2;
+        //Debug.Log("Current Health: " + currentHealth.ToString());
+        //healthBar.SetHealth((int)currentHealth);
+        playerData.currentHealth = currentHealth;
+        if (staticVariables.guesses == 3) { staticVariables.guesses -= 1; }
+        staticVariables.currencyAmount = 0;
+
+        staticVariables.respawning = false;
+	}
+
+    [System.Serializable]
+    public class Ability
+    {
+        public bool isStartingAbility;
+        public GameObject abilitySlot;
+        public KeyCode bindedKey;
     }
 }

@@ -22,12 +22,15 @@ public class Quest : MonoBehaviour
     private bool onLastMsg = false;
     private GameObject buttonPrompt;
     private SelectionMenu selectionBox;
+    private Shop shopMenu;
     private bool currentlyTyping = false;
     private IEnumerator typing;
+    private discoveryTracker mapTracker;
 
     void Start()
     {
         selectionBox = gameObject.GetComponent<SelectionMenu>();
+        shopMenu = gameObject.GetComponent<Shop>();
 
         buttonPrompt = gameObject.transform.Find("Button Prompt").gameObject;
         if (actor.id == 0)
@@ -36,6 +39,7 @@ public class Quest : MonoBehaviour
         }
         dialogBox.SetActive(false);
         npcPortrait.SetActive(false);
+        mapTracker = GameObject.FindGameObjectWithTag("Discovery Tracker").GetComponent<discoveryTracker>();
 
     }
 
@@ -57,13 +61,16 @@ public class Quest : MonoBehaviour
 		}
 
         // dialogue interactions system - when key F is pressed AND in range AND this NPC is the one closest to the player AND we arent already talking to someone else
-        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && !staticVariables.immobile){
-            // if its a regular NPC and they have a clue to give you
-            // then they will spawn a ghost after interacting with them
-            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Contains(gameObject))
-            { // try and discover this dialogue
-                mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Add(gameObject);
-            }
+        if(Input.GetKeyDown(KeyCode.F) && playerInRange && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IsClosestNPC(gameObject) && !staticVariables.immobile && !PauseManager.isPaused){
+            //Track this dialogue on the map
+            mapTracker.track("Dialogue", gameObject);
+            //check if we need to show the earl pop up
+            if(gameObject.name == "Earl Thomas" && !staticVariables.seenSerumPopUp)
+			{
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PopUps>().checkSerumPopUp();
+                return;
+			}
+
             if (staticVariables.currentDialogue != gameObject && staticVariables.currentDialogue != null)
 			{
                 staticVariables.currentDialogue.GetComponent<Quest>().endDialogue();
@@ -89,15 +96,19 @@ public class Quest : MonoBehaviour
             //sound for the dialogue boxes
             SoundManager.PlaySound(SoundManager.Sound.DialogueSound);
 
-
-            
             // controls dialogue boxes
-            if(onLastMsg)
+            if(onLastMsg || cuMsg == messages[data1.questTracker].message.Length)
             { 
                 // if npc has SelectionMenu component, send message to open menu
                 if(selectionBox)
                 {
                     selectionBox.OpenMenu();
+                }
+
+                if(shopMenu)
+                {
+                    staticVariables.immobile = true;
+                    shopMenu.OpenMenu();
                 }
                 //end the dialogue
                 endDialogue();
@@ -109,6 +120,7 @@ public class Quest : MonoBehaviour
                 dialogBox.SetActive(true);
                 npcPortrait.SetActive(true);
                 string msgToDisplay = messages[data1.questTracker].message[cuMsg];
+                
                 if (!currentlyTyping)
                 {
                     typing = Type(dialogText.GetComponent<Text>(), msgToDisplay);

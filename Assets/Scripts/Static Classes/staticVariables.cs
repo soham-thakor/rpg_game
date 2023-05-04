@@ -6,25 +6,39 @@ public class staticVariables : MonoBehaviour
 {
     //static variable to tell the video whether or not it should go to the tutorial or the entrance cutscene after it completes
     public static bool skipTutorial;
+
 	//Use This to disallow player movement from any script
 	public static bool immobile = false;
+
     //Use this to make the player invincible
     public static bool invincible = false;
-    //Keep track of guesses
-    public static int guesses = 0;
-    //Know whether or not the player has picked up the room key
-    public static bool aquiredRoomKey = false;
+
     //Know whether or not the bedroom door has been opened
     public static bool bedroomDoorOpen = false;
+
     //declared for now but will be randomized eventually
     public static string realVillain = NPCStatic.chooseCulprit();
+
     //Store what the last guess was, so that it can be used in the cutscene
     public static string lastGuess = "Error Message";
+
     //To know from any script if a dialogue box is open and if so which one
     public static GameObject currentDialogue;
+    //Tracking which pop ups the player has seen already
+    public static bool seenSerumPopUp;
+    public static bool seenMapPopUp;
+    public static bool seenNotebookPopUp;
+    public static bool popUpsEnabled = true;
     //To Generate which scene the secret entrance is in
     public static int? secretBookshelfIndex = null;
     public static GameObject secretBookshelf;
+
+    public static int currencyAmount = 0;
+    public static Dictionary<string, bool> abilityActiveStatus = new Dictionary<string, bool>();
+    public static Dictionary<string, KeyCode> abilityBindings = new Dictionary<string, KeyCode>();
+    
+    public static int guesses = 0;
+    public static bool aquiredRoomKey = false;
 
     public static Dictionary<string, float> soundLevels = new Dictionary<string, float>();
 
@@ -35,14 +49,14 @@ public class staticVariables : MonoBehaviour
         {2, "Halls Bottom" },
         {3, "Large Rooms" }
     };
+    
     //To Store where you came from to get to the secret room
     public static string secretEntranceScene = chooseSecretRoom();
     public static Vector2 secretEntrancePosition;
     public static bool secretEntranceFound = false;
+
     //To Store the player's chosen name
     public static string chosenName = "Player Name";
-
-	
 
 	//For picking the key's spawn location
 	public static Dictionary<int, Vector2> keyPositions = new Dictionary<int, Vector2>()
@@ -107,29 +121,38 @@ public class staticVariables : MonoBehaviour
         }
 	}
 
-	public static void resetCooldowns()
+    //respawn information
+    public static string lastRespawnableScene;
+    public static bool respawning = false;
+    public static List<string> respawnableScenes = new List<string>() { 
+    "Halls Left", "Halls Right", "Halls Bottom", "Large Rooms", "Throne Room v2", "NPC Rooms", "Garden", "Garden Maze", "Dungeon Maze", "Barracks", "Tutorial"};
+    public static void updateRespawnScene(string scene)
 	{
-        foreach(KeyValuePair<string, float> entry in cooldowns)
-        {
-            cooldowns[entry.Key] = 1f;
+        if (respawnableScenes.Contains(scene)) {
+            lastRespawnableScene = scene;
         }
 	}
-
     public static void GenerateWorld()
 	{
-        Debug.Log("Generateworld");
+        Debug.Log("Generating World...");
         keyPos = placeKey();
         secretEntranceScene = chooseSecretRoom();
         NPCStatic.culpritKey = NPCStatic.pickCulpritKey();
         realVillain = NPCStatic.chooseCulprit();
+        NPCStatic.culpritTraits = NPCStatic.getCulpritTraits();
         NPCStatic.generateDiaries();
         NPCStatic.generateGhostClues();
         NPCStatic.generateAntiClues();
-        NPCStatic.generateGenderClue();
+        NPCStatic.genderClue = NPCStatic.generateGenderClue();
+        NPCStatic.clues = NPCStatic.assignClues();
+        NPCStatic.diaryDict = NPCStatic.assignDiaryClues();
+        Debug.Log("Done Generating World.");
 	}
+
     public static void resetStatics()
 	{
-
+        Debug.Log("Resetting statics...");
+        abilityActiveStatus.Clear();
         secretEntranceFound = false;
         secretBookshelf = null;
         chosenName = "Player Name";
@@ -141,5 +164,9 @@ public class staticVariables : MonoBehaviour
         invincible = false;
         NPCStatic.discoveredClues.Clear();
         NPCStatic.culpritCluesFound.Clear();
+        NotebookStatic.playerNotes = NotebookStatic.emptyNotes() ;
+        NotebookStatic.currentPage = 0;
+        currencyAmount = 0;
+        Debug.Log("Done Resetting statics.");
 	}
 }

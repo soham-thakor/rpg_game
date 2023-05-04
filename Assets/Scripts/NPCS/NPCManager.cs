@@ -47,6 +47,11 @@ public class NPCManager : MonoBehaviour
             NonPlayerCharacters[4].transform.position = spawnPosition.position;
             activeNPC = NonPlayerCharacters[4];
         }
+        else if(staticVariables.lastGuess.Contains("Court Mage"))
+		{
+            NonPlayerCharacters[5].transform.position = spawnPosition.position;
+            activeNPC = NonPlayerCharacters[5];
+        }
         else
         {
             NonPlayerCharacters[0].transform.position = spawnPosition.position;

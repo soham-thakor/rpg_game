@@ -12,18 +12,27 @@ public class BookInteraction : MonoBehaviour
     private PlayerSpeech playerSpeech;
     private bool inRange = false;
     private int messageIndex = 0;
+    private discoveryTracker mapTracker;
+
     void Start()
     {
         playerSpeech = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSpeech>();
         openMessages.AddRange(NPCStatic.diaryDict[diaryOwner].clues);
+        mapTracker = GameObject.FindGameObjectWithTag("Discovery Tracker").GetComponent<discoveryTracker>();
+
     }
 
     void Update()
     {
         if (inRange && Input.GetKeyDown(KeyCode.F))
         {
-            trackDialogueDiscovery();
-
+            mapTracker.track("Diary", gameObject);
+            //display the clue pop up if we need to
+            if(!staticVariables.seenNotebookPopUp)
+			{
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PopUps>().checkNotebookPopUp();
+                return;
+			}
 
             if (messageIndex >= openMessages.Count - 3)
 			{//if we are reading one of the clues
@@ -57,25 +66,7 @@ public class BookInteraction : MonoBehaviour
         }
     }
 
-    void trackDialogueDiscovery()
-	{
-        if(gameObject.CompareTag("NPC"))
-		{
-            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Contains(gameObject))
-            {
-                mapStatic.mapData[SceneManager.GetActiveScene().name].dialogues.Add(gameObject);
-            }
-        }
-        else if(gameObject.CompareTag("Diary")) {
-            if (!mapStatic.mapData[SceneManager.GetActiveScene().name].diaries.Contains(gameObject))
-            {
-                mapStatic.mapData[SceneManager.GetActiveScene().name].diaries.Add(gameObject);
-            }
-        }
-        return;
 
-
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

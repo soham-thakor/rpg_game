@@ -28,9 +28,8 @@ public class MenuManager : MonoBehaviour
 	
 	public void StartGame(){
 		Debug.Log("Start Game");
-		/*staticVariables.resetStatics();
-		staticVariables.resetCooldowns();
-		staticVariables.GenerateWorld();*/
+		staticVariables.resetStatics();
+		staticVariables.GenerateWorld();
 		staticVariables.guesses = 0;
 		
 		StartCoroutine(FadeWithoutTransition());
@@ -41,7 +40,6 @@ public class MenuManager : MonoBehaviour
 	}
 
 	public void BackToStart(){
-		staticVariables.resetCooldowns();
 		staticVariables.resetStatics();
 		SceneManager.LoadScene(0);
 	}
@@ -91,7 +89,11 @@ public class MenuManager : MonoBehaviour
 		loadScene("CutSceneInstruct");
 	}
 
-
+	public void respawnInLastPlayableScene()
+	{
+		staticVariables.respawning = true;
+		SceneManager.LoadScene(staticVariables.lastRespawnableScene);
+	}
 	// Update is called once per frame
 	void Update()
     {
