@@ -1688,7 +1688,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4404104252593525042, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_Name
-      value: Court Mage Melanie Variant
+      value: Court Mage Melanie
       objectReference: {fileID: 0}
     - target: {fileID: 4404104252593525043, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: m_FlipX
@@ -1768,15 +1768,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6904705221131615934, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: messages.Array.data[0].message.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6904705221131615934, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[0]
-      value: Test dialogue woo hoo
+      value: I am Melanie, the Court Mage. I can provide you with spells you may
+        need.
       objectReference: {fileID: 0}
     - target: {fileID: 6904705221131615934, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[1]
-      value: test wooo wowowow
+      value: But let me warn you, the monsters within these walls are no ordinary
+        foes.
       objectReference: {fileID: 0}
     - target: {fileID: 6904705221131615934, guid: f2cbf44118cb7df4da6b8bdf052033e4, type: 3}
       propertyPath: messages.Array.data[0].message.Array.data[2]
