@@ -65,13 +65,12 @@ public class Shop : MonoBehaviour
         buyButton.SetActive(true);
         selectedAbility = name;
         
-        if(itemDict[name].purchased) 
-        {
-            buyButton.SetActive(false);
-        }
-        else
-        {
-            costText.text = itemDict[name].cost.ToString();
+        foreach(Item item in items) {
+            if(item.name != name)
+                item.descriptionPanel.SetActive(false);
+            else
+                item.descriptionPanel.SetActive(true);
+                costText.text = itemDict[name].cost.ToString();
         }
     }
 
